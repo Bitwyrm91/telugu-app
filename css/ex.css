@@ -1,0 +1,242 @@
+/* ex.css: exercise screens (task E6; DESIGN 7). Tokens only; no raw colours. */
+
+.ex { display: flex; flex-direction: column; gap: 20px; max-width: 640px; margin-inline: auto; padding-block: 8px 24px; }
+.ex-title { font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; margin: 0; }
+.ex-title-small { font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); margin: 0; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.ex .en { font-family: var(--font-ui); color: var(--ink); margin: 0; overflow-wrap: anywhere; }
+.ex .en-lg, .ex .en-prompt { font-size: var(--en-h2); line-height: var(--en-h2-lh); }
+.ex .caption { font-size: var(--en-small); color: var(--ink-2); margin: 0; }
+.ex [hidden] { display: none !important; }
+
+/* Telugu sizes (DESIGN 4) */
+.ex .te.te-xl { font-size: var(--te-xl); line-height: var(--te-xl-lh); font-weight: 600; }
+.ex .te.te-lg { font-size: var(--te-lg); line-height: var(--te-lg-lh); }
+.ex .te.te-md { font-size: var(--te-md); line-height: var(--te-md-lh); }
+.ex .te.te-sm { font-size: var(--te-sm); line-height: var(--te-sm-lh); }
+.ex .rom.rom-xl { font-size: var(--rom-xl); }
+.ex .rom.rom-lg { font-size: var(--rom-lg); }
+
+/* words with romanization under each (te -> rom -> en) */
+.tew { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; align-items: flex-start; }
+.tew-word { display: inline-flex; flex-direction: column; align-items: center; }
+.tew[data-rom="tap"] { cursor: pointer; }
+.stack { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
+/* design 4 #9: the stack's own gap spaces its lines; a paragraph adds no empty line of its own */
+.stack > p { margin: 0; }
+/* design 1 #5: audio buttons sit side by side at the top-left of the text, whatever its length */
+.stack-row { display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 12px; }
+.stack-row > .audio-pair { display: flex; flex: none; flex-wrap: nowrap; gap: 8px; }
+.stack-row > .stack { flex: 1 1 0; min-width: 0; }
+/* at 200 % zoom on a small phone a long word cannot fit beside the buttons: it goes under them */
+@media (max-width: 260px) {
+  .stack-row { flex-wrap: wrap; }
+  .stack-row > .stack { flex-basis: 100%; }
+}
+
+/* prompts */
+.ex-prompt { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.ex-prompt-te { flex-direction: row; justify-content: center; }
+.ex-prompt-listen { padding: 16px; border-radius: 12px; background: var(--surface-2); }
+.listen-text { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+
+/* audio (DESIGN 7 "Audio button") */
+.audio-pair { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; flex: 0 1 auto; min-width: 0; max-width: 100%; }
+.audio-btn {
+  width: 48px; height: 48px; border-radius: 50%; border: 0; display: inline-grid; place-items: center;
+  background: var(--primary-bg); color: var(--primary); cursor: pointer; padding: 0;
+}
+.audio-btn.audio-slow { width: 48px; height: 48px; }
+/* B2: audio that could not play says so (and a listen exercise offers a skip) */
+.audio-msg {
+  display: flex; flex-direction: column; align-items: center; gap: 8px; box-sizing: border-box; width: 100%; max-width: 100%;
+  font-family: var(--font-ui); font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink); text-align: center;
+}
+/* Empty, the live region stays in the page (so it is announced when filled) but takes no room. */
+.audio-msg:empty {
+  position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.audio-msg-text { display: block; padding: 4px 12px; border-radius: 12px; background: var(--surface-2); max-width: min(22rem, 100%); overflow-wrap: anywhere; }
+.audio-pair > .audio-msg { flex-basis: 100%; }
+.audio-pair[data-error] .audio-btn { box-shadow: inset 0 0 0 2px var(--border); }
+.audio-skip { min-height: 48px; }
+.audio-btn:disabled { background: var(--surface-2); color: var(--ink-disabled); cursor: default; }
+.audio-btn .i-bars { display: none; }
+.audio-btn[data-playing] .i-play { display: none; }
+.audio-btn[data-playing] .i-bars { display: block; }
+.audio-btn[data-playing] .bar { animation: ex-bar .9s ease-in-out infinite; transform-origin: center; }
+.audio-btn[data-playing] .b2 { animation-delay: .15s; }
+.audio-btn[data-playing] .b3 { animation-delay: .3s; }
+@keyframes ex-bar { 50% { transform: scaleY(.5); } }
+@media (prefers-reduced-motion: reduce) { .audio-btn[data-playing] .bar { animation: none; } }
+.audio-none { font-size: var(--en-small); color: var(--ink-2); }
+
+/* chips and labels */
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px;
+  background: var(--surface-2); color: var(--ink); font-size: var(--en-small); align-self: center;
+}
+.chip .te { padding-block: 0; }
+.chip-text { display: inline; }
+.conf-wrap { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.conf {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 8px; border: 0;
+  background: none; color: var(--ink-2); font: inherit; font-size: var(--en-small); cursor: pointer;
+}
+.conf-native { color: var(--right); }
+.conf-low { color: var(--close); }
+.conf-help { font-size: var(--en-small); color: var(--ink-2); }
+
+/* intro card */
+.intro-card { display: flex; flex-direction: column; gap: 16px; padding: 20px 16px; border-radius: 16px; background: var(--surface); border: 2px solid var(--border); }
+/* design 2 #13: buttons always at the left of the word, whatever its length */
+.intro-main { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: nowrap; text-align: center; }
+.intro-main > .audio-pair { flex: none; flex-wrap: nowrap; }
+.intro-main > .stack { flex: 0 1 auto; min-width: 0; }
+@media (max-width: 260px) { .intro-main { flex-wrap: wrap; } }
+.intro-hints { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
+.intro-hint { display: inline-flex; flex-direction: column; align-items: center; }
+.intro-note { margin: 0; color: var(--ink); }
+.intro-forms { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.intro-form { display: flex; align-items: center; gap: 12px; }
+.intro-form .stack { align-items: flex-start; }
+.intro-variant { border-top: 1px solid var(--line); padding-top: 12px; display: flex; flex-direction: column; gap: 4px; }
+.intro-variant .stack { align-items: flex-start; }
+.intro-variant-label { font-weight: 600; }
+.intro-variant-note { margin: 0; color: var(--ink-2); font-size: var(--en-small); }
+
+/* choice tiles */
+.choices { display: flex; flex-direction: column; gap: 12px; }
+.choice {
+  display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 8px 16px; width: 100%;
+  border: 2px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--ink);
+  font: inherit; text-align: start; cursor: pointer;
+}
+.choice-key {
+  flex: none; width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--border);
+  display: grid; place-items: center; font-size: .75rem; color: var(--ink-2);
+}
+.choice-body { flex: 1; min-width: 0; }
+.choice-mark { flex: none; display: inline-grid; place-items: center; min-width: 24px; }
+.choice.is-selected { border-color: var(--primary); background: var(--primary-bg); }
+.choice.is-selected .choice-key { border-color: var(--primary); background: var(--primary); color: var(--on-primary); }
+.choice.is-right { border-color: var(--right); background: var(--right-bg); }
+.choice.is-right .choice-mark { color: var(--right); }
+.choice.is-wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+.choice.is-wrong .choice-mark { color: var(--wrong); }
+.choice.is-answer { border: 2px dashed var(--right); }
+.choice.is-answer .choice-mark { color: var(--right); }
+.choice:disabled { cursor: default; color: var(--ink); }
+
+/* tile board */
+.board { display: flex; flex-direction: column; gap: 24px; }
+.answer-line {
+  min-height: 84px;   /* design 2 #15: one tile with its romanization, so filling it does not move the pool */
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; padding: 8px;
+  border: 2px dashed var(--border); border-radius: 12px;
+}
+.bank { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.tile, .tile-probe {
+  min-height: 48px; min-width: 48px; padding: 12px; border: 2px solid var(--border); border-bottom-width: 4px;
+  border-radius: 12px; background: var(--surface); color: var(--ink); font: inherit; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.tile .te, .tile-probe .te { padding-block: 0; }
+/* design 3 #15: an invisible, zero-width copy of a placed tile keeps the empty answer line exactly
+   one tile row high, so placing the first tile moves nothing */
+.tile-probe { visibility: hidden; width: 0; min-width: 0; padding-inline: 0; border-inline-width: 0; margin-inline-end: -8px; overflow: hidden; pointer-events: none; }
+.tile-probe * { flex-wrap: nowrap !important; white-space: nowrap; }
+.tile.is-ghost { background: transparent; border: 2px dashed var(--line); cursor: default; }
+.tile.is-ghost > * { visibility: hidden; }
+.tile-space-face { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-2); }
+.tile-placed.is-right { border-color: var(--right); background: var(--right-bg); }
+.tile-placed.is-close { border-color: var(--close); background: var(--close-bg); }
+.tile-placed.is-wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+.tile:disabled { cursor: default; color: var(--ink); }
+
+/* typed answer (DESIGN 7 "Typed answer field") */
+.type-field { display: flex; flex-direction: column; gap: 8px; }
+.type-label { font-weight: 600; }
+.type-input {
+  min-height: 56px; border: 2px solid var(--border); border-radius: 12px; padding: 8px 16px;
+  background: var(--surface); color: var(--ink); font-family: var(--font-ui); font-size: 1.125rem;
+}
+.type-input.is-telugu { font-family: var(--font-te); font-size: var(--te-md); }
+.type-input:focus { border-color: var(--primary); outline: none; }
+.type-input[data-state="right"] { border-color: var(--right); background: var(--right-bg); }
+.type-input[data-state="close"] { border-color: var(--close); background: var(--close-bg); }
+.type-input[data-state="wrong"] { border-color: var(--wrong); background: var(--wrong-bg); }
+.howto-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.howto-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; }
+.howto { border: 2px solid var(--border); border-radius: 12px; padding: 12px 16px; background: var(--surface); }
+.howto p { margin: 0 0 8px; }
+.howto-table { border-collapse: collapse; }
+.howto-table th, .howto-table td { text-align: start; padding: 4px 16px 4px 0; }
+.howto-table .rom { color: var(--ink); }
+.howto-foot { margin-top: 8px !important; font-size: var(--en-small); color: var(--ink-2); }
+
+/* match */
+/* design 1 #10: one grid, equal rows, so row n on the left faces row n on the right */
+.match-grid { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 12px; }
+.match-col { display: contents; }
+.match-card { height: 100%; min-width: 0; }
+.match-card {
+  min-height: 56px; padding: 8px 12px; border: 2px solid var(--border); border-radius: 12px;
+  background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; display: flex;
+  align-items: center; justify-content: center; gap: 8px; position: relative;
+}
+.match-card.is-selected { border-color: var(--primary); background: var(--primary-bg); }
+.match-card.is-wrong { border-color: var(--wrong); background: var(--wrong-bg); animation: match-shake .3s; }
+.match-card.is-matched { background: var(--surface-2); border-color: var(--surface-2); color: var(--ink); cursor: default; }
+/* design 2 E2 / #9: the tick or cross sits in the corner and takes no room in the card */
+.match-card { padding-inline: 22px; }
+.match-mark { position: absolute; top: 4px; right: 4px; color: var(--right); display: inline-grid; }
+/* design 3 #8: the tick and the cross are big enough to carry the state */
+.match-mark:empty { display: none; }
+.match-mark .icon { width: 20px; height: 20px; stroke-width: 2.75; }
+.match-card.is-wrong .match-mark { color: var(--wrong-bg); background: var(--wrong); }
+/* design 4 #8: the done mark is a 20 px tick on a filled success badge on the card's corner, plain in light and dark */
+.match-mark:not(:empty) { top: -8px; right: -8px; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: var(--right); color: var(--right-bg); box-shadow: 0 0 0 2px var(--bg); }
+.match-card.is-matched .match-mark .icon { stroke-width: 3; }
+@keyframes match-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+@media (prefers-reduced-motion: reduce) { .match-card.is-wrong { animation: none; } }
+.match-card:disabled { color: var(--ink); }
+
+/* result */
+.ex-result { display: flex; flex-direction: column; gap: 12px; padding: 16px; border-radius: 12px; background: var(--surface-2); }
+.ex-verdict { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: var(--en-h2); outline: none; }
+.verdict-right { color: var(--right); }
+.verdict-close { color: var(--close); }
+.verdict-wrong { color: var(--wrong); }
+.verdict-skipped { color: var(--ink-2); }
+.ex-answer { display: flex; flex-direction: column; gap: 6px; }
+.ex-answer .stack { align-items: flex-start; }
+.ex-info { display: flex; align-items: center; gap: 8px; margin: 0; }
+.ex-typed { margin: 0; }
+.ex-typed .typed { font-family: var(--font-ui); }
+
+.ex-actions { display: flex; justify-content: flex-end; gap: 12px; position: sticky; bottom: 0; padding-block: 12px; background: var(--bg); margin-top: auto; }
+/* round-1 #2: content passing under the actions fades out instead of a hard cut */
+.ex-actions::before { content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: 16px; background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
+.ex-actions .btn { min-width: 160px; }
+.ex-actions .btn:disabled { border: 2px solid var(--border); }   /* design 1 #17: a disabled Check keeps its outline */
+@media (max-width: 480px) { .ex-actions .btn { flex: 1; } }
+
+/* Q3f S1: the tile board takes focus after a pointer click (programmatic): no ring */
+.board:focus { outline: none; }
+
+/* design 3 #4: a little more stage on tablets and desktops */
+@media (min-width: 720px) { .choice { min-height: 64px; } }
+/* design 3 #12: short windows (200 % zoom): the options come into the first screen */
+/* design 4 #4: a short phone fits a tile step above its Check bar, nothing under the bar's fade */
+@media (max-height: 760px) {
+  .ex { gap: 16px;   /* not below the bar's 16 px fade */ }
+  .board { gap: 16px; }
+  .ex-prompt-listen { padding: 12px; gap: 8px; }
+}
+@media (max-height: 480px) {
+  .ex { gap: 12px; }
+  .ex-actions::before { height: 12px; }   /* the fade stays inside the gap above the bar */
+  .ex-title { font-size: var(--en-body); line-height: var(--en-body-lh); }
+  .ex-prompt-listen { padding: 8px; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+}

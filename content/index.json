@@ -1,0 +1,37 @@
+{
+ "units": [
+  {
+   "id": "u01",
+   "title": "Hello",
+   "section": 1,
+   "lessons": [
+    {
+     "id": "u01.l1",
+     "title": "Greetings"
+    },
+    {
+     "id": "u01.l2",
+     "title": "Yes and no"
+    },
+    {
+     "id": "u01.l3",
+     "title": "Thanks and sorry"
+    },
+    {
+     "id": "u01.l4",
+     "title": "When you're stuck"
+    },
+    {
+     "id": "u01.l5",
+     "title": "Coming and going"
+    }
+   ],
+   "letter_lessons": [
+    "u01.a1",
+    "u01.a2"
+   ],
+   "items": 39,
+   "audio_bytes": 1014720
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+/* notes.css: grammar note screen (task E12; DESIGN 3, 5, 7). Tokens only; no raw colours.
+   Loaded by js/ui/notes.js together with ex.css (audio buttons, te sizes, confidence labels). */
+
+.notes { gap: 16px; }
+.notes-head { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.notes-back { margin-left: -8px; }
+.notes-unit { margin: 8px 0 0; font-size: var(--en-small); line-height: var(--en-small-lh); font-weight: 500; color: var(--ink-2); }
+.notes-title { margin: 0; overflow-wrap: anywhere; }
+.notes-conf { margin-left: -8px; }
+
+.notes-body { display: flex; flex-direction: column; gap: 16px; }
+.notes-h { margin: 16px 0 0; font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; color: var(--ink); }
+.notes-h:first-child { margin-top: 0; }
+.notes-p, .notes-ul { margin: 0; font-size: var(--en-body); line-height: 1.7; color: var(--ink); }
+.notes-ul { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 8px; }
+.notes-ul li::marker { color: var(--ink-2); }
+.notes-b { font-weight: 600; }
+.notes-i { font-style: normal; font-weight: 500; white-space: nowrap; }  /* keeps "-aṇḍi" whole */   /* emphasis: medium weight, never slanted (S7) */
+.notes-missing { font-size: var(--en-small); color: var(--ink-2); }
+
+/* ref chip: a tappable pill inside the text (DESIGN 7 chips; control, so >= 48 px) */
+.notes-chip {
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  vertical-align: middle; min-height: 48px; min-width: 48px; max-width: 100%;
+  margin: 2px 0; padding: 0 14px; border-radius: 999px;
+  border: 2px solid var(--border); background: var(--surface-2); color: var(--ink);
+  font: inherit; cursor: pointer; text-align: center;
+}
+.notes-chip .te { font-size: var(--te-sm); line-height: var(--te-sm-lh); padding-block: 0.1em; }
+.notes-chip-rom { font-size: var(--rom); line-height: 1.2; padding-bottom: 4px; }
+.notes-chip:hover { border-color: var(--primary); }
+.notes-chip[aria-expanded="true"] { border-color: var(--primary); background: var(--primary-bg); }
+
+/* item card (an `item` block, and the card a chip opens) */
+.notes-item {
+  padding: 16px; border-radius: 16px; background: var(--surface);
+  border: 1px solid var(--line); box-shadow: 0 1px 2px rgb(0 0 0 / .06);
+}
+.notes-item .stack-row { align-items: center; flex-wrap: wrap; }
+.notes-item .audio-pair { align-self: center; }
+.notes-stack { align-items: flex-start; flex: 1 1 9rem; min-width: 0; }
+.notes-item .stack-row > .notes-stack { flex: 1 1 9rem; }  /* wraps under the buttons when narrow (ex.css sets basis 0) */
+.notes-stack .tew { justify-content: flex-start; }
+.notes-stack .tew-word { align-items: flex-start; }
+.notes-ref-card { margin-top: 8px; border-color: var(--primary); }
+li > .notes-ref-card { margin-bottom: 4px; }
+
+.notes-empty { padding-block: 8px; }
+
+@media (min-width: 820px) {
+  .notes-item { padding: 24px; }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .notes-item { box-shadow: none; }
+}
+:root[data-theme="dark"] .notes-item { box-shadow: none; }

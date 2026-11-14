@@ -1,0 +1,52 @@
+[
+ {
+  "mark": "ā",
+  "text": "A line over a vowel means it is long: hold it about twice as long.",
+  "te": "కాదు",
+  "rom": "kādu",
+  "audio": {
+   "f": "../audio/u01/2976442da02896c8.f.mp3",
+   "m": "../audio/u01/b1d91cd7eb240467.m.mp3"
+  }
+ },
+ {
+  "mark": "ṭ ḍ ṇ ḷ",
+  "text": "A dot under a letter means the tongue curls back to touch the roof of the mouth.",
+  "te": "మళ్ళీ చెప్పండి",
+  "rom": "maḷḷī cheppaṇḍi",
+  "audio": {
+   "f": "../audio/u01/4ebafbdc3edf28fe.f.mp3",
+   "m": "../audio/u01/22504e480f3078cb.m.mp3"
+  }
+ },
+ {
+  "mark": "ch",
+  "text": "Always the 'ch' of 'church', never the 'k' sound of 'school'.",
+  "te": "మంచిది",
+  "rom": "mañchidi",
+  "audio": {
+   "f": "../audio/u01/1f4b083b58d258d1.f.mp3",
+   "m": "../audio/u01/234ebc54641aab8a.m.mp3"
+  }
+ },
+ {
+  "mark": "dh th kh",
+  "text": "An h after a consonant is a puff of air after it. 'th' is never the English 'th' of 'this' or 'thin'.",
+  "te": "ధన్యవాదాలు",
+  "rom": "dhanyavādālu",
+  "audio": {
+   "f": "../audio/u01/0b7dc4e0fd58efca.f.mp3",
+   "m": "../audio/u01/ca6f5549ed12a0f5.m.mp3"
+  }
+ },
+ {
+  "mark": "nn ll pp",
+  "text": "A doubled letter is held longer, as in 'pen-knife'.",
+  "te": "బాగున్నాను",
+  "rom": "bāgunnānu",
+  "audio": {
+   "f": "../audio/u01/c17a02adbce86c7d.f.mp3",
+   "m": "../audio/u01/1ae54d0259408845.m.mp3"
+  }
+ }
+]

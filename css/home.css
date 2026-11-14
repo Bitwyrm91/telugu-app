@@ -1,0 +1,213 @@
+/* home.css: the home path (task E8; DESIGN 7 "Path node", 9 motif). Tokens only. */
+
+.home-head { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.home-head .screen-title { position: relative; z-index: 1; }
+.muggu { color: var(--line); flex: none; }
+.muggu-line { fill: none; stroke: currentColor; stroke-width: 1.5; }
+.muggu-dot { fill: var(--accent); }
+.home-muggu { width: 72px; height: 72px; }
+
+.home-path { display: grid; gap: 32px; padding-bottom: 24px; }
+
+/* -- unit header card -- */
+.unit-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;   /* design 2 #14: Notes never drops under the text */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / .06);
+}
+@media (min-width: 820px) { .unit-card { padding: 24px; } }
+.unit-muggu { display: none; }   /* design 1 #8: one kolam per screen (the page header's) */
+.unit-card .unit-notes { align-self: flex-end; }
+.unit-text { position: relative; min-width: 0; flex: 1 1 auto; }
+.unit-card .unit-notes { flex: none; }
+@media (max-width: 339.98px) { .unit-card { flex-wrap: wrap; } }   /* 200% zoom: no sideways scroll */
+.unit-kicker { margin: 0; font-size: var(--en-small); line-height: var(--en-small-lh); font-weight: 500; color: var(--ink-2); }
+.unit-title { margin: 2px 0 6px; font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; overflow-wrap: anywhere; }
+.unit-progress {
+  display: flex; align-items: center; gap: 6px; margin: 0;
+  font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+.unit-lock { width: 18px; height: 18px; }
+.unit-notes { position: relative; }
+
+/* -- the path -- */
+/* design 2 #2: a straight path. Three columns (side node | circle | label); the 4 px line runs down
+   the middle column only, drawn per row from circle centre to circle centre, so it never crosses text
+   and nothing hangs below the last node. data-seg says which part of the line a row carries. */
+.path-list {
+  --gap: 20px;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0 0;
+  display: grid;
+  gap: var(--gap);
+}
+.path-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: start;
+  width: 100%;
+}
+.path-row::before {      /* the centre of the circle column */
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  margin-left: -2px;
+  background: var(--line);
+  top: 0;
+  bottom: calc(-1 * var(--gap));
+}
+.path-row[data-seg="first"]::before { top: 36px; }
+.path-row[data-seg="last"]::before { bottom: auto; height: 36px; }
+.path-row[data-seg="none"]::before { content: none; }
+.path-node { grid-column: 2 / 4; display: grid; grid-template-columns: 72px minmax(0, 1fr); column-gap: 12px; align-items: center; justify-items: start; }
+.path-node > .node-circle { position: relative; z-index: 1; }
+
+.path-node, .side-node {
+  position: relative;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 16px;
+}
+.node-circle {
+  display: flex; align-items: center; justify-content: center;
+  width: 72px; height: 72px;
+  border-radius: 999px;
+  border: 4px solid transparent;
+}
+.node-circle .icon { width: 28px; height: 28px; }
+.node-label {
+  display: flex; flex-direction: column; align-items: flex-start;
+  min-width: 0; max-width: 100%;
+  text-align: start;
+  font-size: var(--en-small);
+  line-height: var(--en-small-lh);
+  overflow-wrap: anywhere;
+}
+.node-title {
+  font-weight: 500;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+}
+.node-state { color: var(--ink-2); }
+
+.path-node[data-state="done"] .node-circle { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
+.path-node[data-perfect="true"] .node-circle { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--accent); }
+.path-node[data-state="open"] .node-circle { background: var(--surface); border-color: var(--primary); color: var(--primary); animation: node-pulse 2.4s cubic-bezier(.2, .8, .2, 1) infinite; }
+.path-node[data-state="locked"] .node-circle { background: var(--surface-2); border-color: var(--surface-2); color: var(--border); }
+.path-node[data-state="locked"] .node-title,
+.side-node[data-state="locked"] .node-title { color: var(--ink-2); }
+.path-node[data-state="locked"], .side-node[data-state="locked"] { cursor: default; }
+
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--primary-bg); }
+  50% { box-shadow: 0 0 0 8px var(--primary-bg); }
+}
+
+.node-bubble {           /* design 2 #2: in the label column, never over the line */
+  align-self: flex-start;
+  margin-bottom: 4px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: var(--en-small);
+  line-height: var(--en-small-lh);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* -- letter-lesson side nodes: 56 px rounded squares in the left column, a short dotted link to the line -- */
+.side-node { grid-column: 1; justify-self: end; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; max-width: 100%; }
+.side-link {             /* from the side node's edge to the line */
+  position: absolute;
+  top: 27px; left: calc(50% - 48px);
+  width: 46px;
+  border-top: 2px dotted var(--border);
+}
+.path-row[data-seg="none"] .side-link { display: none; }
+/* narrow (200% zoom): no left column; side nodes hang off the line on the right */
+@media (max-width: 339.98px) {
+  .path-row { grid-template-columns: 0 72px minmax(0, 1fr); column-gap: 0; }
+  .path-node { column-gap: 8px; }
+  .side-node { grid-column: 3; justify-self: start; margin-left: 8px; }
+  .path-row::before { left: 36px; }
+  .side-link { left: 38px; width: 40px; }
+}
+.side-square {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  min-width: 56px; min-height: 56px;
+  padding: 0 6px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+}
+.side-glyph { font-size: var(--te-lg); line-height: 1.5; padding-block: 0.1em; }
+.side-node[data-state="open"] .side-square { border: 4px solid var(--primary); animation: node-pulse 2.4s cubic-bezier(.2, .8, .2, 1) infinite; }
+.side-node[data-state="done"] .side-square { border-color: var(--primary); }
+.side-node[data-state="locked"] .side-square { background: var(--surface-2); border-color: var(--surface-2); }
+.side-badge {
+  position: absolute; right: -8px; bottom: -8px;
+  display: flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--ink-2);
+}
+.side-node[data-state="done"] .side-badge { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
+.side-badge .icon { width: 14px; height: 14px; }
+.side-label { align-items: center; text-align: center; max-width: 96px; }
+
+/* -- side panel (1100 px and wider): next up -- */
+.home-next {
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.home-next-title { margin: 0; font-size: var(--en-small); line-height: var(--en-small-lh); font-weight: 500; color: var(--ink-2); }
+.home-next-name { margin: 4px 0 12px; font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; overflow-wrap: anywhere; }
+.home-next-go { width: 100%; }
+.home-done .home-next-name { margin: 0 0 12px; }
+.home-streak { display: flex; align-items: center; gap: 6px; margin: 12px 0 0; color: var(--ink-2); font-size: var(--en-small); line-height: var(--en-small-lh); }
+.home-done .home-streak { margin-top: 0; }
+.home-flame { width: 20px; height: 20px; flex: none; color: var(--accent); }
+/* design 1 #8: the day strip under the title, below 1100 px (the side panel shows it wider) */
+.home-strip {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 4px 0 8px;
+  font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2);
+}
+.home-strip-streak { display: inline-flex; align-items: center; gap: 6px; flex: none; }
+.home-strip-next { min-width: 0; text-align: end; overflow-wrap: anywhere; }
+@media (min-width: 1100px) { .home-strip { display: none; } }
+@media (max-width: 1099.98px) { .side:has(.home-next) { display: none; } }   /* the panel is a wide-screen extra */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .unit-card { box-shadow: none; }
+}
+:root[data-theme="dark"] .unit-card { box-shadow: none; }
+
+/* design 2 #16: the closing card when a unit is done */
+.unit-end { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 24px; padding: 24px 16px; text-align: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.unit-end-title { margin: 0; font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; }
+.unit-end-note { margin: 0; color: var(--ink-2); font-size: var(--en-small); line-height: var(--en-small-lh); }
+
+@media (prefers-reduced-motion: reduce) {
+  .path-node[data-state="open"] .node-circle,
+  .side-node[data-state="open"] .side-square { animation: none; }
+}

@@ -1,0 +1,130 @@
+/* letters.css: letter exercises, letter card, look-alike card, Letters screen (task E11; DESIGN 7). Tokens only. */
+
+.ex-letter .te.te-hero, .letters .te.te-hero { font-size: var(--te-hero); line-height: var(--te-hero-lh); font-weight: 400; }
+.ex-letter .te.te-xl, .letters .te.te-xl { font-size: var(--te-xl); line-height: var(--te-xl-lh); }
+.ex-letter .te.te-lg, .letters .te.te-lg { font-size: var(--te-lg); line-height: var(--te-lg-lh); }
+.ex-letter .rom-xl, .letters .rom-xl { font-size: var(--rom-xl); }
+.ex-letter .rom-lg, .letters .rom-lg { font-size: var(--rom-lg); }
+.ex-letter [hidden], .letters [hidden] { display: none !important; }
+
+/* letter card */
+.letter-card { display: flex; flex-direction: column; gap: 12px; align-items: center; padding: 16px; border-radius: 16px; background: var(--surface); border: 2px solid var(--border); }
+.lc-well {
+  position: relative; display: grid; place-items: center; min-width: 160px; min-height: 160px; padding: 8px 16px;
+  border-radius: 16px; background: var(--surface-2); color: var(--ink);
+}
+.lc-guide { position: absolute; left: 12px; right: 12px; height: 1px; background: var(--line); pointer-events: none; }
+.lc-guide-head { top: 32%; }
+.lc-guide-base { top: 68%; }
+.lw-glyph { position: relative; display: inline-flex; align-items: center; gap: 12px; }
+.lw-carrier { color: var(--ink-2); }
+.lw-arrow { color: var(--ink-2); font-size: var(--en-h1); }
+.lw-full { color: var(--ink); }
+.lc-rom { margin: 0; font-size: 1.5rem; font-weight: 500; color: var(--ink); }
+.lc-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
+.lc-note { margin: 0; font-size: var(--en-body); line-height: var(--en-body-lh); color: var(--ink); text-align: start; align-self: stretch; }
+.lc-example { align-self: stretch; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.lc-example .caption { margin: 0; font-size: var(--en-small); color: var(--ink-2); }
+
+/* look-alike card */
+.lookalike { display: flex; flex-direction: column; gap: 12px; padding: 16px; border-radius: 16px; background: var(--surface); border: 2px solid var(--border); }
+.la-title { margin: 0; font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; }
+.la-wells { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.la-side { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 8px; border-radius: 16px; border: 2px solid transparent; }
+.la-side.is-new { border-color: var(--primary); }
+.la-tag { position: absolute; top: 4px; right: 8px; z-index: 1; padding: 0 8px; border-radius: 999px; background: var(--primary); color: var(--on-primary); font-size: var(--en-small); }
+.la-ne { color: var(--ink-2); font-size: var(--en-h1); }
+.la-note { margin: 0; }
+@media (max-width: 320px) { .la-wells { flex-direction: column; } }
+
+/* drills */
+.lx-say { display: grid; place-items: center; }
+.lx-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.lx-grid:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }   /* design 1 #14 */
+.lx-choice-te { display: flex; justify-content: center; }
+/* design 2 E1: badge and mark sit in the corners above the glyph, never beside it */
+.lx-grid .choice { position: relative; flex-direction: column; align-items: center; justify-content: center; gap: 0; min-height: 104px; padding: 32px 4px 8px; }
+.lx-grid .choice-key { position: absolute; top: 6px; left: 6px; }
+.lx-grid .choice-mark { position: absolute; top: 6px; right: 6px; }
+.lx-grid .lx-choice-te { flex: none; max-width: 100%; }
+@media (pointer: coarse) { .lx-grid .choice-key { display: none; } }
+/* design 3 #12: a short window keeps a letter choice short enough to show whole above the sheet */
+@media (max-height: 480px) { .lx-grid .choice { min-height: 88px; padding: 8px 28px; } }
+.lx-answer { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+/* round-1 #2 (desktop): the letter intro card in two columns so it fits a 1280x800 window */
+@media (min-width: 900px) {
+  .ex-letter .letter-card { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 24px; row-gap: 8px; align-items: start; }
+  .ex-letter .letter-card > .lc-well { grid-column: 1; grid-row: 1; justify-self: center; }
+  .ex-letter .letter-card > .lc-rom { grid-column: 1; grid-row: 2; justify-self: center; }
+  .ex-letter .letter-card > .lc-row { grid-column: 1; grid-row: 3; justify-self: center; }
+  .ex-letter .letter-card > .lc-note { grid-column: 2; grid-row: 1; align-self: center; }
+  .ex-letter .letter-card > .lc-example { grid-column: 2; grid-row: 2 / span 2; }
+  .ex-letter .letter-card > :not(.lc-well):not(.lc-rom):not(.lc-row):not(.lc-note):not(.lc-example) { grid-column: 1 / -1; }
+}
+
+/* letter_build */
+.lb-board { gap: 12px; }
+.lb-board .caption { margin: 0; font-size: var(--en-small); color: var(--ink-2); }
+.lb-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.lb-forms { display: flex; flex-direction: column; gap: 8px; min-height: 48px; }
+.tile.lb-cons, .tile.lb-form { min-width: 64px; min-height: 64px; }
+.tile.is-selected { border-color: var(--primary); background: var(--primary-bg); }
+.tile.is-right { border-color: var(--right); background: var(--right-bg); }
+.tile.is-wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+.tile.is-answer { border: 2px dashed var(--right); }
+.lb-result { display: flex; flex-direction: column; gap: 8px; padding: 16px; border-radius: 12px; background: var(--surface-2); }
+.lb-result .caption { margin: 0; font-size: var(--en-small); color: var(--ink-2); }
+
+/* Letters screen */
+.letters { display: flex; flex-direction: column; gap: 24px; }
+.lg-group { display: flex; flex-direction: column; gap: 8px; }
+.lg-group + .lg-group { margin-top: 16px; }
+.lg-heading { margin: 0; font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; }
+/* design 2 #10: on phones and tablets the cells fill the row (4 to a row, as a lesson has) */
+.lg-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 299.98px) { .lg-grid { grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); } }
+/* design 4 #2: from tablet up the cells grow to fit the widest glyph (conjuncts included) and fill the column */
+@media (min-width: 820px) { .lg-grid { grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); } }
+@media (min-width: 820px) and (max-width: 1099.98px) { .letters { width: 100%; max-width: 40rem; margin-inline: auto; } }
+.lg-cell {
+  min-height: 84px; min-width: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 4px; border: 2px solid var(--border); border-bottom: 3px solid var(--primary); border-radius: 12px;
+  background: var(--surface); color: var(--ink); font: inherit; cursor: pointer;
+}
+.lg-cell .te.te-xl { font-size: var(--te-xl); line-height: 1.4; font-weight: 400; padding-block: 0; }
+.lg-cell .lg-rom { font-size: var(--en-small); line-height: var(--en-small-lh); }
+.lg-cell[data-taught="false"] { background: var(--surface-2); border-color: var(--surface-2); color: var(--ink-2); }
+.lg-cell[aria-expanded="true"] { outline: 2px solid var(--primary); outline-offset: 2px; }
+.lg-card-slot:empty { display: none; }
+/* design 3 #11: the open card closes from its top-right corner */
+.lg-card-wrap { position: relative; scroll-margin-bottom: 96px; scroll-margin-top: 16px; }
+.lg-card-wrap > .letter-card { padding-top: 56px; }
+.lg-card-wrap > .lg-locked-note { padding-right: 64px; }
+.lg-card-close { position: absolute; top: 4px; right: 4px; width: 48px; height: 48px; display: inline-grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; z-index: 1; }
+.lg-card-close .icon { width: 24px; height: 24px; }
+.lg-card-close:hover { background: var(--surface-2); }
+.lg-card-close:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+@media (min-width: 820px) {
+  /* design 4 #2: the label sits on one line above its grid, and the grid takes the whole column */
+  .lg-heading { white-space: nowrap; }
+}
+.lg-locked-note { margin: 0 0 12px; padding: 12px 16px; border-radius: 12px; background: var(--surface-2); color: var(--ink); }
+.ll-more { align-self: flex-start; margin-top: 8px; }
+.ll-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ll-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 8px 16px;
+  border: 2px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--ink); text-decoration: none;
+}
+.ll-row[data-state="locked"] { background: var(--surface-2); color: var(--ink-2); cursor: default; }
+.ll-state { font-size: var(--en-small); color: var(--ink-2); }
+.ll-row[data-state="done"] .ll-state { color: var(--right); }
+.ll-row[data-state="open"] .ll-state { color: var(--primary); }
+.te.te-note { font-size: var(--te-sm); line-height: var(--te-sm-lh); padding-block: 0; }
+.la-side { flex: 1 1 0; min-width: 0; }
+.la-side .lc-well { min-width: 0; width: 100%; padding-inline: 4px; }
+.lc-example .stack { align-items: flex-start; }
+.ex-letter .lc-example .stack .te, .letters .lc-example .stack .te { line-height: 1.35; padding-block: 0; }   /* the sound sits right under the word */
+@media (max-width: 320px) { .la-side { width: 100%; } }
+.lc-row, .lb-result .stack { flex-wrap: wrap; min-width: 0; }
+.letter-card, .lookalike { min-width: 0; max-width: 100%; }
+@media (max-width: 240px) { .lc-well { min-width: 0; width: 100%; } .letter-card, .lookalike { padding: 8px; } }

@@ -1,0 +1,201 @@
+/* lesson.css: lesson screen, feedback sheet, report sheet, summary (task E7; DESIGN 5, 7). Tokens only. */
+
+.lesson { display: flex; flex-direction: column; gap: 8px; min-height: calc(100vh - 16px); min-height: calc(100dvh - 16px); }
+@media (min-width: 1100px) { .lesson { min-height: calc(100vh - 32px); min-height: calc(100dvh - 32px); } }
+.lesson .te.te-xl { font-size: var(--te-xl); line-height: var(--te-xl-lh); }
+.lesson-summary [hidden] { display: none !important; }
+.lesson .te.te-lg, .lesson-summary .te.te-lg { font-size: var(--te-lg); line-height: var(--te-lg-lh); }
+.lesson .te.te-md, .lesson-summary .te.te-md { font-size: var(--te-md); line-height: var(--te-md-lh); }
+.lesson .te.te-sm, .lesson-summary .te.te-sm { font-size: var(--te-sm); line-height: var(--te-sm-lh); }
+.lesson .caption { font-size: var(--en-small); color: var(--ink-2); margin: 0; }
+.lesson .en { margin: 0; }
+.lesson [hidden] { display: none !important; }
+
+/* top bar: close, progress, report flag */
+.lesson-top { display: flex; align-items: center; gap: 8px; position: sticky; top: 0; z-index: 2; background: var(--bg); padding-block: 4px; }
+/* design 2 #4: content scrolling under the header fades instead of being sliced */
+.lesson-top::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 8px; background: linear-gradient(var(--bg), transparent); pointer-events: none; }
+/* design 2 #4: the sheet is a child of the lesson column, so it stays pinned to the bottom */
+.lesson-sheet-slot { display: contents; }
+.icon-btn {
+  width: 48px; height: 48px; flex: none; display: inline-grid; place-items: center; border: 0; border-radius: 50%;
+  background: none; color: var(--ink-2); cursor: pointer; padding: 0;
+}
+.icon-btn:hover { background: var(--surface-2); color: var(--ink); }
+.icon-btn[aria-disabled="true"] { cursor: default; color: var(--ink-disabled); background: none; }
+.lesson-progress { flex: 1; min-width: 0; }
+.lp-track { display: block; height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.lp-fill { display: block; height: 100%; width: 0; background: var(--primary); border-radius: 999px; transition: width .3s ease; }
+@media (prefers-reduced-motion: reduce) { .lp-fill { transition: none; } }
+
+.lesson-stage { flex: 1; display: flex; flex-direction: column; }
+/* design 3 #6: the step fills the screen, so its action bar rests at the bottom on every exercise */
+.lesson-stage > .ex { flex: 1 0 auto; width: 100%; padding-bottom: 0; }
+/* design 3 #6: the action bar rests on the bottom edge on every step */
+.lesson-stage > .ex > .ex-actions { padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+/* design 3 #17: from 720 px a short step sits centred between the header and the action bar
+   (auto margins collapse to 0 when the step is taller than the space, so nothing is pushed off) */
+@media (min-width: 720px) { .lesson-stage > .ex > :first-child { margin-top: auto; } }
+/* design 4 #5: from 720 px the step is centred in the space above a reserve for the sheet, so the sheet
+   opens under it without moving it; the reserve only takes free space, so it never adds a scroll */
+@media (min-width: 720px) {
+  .lesson-stage > .ex::after { content: ''; order: 1; flex: 1 1 0; min-height: 0; max-height: min(36vh, 420px); }
+  .lesson-stage > .ex > .ex-actions { order: 2; }
+  .lesson-stage[data-answered] > .ex::after { display: none; }
+  .lesson-stage[data-answered] > .ex { padding-bottom: 24px; }
+}
+.lesson-stage > .ex { scroll-margin-top: 64px; }
+.lesson-notice { margin: 0 0 8px; padding: 8px 12px; border-radius: 12px; background: var(--surface-2); color: var(--ink); font-size: var(--en-small); line-height: var(--en-small-lh); text-align: center; }
+.lesson-stage[data-answered] .ex-actions { display: none; }
+
+/* resume prompt */
+.lesson-resume {
+  display: flex; flex-direction: column; gap: 16px; margin-top: 18vh; padding: 24px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+}
+.lesson-resume .screen-title { margin: 0; }
+.lesson-resume p { margin: 0; }
+.resume-progress { color: var(--ink-2); font-size: var(--en-small); line-height: var(--en-small-lh); font-variant-numeric: tabular-nums; }
+.lesson-resume-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.lesson-resume-page { display: flex; flex-direction: column; }
+.resume-top { justify-content: flex-start; }
+.lesson-resume-page .lesson-resume { margin-top: 12vh; }
+.resume-bar { display: flex; flex-direction: column; gap: 6px; }
+@media (min-width: 720px) { .lesson-resume { width: 100%; max-width: 32rem; margin-inline: auto; } }
+/* design 2 #3: a lesson address that names no lesson */
+.lesson-missing {
+  max-width: 28rem; margin: 20vh auto 0; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
+  padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+}
+.lesson-missing p { margin: 0; color: var(--ink-2); }
+.lesson-missing .screen-title { margin: 0; }
+.lesson-missing-kolam { width: 64px; height: 64px; color: var(--line); }
+
+/* feedback sheet (DESIGN 7) */
+.fb {
+  position: sticky; bottom: 0; z-index: 2; display: flex; flex-direction: column; gap: 12px;
+  padding: 16px; border-top: 4px solid var(--border); border-radius: 16px 16px 0 0; background: var(--surface-2);
+  max-height: 80vh; max-height: 80dvh; overflow: visible;
+  /* design 1 #1: the sheet always ends at the bottom of the screen */
+  margin-top: auto; padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+}
+/* S3: Continue is a footer that always shows; long feedback scrolls above it. */
+.fb > .fb-body {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 4px 24px; margin: -4px;
+  /* design 1 #2: a body that scrolls fades out above Continue instead of being cut mid-line */
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 24px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 24px), transparent);
+}
+.fb > .fb-actions { flex: none; }
+.lesson-stage .kiv-cut { visibility: hidden; }
+/* design 4 #4: an answer box the header or the sheet would slice loses its frame (its tiles stay) */
+.lesson-stage .kiv-frame { border-color: transparent !important; background: transparent !important; }
+/* design 3 #12: in a short window the sheet leaves room for the answer above it (its body scrolls) */
+@media (max-height: 480px) { .fb { max-height: 62vh; max-height: 62dvh; gap: 8px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); } }
+/* design 3 #2: content running under the sheet fades out instead of being sliced at its edge */
+.fb::before { content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: 24px; background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
+.fb-missed { display: flex; flex-direction: column; gap: 6px; }
+.fb-pairs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.fb-pair { display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; gap: 4px 12px; }
+.fb-pair > .en { grid-column: 3; }
+.fb-right { background: var(--right-bg); border-top-color: var(--right); }
+.fb-close { background: var(--close-bg); border-top-color: var(--close); }
+.fb-wrong { background: var(--wrong-bg); border-top-color: var(--wrong); }
+.fb-body { display: flex; flex-direction: column; gap: 12px; }
+.fb-body > * { flex: none; }
+.fb-state { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: var(--en-h2); line-height: var(--en-h2-lh); outline: none; }
+.fb-state .fb-icon { width: 32px; height: 32px; }
+.fb-right .fb-state { color: var(--right); }
+.fb-close .fb-state { color: var(--close); }
+.fb-wrong .fb-state { color: var(--wrong); }
+.fb-skipped .fb-state { color: var(--ink-2); }
+.fb-answer, .fb-wrote { display: flex; flex-direction: column; gap: 6px; }
+.fb .stack { align-items: flex-start; }
+.fb-line { display: inline-flex; flex-wrap: wrap; align-items: flex-end; padding-bottom: 16px; }   /* room for the ▲ */
+/* design 2 #12: Telugu and its romanization read as one block */
+.fb-line .te, .fb-answer .te, .fb-part .te { line-height: 1.35; padding-block: 0; }
+.fb-answer .stack, .fb-wrote .stack { gap: 2px; }
+.lesson .fb-answer .te.te-xl, .lesson .fb-answer .te.te-lg { line-height: 1.35; padding-block: 0; }   /* the sound sits right under its glyph */
+.fb-answer[data-of="letter"] .stack-row { align-items: center; }
+.fb-answer .rom, .fb-line .rom { margin-top: 2px; }
+.fb-mark { border-radius: 0; border-bottom: 3px solid currentColor; position: relative; padding-inline: 0; }
+.fb-mark::after { content: "▲"; position: absolute; left: 50%; bottom: -15px; transform: translateX(-50%); font-family: var(--font-ui); font-size: .625rem; line-height: 1; }
+.fb-mark-wrong, .fb-mark-close { background: transparent; }
+.fb-mark-wrong { color: var(--wrong); }
+.fb-mark-close { color: var(--close); }
+.fb-parts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+/* design 3 #1: one sentence; a glyph, its romanization and the mark after it never part */
+.fb-part { display: block; line-height: 1.6; }
+.fb-unit { white-space: nowrap; }
+/* design 4 #9: a glyph inside the sentence does not loosen its lines; room for the mark only when there is one */
+.fb-part { line-height: 1.5; }
+.fb-part .te { line-height: 1; }
+.fb-line:not(:has(.fb-mark)) { padding-bottom: 0; }
+.fb-typed { margin: 0; }
+.fb-note { margin: 0; color: var(--ink); }
+.fb-variant { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--line); padding-top: 8px; }
+.fb-variant-label { font-weight: 600; }
+.fb-variant-note { margin: 0; color: var(--ink-2); font-size: var(--en-small); }
+.fb-report { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 48px; }
+.fb-actions { display: flex; justify-content: flex-end; }
+.fb-actions .btn { min-width: 160px; }
+@media (max-width: 480px) { .fb-actions .btn { flex: 1; } }
+.fb-continue.cont-right { background: var(--right); border-color: var(--right); color: var(--on-primary); }
+.fb-continue.cont-close { background: var(--close); border-color: var(--close); color: var(--on-primary); }
+.fb-continue.cont-wrong { background: var(--wrong); border-color: var(--wrong); color: var(--on-primary); }
+
+/* report + leave sheets */
+.rp-backdrop { position: fixed; inset: 0; z-index: 50; display: flex; align-items: flex-end; justify-content: center; background: color-mix(in srgb, var(--ink) 40%, transparent); }
+/* design 2 #7: in dark mode the scrim darkens the page instead of washing it out */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rp-backdrop { background: rgb(0 0 0 / .6); } }
+:root[data-theme="dark"] .rp-backdrop { background: rgb(0 0 0 / .6); }
+.rp {
+  width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; display: flex; flex-direction: column; gap: 12px;
+  padding: 20px 16px; border-radius: 16px 16px 0 0; background: var(--surface); color: var(--ink);
+}
+@media (min-width: 720px) { .rp-backdrop { align-items: center; } .rp { border-radius: 16px; } }
+.rp-title { margin: 0; font-size: var(--en-h2); line-height: var(--en-h2-lh); }
+.rp-body { display: flex; flex-direction: column; gap: 8px; }
+.rp-kinds { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.rp-row { display: flex; align-items: center; gap: 12px; min-height: 48px; cursor: pointer; }
+.rp-row input { width: 20px; height: 20px; accent-color: var(--primary); }
+.rp-text { min-height: 80px; border: 2px solid var(--border); border-radius: 12px; padding: 8px 12px; font: inherit; background: var(--surface); color: var(--ink); }
+.rp-text:focus { border-color: var(--primary); outline: none; }
+.rp-actions { display: flex; justify-content: flex-end; gap: 12px; flex-wrap: wrap; }
+.rp-done { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--right); }
+
+/* summary (DESIGN 7) */
+.lesson-summary { display: flex; flex-direction: column; align-items: center; gap: 20px; padding-block: 16px 24px; text-align: center; }
+.sum-ring-wrap { position: relative; width: 200px; height: 200px; display: grid; place-items: center; }
+.sum-muggu { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--accent); opacity: .25; }
+.muggu-line { fill: none; stroke: currentColor; stroke-width: 2; }
+.muggu-dot { fill: currentColor; }
+.sum-ring { position: absolute; width: 140px; height: 140px; }
+.ring-track { fill: none; stroke: var(--surface-2); stroke-width: 10; }
+.ring-arc { fill: none; stroke: var(--primary); stroke-width: 10; stroke-linecap: round; }
+.sum-fraction { position: relative; margin: 0; font-size: var(--en-h1); line-height: var(--en-h1-lh); font-weight: 700; }
+.sum-stats { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: row; justify-content: center; gap: 12px; width: 100%; }
+.sum-stats li {
+  flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 40px;
+  padding: 12px 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+}
+.sum-icon { width: 24px; height: 24px; color: var(--accent); }
+.sum-num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat-label { white-space: nowrap; font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); }
+.sum-revisit { width: 100%; display: flex; flex-direction: column; gap: 8px; text-align: start; }
+.sum-more { align-self: flex-start; }
+.sum-h2 { margin: 0; font-size: var(--en-h2); line-height: var(--en-h2-lh); }
+.sum-words { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.sum-word { padding: 8px 12px; border: 2px solid var(--border); border-radius: 12px; background: var(--surface); display: flex; flex-direction: column; align-items: flex-start; }
+.sum-word .stack { align-items: flex-start; gap: 2px; }
+/* design 3 #7: Telugu, romanization and English share one left edge, with even gaps */
+.sum-word .tew { justify-content: flex-start; }
+.sum-word .tew-word { align-items: flex-start; }
+.sum-word .tew .rom { text-align: start; }
+.sum-word .en { margin-top: 2px; }
+/* a letter to revisit: glyph and its sound sit together, centred on the play buttons */
+.sum-letter .stack-row { align-items: center; }
+.sum-letter .stack { gap: 0; }
+.lesson-summary .sum-letter .te.te-lg { line-height: 1.35; padding-block: 0; }
+.sum-actions { width: 100%; display: flex; justify-content: center; }
+.sum-actions .btn { min-width: 200px; }

@@ -1,0 +1,126 @@
+/* settings.css: the Settings screen, #/settings (task E14; DESIGN 5, 7). Tokens only. */
+
+.settings { display: grid; gap: 16px; padding-bottom: 24px; }
+.settings .screen-title { margin-bottom: 0; }
+
+.set-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / .06);
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+@media (min-width: 820px) { .set-card { padding: 24px; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .set-card { box-shadow: none; } }
+:root[data-theme="dark"] .set-card { box-shadow: none; }
+
+.set-h2 { font-size: var(--en-h2); line-height: var(--en-h2-lh); font-weight: 600; margin: 0; }
+.set-row { min-width: 0; }
+.set-row + .set-row { border-top: 1px solid var(--line); padding-top: 16px; }
+.set-label { display: block; font-weight: 500; font-size: var(--en-body); line-height: var(--en-body-lh); padding: 0; }
+.set-help {
+  display: block; margin: 2px 0 0; color: var(--ink-2);
+  font-size: var(--en-small); line-height: var(--en-small-lh);
+}
+.set-card, .set-card * { overflow-wrap: anywhere; }   /* English only on this screen */
+
+/* -- choice groups (radio tiles) -- */
+
+fieldset.set-choice { border: 0; margin: 0; padding: 0; min-inline-size: 0; }
+/* a floated legend behaves like a plain heading, so the divider above stays straight */
+fieldset.set-choice > legend { float: left; width: 100%; }
+fieldset.set-choice > legend + * { clear: both; }
+fieldset.set-choice + .set-row, .set-row + fieldset.set-choice { border-top: 1px solid var(--line); padding-top: 16px; }
+.set-options {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) { .set-options { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); } }   /* design 1 #13: one row (3 options; Typing has 2) */
+.set-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  cursor: pointer;
+  min-width: 0;
+}
+.set-option input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.set-dot {
+  flex: none; width: 20px; height: 20px; border-radius: 999px;
+  border: 2px solid var(--border); background: var(--surface);
+}
+.set-option-text { display: grid; min-width: 0; }
+.set-option-label { font-weight: 500; }
+.set-option-sub { color: var(--ink-2); font-size: var(--en-small); line-height: var(--en-small-lh); }
+.set-option:has(input:checked) { border-color: var(--primary); background: var(--primary-bg); }
+.set-option:has(input:checked) .set-dot { border-color: var(--primary); box-shadow: inset 0 0 0 4px var(--surface); background: var(--primary); }
+.set-option:has(input:focus-visible) { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+/* -- switches -- */
+
+.set-switch-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  cursor: pointer;
+}
+.set-switch-text { flex: 1 1 auto; min-width: 0; }
+.set-switch-input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.set-track {
+  position: relative; flex: none;
+  width: 52px; height: 32px; border-radius: 999px;
+  background: var(--surface-2); border: 2px solid var(--border);
+  transition: background 200ms cubic-bezier(.2, .8, .2, 1);
+}
+.set-thumb {
+  position: absolute; top: 3px; left: 3px;
+  width: 22px; height: 22px; border-radius: 999px;
+  background: var(--border);
+  transition: transform 200ms cubic-bezier(.2, .8, .2, 1);
+}
+.set-switch-state { flex: none; min-width: 2em; font-weight: 600; font-size: var(--en-small); color: var(--ink-2); }
+.set-switch-input:checked ~ .set-track { background: var(--primary); border-color: var(--primary); }
+.set-switch-input:checked ~ .set-track .set-thumb { transform: translateX(20px); background: var(--on-primary); }
+.set-switch-input:checked ~ .set-switch-state { color: var(--primary); }
+.set-switch-input:focus-visible ~ .set-track { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+/* -- export / import -- */
+
+.set-actions { display: grid; gap: 8px; justify-items: start; }
+.set-actions .btn { width: 100%; }
+@media (min-width: 480px) { .set-actions .btn { width: auto; } }
+.set-file { position: absolute; opacity: 0; width: 1px; height: 1px; overflow: hidden; }
+.set-file:focus-visible + .set-import { outline: 3px solid var(--primary); outline-offset: 2px; }
+.set-take-row { display: flex; align-items: center; gap: 12px; min-height: 48px; cursor: pointer; }
+.set-take { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.set-check {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 6px; border: 2px solid var(--border); background: var(--surface);
+  color: transparent;
+}
+.set-check .icon { width: 18px; height: 18px; }
+.set-take:checked + .set-check { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
+.set-take:focus-visible + .set-check { outline: 3px solid var(--primary); outline-offset: 2px; }
+.set-status-slot:empty { display: none; }
+.set-status {
+  display: flex; align-items: flex-start; gap: 8px; margin: 0;
+  padding: 12px; border-radius: 12px; background: var(--surface-2); color: var(--ink);
+}
+.set-status-ok .icon { color: var(--right); }
+.set-status-error { background: var(--wrong-bg); }
+.set-status-error .icon { color: var(--wrong); }
+
+@media (prefers-reduced-motion: reduce) {
+  .set-track, .set-thumb { transition: opacity 120ms; }
+}

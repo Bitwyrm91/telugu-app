@@ -1,0 +1,60 @@
+/* speak.css: the speak exercise (task E9; DESIGN 5, 7). Tokens only; no raw colours. */
+
+.speak-prompt { padding: 16px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.speak-prompt .stack-row { justify-content: center; max-width: 100%; }
+.speak-prompt .stack-row > .stack { flex: 0 1 auto; }
+.speak-prompt .stack { max-width: 100%; }
+.speak-prompt .tew { justify-content: center; }
+.speak-panel { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding-bottom: 20px; }
+/* design 3 #5: empty rows take no room (the status stays in the page as a live region) */
+.speak-plays:not(:has(> :not([hidden]))) { display: none; }
+.speak-status:empty {
+  position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.speak-rec-row { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.speak-rec {
+  width: 72px; height: 72px; border-radius: 50%; display: inline-grid; place-items: center; padding: 0;
+  background: var(--primary); color: var(--on-primary); border: 0; border-bottom: 3px solid var(--primary-edge);
+  cursor: pointer;
+}
+.speak-rec .icon { width: 32px; height: 32px; }
+.speak-rec .i-stop { display: none; }
+.speak-rec[aria-pressed="true"] { background: var(--surface); color: var(--wrong); border: 4px solid var(--wrong); }
+.speak-rec[aria-pressed="true"] .i-stop { display: block; }
+.speak-rec[aria-pressed="true"] .i-mic { display: none; }
+.speak-rec:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.speak-rec:disabled { background: var(--surface-2); color: var(--ink-disabled); border-color: var(--surface-2); cursor: default; }
+.speak-rec-label { font-size: var(--en-small); font-weight: 600; color: var(--ink); cursor: pointer; }
+/* design 2 #6: space only when there is something to say */
+.speak-status { margin: 0; min-height: 0; color: var(--ink-2); }
+.speak-status:not(:empty) { min-height: 1.5em; }
+.speak-plays { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.speak-plays .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; }
+.speak-plays .btn .icon { width: 20px; height: 20px; flex: none; }
+.speak-plays .btn[data-playing] { border-color: var(--primary); color: var(--primary); }
+.speak-nomic { width: 100%; }
+.speak-nomic-row { padding: 12px 16px; border-radius: 12px; background: var(--surface-2); color: var(--ink); text-align: left; }
+.speak-nomic-row .icon { width: 24px; height: 24px; flex: none; }
+.speak-rate { order: 0; flex-basis: 100%; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.speak-rate[hidden] { display: none; }
+.speak-rate-q { margin: 0; text-align: center; color: var(--ink-2); }
+.speak-rate-word { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.speak-rate-word .tew { justify-content: center; }
+.speak-actions .speak-again, .speak-actions .speak-good { order: 1; }
+.speak-actions { flex-wrap: wrap; justify-content: center; }
+/* design 3 #5: at every width the two answers sit together, and "Can't speak now" is centred under them */
+.speak-actions .speak-skip.btn-quiet { order: 3; flex: 0 1 auto; min-width: 0; margin-inline: auto; }
+.speak-actions::after { content: ''; order: 2; flex-basis: 100%; height: 0; }
+/* design 4 #7: alone (before a recording) the skip stays in the bottom bar, where it is after one */
+.speak-actions:not(:has(> .btn:not(.speak-skip):not([hidden])))::after { display: none; }
+/* design 1 #11: the two answers stay together in one row */
+@media (max-width: 480px) {
+  .speak-actions .btn:not(.speak-skip) { flex: 1 1 0; min-width: 0; }
+}
+/* design 3 E1: a short screen fits the recorded state without scrolling */
+@media (max-height: 760px) {
+  .speak-prompt { padding: 12px; }
+  .speak-panel { gap: 8px; }
+  .speak-rec { width: 64px; height: 64px; }
+}

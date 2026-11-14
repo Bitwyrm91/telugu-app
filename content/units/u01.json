@@ -1,0 +1,10942 @@
+{
+ "id": "u01",
+ "title": "Hello",
+ "section": 1,
+ "scope": "Whole phrases only, learned by ear; no grammar is taught yet. Polite (-aṇḍi / mīru) forms, as used with a partner's parents and elders; the few plain phrases say who they are for.",
+ "names": {},
+ "bank_avoid": [
+  "పర్వాలేదు",
+  "పరవాలేదు",
+  "ఫర్వాలేదు",
+  "ఫరవాలేదు",
+  "సరే",
+  "సరేనండి",
+  "మంచిది"
+ ],
+ "loan": {
+  "thanks": "thāṅks",
+  "thanx": "thāṅks",
+  "sorry": "sārī",
+  "telugu": "telugu"
+ },
+ "note": [
+  {
+   "t": "h",
+   "spans": [
+    {
+     "s": "Politeness lives in the ending"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "spans": [
+    {
+     "s": "Telugu has no everyday word for \"please\". A request is made polite by the ending "
+    },
+    {
+     "i": "-aṇḍi"
+    },
+    {
+     "s": " on the verb, and you can add "
+    },
+    {
+     "i": "-aṇḍi"
+    },
+    {
+     "s": " to short words too. It fuses with some verbs: "
+    },
+    {
+     "i": "rā"
+    },
+    {
+     "s": " (come) + "
+    },
+    {
+     "i": "-aṇḍi"
+    },
+    {
+     "s": " becomes "
+    },
+    {
+     "i": "raṇḍi"
+    },
+    {
+     "s": ", the first word below. You will often hear and see it with a long final vowel, "
+    },
+    {
+     "i": "-aṇḍī"
+    },
+    {
+     "s": "; it is the same ending. In a question like \"are you well?\" the respect is in a different ending, "
+    },
+    {
+     "i": "-āru"
+    },
+    {
+     "s": ", which goes with "
+    },
+    {
+     "i": "mīru"
+    },
+    {
+     "s": ", the polite \"you\"."
+    }
+   ]
+  },
+  {
+   "t": "item",
+   "id": "u01.randi"
+  },
+  {
+   "t": "item",
+   "id": "u01.avunandi"
+  },
+  {
+   "t": "ul",
+   "items": [
+    [
+     {
+      "s": "With your partner's parents and with elders, use the "
+     },
+     {
+      "i": "-aṇḍi"
+     },
+     {
+      "s": " forms and "
+     },
+     {
+      "i": "mīru"
+     },
+     {
+      "s": " for \"you\"."
+     }
+    ],
+    [
+     {
+      "s": "Yes, no and okay can sound curt to an elder when said bare. Add "
+     },
+     {
+      "i": "-aṇḍi"
+     },
+     {
+      "s": ": "
+     },
+     {
+      "i": "avunaṇḍi"
+     },
+     {
+      "s": ", "
+     },
+     {
+      "i": "kādaṇḍi"
+     },
+     {
+      "s": ", "
+     },
+     {
+      "i": "sarēnaṇḍi"
+     },
+     {
+      "s": "."
+     }
+    ],
+    [
+     {
+      "s": "The goodbye is fine as it is, and warmer with the ending: "
+     },
+     {
+      "i": "veḷḷostānaṇḍi"
+     },
+     {
+      "s": "."
+     }
+    ],
+    [
+     {
+      "s": "A word for \"please\", "
+     },
+     {
+      "i": "dayachēsi"
+     },
+     {
+      "s": ", exists, but it belongs to notices and speeches. In conversation it is rare."
+     }
+    ]
+   ]
+  },
+  {
+   "t": "h",
+   "spans": [
+    {
+     "s": "What people say and what books teach"
+    }
+   ]
+  },
+  {
+   "t": "ul",
+   "items": [
+    [
+     {
+      "s": "For thanks and sorry, people at home say the English words, in a Telugu accent. Within a family, thanks is often not said at all."
+     }
+    ],
+    [
+     {
+      "s": "The Telugu words are formal. They are right for an elder you have just met, and they are what textbooks teach."
+     }
+    ],
+    [
+     {
+      "s": "Textbooks give "
+     },
+     {
+      "i": "śubhōdayam"
+     },
+     {
+      "s": " for \"good morning\". People at home don't say it: "
+     },
+     {
+      "i": "namaskāram"
+     },
+     {
+      "s": " works at any time of day."
+     }
+    ]
+   ]
+  },
+  {
+   "t": "item",
+   "id": "u01.thanks"
+  },
+  {
+   "t": "item",
+   "id": "u01.dhanyavadalu"
+  },
+  {
+   "t": "item",
+   "id": "u01.namaskaram"
+  },
+  {
+   "t": "h",
+   "spans": [
+    {
+     "s": "\"No\" has more than one word"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "spans": [
+    {
+     "s": "The word below only denies what something "
+    },
+    {
+     "i": "is"
+    },
+    {
+     "s": ": \"no, it isn't\", \"no, that's not right\". \"I don't want it\" and \"there isn't any\" are different words, and they come in Units 5 and 7."
+    }
+   ]
+  },
+  {
+   "t": "item",
+   "id": "u01.kadu"
+  },
+  {
+   "t": "h",
+   "spans": [
+    {
+     "s": "Leaving"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "spans": [
+    {
+     "s": "People avoid a bare \"I'm going\": it sounds final. The usual goodbye, said by the person who is leaving, means \"I'll go and come back\"."
+    }
+   ]
+  },
+  {
+   "t": "item",
+   "id": "u01.vellostanu"
+  }
+ ],
+ "note_confidence": "checked",
+ "lessons": [
+  {
+   "id": "u01.l1",
+   "title": "Greetings",
+   "items": [
+    "u01.namaskaram",
+    "u01.bagunnara",
+    "u01.bagunnanu",
+    "u01.miru",
+    "u01.mari-miru"
+   ],
+   "practice": [
+    "u01.s1",
+    "u01.s2",
+    "u01.s3"
+   ],
+   "steps": 18,
+   "secs": 250,
+   "skipped": []
+  },
+  {
+   "id": "u01.l2",
+   "title": "Yes and no",
+   "items": [
+    "u01.avunu",
+    "u01.avunandi",
+    "u01.kadu",
+    "u01.sare",
+    "u01.manchidi"
+   ],
+   "practice": [
+    "u01.s4",
+    "u01.s5"
+   ],
+   "steps": 19,
+   "secs": 246,
+   "skipped": [
+    "u01.avunandi",
+    "u01.manchidi"
+   ]
+  },
+  {
+   "id": "u01.l3",
+   "title": "Thanks and sorry",
+   "items": [
+    "u01.dhanyavadalu",
+    "u01.thanks",
+    "u01.kshaminchandi",
+    "u01.sorry",
+    "u01.parvaledu"
+   ],
+   "practice": [
+    "u01.s6",
+    "u01.s7",
+    "u01.s14"
+   ],
+   "steps": 20,
+   "secs": 266,
+   "skipped": [
+    "u01.thanks",
+    "u01.sorry"
+   ]
+  },
+  {
+   "id": "u01.l4",
+   "title": "When you're stuck",
+   "items": [
+    "u01.konchem",
+    "u01.telugu-konchem",
+    "u01.artham-kaledu",
+    "u01.mellaga",
+    "u01.malli-cheppandi"
+   ],
+   "practice": [
+    "u01.s8",
+    "u01.s9",
+    "u01.s10"
+   ],
+   "steps": 18,
+   "secs": 250,
+   "skipped": []
+  },
+  {
+   "id": "u01.l5",
+   "title": "Coming and going",
+   "items": [
+    "u01.vellostanu",
+    "u01.malli-kaluddam",
+    "u01.jagratta",
+    "u01.randi",
+    "u01.kurchondi"
+   ],
+   "practice": [
+    "u01.s11",
+    "u01.s12",
+    "u01.s13"
+   ],
+   "steps": 20,
+   "secs": 266,
+   "skipped": [
+    "u01.malli-kaluddam",
+    "u01.jagratta"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "u01.namaskaram",
+   "kind": "word",
+   "te": "నమస్కారం",
+   "en": "hello (polite)",
+   "en_alt": [
+    "hello",
+    "greetings",
+    "namaste"
+   ],
+   "te_alt": [
+    "నమస్తే"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "basic-telugu",
+    "ref": "2-5#23"
+   },
+   "note": "Works at any time of day, for arriving and for leaving. Often said with the palms together. You will also hear the shorter namastē, a lot of it in Hyderabad; both are fine.",
+   "similar": [
+    "u01.vellostanu"
+   ],
+   "rom": "namaskāram",
+   "units": [
+    {
+     "te": "న",
+     "rom": "na",
+     "needs": [
+      "na"
+     ]
+    },
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "స్కా",
+     "rom": "skā",
+     "needs": [
+      "cl-ska",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రం",
+     "rom": "ram",
+     "needs": [
+      "ra",
+      "anusvara"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "నమస్కారం",
+     "rom": "namaskāram",
+     "needs": [
+      "na",
+      "ma",
+      "cl-ska",
+      "sign-aa",
+      "ra",
+      "anusvara"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "నమస్తే",
+     "rom": "namastē",
+     "units": [
+      {
+       "te": "న",
+       "rom": "na",
+       "needs": [
+        "na"
+       ]
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "స్తే",
+       "rom": "stē",
+       "needs": [
+        "cl-sta",
+        "sign-ee"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "నమస్కారం"
+    ],
+    [
+     "నమస్తే"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/c818b9b43a21ee8c.f.mp3",
+    "m": "../audio/u01/79de0d097f6d4797.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.bagunnara",
+   "kind": "phrase",
+   "te": "బాగున్నారా?",
+   "en": "how are you? (polite)",
+   "en_alt": [
+    "how are you",
+    "are you well",
+    "are you well?",
+    "are you doing well?",
+    "are you fine",
+    "are you fine?",
+    "are you okay",
+    "are you okay?",
+    "are you ok?",
+    "are you good",
+    "are you good?",
+    "how are you doing",
+    "how are you doing?",
+    "are you doing well",
+    "are you ok",
+    "are you all right",
+    "are you all right?",
+    "are you alright",
+    "are you alright?"
+   ],
+   "te_alt": [
+    "బావున్నారా?",
+    "మీరు బాగున్నారా?",
+    "ఎలా ఉన్నారు?",
+    "మీరు ఎలా ఉన్నారు?"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Word for word: 'are you well?'. The final -ā turns a statement into a yes/no question. You will also hear elā unnāru? ('how are you?'); it is just as common and is answered the same way.",
+   "similar": [
+    "u01.s1"
+   ],
+   "rom": "bāgunnārā?",
+   "units": [
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రా",
+     "rom": "rā",
+     "needs": [
+      "ra",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "?",
+     "rom": "?",
+     "needs": []
+    }
+   ],
+   "tokens": [
+    {
+     "te": "బాగున్నారా",
+     "rom": "bāgunnārā",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "ra"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "బావున్నారా?",
+     "rom": "bāvunnārā?",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రా",
+       "rom": "rā",
+       "needs": [
+        "ra",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "మీరు బాగున్నారా?",
+     "rom": "mīru bāgunnārā?",
+     "units": [
+      {
+       "te": "మీ",
+       "rom": "mī",
+       "needs": [
+        "ma",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రా",
+       "rom": "rā",
+       "needs": [
+        "ra",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "ఎలా ఉన్నారు?",
+     "rom": "elā unnāru?",
+     "units": [
+      {
+       "te": "ఎ",
+       "rom": "e",
+       "needs": [
+        "e"
+       ]
+      },
+      {
+       "te": "లా",
+       "rom": "lā",
+       "needs": [
+        "la",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఉ",
+       "rom": "u",
+       "needs": [
+        "u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "మీరు ఎలా ఉన్నారు?",
+     "rom": "mīru elā unnāru?",
+     "units": [
+      {
+       "te": "మీ",
+       "rom": "mī",
+       "needs": [
+        "ma",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఎ",
+       "rom": "e",
+       "needs": [
+        "e"
+       ]
+      },
+      {
+       "te": "లా",
+       "rom": "lā",
+       "needs": [
+        "la",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఉ",
+       "rom": "u",
+       "needs": [
+        "u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "బాగున్నారా"
+    ],
+    [
+     "బావున్నారా"
+    ],
+    [
+     "మీరు",
+     "బాగున్నారా"
+    ],
+    [
+     "ఎలా",
+     "ఉన్నారు"
+    ],
+    [
+     "మీరు",
+     "ఎలా",
+     "ఉన్నారు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/e34c9a1f651a8294.f.mp3",
+    "m": "../audio/u01/975d4248e1229aa8.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.bagunnanu",
+   "kind": "phrase",
+   "te": "బాగున్నాను",
+   "en": "I'm fine",
+   "en_alt": [
+    "I am fine",
+    "I'm well",
+    "I am well",
+    "I'm good",
+    "I am good",
+    "I'm doing well",
+    "I'm okay",
+    "I am okay",
+    "I'm doing fine",
+    "I'm ok",
+    "I'm alright",
+    "I'm all right",
+    "fine"
+   ],
+   "te_alt": [
+    "బావున్నాను",
+    "బాగున్నా",
+    "నేను బాగున్నాను",
+    "బాగున్నానండి",
+    "నేను బాగున్నానండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "To an elder you can add the respectful ending: bāgunnānaṇḍi.",
+   "similar": [
+    "u01.manchidi",
+    "u01.parvaledu"
+   ],
+   "rom": "bāgunnānu",
+   "units": [
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "బాగున్నాను",
+     "rom": "bāgunnānu",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "na"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "బావున్నాను",
+     "rom": "bāvunnānu",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "బాగున్నా",
+     "rom": "bāgunnā",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "నేను బాగున్నాను",
+     "rom": "nēnu bāgunnānu",
+     "units": [
+      {
+       "te": "నే",
+       "rom": "nē",
+       "needs": [
+        "na",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "బాగున్నానండి",
+     "rom": "bāgunnānaṇḍi",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "నేను బాగున్నానండి",
+     "rom": "nēnu bāgunnānaṇḍi",
+     "units": [
+      {
+       "te": "నే",
+       "rom": "nē",
+       "needs": [
+        "na",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "బాగున్నాను"
+    ],
+    [
+     "బావున్నాను"
+    ],
+    [
+     "బాగున్నా"
+    ],
+    [
+     "నేను",
+     "బాగున్నాను"
+    ],
+    [
+     "బాగున్నానండి"
+    ],
+    [
+     "నేను",
+     "బాగున్నానండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/c17a02adbce86c7d.f.mp3",
+    "m": "../audio/u01/1ae54d0259408845.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.miru",
+   "kind": "word",
+   "te": "మీరు",
+   "en": "you (polite)",
+   "en_alt": [
+    "you"
+   ],
+   "te_alt": [],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "basic-telugu",
+    "ref": "2-2#1"
+   },
+   "note": "Used for one person you respect, and for any group of people. The close-friend 'you' comes in Unit 4.",
+   "similar": [],
+   "rom": "mīru",
+   "units": [
+    {
+     "te": "మీ",
+     "rom": "mī",
+     "needs": [
+      "ma",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": "రు",
+     "rom": "ru",
+     "needs": [
+      "ra",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మీరు",
+     "rom": "mīru",
+     "needs": [
+      "ma",
+      "sign-ii",
+      "ra",
+      "sign-u"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [],
+   "forms": [],
+   "orders": [
+    [
+     "మీరు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/bd360f06aff8b626.f.mp3",
+    "m": "../audio/u01/cbf0f7bf6737d53a.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.mari-miru",
+   "kind": "phrase",
+   "te": "మరి మీరు?",
+   "en": "and you? (polite)",
+   "en_alt": [
+    "and you",
+    "and you?",
+    "what about you?",
+    "how about you?"
+   ],
+   "te_alt": [],
+   "words": [
+    "మరి=and, then",
+    "మీరు=you (polite)"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "mari mīru?",
+   "units": [
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "రి",
+     "rom": "ri",
+     "needs": [
+      "ra",
+      "sign-i"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మీ",
+     "rom": "mī",
+     "needs": [
+      "ma",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": "రు",
+     "rom": "ru",
+     "needs": [
+      "ra",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "?",
+     "rom": "?",
+     "needs": []
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మరి",
+     "rom": "mari",
+     "needs": [
+      "ma",
+      "ra",
+      "sign-i"
+     ],
+     "hint": "and, then"
+    },
+    {
+     "te": "మీరు",
+     "rom": "mīru",
+     "needs": [
+      "ma",
+      "sign-ii",
+      "ra",
+      "sign-u"
+     ],
+     "hint": "you (polite)"
+    }
+   ],
+   "alts": [],
+   "forms": [],
+   "orders": [
+    [
+     "మరి",
+     "మీరు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/c1d362f573155f95.f.mp3",
+    "m": "../audio/u01/d9ec68cbc2b301e7.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s1",
+   "kind": "sentence",
+   "te": "మీరు బాగున్నారా?",
+   "en": "Are you well? (polite)",
+   "en_alt": [
+    "are you well",
+    "are you well?",
+    "how are you",
+    "how are you?",
+    "are you doing well?",
+    "are you fine",
+    "are you fine?",
+    "are you okay",
+    "are you okay?",
+    "are you ok?",
+    "are you good",
+    "are you good?",
+    "how are you doing",
+    "how are you doing?",
+    "are you doing well",
+    "are you ok",
+    "are you all right",
+    "are you all right?",
+    "are you alright",
+    "are you alright?"
+   ],
+   "te_alt": [
+    "బాగున్నారా మీరు?",
+    "బాగున్నారా?"
+   ],
+   "words": [
+    "మీరు=you (polite)",
+    "బాగున్నారా=are (you) well?"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "tatoeba",
+    "ref": "3534751"
+   },
+   "note": null,
+   "similar": [
+    "u01.bagunnara"
+   ],
+   "rom": "mīru bāgunnārā?",
+   "units": [
+    {
+     "te": "మీ",
+     "rom": "mī",
+     "needs": [
+      "ma",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": "రు",
+     "rom": "ru",
+     "needs": [
+      "ra",
+      "sign-u"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రా",
+     "rom": "rā",
+     "needs": [
+      "ra",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "?",
+     "rom": "?",
+     "needs": []
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మీరు",
+     "rom": "mīru",
+     "needs": [
+      "ma",
+      "sign-ii",
+      "ra",
+      "sign-u"
+     ],
+     "hint": "you (polite)"
+    },
+    {
+     "te": "బాగున్నారా",
+     "rom": "bāgunnārā",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "ra"
+     ],
+     "hint": "are (you) well?"
+    }
+   ],
+   "alts": [
+    {
+     "te": "బాగున్నారా మీరు?",
+     "rom": "bāgunnārā mīru?",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రా",
+       "rom": "rā",
+       "needs": [
+        "ra",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మీ",
+       "rom": "mī",
+       "needs": [
+        "ma",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "బాగున్నారా?",
+     "rom": "bāgunnārā?",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రా",
+       "rom": "rā",
+       "needs": [
+        "ra",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "మీరు",
+     "బాగున్నారా"
+    ],
+    [
+     "బాగున్నారా",
+     "మీరు"
+    ],
+    [
+     "బాగున్నారా"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/5463f6654a3a4aa0.f.mp3",
+    "m": "../audio/u01/17bf986d1a35fbc5.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.s2",
+   "kind": "sentence",
+   "te": "నమస్కారం, బాగున్నారా?",
+   "en": "Hello, how are you?",
+   "en_alt": [
+    "hello how are you",
+    "hello, are you well?",
+    "hello, are you fine?",
+    "hello, are you okay?",
+    "hello, are you good?",
+    "hello, how are you doing?",
+    "hello, are you doing well?"
+   ],
+   "te_alt": [
+    "నమస్కారం, మీరు బాగున్నారా?",
+    "నమస్కారం, ఎలా ఉన్నారు?",
+    "నమస్కారం, మీరు ఎలా ఉన్నారు?",
+    "నమస్తే, బాగున్నారా?"
+   ],
+   "words": [
+    "నమస్కారం=hello",
+    "బాగున్నారా=how are you?"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "namaskāram, bāgunnārā?",
+   "units": [
+    {
+     "te": "న",
+     "rom": "na",
+     "needs": [
+      "na"
+     ]
+    },
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "స్కా",
+     "rom": "skā",
+     "needs": [
+      "cl-ska",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రం",
+     "rom": "ram",
+     "needs": [
+      "ra",
+      "anusvara"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రా",
+     "rom": "rā",
+     "needs": [
+      "ra",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "?",
+     "rom": "?",
+     "needs": []
+    }
+   ],
+   "tokens": [
+    {
+     "te": "నమస్కారం",
+     "rom": "namaskāram",
+     "needs": [
+      "na",
+      "ma",
+      "cl-ska",
+      "sign-aa",
+      "ra",
+      "anusvara"
+     ],
+     "hint": "hello"
+    },
+    {
+     "te": "బాగున్నారా",
+     "rom": "bāgunnārā",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "ra"
+     ],
+     "hint": "how are you?"
+    }
+   ],
+   "alts": [
+    {
+     "te": "నమస్కారం, మీరు బాగున్నారా?",
+     "rom": "namaskāram, mīru bāgunnārā?",
+     "units": [
+      {
+       "te": "న",
+       "rom": "na",
+       "needs": [
+        "na"
+       ]
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "స్కా",
+       "rom": "skā",
+       "needs": [
+        "cl-ska",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రం",
+       "rom": "ram",
+       "needs": [
+        "ra",
+        "anusvara"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మీ",
+       "rom": "mī",
+       "needs": [
+        "ma",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రా",
+       "rom": "rā",
+       "needs": [
+        "ra",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "నమస్కారం, ఎలా ఉన్నారు?",
+     "rom": "namaskāram, elā unnāru?",
+     "units": [
+      {
+       "te": "న",
+       "rom": "na",
+       "needs": [
+        "na"
+       ]
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "స్కా",
+       "rom": "skā",
+       "needs": [
+        "cl-ska",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రం",
+       "rom": "ram",
+       "needs": [
+        "ra",
+        "anusvara"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఎ",
+       "rom": "e",
+       "needs": [
+        "e"
+       ]
+      },
+      {
+       "te": "లా",
+       "rom": "lā",
+       "needs": [
+        "la",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఉ",
+       "rom": "u",
+       "needs": [
+        "u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "నమస్కారం, మీరు ఎలా ఉన్నారు?",
+     "rom": "namaskāram, mīru elā unnāru?",
+     "units": [
+      {
+       "te": "న",
+       "rom": "na",
+       "needs": [
+        "na"
+       ]
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "స్కా",
+       "rom": "skā",
+       "needs": [
+        "cl-ska",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రం",
+       "rom": "ram",
+       "needs": [
+        "ra",
+        "anusvara"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మీ",
+       "rom": "mī",
+       "needs": [
+        "ma",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఎ",
+       "rom": "e",
+       "needs": [
+        "e"
+       ]
+      },
+      {
+       "te": "లా",
+       "rom": "lā",
+       "needs": [
+        "la",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ఉ",
+       "rom": "u",
+       "needs": [
+        "u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    },
+    {
+     "te": "నమస్తే, బాగున్నారా?",
+     "rom": "namastē, bāgunnārā?",
+     "units": [
+      {
+       "te": "న",
+       "rom": "na",
+       "needs": [
+        "na"
+       ]
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "స్తే",
+       "rom": "stē",
+       "needs": [
+        "cl-sta",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రా",
+       "rom": "rā",
+       "needs": [
+        "ra",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "నమస్కారం",
+     "బాగున్నారా"
+    ],
+    [
+     "నమస్కారం",
+     "మీరు",
+     "బాగున్నారా"
+    ],
+    [
+     "నమస్కారం",
+     "ఎలా",
+     "ఉన్నారు"
+    ],
+    [
+     "నమస్కారం",
+     "మీరు",
+     "ఎలా",
+     "ఉన్నారు"
+    ],
+    [
+     "నమస్తే",
+     "బాగున్నారా"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/3b70230b7ea9d574.f.mp3",
+    "m": "../audio/u01/65c0593fea8d705f.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s3",
+   "kind": "sentence",
+   "te": "బాగున్నాను, మరి మీరు?",
+   "en": "I'm fine, and you?",
+   "en_alt": [
+    "I am fine, and you?",
+    "I'm well, and you?",
+    "I'm good, and you?",
+    "I'm fine, what about you?",
+    "I am well, and you?",
+    "I'm fine, how about you?",
+    "I'm fine, and how are you?",
+    "I'm okay, and you?",
+    "I'm fine, you?",
+    "I am fine, you?",
+    "I'm good, you?",
+    "I'm well, you?",
+    "I'm okay, you?",
+    "I am fine, what about you?",
+    "I am fine, how about you?",
+    "I'm good, how about you?",
+    "I'm good, what about you?",
+    "I'm well, how about you?",
+    "I am good, and you?",
+    "I am okay, and you?",
+    "fine, and you?",
+    "fine, you?"
+   ],
+   "te_alt": [
+    "బాగున్నాను, మీరు?"
+   ],
+   "words": [
+    "బాగున్నాను=I'm fine",
+    "మరి=and, then",
+    "మీరు=you (polite)"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "bāgunnānu, mari mīru?",
+   "units": [
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "రి",
+     "rom": "ri",
+     "needs": [
+      "ra",
+      "sign-i"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మీ",
+     "rom": "mī",
+     "needs": [
+      "ma",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": "రు",
+     "rom": "ru",
+     "needs": [
+      "ra",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "?",
+     "rom": "?",
+     "needs": []
+    }
+   ],
+   "tokens": [
+    {
+     "te": "బాగున్నాను",
+     "rom": "bāgunnānu",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "na"
+     ],
+     "hint": "I'm fine"
+    },
+    {
+     "te": "మరి",
+     "rom": "mari",
+     "needs": [
+      "ma",
+      "ra",
+      "sign-i"
+     ],
+     "hint": "and, then"
+    },
+    {
+     "te": "మీరు",
+     "rom": "mīru",
+     "needs": [
+      "ma",
+      "sign-ii",
+      "ra",
+      "sign-u"
+     ],
+     "hint": "you (polite)"
+    }
+   ],
+   "alts": [
+    {
+     "te": "బాగున్నాను, మీరు?",
+     "rom": "bāgunnānu, mīru?",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మీ",
+       "rom": "mī",
+       "needs": [
+        "ma",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": "రు",
+       "rom": "ru",
+       "needs": [
+        "ra",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "?",
+       "rom": "?",
+       "needs": []
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "బాగున్నాను",
+     "మరి",
+     "మీరు"
+    ],
+    [
+     "బాగున్నాను",
+     "మీరు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/0170bc24e2b12689.f.mp3",
+    "m": "../audio/u01/51b4a4518e3e5ea0.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.avunu",
+   "kind": "word",
+   "te": "అవును",
+   "en": "yes",
+   "en_alt": [
+    "yeah",
+    "yes it is",
+    "that's right"
+   ],
+   "te_alt": [
+    "ఔను",
+    "అవునండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "basic-telugu",
+    "ref": "3-3#18"
+   },
+   "note": null,
+   "similar": [
+    "u01.avunandi"
+   ],
+   "rom": "avunu",
+   "units": [
+    {
+     "te": "అ",
+     "rom": "a",
+     "needs": [
+      "a"
+     ]
+    },
+    {
+     "te": "వు",
+     "rom": "vu",
+     "needs": [
+      "va",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "అవును",
+     "rom": "avunu",
+     "needs": [
+      "a",
+      "va",
+      "sign-u",
+      "na"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "ఔను",
+     "rom": "aunu",
+     "units": [
+      {
+       "te": "ఔ",
+       "rom": "au",
+       "needs": [
+        "au"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "అవునండి",
+     "rom": "avunaṇḍi",
+     "units": [
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "అవును"
+    ],
+    [
+     "ఔను"
+    ],
+    [
+     "అవునండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/a0509ad66c1c5cee.f.mp3",
+    "m": "../audio/u01/4b5bac492049be21.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.avunandi",
+   "kind": "word",
+   "te": "అవునండి",
+   "en": "yes (respectful)",
+   "en_alt": [
+    "yes",
+    "yes sir",
+    "yes ma'am",
+    "yes, sir",
+    "yes, ma'am"
+   ],
+   "te_alt": [
+    "అవునండీ",
+    "ఔనండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "'Yes' with the respectful ending -aṇḍi. This is the one to use with elders.",
+   "similar": [
+    "u01.avunu"
+   ],
+   "rom": "avunaṇḍi",
+   "units": [
+    {
+     "te": "అ",
+     "rom": "a",
+     "needs": [
+      "a"
+     ]
+    },
+    {
+     "te": "వు",
+     "rom": "vu",
+     "needs": [
+      "va",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "నం",
+     "rom": "naṇ",
+     "needs": [
+      "na",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "అవునండి",
+     "rom": "avunaṇḍi",
+     "needs": [
+      "a",
+      "va",
+      "sign-u",
+      "na",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "అవునండీ",
+     "rom": "avunaṇḍī",
+     "units": [
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డీ",
+       "rom": "ḍī",
+       "needs": [
+        "dda",
+        "sign-ii"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఔనండి",
+     "rom": "aunaṇḍi",
+     "units": [
+      {
+       "te": "ఔ",
+       "rom": "au",
+       "needs": [
+        "au"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "అవునండి"
+    ],
+    [
+     "అవునండీ"
+    ],
+    [
+     "ఔనండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/4e9ebcaad1f3bde8.f.mp3",
+    "m": "../audio/u01/1992bf15083a6eb1.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.kadu",
+   "kind": "word",
+   "te": "కాదు",
+   "en": "no, it isn't",
+   "en_alt": [
+    "no",
+    "it isn't",
+    "it is not",
+    "no, it is not",
+    "not so",
+    "that's not right"
+   ],
+   "te_alt": [
+    "కాదండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Only denies what something is. 'I don't want' and 'there isn't' are other words (Units 5 and 7).",
+   "similar": [],
+   "rom": "kādu",
+   "units": [
+    {
+     "te": "కా",
+     "rom": "kā",
+     "needs": [
+      "ka",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "దు",
+     "rom": "du",
+     "needs": [
+      "da",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "కాదు",
+     "rom": "kādu",
+     "needs": [
+      "ka",
+      "sign-aa",
+      "da",
+      "sign-u"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "కాదండి",
+     "rom": "kādaṇḍi",
+     "units": [
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [
+    {
+     "te": "కాదండి",
+     "en": "no (respectful)",
+     "rom": "kādaṇḍi",
+     "units": [
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ],
+     "audio": {
+      "f": "../audio/u01/fc6205caa5e30732.f.mp3",
+      "m": "../audio/u01/66ebce2d70dd5058.m.mp3"
+     },
+     "confidence": "checked"
+    }
+   ],
+   "orders": [
+    [
+     "కాదు"
+    ],
+    [
+     "కాదండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/2976442da02896c8.f.mp3",
+    "m": "../audio/u01/b1d91cd7eb240467.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.sare",
+   "kind": "word",
+   "te": "సరే",
+   "en": "okay",
+   "en_alt": [
+    "ok",
+    "OK",
+    "all right",
+    "alright",
+    "right",
+    "fine"
+   ],
+   "te_alt": [
+    "సరేనండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "basic-telugu",
+    "ref": "7-3#53"
+   },
+   "note": null,
+   "similar": [
+    "u01.manchidi",
+    "u01.parvaledu",
+    "u01.s5"
+   ],
+   "rom": "sarē",
+   "units": [
+    {
+     "te": "స",
+     "rom": "sa",
+     "needs": [
+      "sa"
+     ]
+    },
+    {
+     "te": "రే",
+     "rom": "rē",
+     "needs": [
+      "ra",
+      "sign-ee"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "సరే",
+     "rom": "sarē",
+     "needs": [
+      "sa",
+      "ra",
+      "sign-ee"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "సరేనండి",
+     "rom": "sarēnaṇḍi",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [
+    {
+     "te": "సరేనండి",
+     "en": "okay (respectful)",
+     "rom": "sarēnaṇḍi",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ],
+     "audio": {
+      "f": "../audio/u01/935a863847106ab3.f.mp3",
+      "m": "../audio/u01/0face9956c2278d0.m.mp3"
+     },
+     "confidence": "checked"
+    }
+   ],
+   "orders": [
+    [
+     "సరే"
+    ],
+    [
+     "సరేనండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/50290acd742bbda8.f.mp3",
+    "m": "../audio/u01/08de37d643578d58.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.manchidi",
+   "kind": "word",
+   "te": "మంచిది",
+   "en": "good, fine",
+   "en_alt": [
+    "good",
+    "fine",
+    "that's good",
+    "very well",
+    "that is good"
+   ],
+   "te_alt": [
+    "మంచిదండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Said to approve of a plan or of news: 'good', 'that's fine then'.",
+   "similar": [
+    "u01.bagunnanu",
+    "u01.parvaledu",
+    "u01.s5",
+    "u01.sare"
+   ],
+   "rom": "mañchidi",
+   "units": [
+    {
+     "te": "మం",
+     "rom": "mañ",
+     "needs": [
+      "ma",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చి",
+     "rom": "chi",
+     "needs": [
+      "cha",
+      "sign-i"
+     ]
+    },
+    {
+     "te": "ది",
+     "rom": "di",
+     "needs": [
+      "da",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మంచిది",
+     "rom": "mañchidi",
+     "needs": [
+      "ma",
+      "anusvara",
+      "cha",
+      "sign-i",
+      "da"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "మంచిదండి",
+     "rom": "mañchidaṇḍi",
+     "units": [
+      {
+       "te": "మం",
+       "rom": "mañ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చి",
+       "rom": "chi",
+       "needs": [
+        "cha",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "మంచిది"
+    ],
+    [
+     "మంచిదండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/1f4b083b58d258d1.f.mp3",
+    "m": "../audio/u01/234ebc54641aab8a.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s4",
+   "kind": "sentence",
+   "te": "అవునండి, బాగున్నాను",
+   "en": "Yes, I'm fine (respectful)",
+   "en_alt": [
+    "yes, I'm fine",
+    "yes, I am fine",
+    "yes, I'm well",
+    "yes, I'm good",
+    "yeah, I'm fine",
+    "yes, I'm okay",
+    "yes, I am okay",
+    "yes, I am well",
+    "yes, fine",
+    "yeah, I'm good"
+   ],
+   "te_alt": [
+    "అవునండీ, బాగున్నాను",
+    "ఔనండి, బాగున్నాను",
+    "అవునండి, బాగున్నానండి",
+    "అవునండి, నేను బాగున్నాను"
+   ],
+   "words": [
+    "అవునండి=yes (respectful)",
+    "బాగున్నాను=I'm fine"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Many people answer with just the second word. The yes is not wrong; it is a little formal.",
+   "similar": [],
+   "rom": "avunaṇḍi, bāgunnānu",
+   "units": [
+    {
+     "te": "అ",
+     "rom": "a",
+     "needs": [
+      "a"
+     ]
+    },
+    {
+     "te": "వు",
+     "rom": "vu",
+     "needs": [
+      "va",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "నం",
+     "rom": "naṇ",
+     "needs": [
+      "na",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "అవునండి",
+     "rom": "avunaṇḍi",
+     "needs": [
+      "a",
+      "va",
+      "sign-u",
+      "na",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "yes (respectful)"
+    },
+    {
+     "te": "బాగున్నాను",
+     "rom": "bāgunnānu",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "na"
+     ],
+     "hint": "I'm fine"
+    }
+   ],
+   "alts": [
+    {
+     "te": "అవునండీ, బాగున్నాను",
+     "rom": "avunaṇḍī, bāgunnānu",
+     "units": [
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డీ",
+       "rom": "ḍī",
+       "needs": [
+        "dda",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఔనండి, బాగున్నాను",
+     "rom": "aunaṇḍi, bāgunnānu",
+     "units": [
+      {
+       "te": "ఔ",
+       "rom": "au",
+       "needs": [
+        "au"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "అవునండి, బాగున్నానండి",
+     "rom": "avunaṇḍi, bāgunnānaṇḍi",
+     "units": [
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "అవునండి, నేను బాగున్నాను",
+     "rom": "avunaṇḍi, nēnu bāgunnānu",
+     "units": [
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "వు",
+       "rom": "vu",
+       "needs": [
+        "va",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "నే",
+       "rom": "nē",
+       "needs": [
+        "na",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "అవునండి",
+     "బాగున్నాను"
+    ],
+    [
+     "అవునండీ",
+     "బాగున్నాను"
+    ],
+    [
+     "ఔనండి",
+     "బాగున్నాను"
+    ],
+    [
+     "అవునండి",
+     "బాగున్నానండి"
+    ],
+    [
+     "అవునండి",
+     "నేను",
+     "బాగున్నాను"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/fea3d29e573a17e3.f.mp3",
+    "m": "../audio/u01/e3ed1de7cd8c1334.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s5",
+   "kind": "sentence",
+   "te": "సరేనండి, మంచిది",
+   "en": "Okay, good (respectful)",
+   "en_alt": [
+    "okay, good",
+    "okay, fine",
+    "ok, good",
+    "all right, good",
+    "okay, that's good",
+    "ok, fine",
+    "okay, it's good",
+    "ok, it's good"
+   ],
+   "te_alt": [
+    "సరేనండీ, మంచిది"
+   ],
+   "words": [
+    "సరేనండి=okay (respectful)",
+    "మంచిది=good, fine"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "sarē with the respectful ending. Between sarē and -aṇḍi an n slips in: sarēnaṇḍi.",
+   "similar": [
+    "u01.manchidi",
+    "u01.sare"
+   ],
+   "rom": "sarēnaṇḍi, mañchidi",
+   "units": [
+    {
+     "te": "స",
+     "rom": "sa",
+     "needs": [
+      "sa"
+     ]
+    },
+    {
+     "te": "రే",
+     "rom": "rē",
+     "needs": [
+      "ra",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": "నం",
+     "rom": "naṇ",
+     "needs": [
+      "na",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మం",
+     "rom": "mañ",
+     "needs": [
+      "ma",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చి",
+     "rom": "chi",
+     "needs": [
+      "cha",
+      "sign-i"
+     ]
+    },
+    {
+     "te": "ది",
+     "rom": "di",
+     "needs": [
+      "da",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "సరేనండి",
+     "rom": "sarēnaṇḍi",
+     "needs": [
+      "sa",
+      "ra",
+      "sign-ee",
+      "na",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "okay (respectful)"
+    },
+    {
+     "te": "మంచిది",
+     "rom": "mañchidi",
+     "needs": [
+      "ma",
+      "anusvara",
+      "cha",
+      "sign-i",
+      "da"
+     ],
+     "hint": "good, fine"
+    }
+   ],
+   "alts": [
+    {
+     "te": "సరేనండీ, మంచిది",
+     "rom": "sarēnaṇḍī, mañchidi",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డీ",
+       "rom": "ḍī",
+       "needs": [
+        "dda",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మం",
+       "rom": "mañ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చి",
+       "rom": "chi",
+       "needs": [
+        "cha",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "సరేనండి",
+     "మంచిది"
+    ],
+    [
+     "సరేనండీ",
+     "మంచిది"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/bc9da4608ee65730.f.mp3",
+    "m": "../audio/u01/1809a6db7e8b4ef2.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.dhanyavadalu",
+   "kind": "word",
+   "te": "ధన్యవాదాలు",
+   "en": "thank you (formal)",
+   "en_alt": [
+    "thank you",
+    "thanks",
+    "many thanks"
+   ],
+   "te_alt": [
+    "ధన్యవాదాలండి",
+    "ధన్యవాదములు"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Formal. Right for an elder you have just met, a speech, or a letter. At home people say the everyday word.",
+   "similar": [
+    "u01.thanks"
+   ],
+   "rom": "dhanyavādālu",
+   "units": [
+    {
+     "te": "ధ",
+     "rom": "dha",
+     "needs": [
+      "dha"
+     ]
+    },
+    {
+     "te": "న్య",
+     "rom": "nya",
+     "needs": [
+      "cl-nya"
+     ]
+    },
+    {
+     "te": "వా",
+     "rom": "vā",
+     "needs": [
+      "va",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "దా",
+     "rom": "dā",
+     "needs": [
+      "da",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "లు",
+     "rom": "lu",
+     "needs": [
+      "la",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "ధన్యవాదాలు",
+     "rom": "dhanyavādālu",
+     "needs": [
+      "dha",
+      "cl-nya",
+      "va",
+      "sign-aa",
+      "da",
+      "la",
+      "sign-u"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "ధన్యవాదాలండి",
+     "rom": "dhanyavādālaṇḍi",
+     "units": [
+      {
+       "te": "ధ",
+       "rom": "dha",
+       "needs": [
+        "dha"
+       ]
+      },
+      {
+       "te": "న్య",
+       "rom": "nya",
+       "needs": [
+        "cl-nya"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "దా",
+       "rom": "dā",
+       "needs": [
+        "da",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లం",
+       "rom": "laṇ",
+       "needs": [
+        "la",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ధన్యవాదములు",
+     "rom": "dhanyavādamulu",
+     "units": [
+      {
+       "te": "ధ",
+       "rom": "dha",
+       "needs": [
+        "dha"
+       ]
+      },
+      {
+       "te": "న్య",
+       "rom": "nya",
+       "needs": [
+        "cl-nya"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ద",
+       "rom": "da",
+       "needs": [
+        "da"
+       ]
+      },
+      {
+       "te": "ము",
+       "rom": "mu",
+       "needs": [
+        "ma",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "ధన్యవాదాలు"
+    ],
+    [
+     "ధన్యవాదాలండి"
+    ],
+    [
+     "ధన్యవాదములు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/0b7dc4e0fd58efca.f.mp3",
+    "m": "../audio/u01/ca6f5549ed12a0f5.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.thanks",
+   "kind": "word",
+   "te": "థాంక్స్",
+   "en": "thanks (everyday)",
+   "en_alt": [
+    "thanks",
+    "thank you"
+   ],
+   "te_alt": [
+    "థ్యాంక్స్"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": {
+    "te": "ధన్యవాదాలు",
+    "note": "Writing and formal speech use the Telugu word; everyday speech uses the English one."
+   },
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "The English word, said the Telugu way. This is what most people say day to day.",
+   "similar": [
+    "u01.dhanyavadalu"
+   ],
+   "rom": "thāṅks",
+   "units": [
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "థ్యాంక్స్",
+     "rom": "thyāṅks",
+     "units": [
+      {
+       "te": "థ్యాంక్స్",
+       "rom": "thyāṅks",
+       "needs": [
+        "tha",
+        "cl-yya",
+        "sign-aa",
+        "anusvara",
+        "cl-ksa",
+        "virama"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "థాంక్స్"
+    ],
+    [
+     "థ్యాంక్స్"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/32d12bde830edd86.f.mp3",
+    "m": "../audio/u01/7610aceb4e1c9939.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.kshaminchandi",
+   "kind": "word",
+   "te": "క్షమించండి",
+   "en": "sorry, pardon me (formal)",
+   "en_alt": [
+    "sorry",
+    "I'm sorry",
+    "I am sorry",
+    "pardon me",
+    "forgive me",
+    "please forgive me",
+    "pardon"
+   ],
+   "te_alt": [],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Word for word: 'please forgive'. A formal apology. It is not normally used to get someone's attention.",
+   "similar": [
+    "u01.sorry"
+   ],
+   "rom": "kṣamiñchaṇḍi",
+   "units": [
+    {
+     "te": "క్ష",
+     "rom": "kṣa",
+     "needs": [
+      "cl-ksha"
+     ]
+    },
+    {
+     "te": "మిం",
+     "rom": "miñ",
+     "needs": [
+      "ma",
+      "sign-i",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చం",
+     "rom": "chaṇ",
+     "needs": [
+      "cha",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "క్షమించండి",
+     "rom": "kṣamiñchaṇḍi",
+     "needs": [
+      "cl-ksha",
+      "ma",
+      "sign-i",
+      "anusvara",
+      "cha",
+      "dda"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [],
+   "forms": [],
+   "orders": [
+    [
+     "క్షమించండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/c0761162403a610d.f.mp3",
+    "m": "../audio/u01/cfe2e2f3ff2815e9.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.sorry",
+   "kind": "word",
+   "te": "సారీ",
+   "en": "sorry (everyday)",
+   "en_alt": [
+    "sorry"
+   ],
+   "te_alt": [],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": {
+    "te": "క్షమించండి",
+    "note": "Writing and formal speech use the Telugu word; everyday speech uses the English one."
+   },
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [
+    "u01.kshaminchandi"
+   ],
+   "rom": "sārī",
+   "units": [
+    {
+     "te": "సా",
+     "rom": "sā",
+     "needs": [
+      "sa",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రీ",
+     "rom": "rī",
+     "needs": [
+      "ra",
+      "sign-ii"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "సారీ",
+     "rom": "sārī",
+     "needs": [
+      "sa",
+      "sign-aa",
+      "ra",
+      "sign-ii"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [],
+   "forms": [],
+   "orders": [
+    [
+     "సారీ"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/cdc0c5421dd94394.f.mp3",
+    "m": "../audio/u01/8a7d569df94f0739.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.parvaledu",
+   "kind": "word",
+   "te": "పర్వాలేదు",
+   "en": "it's okay, no problem",
+   "en_alt": [
+    "it's okay",
+    "no problem",
+    "it's fine",
+    "never mind",
+    "it doesn't matter",
+    "that's okay",
+    "it's all right",
+    "not bad",
+    "you're welcome",
+    "no worries"
+   ],
+   "te_alt": [
+    "పరవాలేదు",
+    "ఫర్వాలేదు",
+    "ఫరవాలేదు",
+    "పర్వాలేదండి",
+    "పరవాలేదండి",
+    "ఫర్వాలేదండి",
+    "ఫరవాలేదండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "The usual answer to 'sorry' and to 'thanks'. You will see it spelled several ways; all are the same word.",
+   "similar": [
+    "u01.bagunnanu",
+    "u01.manchidi",
+    "u01.sare"
+   ],
+   "rom": "parvālēdu",
+   "units": [
+    {
+     "te": "ప",
+     "rom": "pa",
+     "needs": [
+      "pa"
+     ]
+    },
+    {
+     "te": "ర్వా",
+     "rom": "rvā",
+     "needs": [
+      "ra",
+      "cl-vva",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "లే",
+     "rom": "lē",
+     "needs": [
+      "la",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": "దు",
+     "rom": "du",
+     "needs": [
+      "da",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "పర్వాలేదు",
+     "rom": "parvālēdu",
+     "needs": [
+      "pa",
+      "ra",
+      "cl-vva",
+      "sign-aa",
+      "la",
+      "sign-ee",
+      "da",
+      "sign-u"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "పరవాలేదు",
+     "rom": "paravālēdu",
+     "units": [
+      {
+       "te": "ప",
+       "rom": "pa",
+       "needs": [
+        "pa"
+       ]
+      },
+      {
+       "te": "ర",
+       "rom": "ra",
+       "needs": [
+        "ra"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఫర్వాలేదు",
+     "rom": "pharvālēdu",
+     "units": [
+      {
+       "te": "ఫ",
+       "rom": "pha",
+       "needs": [
+        "pha"
+       ]
+      },
+      {
+       "te": "ర్వా",
+       "rom": "rvā",
+       "needs": [
+        "ra",
+        "cl-vva",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఫరవాలేదు",
+     "rom": "pharavālēdu",
+     "units": [
+      {
+       "te": "ఫ",
+       "rom": "pha",
+       "needs": [
+        "pha"
+       ]
+      },
+      {
+       "te": "ర",
+       "rom": "ra",
+       "needs": [
+        "ra"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "పర్వాలేదండి",
+     "rom": "parvālēdaṇḍi",
+     "units": [
+      {
+       "te": "ప",
+       "rom": "pa",
+       "needs": [
+        "pa"
+       ]
+      },
+      {
+       "te": "ర్వా",
+       "rom": "rvā",
+       "needs": [
+        "ra",
+        "cl-vva",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "పరవాలేదండి",
+     "rom": "paravālēdaṇḍi",
+     "units": [
+      {
+       "te": "ప",
+       "rom": "pa",
+       "needs": [
+        "pa"
+       ]
+      },
+      {
+       "te": "ర",
+       "rom": "ra",
+       "needs": [
+        "ra"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఫర్వాలేదండి",
+     "rom": "pharvālēdaṇḍi",
+     "units": [
+      {
+       "te": "ఫ",
+       "rom": "pha",
+       "needs": [
+        "pha"
+       ]
+      },
+      {
+       "te": "ర్వా",
+       "rom": "rvā",
+       "needs": [
+        "ra",
+        "cl-vva",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఫరవాలేదండి",
+     "rom": "pharavālēdaṇḍi",
+     "units": [
+      {
+       "te": "ఫ",
+       "rom": "pha",
+       "needs": [
+        "pha"
+       ]
+      },
+      {
+       "te": "ర",
+       "rom": "ra",
+       "needs": [
+        "ra"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [
+    {
+     "te": "పర్వాలేదండి",
+     "en": "it's okay (respectful)",
+     "rom": "parvālēdaṇḍi",
+     "units": [
+      {
+       "te": "ప",
+       "rom": "pa",
+       "needs": [
+        "pa"
+       ]
+      },
+      {
+       "te": "ర్వా",
+       "rom": "rvā",
+       "needs": [
+        "ra",
+        "cl-vva",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ],
+     "audio": {
+      "f": "../audio/u01/f62efa41c7491100.f.mp3",
+      "m": "../audio/u01/2d86bf26cba7af24.m.mp3"
+     },
+     "confidence": "checked"
+    }
+   ],
+   "orders": [
+    [
+     "పర్వాలేదు"
+    ],
+    [
+     "పరవాలేదు"
+    ],
+    [
+     "ఫర్వాలేదు"
+    ],
+    [
+     "ఫరవాలేదు"
+    ],
+    [
+     "పర్వాలేదండి"
+    ],
+    [
+     "పరవాలేదండి"
+    ],
+    [
+     "ఫర్వాలేదండి"
+    ],
+    [
+     "ఫరవాలేదండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/e5f7d14e799c0007.f.mp3",
+    "m": "../audio/u01/941bae33ab2204a2.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s6",
+   "kind": "sentence",
+   "te": "బాగున్నాను, థాంక్స్",
+   "en": "I'm fine, thanks",
+   "en_alt": [
+    "I am fine, thanks",
+    "I'm fine, thank you",
+    "I'm well, thanks",
+    "I'm good, thanks",
+    "I'm okay, thanks",
+    "I am okay, thanks",
+    "I'm okay, thank you",
+    "I'm well, thank you",
+    "I'm good, thank you",
+    "fine, thanks",
+    "fine, thank you",
+    "I am fine, thank you",
+    "I am well, thanks",
+    "I am good, thanks",
+    "I'm ok, thanks"
+   ],
+   "te_alt": [
+    "బాగున్నాను, ధన్యవాదాలు"
+   ],
+   "words": [
+    "బాగున్నాను=I'm fine",
+    "థాంక్స్=thanks"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "bāgunnānu, thāṅks",
+   "units": [
+    {
+     "te": "బా",
+     "rom": "bā",
+     "needs": [
+      "ba",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "న్నా",
+     "rom": "nnā",
+     "needs": [
+      "cl-nna",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "బాగున్నాను",
+     "rom": "bāgunnānu",
+     "needs": [
+      "ba",
+      "sign-aa",
+      "ga",
+      "sign-u",
+      "cl-nna",
+      "na"
+     ],
+     "hint": "I'm fine"
+    },
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ],
+     "hint": "thanks"
+    }
+   ],
+   "alts": [
+    {
+     "te": "బాగున్నాను, ధన్యవాదాలు",
+     "rom": "bāgunnānu, dhanyavādālu",
+     "units": [
+      {
+       "te": "బా",
+       "rom": "bā",
+       "needs": [
+        "ba",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "న్నా",
+       "rom": "nnā",
+       "needs": [
+        "cl-nna",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "ధ",
+       "rom": "dha",
+       "needs": [
+        "dha"
+       ]
+      },
+      {
+       "te": "న్య",
+       "rom": "nya",
+       "needs": [
+        "cl-nya"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "దా",
+       "rom": "dā",
+       "needs": [
+        "da",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "బాగున్నాను",
+     "థాంక్స్"
+    ],
+    [
+     "బాగున్నాను",
+     "ధన్యవాదాలు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/3e2f4f7c89750b87.f.mp3",
+    "m": "../audio/u01/45b7b5480acd5f76.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s7",
+   "kind": "sentence",
+   "te": "సరే, థాంక్స్",
+   "en": "Okay, thanks",
+   "en_alt": [
+    "okay, thank you",
+    "ok, thank you",
+    "all right, thanks",
+    "all right, thank you",
+    "ok, thanks",
+    "fine, thanks",
+    "fine, thank you"
+   ],
+   "te_alt": [
+    "సరే, థ్యాంక్స్"
+   ],
+   "words": [
+    "సరే=okay",
+    "థాంక్స్=thanks"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Bare sarē is for someone your own age or younger. To an elder, say sarēnaṇḍi.",
+   "similar": [
+    "u01.s14"
+   ],
+   "rom": "sarē, thāṅks",
+   "units": [
+    {
+     "te": "స",
+     "rom": "sa",
+     "needs": [
+      "sa"
+     ]
+    },
+    {
+     "te": "రే",
+     "rom": "rē",
+     "needs": [
+      "ra",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "సరే",
+     "rom": "sarē",
+     "needs": [
+      "sa",
+      "ra",
+      "sign-ee"
+     ],
+     "hint": "okay"
+    },
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ],
+     "hint": "thanks"
+    }
+   ],
+   "alts": [
+    {
+     "te": "సరే, థ్యాంక్స్",
+     "rom": "sarē, thyāṅks",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "థ్యాంక్స్",
+       "rom": "thyāṅks",
+       "needs": [
+        "tha",
+        "cl-yya",
+        "sign-aa",
+        "anusvara",
+        "cl-ksa",
+        "virama"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "సరే",
+     "థాంక్స్"
+    ],
+    [
+     "సరే",
+     "థ్యాంక్స్"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/51aeca84893d9d59.f.mp3",
+    "m": "../audio/u01/ac98aac09976fc60.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s14",
+   "kind": "sentence",
+   "te": "పర్వాలేదండి, థాంక్స్",
+   "en": "It's okay, thanks (respectful)",
+   "en_alt": [
+    "it's okay, thanks",
+    "it's fine, thanks",
+    "no problem, thanks",
+    "it's all right, thanks",
+    "that's okay, thanks",
+    "it's okay, thank you",
+    "it's fine, thank you",
+    "no problem, thank you",
+    "never mind, thanks",
+    "it's ok, thanks",
+    "it's alright, thanks",
+    "that's fine, thanks",
+    "that's all right, thanks",
+    "no worries, thanks",
+    "it doesn't matter, thanks",
+    "it's all right, thank you"
+   ],
+   "te_alt": [
+    "పర్వాలేదండీ, థాంక్స్",
+    "పరవాలేదండి, థాంక్స్",
+    "ఫర్వాలేదండి, థాంక్స్",
+    "ఫరవాలేదండి, థాంక్స్"
+   ],
+   "words": [
+    "పర్వాలేదండి=it's okay (respectful)",
+    "థాంక్స్=thanks"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "parvālēdu with the respectful ending: the final u drops. A polite way to turn down help or an offer.",
+   "similar": [
+    "u01.s7"
+   ],
+   "rom": "parvālēdaṇḍi, thāṅks",
+   "units": [
+    {
+     "te": "ప",
+     "rom": "pa",
+     "needs": [
+      "pa"
+     ]
+    },
+    {
+     "te": "ర్వా",
+     "rom": "rvā",
+     "needs": [
+      "ra",
+      "cl-vva",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "లే",
+     "rom": "lē",
+     "needs": [
+      "la",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": "దం",
+     "rom": "daṇ",
+     "needs": [
+      "da",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "పర్వాలేదండి",
+     "rom": "parvālēdaṇḍi",
+     "needs": [
+      "pa",
+      "ra",
+      "cl-vva",
+      "sign-aa",
+      "la",
+      "sign-ee",
+      "da",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "it's okay (respectful)"
+    },
+    {
+     "te": "థాంక్స్",
+     "rom": "thāṅks",
+     "needs": [
+      "tha",
+      "sign-aa",
+      "anusvara",
+      "cl-ksa",
+      "virama"
+     ],
+     "hint": "thanks"
+    }
+   ],
+   "alts": [
+    {
+     "te": "పర్వాలేదండీ, థాంక్స్",
+     "rom": "parvālēdaṇḍī, thāṅks",
+     "units": [
+      {
+       "te": "ప",
+       "rom": "pa",
+       "needs": [
+        "pa"
+       ]
+      },
+      {
+       "te": "ర్వా",
+       "rom": "rvā",
+       "needs": [
+        "ra",
+        "cl-vva",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డీ",
+       "rom": "ḍī",
+       "needs": [
+        "dda",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "థాంక్స్",
+       "rom": "thāṅks",
+       "needs": [
+        "tha",
+        "sign-aa",
+        "anusvara",
+        "cl-ksa",
+        "virama"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "పరవాలేదండి, థాంక్స్",
+     "rom": "paravālēdaṇḍi, thāṅks",
+     "units": [
+      {
+       "te": "ప",
+       "rom": "pa",
+       "needs": [
+        "pa"
+       ]
+      },
+      {
+       "te": "ర",
+       "rom": "ra",
+       "needs": [
+        "ra"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "థాంక్స్",
+       "rom": "thāṅks",
+       "needs": [
+        "tha",
+        "sign-aa",
+        "anusvara",
+        "cl-ksa",
+        "virama"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఫర్వాలేదండి, థాంక్స్",
+     "rom": "pharvālēdaṇḍi, thāṅks",
+     "units": [
+      {
+       "te": "ఫ",
+       "rom": "pha",
+       "needs": [
+        "pha"
+       ]
+      },
+      {
+       "te": "ర్వా",
+       "rom": "rvā",
+       "needs": [
+        "ra",
+        "cl-vva",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "థాంక్స్",
+       "rom": "thāṅks",
+       "needs": [
+        "tha",
+        "sign-aa",
+        "anusvara",
+        "cl-ksa",
+        "virama"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఫరవాలేదండి, థాంక్స్",
+     "rom": "pharavālēdaṇḍi, thāṅks",
+     "units": [
+      {
+       "te": "ఫ",
+       "rom": "pha",
+       "needs": [
+        "pha"
+       ]
+      },
+      {
+       "te": "ర",
+       "rom": "ra",
+       "needs": [
+        "ra"
+       ]
+      },
+      {
+       "te": "వా",
+       "rom": "vā",
+       "needs": [
+        "va",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దం",
+       "rom": "daṇ",
+       "needs": [
+        "da",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "థాంక్స్",
+       "rom": "thāṅks",
+       "needs": [
+        "tha",
+        "sign-aa",
+        "anusvara",
+        "cl-ksa",
+        "virama"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "పర్వాలేదండి",
+     "థాంక్స్"
+    ],
+    [
+     "పర్వాలేదండీ",
+     "థాంక్స్"
+    ],
+    [
+     "పరవాలేదండి",
+     "థాంక్స్"
+    ],
+    [
+     "ఫర్వాలేదండి",
+     "థాంక్స్"
+    ],
+    [
+     "ఫరవాలేదండి",
+     "థాంక్స్"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/b2edb6888b636158.f.mp3",
+    "m": "../audio/u01/60bcf618e27543cb.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.konchem",
+   "kind": "word",
+   "te": "కొంచెం",
+   "en": "a little",
+   "en_alt": [
+    "a bit",
+    "little",
+    "some",
+    "a little bit",
+    "slightly"
+   ],
+   "te_alt": [
+    "కొంచం",
+    "కాస్త",
+    "కొద్దిగా"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "basic-telugu",
+    "ref": "3-3#27"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "koñchem",
+   "units": [
+    {
+     "te": "కొం",
+     "rom": "koñ",
+     "needs": [
+      "ka",
+      "sign-o",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చెం",
+     "rom": "chem",
+     "needs": [
+      "cha",
+      "sign-e",
+      "anusvara"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "కొంచెం",
+     "rom": "koñchem",
+     "needs": [
+      "ka",
+      "sign-o",
+      "anusvara",
+      "cha",
+      "sign-e"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "కొంచం",
+     "rom": "koñcham",
+     "units": [
+      {
+       "te": "కొం",
+       "rom": "koñ",
+       "needs": [
+        "ka",
+        "sign-o",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చం",
+       "rom": "cham",
+       "needs": [
+        "cha",
+        "anusvara"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "కాస్త",
+     "rom": "kāsta",
+     "units": [
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "స్త",
+       "rom": "sta",
+       "needs": [
+        "cl-sta"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "కొద్దిగా",
+     "rom": "koddigā",
+     "units": [
+      {
+       "te": "కొ",
+       "rom": "ko",
+       "needs": [
+        "ka",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "ద్ది",
+       "rom": "ddi",
+       "needs": [
+        "cl-dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "గా",
+       "rom": "gā",
+       "needs": [
+        "ga",
+        "sign-aa"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "కొంచెం"
+    ],
+    [
+     "కొంచం"
+    ],
+    [
+     "కాస్త"
+    ],
+    [
+     "కొద్దిగా"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/993162394c2f38aa.f.mp3",
+    "m": "../audio/u01/dab241f5cb8f1fd1.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.telugu-konchem",
+   "kind": "sentence",
+   "te": "నాకు తెలుగు కొంచెం వచ్చు",
+   "en": "I know a little Telugu",
+   "en_alt": [
+    "I speak a little Telugu",
+    "I know Telugu a little",
+    "I can speak a little Telugu",
+    "I know a bit of Telugu"
+   ],
+   "te_alt": [
+    "నాకు కొంచెం తెలుగు వచ్చు"
+   ],
+   "words": [
+    "నాకు=to me",
+    "తెలుగు=Telugu",
+    "కొంచెం=a little",
+    "వచ్చు=comes (= know how to)"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Word for word: 'to me Telugu a little comes'. Languages and skills 'come to' you in Telugu.",
+   "similar": [],
+   "rom": "nāku telugu koñchem vachchu",
+   "units": [
+    {
+     "te": "నా",
+     "rom": "nā",
+     "needs": [
+      "na",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "కు",
+     "rom": "ku",
+     "needs": [
+      "ka",
+      "sign-u"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "తె",
+     "rom": "te",
+     "needs": [
+      "ta",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "లు",
+     "rom": "lu",
+     "needs": [
+      "la",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "గు",
+     "rom": "gu",
+     "needs": [
+      "ga",
+      "sign-u"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "కొం",
+     "rom": "koñ",
+     "needs": [
+      "ka",
+      "sign-o",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చెం",
+     "rom": "chem",
+     "needs": [
+      "cha",
+      "sign-e",
+      "anusvara"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "వ",
+     "rom": "va",
+     "needs": [
+      "va"
+     ]
+    },
+    {
+     "te": "చ్చు",
+     "rom": "chchu",
+     "needs": [
+      "cl-chcha",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "నాకు",
+     "rom": "nāku",
+     "needs": [
+      "na",
+      "sign-aa",
+      "ka",
+      "sign-u"
+     ],
+     "hint": "to me"
+    },
+    {
+     "te": "తెలుగు",
+     "rom": "telugu",
+     "needs": [
+      "ta",
+      "sign-e",
+      "la",
+      "sign-u",
+      "ga"
+     ],
+     "hint": "Telugu"
+    },
+    {
+     "te": "కొంచెం",
+     "rom": "koñchem",
+     "needs": [
+      "ka",
+      "sign-o",
+      "anusvara",
+      "cha",
+      "sign-e"
+     ],
+     "hint": "a little"
+    },
+    {
+     "te": "వచ్చు",
+     "rom": "vachchu",
+     "needs": [
+      "va",
+      "cl-chcha",
+      "sign-u"
+     ],
+     "hint": "comes (= know how to)"
+    }
+   ],
+   "alts": [
+    {
+     "te": "నాకు కొంచెం తెలుగు వచ్చు",
+     "rom": "nāku koñchem telugu vachchu",
+     "units": [
+      {
+       "te": "నా",
+       "rom": "nā",
+       "needs": [
+        "na",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "కు",
+       "rom": "ku",
+       "needs": [
+        "ka",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "కొం",
+       "rom": "koñ",
+       "needs": [
+        "ka",
+        "sign-o",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చెం",
+       "rom": "chem",
+       "needs": [
+        "cha",
+        "sign-e",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "తె",
+       "rom": "te",
+       "needs": [
+        "ta",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "గు",
+       "rom": "gu",
+       "needs": [
+        "ga",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వ",
+       "rom": "va",
+       "needs": [
+        "va"
+       ]
+      },
+      {
+       "te": "చ్చు",
+       "rom": "chchu",
+       "needs": [
+        "cl-chcha",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "నాకు",
+     "తెలుగు",
+     "కొంచెం",
+     "వచ్చు"
+    ],
+    [
+     "నాకు",
+     "కొంచెం",
+     "తెలుగు",
+     "వచ్చు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/f36e8e01e61f5fb1.f.mp3",
+    "m": "../audio/u01/45c72e55b19516a9.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.artham-kaledu",
+   "kind": "sentence",
+   "te": "నాకు అర్థం కాలేదు",
+   "en": "I didn't understand",
+   "en_alt": [
+    "I did not understand",
+    "I don't understand",
+    "I do not understand",
+    "I didn't get it",
+    "I couldn't understand"
+   ],
+   "te_alt": [
+    "అర్థం కాలేదు"
+   ],
+   "words": [
+    "నాకు=to me",
+    "అర్థం=meaning",
+    "కాలేదు=didn't become"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "Word for word: 'to me it didn't become meaning': it didn't make sense to me. People often drop the first word.",
+   "similar": [
+    "u01.s8"
+   ],
+   "rom": "nāku artham kālēdu",
+   "units": [
+    {
+     "te": "నా",
+     "rom": "nā",
+     "needs": [
+      "na",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "కు",
+     "rom": "ku",
+     "needs": [
+      "ka",
+      "sign-u"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "అ",
+     "rom": "a",
+     "needs": [
+      "a"
+     ]
+    },
+    {
+     "te": "ర్థం",
+     "rom": "rtham",
+     "needs": [
+      "cl-rtha",
+      "anusvara"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "కా",
+     "rom": "kā",
+     "needs": [
+      "ka",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "లే",
+     "rom": "lē",
+     "needs": [
+      "la",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": "దు",
+     "rom": "du",
+     "needs": [
+      "da",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "నాకు",
+     "rom": "nāku",
+     "needs": [
+      "na",
+      "sign-aa",
+      "ka",
+      "sign-u"
+     ],
+     "hint": "to me"
+    },
+    {
+     "te": "అర్థం",
+     "rom": "artham",
+     "needs": [
+      "a",
+      "cl-rtha",
+      "anusvara"
+     ],
+     "hint": "meaning"
+    },
+    {
+     "te": "కాలేదు",
+     "rom": "kālēdu",
+     "needs": [
+      "ka",
+      "sign-aa",
+      "la",
+      "sign-ee",
+      "da",
+      "sign-u"
+     ],
+     "hint": "didn't become"
+    }
+   ],
+   "alts": [
+    {
+     "te": "అర్థం కాలేదు",
+     "rom": "artham kālēdu",
+     "units": [
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "ర్థం",
+       "rom": "rtham",
+       "needs": [
+        "cl-rtha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "నాకు",
+     "అర్థం",
+     "కాలేదు"
+    ],
+    [
+     "అర్థం",
+     "కాలేదు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/e68ce3a9232d3d05.f.mp3",
+    "m": "../audio/u01/f0429c5edbead4d4.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.mellaga",
+   "kind": "phrase",
+   "te": "మెల్లగా చెప్పండి",
+   "en": "please say it slowly",
+   "en_alt": [
+    "say it slowly",
+    "please speak slowly",
+    "speak slowly",
+    "please say that slowly",
+    "please tell me slowly"
+   ],
+   "te_alt": [
+    "మెల్లిగా చెప్పండి",
+    "నెమ్మదిగా చెప్పండి"
+   ],
+   "words": [
+    "మెల్లగా=slowly",
+    "చెప్పండి=please say"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [
+    "u01.s10"
+   ],
+   "rom": "mellagā cheppaṇḍi",
+   "units": [
+    {
+     "te": "మె",
+     "rom": "me",
+     "needs": [
+      "ma",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ల్ల",
+     "rom": "lla",
+     "needs": [
+      "cl-lla"
+     ]
+    },
+    {
+     "te": "గా",
+     "rom": "gā",
+     "needs": [
+      "ga",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "చె",
+     "rom": "che",
+     "needs": [
+      "cha",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ప్పం",
+     "rom": "ppaṇ",
+     "needs": [
+      "cl-ppa",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మెల్లగా",
+     "rom": "mellagā",
+     "needs": [
+      "ma",
+      "sign-e",
+      "cl-lla",
+      "ga",
+      "sign-aa"
+     ],
+     "hint": "slowly"
+    },
+    {
+     "te": "చెప్పండి",
+     "rom": "cheppaṇḍi",
+     "needs": [
+      "cha",
+      "sign-e",
+      "cl-ppa",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "please say"
+    }
+   ],
+   "alts": [
+    {
+     "te": "మెల్లిగా చెప్పండి",
+     "rom": "melligā cheppaṇḍi",
+     "units": [
+      {
+       "te": "మె",
+       "rom": "me",
+       "needs": [
+        "ma",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ల్లి",
+       "rom": "lli",
+       "needs": [
+        "cl-lla",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "గా",
+       "rom": "gā",
+       "needs": [
+        "ga",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "నెమ్మదిగా చెప్పండి",
+     "rom": "nemmadigā cheppaṇḍi",
+     "units": [
+      {
+       "te": "నె",
+       "rom": "ne",
+       "needs": [
+        "na",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "మ్మ",
+       "rom": "mma",
+       "needs": [
+        "cl-mma"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "గా",
+       "rom": "gā",
+       "needs": [
+        "ga",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "మెల్లగా",
+     "చెప్పండి"
+    ],
+    [
+     "మెల్లిగా",
+     "చెప్పండి"
+    ],
+    [
+     "నెమ్మదిగా",
+     "చెప్పండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/97207803c7df3038.f.mp3",
+    "m": "../audio/u01/0151e2d40736b790.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.malli-cheppandi",
+   "kind": "phrase",
+   "te": "మళ్ళీ చెప్పండి",
+   "en": "please say it again",
+   "en_alt": [
+    "say it again",
+    "please repeat",
+    "please say that again",
+    "please repeat that",
+    "please tell me again",
+    "say that again",
+    "please repeat it",
+    "repeat please",
+    "repeat that",
+    "tell me again",
+    "please say it once more",
+    "say it once more",
+    "could you say it again?",
+    "can you say that again?"
+   ],
+   "te_alt": [
+    "మళ్లీ చెప్పండి",
+    "ఇంకోసారి చెప్పండి",
+    "ఇంకొకసారి చెప్పండి",
+    "మరోసారి చెప్పండి",
+    "మళ్ళా చెప్పండి",
+    "ఇంకొక్కసారి చెప్పండి"
+   ],
+   "words": [
+    "మళ్ళీ=again",
+    "చెప్పండి=please say"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "maḷḷī cheppaṇḍi",
+   "units": [
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "ళ్ళీ",
+     "rom": "ḷḷī",
+     "needs": [
+      "cl-llla",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "చె",
+     "rom": "che",
+     "needs": [
+      "cha",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ప్పం",
+     "rom": "ppaṇ",
+     "needs": [
+      "cl-ppa",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మళ్ళీ",
+     "rom": "maḷḷī",
+     "needs": [
+      "ma",
+      "cl-llla",
+      "sign-ii"
+     ],
+     "hint": "again"
+    },
+    {
+     "te": "చెప్పండి",
+     "rom": "cheppaṇḍi",
+     "needs": [
+      "cha",
+      "sign-e",
+      "cl-ppa",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "please say"
+    }
+   ],
+   "alts": [
+    {
+     "te": "మళ్లీ చెప్పండి",
+     "rom": "maḷlī cheppaṇḍi",
+     "units": [
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్లీ",
+       "rom": "ḷlī",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఇంకోసారి చెప్పండి",
+     "rom": "iṅkōsāri cheppaṇḍi",
+     "units": [
+      {
+       "te": "ఇం",
+       "rom": "iṅ",
+       "needs": [
+        "i",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "కో",
+       "rom": "kō",
+       "needs": [
+        "ka",
+        "sign-oo"
+       ]
+      },
+      {
+       "te": "సా",
+       "rom": "sā",
+       "needs": [
+        "sa",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రి",
+       "rom": "ri",
+       "needs": [
+        "ra",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఇంకొకసారి చెప్పండి",
+     "rom": "iṅkokasāri cheppaṇḍi",
+     "units": [
+      {
+       "te": "ఇం",
+       "rom": "iṅ",
+       "needs": [
+        "i",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "కొ",
+       "rom": "ko",
+       "needs": [
+        "ka",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "సా",
+       "rom": "sā",
+       "needs": [
+        "sa",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రి",
+       "rom": "ri",
+       "needs": [
+        "ra",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "మరోసారి చెప్పండి",
+     "rom": "marōsāri cheppaṇḍi",
+     "units": [
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "రో",
+       "rom": "rō",
+       "needs": [
+        "ra",
+        "sign-oo"
+       ]
+      },
+      {
+       "te": "సా",
+       "rom": "sā",
+       "needs": [
+        "sa",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రి",
+       "rom": "ri",
+       "needs": [
+        "ra",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "మళ్ళా చెప్పండి",
+     "rom": "maḷḷā cheppaṇḍi",
+     "units": [
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్ళా",
+       "rom": "ḷḷā",
+       "needs": [
+        "cl-llla",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "ఇంకొక్కసారి చెప్పండి",
+     "rom": "iṅkokkasāri cheppaṇḍi",
+     "units": [
+      {
+       "te": "ఇం",
+       "rom": "iṅ",
+       "needs": [
+        "i",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "కొ",
+       "rom": "ko",
+       "needs": [
+        "ka",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "క్క",
+       "rom": "kka",
+       "needs": [
+        "cl-kka"
+       ]
+      },
+      {
+       "te": "సా",
+       "rom": "sā",
+       "needs": [
+        "sa",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రి",
+       "rom": "ri",
+       "needs": [
+        "ra",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "మళ్ళీ",
+     "చెప్పండి"
+    ],
+    [
+     "మళ్లీ",
+     "చెప్పండి"
+    ],
+    [
+     "ఇంకోసారి",
+     "చెప్పండి"
+    ],
+    [
+     "ఇంకొకసారి",
+     "చెప్పండి"
+    ],
+    [
+     "మరోసారి",
+     "చెప్పండి"
+    ],
+    [
+     "మళ్ళా",
+     "చెప్పండి"
+    ],
+    [
+     "ఇంకొక్కసారి",
+     "చెప్పండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/4ebafbdc3edf28fe.f.mp3",
+    "m": "../audio/u01/22504e480f3078cb.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s8",
+   "kind": "sentence",
+   "te": "సారీ, నాకు అర్థం కాలేదు",
+   "en": "Sorry, I didn't understand",
+   "en_alt": [
+    "sorry, I did not understand",
+    "sorry, I don't understand",
+    "sorry, I didn't get it",
+    "sorry, I do not understand",
+    "I'm sorry, I didn't understand",
+    "I'm sorry, I don't understand",
+    "sorry, I don't get it",
+    "pardon me, I didn't understand",
+    "excuse me, I didn't understand",
+    "sorry, I did not get it",
+    "sorry, I didn't get that",
+    "sorry, I didn't understand that",
+    "I'm sorry, I didn't get it",
+    "sorry, I couldn't understand"
+   ],
+   "te_alt": [
+    "సారీ, అర్థం కాలేదు",
+    "క్షమించండి, నాకు అర్థం కాలేదు",
+    "క్షమించండి, అర్థం కాలేదు"
+   ],
+   "words": [
+    "సారీ=sorry",
+    "నాకు=to me",
+    "అర్థం=meaning",
+    "కాలేదు=didn't become"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [
+    "u01.artham-kaledu"
+   ],
+   "rom": "sārī, nāku artham kālēdu",
+   "units": [
+    {
+     "te": "సా",
+     "rom": "sā",
+     "needs": [
+      "sa",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "రీ",
+     "rom": "rī",
+     "needs": [
+      "ra",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "నా",
+     "rom": "nā",
+     "needs": [
+      "na",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "కు",
+     "rom": "ku",
+     "needs": [
+      "ka",
+      "sign-u"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "అ",
+     "rom": "a",
+     "needs": [
+      "a"
+     ]
+    },
+    {
+     "te": "ర్థం",
+     "rom": "rtham",
+     "needs": [
+      "cl-rtha",
+      "anusvara"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "కా",
+     "rom": "kā",
+     "needs": [
+      "ka",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "లే",
+     "rom": "lē",
+     "needs": [
+      "la",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": "దు",
+     "rom": "du",
+     "needs": [
+      "da",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "సారీ",
+     "rom": "sārī",
+     "needs": [
+      "sa",
+      "sign-aa",
+      "ra",
+      "sign-ii"
+     ],
+     "hint": "sorry"
+    },
+    {
+     "te": "నాకు",
+     "rom": "nāku",
+     "needs": [
+      "na",
+      "sign-aa",
+      "ka",
+      "sign-u"
+     ],
+     "hint": "to me"
+    },
+    {
+     "te": "అర్థం",
+     "rom": "artham",
+     "needs": [
+      "a",
+      "cl-rtha",
+      "anusvara"
+     ],
+     "hint": "meaning"
+    },
+    {
+     "te": "కాలేదు",
+     "rom": "kālēdu",
+     "needs": [
+      "ka",
+      "sign-aa",
+      "la",
+      "sign-ee",
+      "da",
+      "sign-u"
+     ],
+     "hint": "didn't become"
+    }
+   ],
+   "alts": [
+    {
+     "te": "సారీ, అర్థం కాలేదు",
+     "rom": "sārī, artham kālēdu",
+     "units": [
+      {
+       "te": "సా",
+       "rom": "sā",
+       "needs": [
+        "sa",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "రీ",
+       "rom": "rī",
+       "needs": [
+        "ra",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "ర్థం",
+       "rom": "rtham",
+       "needs": [
+        "cl-rtha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "క్షమించండి, నాకు అర్థం కాలేదు",
+     "rom": "kṣamiñchaṇḍi, nāku artham kālēdu",
+     "units": [
+      {
+       "te": "క్ష",
+       "rom": "kṣa",
+       "needs": [
+        "cl-ksha"
+       ]
+      },
+      {
+       "te": "మిం",
+       "rom": "miñ",
+       "needs": [
+        "ma",
+        "sign-i",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చం",
+       "rom": "chaṇ",
+       "needs": [
+        "cha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "నా",
+       "rom": "nā",
+       "needs": [
+        "na",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "కు",
+       "rom": "ku",
+       "needs": [
+        "ka",
+        "sign-u"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "ర్థం",
+       "rom": "rtham",
+       "needs": [
+        "cl-rtha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "క్షమించండి, అర్థం కాలేదు",
+     "rom": "kṣamiñchaṇḍi, artham kālēdu",
+     "units": [
+      {
+       "te": "క్ష",
+       "rom": "kṣa",
+       "needs": [
+        "cl-ksha"
+       ]
+      },
+      {
+       "te": "మిం",
+       "rom": "miñ",
+       "needs": [
+        "ma",
+        "sign-i",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చం",
+       "rom": "chaṇ",
+       "needs": [
+        "cha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "అ",
+       "rom": "a",
+       "needs": [
+        "a"
+       ]
+      },
+      {
+       "te": "ర్థం",
+       "rom": "rtham",
+       "needs": [
+        "cl-rtha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "కా",
+       "rom": "kā",
+       "needs": [
+        "ka",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "లే",
+       "rom": "lē",
+       "needs": [
+        "la",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "దు",
+       "rom": "du",
+       "needs": [
+        "da",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "సారీ",
+     "నాకు",
+     "అర్థం",
+     "కాలేదు"
+    ],
+    [
+     "సారీ",
+     "అర్థం",
+     "కాలేదు"
+    ],
+    [
+     "క్షమించండి",
+     "నాకు",
+     "అర్థం",
+     "కాలేదు"
+    ],
+    [
+     "క్షమించండి",
+     "అర్థం",
+     "కాలేదు"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/55987c5f3de3ea50.f.mp3",
+    "m": "../audio/u01/83983baaca231269.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s9",
+   "kind": "sentence",
+   "te": "క్షమించండి, మళ్ళీ చెప్పండి",
+   "en": "Pardon me, please say it again",
+   "en_alt": [
+    "excuse me, please say it again",
+    "pardon me, please repeat",
+    "pardon me, say it again",
+    "pardon me, please say that again",
+    "sorry, please say it again",
+    "excuse me, please repeat",
+    "sorry, please repeat",
+    "excuse me, say it again",
+    "sorry, say it again",
+    "excuse me, please say that again",
+    "sorry, please say that again",
+    "pardon me, say it again please",
+    "pardon me, please say it again please",
+    "pardon, please say it again",
+    "pardon, say it again",
+    "pardon, please repeat",
+    "pardon, please say that again",
+    "pardon, say it again please",
+    "please pardon me, say it again",
+    "excuse me, say it again please",
+    "sorry, say it again please"
+   ],
+   "te_alt": [
+    "క్షమించండి, మళ్లీ చెప్పండి"
+   ],
+   "words": [
+    "క్షమించండి=sorry, pardon me",
+    "మళ్ళీ=again",
+    "చెప్పండి=please say"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "kṣamiñchaṇḍi, maḷḷī cheppaṇḍi",
+   "units": [
+    {
+     "te": "క్ష",
+     "rom": "kṣa",
+     "needs": [
+      "cl-ksha"
+     ]
+    },
+    {
+     "te": "మిం",
+     "rom": "miñ",
+     "needs": [
+      "ma",
+      "sign-i",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చం",
+     "rom": "chaṇ",
+     "needs": [
+      "cha",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "ళ్ళీ",
+     "rom": "ḷḷī",
+     "needs": [
+      "cl-llla",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "చె",
+     "rom": "che",
+     "needs": [
+      "cha",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ప్పం",
+     "rom": "ppaṇ",
+     "needs": [
+      "cl-ppa",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "క్షమించండి",
+     "rom": "kṣamiñchaṇḍi",
+     "needs": [
+      "cl-ksha",
+      "ma",
+      "sign-i",
+      "anusvara",
+      "cha",
+      "dda"
+     ],
+     "hint": "sorry, pardon me"
+    },
+    {
+     "te": "మళ్ళీ",
+     "rom": "maḷḷī",
+     "needs": [
+      "ma",
+      "cl-llla",
+      "sign-ii"
+     ],
+     "hint": "again"
+    },
+    {
+     "te": "చెప్పండి",
+     "rom": "cheppaṇḍi",
+     "needs": [
+      "cha",
+      "sign-e",
+      "cl-ppa",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "please say"
+    }
+   ],
+   "alts": [
+    {
+     "te": "క్షమించండి, మళ్లీ చెప్పండి",
+     "rom": "kṣamiñchaṇḍi, maḷlī cheppaṇḍi",
+     "units": [
+      {
+       "te": "క్ష",
+       "rom": "kṣa",
+       "needs": [
+        "cl-ksha"
+       ]
+      },
+      {
+       "te": "మిం",
+       "rom": "miñ",
+       "needs": [
+        "ma",
+        "sign-i",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చం",
+       "rom": "chaṇ",
+       "needs": [
+        "cha",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్లీ",
+       "rom": "ḷlī",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "క్షమించండి",
+     "మళ్ళీ",
+     "చెప్పండి"
+    ],
+    [
+     "క్షమించండి",
+     "మళ్లీ",
+     "చెప్పండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/c565096b304e5971.f.mp3",
+    "m": "../audio/u01/5fce098ed420c6b8.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s10",
+   "kind": "sentence",
+   "te": "కొంచెం మెల్లగా చెప్పండి",
+   "en": "Please say it a little slowly",
+   "en_alt": [
+    "say it a little slowly",
+    "please speak a little slowly",
+    "please say it a bit slowly",
+    "please speak a bit slowly",
+    "please say it a little more slowly",
+    "please speak a little more slowly",
+    "say it a little slowly please"
+   ],
+   "te_alt": [
+    "కొంచెం మెల్లిగా చెప్పండి",
+    "కొంచెం నెమ్మదిగా చెప్పండి"
+   ],
+   "words": [
+    "కొంచెం=a little",
+    "మెల్లగా=slowly",
+    "చెప్పండి=please say"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [
+    "u01.mellaga"
+   ],
+   "rom": "koñchem mellagā cheppaṇḍi",
+   "units": [
+    {
+     "te": "కొం",
+     "rom": "koñ",
+     "needs": [
+      "ka",
+      "sign-o",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చెం",
+     "rom": "chem",
+     "needs": [
+      "cha",
+      "sign-e",
+      "anusvara"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మె",
+     "rom": "me",
+     "needs": [
+      "ma",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ల్ల",
+     "rom": "lla",
+     "needs": [
+      "cl-lla"
+     ]
+    },
+    {
+     "te": "గా",
+     "rom": "gā",
+     "needs": [
+      "ga",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "చె",
+     "rom": "che",
+     "needs": [
+      "cha",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ప్పం",
+     "rom": "ppaṇ",
+     "needs": [
+      "cl-ppa",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "కొంచెం",
+     "rom": "koñchem",
+     "needs": [
+      "ka",
+      "sign-o",
+      "anusvara",
+      "cha",
+      "sign-e"
+     ],
+     "hint": "a little"
+    },
+    {
+     "te": "మెల్లగా",
+     "rom": "mellagā",
+     "needs": [
+      "ma",
+      "sign-e",
+      "cl-lla",
+      "ga",
+      "sign-aa"
+     ],
+     "hint": "slowly"
+    },
+    {
+     "te": "చెప్పండి",
+     "rom": "cheppaṇḍi",
+     "needs": [
+      "cha",
+      "sign-e",
+      "cl-ppa",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "please say"
+    }
+   ],
+   "alts": [
+    {
+     "te": "కొంచెం మెల్లిగా చెప్పండి",
+     "rom": "koñchem melligā cheppaṇḍi",
+     "units": [
+      {
+       "te": "కొం",
+       "rom": "koñ",
+       "needs": [
+        "ka",
+        "sign-o",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చెం",
+       "rom": "chem",
+       "needs": [
+        "cha",
+        "sign-e",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మె",
+       "rom": "me",
+       "needs": [
+        "ma",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ల్లి",
+       "rom": "lli",
+       "needs": [
+        "cl-lla",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "గా",
+       "rom": "gā",
+       "needs": [
+        "ga",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "కొంచెం నెమ్మదిగా చెప్పండి",
+     "rom": "koñchem nemmadigā cheppaṇḍi",
+     "units": [
+      {
+       "te": "కొం",
+       "rom": "koñ",
+       "needs": [
+        "ka",
+        "sign-o",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చెం",
+       "rom": "chem",
+       "needs": [
+        "cha",
+        "sign-e",
+        "anusvara"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "నె",
+       "rom": "ne",
+       "needs": [
+        "na",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "మ్మ",
+       "rom": "mma",
+       "needs": [
+        "cl-mma"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "గా",
+       "rom": "gā",
+       "needs": [
+        "ga",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "చె",
+       "rom": "che",
+       "needs": [
+        "cha",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ప్పం",
+       "rom": "ppaṇ",
+       "needs": [
+        "cl-ppa",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "కొంచెం",
+     "మెల్లగా",
+     "చెప్పండి"
+    ],
+    [
+     "కొంచెం",
+     "మెల్లిగా",
+     "చెప్పండి"
+    ],
+    [
+     "కొంచెం",
+     "నెమ్మదిగా",
+     "చెప్పండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/daf292d2e7061b1f.f.mp3",
+    "m": "../audio/u01/40386c7be7cd0451.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.vellostanu",
+   "kind": "phrase",
+   "te": "వెళ్ళొస్తాను",
+   "en": "goodbye (\"I'll go and come back\")",
+   "en_alt": [
+    "goodbye",
+    "bye",
+    "I'll go and come back",
+    "I'll be back",
+    "see you",
+    "I'm off",
+    "bye bye",
+    "good bye",
+    "I will go and come back",
+    "I'll go and come",
+    "I'll take my leave"
+   ],
+   "te_alt": [
+    "వెళ్లొస్తాను",
+    "వెళ్ళొస్తా",
+    "వెళ్లొస్తా",
+    "వెళ్ళొస్తాం",
+    "వెళ్లొస్తాం",
+    "వెళ్ళొస్తానండి",
+    "వెళ్ళొస్తామండి",
+    "వెళ్ళి వస్తాను",
+    "వెళ్ళి వస్తా",
+    "వెళ్ళివస్తాను"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": {
+    "te": "వెళ్ళి వస్తాను",
+    "note": "Written as two words; in speech they run together into one."
+   },
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "What the person leaving says. A bare 'I'm going' is avoided because it sounds final. When two or more of you leave together, say veḷḷostām ('we'll go and come back').",
+   "similar": [
+    "u01.jagratta",
+    "u01.malli-kaluddam",
+    "u01.namaskaram",
+    "u01.s13"
+   ],
+   "rom": "veḷḷostānu",
+   "units": [
+    {
+     "te": "వె",
+     "rom": "ve",
+     "needs": [
+      "va",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ళ్ళొ",
+     "rom": "ḷḷo",
+     "needs": [
+      "cl-llla",
+      "sign-o"
+     ]
+    },
+    {
+     "te": "స్తా",
+     "rom": "stā",
+     "needs": [
+      "cl-sta",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "వెళ్ళొస్తాను",
+     "rom": "veḷḷostānu",
+     "needs": [
+      "va",
+      "sign-e",
+      "cl-llla",
+      "sign-o",
+      "cl-sta",
+      "sign-aa",
+      "na",
+      "sign-u"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "వెళ్లొస్తాను",
+     "rom": "veḷlostānu",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్లొ",
+       "rom": "ḷlo",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళొస్తా",
+     "rom": "veḷḷostā",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్లొస్తా",
+     "rom": "veḷlostā",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్లొ",
+       "rom": "ḷlo",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళొస్తాం",
+     "rom": "veḷḷostām",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తాం",
+       "rom": "stām",
+       "needs": [
+        "cl-sta",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్లొస్తాం",
+     "rom": "veḷlostām",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్లొ",
+       "rom": "ḷlo",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తాం",
+       "rom": "stām",
+       "needs": [
+        "cl-sta",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళొస్తానండి",
+     "rom": "veḷḷostānaṇḍi",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళొస్తామండి",
+     "rom": "veḷḷostāmaṇḍi",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "మం",
+       "rom": "maṇ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళి వస్తాను",
+     "rom": "veḷḷi vastānu",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళి",
+       "rom": "ḷḷi",
+       "needs": [
+        "cl-llla",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వ",
+       "rom": "va",
+       "needs": [
+        "va"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళి వస్తా",
+     "rom": "veḷḷi vastā",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళి",
+       "rom": "ḷḷi",
+       "needs": [
+        "cl-llla",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వ",
+       "rom": "va",
+       "needs": [
+        "va"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "వెళ్ళివస్తాను",
+     "rom": "veḷḷivastānu",
+     "units": [
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళి",
+       "rom": "ḷḷi",
+       "needs": [
+        "cl-llla",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "వ",
+       "rom": "va",
+       "needs": [
+        "va"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "వెళ్ళొస్తాను"
+    ],
+    [
+     "వెళ్లొస్తాను"
+    ],
+    [
+     "వెళ్ళొస్తా"
+    ],
+    [
+     "వెళ్లొస్తా"
+    ],
+    [
+     "వెళ్ళొస్తాం"
+    ],
+    [
+     "వెళ్లొస్తాం"
+    ],
+    [
+     "వెళ్ళొస్తానండి"
+    ],
+    [
+     "వెళ్ళొస్తామండి"
+    ],
+    [
+     "వెళ్ళి",
+     "వస్తాను"
+    ],
+    [
+     "వెళ్ళి",
+     "వస్తా"
+    ],
+    [
+     "వెళ్ళివస్తాను"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/ae72df3f22d977e0.f.mp3",
+    "m": "../audio/u01/d6ef556bf1714b9f.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.malli-kaluddam",
+   "kind": "phrase",
+   "te": "మళ్ళీ కలుద్దాం",
+   "en": "see you again",
+   "en_alt": [
+    "let's meet again",
+    "see you",
+    "see you later",
+    "we'll meet again",
+    "let us meet again"
+   ],
+   "te_alt": [
+    "మళ్లీ కలుద్దాం",
+    "మళ్ళీ కలుద్దామండి"
+   ],
+   "words": [
+    "మళ్ళీ=again",
+    "కలుద్దాం=let's meet"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [
+    "u01.jagratta",
+    "u01.s12",
+    "u01.vellostanu"
+   ],
+   "rom": "maḷḷī kaluddām",
+   "units": [
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "ళ్ళీ",
+     "rom": "ḷḷī",
+     "needs": [
+      "cl-llla",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "క",
+     "rom": "ka",
+     "needs": [
+      "ka"
+     ]
+    },
+    {
+     "te": "లు",
+     "rom": "lu",
+     "needs": [
+      "la",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "ద్దాం",
+     "rom": "ddām",
+     "needs": [
+      "cl-dda",
+      "sign-aa",
+      "anusvara"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మళ్ళీ",
+     "rom": "maḷḷī",
+     "needs": [
+      "ma",
+      "cl-llla",
+      "sign-ii"
+     ],
+     "hint": "again"
+    },
+    {
+     "te": "కలుద్దాం",
+     "rom": "kaluddām",
+     "needs": [
+      "ka",
+      "la",
+      "sign-u",
+      "cl-dda",
+      "sign-aa",
+      "anusvara"
+     ],
+     "hint": "let's meet"
+    }
+   ],
+   "alts": [
+    {
+     "te": "మళ్లీ కలుద్దాం",
+     "rom": "maḷlī kaluddām",
+     "units": [
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్లీ",
+       "rom": "ḷlī",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "ద్దాం",
+       "rom": "ddām",
+       "needs": [
+        "cl-dda",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "మళ్ళీ కలుద్దామండి",
+     "rom": "maḷḷī kaluddāmaṇḍi",
+     "units": [
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్ళీ",
+       "rom": "ḷḷī",
+       "needs": [
+        "cl-llla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "ద్దా",
+       "rom": "ddā",
+       "needs": [
+        "cl-dda",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "మం",
+       "rom": "maṇ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "మళ్ళీ",
+     "కలుద్దాం"
+    ],
+    [
+     "మళ్లీ",
+     "కలుద్దాం"
+    ],
+    [
+     "మళ్ళీ",
+     "కలుద్దామండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/7692402f9784d9ba.f.mp3",
+    "m": "../audio/u01/731e95ab8c53fa1c.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.jagratta",
+   "kind": "word",
+   "te": "జాగ్రత్త",
+   "en": "take care",
+   "en_alt": [
+    "careful",
+    "be careful"
+   ],
+   "te_alt": [],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "The word means 'care, caution'. Said by itself to someone who is leaving, mostly to someone your own age or younger, and as a warning: 'careful!'.",
+   "similar": [
+    "u01.malli-kaluddam",
+    "u01.vellostanu"
+   ],
+   "rom": "jāgratta",
+   "units": [
+    {
+     "te": "జా",
+     "rom": "jā",
+     "needs": [
+      "ja",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "గ్ర",
+     "rom": "gra",
+     "needs": [
+      "ga",
+      "cl-pra"
+     ]
+    },
+    {
+     "te": "త్త",
+     "rom": "tta",
+     "needs": [
+      "cl-tta"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "జాగ్రత్త",
+     "rom": "jāgratta",
+     "needs": [
+      "ja",
+      "sign-aa",
+      "ga",
+      "cl-pra",
+      "cl-tta"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [],
+   "forms": [],
+   "orders": [
+    [
+     "జాగ్రత్త"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/fd09767a71862824.f.mp3",
+    "m": "../audio/u01/aa73d06b7d87f088.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.randi",
+   "kind": "word",
+   "te": "రండి",
+   "en": "please come (in)",
+   "en_alt": [
+    "please come",
+    "come in",
+    "please come in",
+    "come",
+    "welcome"
+   ],
+   "te_alt": [
+    "రండి రండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "basic-telugu",
+    "ref": "2-2#105"
+   },
+   "note": "What a host says at the door. Often doubled: 'raṇḍi, raṇḍi'.",
+   "similar": [],
+   "rom": "raṇḍi",
+   "units": [
+    {
+     "te": "రం",
+     "rom": "raṇ",
+     "needs": [
+      "ra",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "రండి",
+     "rom": "raṇḍi",
+     "needs": [
+      "ra",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "రండి రండి",
+     "rom": "raṇḍi raṇḍi",
+     "units": [
+      {
+       "te": "రం",
+       "rom": "raṇ",
+       "needs": [
+        "ra",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "రం",
+       "rom": "raṇ",
+       "needs": [
+        "ra",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "రండి"
+    ],
+    [
+     "రండి",
+     "రండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/b5375858f0644e1a.f.mp3",
+    "m": "../audio/u01/40542e1e3359b292.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "attested"
+  },
+  {
+   "id": "u01.kurchondi",
+   "kind": "word",
+   "te": "కూర్చోండి",
+   "en": "please sit",
+   "en_alt": [
+    "please sit down",
+    "sit down",
+    "sit",
+    "have a seat",
+    "please have a seat",
+    "please take a seat"
+   ],
+   "te_alt": [
+    "కూచోండి"
+   ],
+   "words": [],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": false,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "kūrchōṇḍi",
+   "units": [
+    {
+     "te": "కూ",
+     "rom": "kū",
+     "needs": [
+      "ka",
+      "sign-uu"
+     ]
+    },
+    {
+     "te": "ర్చోం",
+     "rom": "rchōṇ",
+     "needs": [
+      "ra",
+      "cl-chcha",
+      "sign-oo",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "కూర్చోండి",
+     "rom": "kūrchōṇḍi",
+     "needs": [
+      "ka",
+      "sign-uu",
+      "ra",
+      "cl-chcha",
+      "sign-oo",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": null
+    }
+   ],
+   "alts": [
+    {
+     "te": "కూచోండి",
+     "rom": "kūchōṇḍi",
+     "units": [
+      {
+       "te": "కూ",
+       "rom": "kū",
+       "needs": [
+        "ka",
+        "sign-uu"
+       ]
+      },
+      {
+       "te": "చోం",
+       "rom": "chōṇ",
+       "needs": [
+        "cha",
+        "sign-oo",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "కూర్చోండి"
+    ],
+    [
+     "కూచోండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/3a72ab1814b9ea15.f.mp3",
+    "m": "../audio/u01/ed1dd99599a01969.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s11",
+   "kind": "sentence",
+   "te": "రండి, కూర్చోండి",
+   "en": "Please come in, please sit",
+   "en_alt": [
+    "come in, sit down",
+    "please come, please sit",
+    "come in, please sit",
+    "please come in and sit",
+    "please come in and sit down",
+    "come in and sit down",
+    "please come in, sit down",
+    "come, sit",
+    "come in, have a seat",
+    "please come in, have a seat",
+    "come in, sit",
+    "please come in, sit",
+    "please come, sit",
+    "come, please sit",
+    "come, sit down",
+    "please come, sit down",
+    "come in, sit please",
+    "come, sit please",
+    "come in, sit down please",
+    "come in, please sit down",
+    "please come in, sit please",
+    "please come in, please sit down",
+    "please come in, sit down please",
+    "come in please, sit",
+    "come in please, please sit",
+    "come in please, sit please",
+    "come in please, sit down",
+    "come in please, please sit down",
+    "come in please, sit down please",
+    "come, please sit down",
+    "come, sit down please",
+    "please come, sit please",
+    "please come, please sit down",
+    "please come, sit down please",
+    "come please, sit",
+    "come please, please sit",
+    "come please, sit please",
+    "come please, sit down",
+    "come please, please sit down",
+    "come please, sit down please"
+   ],
+   "te_alt": [],
+   "words": [
+    "రండి=please come (in)",
+    "కూర్చోండి=please sit"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [],
+   "rom": "raṇḍi, kūrchōṇḍi",
+   "units": [
+    {
+     "te": "రం",
+     "rom": "raṇ",
+     "needs": [
+      "ra",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "కూ",
+     "rom": "kū",
+     "needs": [
+      "ka",
+      "sign-uu"
+     ]
+    },
+    {
+     "te": "ర్చోం",
+     "rom": "rchōṇ",
+     "needs": [
+      "ra",
+      "cl-chcha",
+      "sign-oo",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "రండి",
+     "rom": "raṇḍi",
+     "needs": [
+      "ra",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "please come (in)"
+    },
+    {
+     "te": "కూర్చోండి",
+     "rom": "kūrchōṇḍi",
+     "needs": [
+      "ka",
+      "sign-uu",
+      "ra",
+      "cl-chcha",
+      "sign-oo",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "please sit"
+    }
+   ],
+   "alts": [],
+   "forms": [],
+   "orders": [
+    [
+     "రండి",
+     "కూర్చోండి"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/005aa344f3e1521b.f.mp3",
+    "m": "../audio/u01/9ef49dcae87ce0e9.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s12",
+   "kind": "sentence",
+   "te": "సరేనండి, వెళ్ళొస్తాను",
+   "en": "Okay, goodbye (respectful)",
+   "en_alt": [
+    "okay, goodbye",
+    "ok, goodbye",
+    "okay, bye",
+    "ok, bye",
+    "okay, I'll go and come back",
+    "all right, goodbye",
+    "okay, I'm off",
+    "okay, see you",
+    "fine, goodbye",
+    "alright, goodbye",
+    "alright, bye",
+    "all right, bye",
+    "okay, bye bye",
+    "ok, see you",
+    "ok, I'm off",
+    "ok, I'll go and come back"
+   ],
+   "te_alt": [
+    "సరేనండీ, వెళ్ళొస్తాను",
+    "సరేనండి, వెళ్లొస్తాను",
+    "సరేనండి, వెళ్ళొస్తా",
+    "సరేనండి, వెళ్ళొస్తానండి",
+    "సరేనండి, వెళ్ళొస్తాం",
+    "సరేనండి, వెళ్లొస్తాం"
+   ],
+   "words": [
+    "సరేనండి=okay (respectful)",
+    "వెళ్ళొస్తాను=goodbye (I'll go and come back)"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "polite",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": null,
+   "similar": [
+    "u01.malli-kaluddam",
+    "u01.s13"
+   ],
+   "rom": "sarēnaṇḍi, veḷḷostānu",
+   "units": [
+    {
+     "te": "స",
+     "rom": "sa",
+     "needs": [
+      "sa"
+     ]
+    },
+    {
+     "te": "రే",
+     "rom": "rē",
+     "needs": [
+      "ra",
+      "sign-ee"
+     ]
+    },
+    {
+     "te": "నం",
+     "rom": "naṇ",
+     "needs": [
+      "na",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "needs": [
+      "dda",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "వె",
+     "rom": "ve",
+     "needs": [
+      "va",
+      "sign-e"
+     ]
+    },
+    {
+     "te": "ళ్ళొ",
+     "rom": "ḷḷo",
+     "needs": [
+      "cl-llla",
+      "sign-o"
+     ]
+    },
+    {
+     "te": "స్తా",
+     "rom": "stā",
+     "needs": [
+      "cl-sta",
+      "sign-aa"
+     ]
+    },
+    {
+     "te": "ను",
+     "rom": "nu",
+     "needs": [
+      "na",
+      "sign-u"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "సరేనండి",
+     "rom": "sarēnaṇḍi",
+     "needs": [
+      "sa",
+      "ra",
+      "sign-ee",
+      "na",
+      "anusvara",
+      "dda",
+      "sign-i"
+     ],
+     "hint": "okay (respectful)"
+    },
+    {
+     "te": "వెళ్ళొస్తాను",
+     "rom": "veḷḷostānu",
+     "needs": [
+      "va",
+      "sign-e",
+      "cl-llla",
+      "sign-o",
+      "cl-sta",
+      "sign-aa",
+      "na",
+      "sign-u"
+     ],
+     "hint": "goodbye (I'll go and come back)"
+    }
+   ],
+   "alts": [
+    {
+     "te": "సరేనండీ, వెళ్ళొస్తాను",
+     "rom": "sarēnaṇḍī, veḷḷostānu",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డీ",
+       "rom": "ḍī",
+       "needs": [
+        "dda",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "సరేనండి, వెళ్లొస్తాను",
+     "rom": "sarēnaṇḍi, veḷlostānu",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్లొ",
+       "rom": "ḷlo",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "ను",
+       "rom": "nu",
+       "needs": [
+        "na",
+        "sign-u"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "సరేనండి, వెళ్ళొస్తా",
+     "rom": "sarēnaṇḍi, veḷḷostā",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "సరేనండి, వెళ్ళొస్తానండి",
+     "rom": "sarēnaṇḍi, veḷḷostānaṇḍi",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తా",
+       "rom": "stā",
+       "needs": [
+        "cl-sta",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "సరేనండి, వెళ్ళొస్తాం",
+     "rom": "sarēnaṇḍi, veḷḷostām",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్ళొ",
+       "rom": "ḷḷo",
+       "needs": [
+        "cl-llla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తాం",
+       "rom": "stām",
+       "needs": [
+        "cl-sta",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "సరేనండి, వెళ్లొస్తాం",
+     "rom": "sarēnaṇḍi, veḷlostām",
+     "units": [
+      {
+       "te": "స",
+       "rom": "sa",
+       "needs": [
+        "sa"
+       ]
+      },
+      {
+       "te": "రే",
+       "rom": "rē",
+       "needs": [
+        "ra",
+        "sign-ee"
+       ]
+      },
+      {
+       "te": "నం",
+       "rom": "naṇ",
+       "needs": [
+        "na",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "వె",
+       "rom": "ve",
+       "needs": [
+        "va",
+        "sign-e"
+       ]
+      },
+      {
+       "te": "ళ్లొ",
+       "rom": "ḷlo",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-o"
+       ]
+      },
+      {
+       "te": "స్తాం",
+       "rom": "stām",
+       "needs": [
+        "cl-sta",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "సరేనండి",
+     "వెళ్ళొస్తాను"
+    ],
+    [
+     "సరేనండీ",
+     "వెళ్ళొస్తాను"
+    ],
+    [
+     "సరేనండి",
+     "వెళ్లొస్తాను"
+    ],
+    [
+     "సరేనండి",
+     "వెళ్ళొస్తా"
+    ],
+    [
+     "సరేనండి",
+     "వెళ్ళొస్తానండి"
+    ],
+    [
+     "సరేనండి",
+     "వెళ్ళొస్తాం"
+    ],
+    [
+     "సరేనండి",
+     "వెళ్లొస్తాం"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/d6d55fe2b3dc7458.f.mp3",
+    "m": "../audio/u01/7e507158f04ef2e7.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  },
+  {
+   "id": "u01.s13",
+   "kind": "sentence",
+   "te": "మంచిది, మళ్ళీ కలుద్దాం",
+   "en": "Good, see you again",
+   "en_alt": [
+    "fine, see you again",
+    "good, let's meet again",
+    "good, see you later",
+    "fine, let's meet again",
+    "good, see you",
+    "okay, see you again",
+    "all right, see you again",
+    "alright, see you again",
+    "okay, let's meet again",
+    "all right, let's meet again",
+    "alright, let's meet again",
+    "fine, see you later",
+    "okay, see you later",
+    "fine, see you",
+    "good, we'll meet again",
+    "good, let us meet again",
+    "ok, see you again"
+   ],
+   "te_alt": [
+    "మంచిది, మళ్లీ కలుద్దాం",
+    "మంచిది, మళ్ళీ కలుద్దామండి",
+    "మంచిది, మళ్లీ కలుద్దామండి",
+    "మంచిది, మళ్ళా కలుద్దాం"
+   ],
+   "words": [
+    "మంచిది=good, fine",
+    "మళ్ళీ=again",
+    "కలుద్దాం=let's meet"
+   ],
+   "chunks": [],
+   "order": "fixed",
+   "order_deny": [],
+   "practice": true,
+   "register": "neutral",
+   "literary": null,
+   "hyd": null,
+   "source": {
+    "kind": "authored"
+   },
+   "note": "To an elder, add the respectful ending to the last word: kaluddāmaṇḍi.",
+   "similar": [
+    "u01.s12",
+    "u01.vellostanu"
+   ],
+   "rom": "mañchidi, maḷḷī kaluddām",
+   "units": [
+    {
+     "te": "మం",
+     "rom": "mañ",
+     "needs": [
+      "ma",
+      "anusvara"
+     ]
+    },
+    {
+     "te": "చి",
+     "rom": "chi",
+     "needs": [
+      "cha",
+      "sign-i"
+     ]
+    },
+    {
+     "te": "ది",
+     "rom": "di",
+     "needs": [
+      "da",
+      "sign-i"
+     ]
+    },
+    {
+     "te": ",",
+     "rom": ",",
+     "needs": []
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "మ",
+     "rom": "ma",
+     "needs": [
+      "ma"
+     ]
+    },
+    {
+     "te": "ళ్ళీ",
+     "rom": "ḷḷī",
+     "needs": [
+      "cl-llla",
+      "sign-ii"
+     ]
+    },
+    {
+     "te": " ",
+     "rom": " ",
+     "needs": []
+    },
+    {
+     "te": "క",
+     "rom": "ka",
+     "needs": [
+      "ka"
+     ]
+    },
+    {
+     "te": "లు",
+     "rom": "lu",
+     "needs": [
+      "la",
+      "sign-u"
+     ]
+    },
+    {
+     "te": "ద్దాం",
+     "rom": "ddām",
+     "needs": [
+      "cl-dda",
+      "sign-aa",
+      "anusvara"
+     ]
+    }
+   ],
+   "tokens": [
+    {
+     "te": "మంచిది",
+     "rom": "mañchidi",
+     "needs": [
+      "ma",
+      "anusvara",
+      "cha",
+      "sign-i",
+      "da"
+     ],
+     "hint": "good, fine"
+    },
+    {
+     "te": "మళ్ళీ",
+     "rom": "maḷḷī",
+     "needs": [
+      "ma",
+      "cl-llla",
+      "sign-ii"
+     ],
+     "hint": "again"
+    },
+    {
+     "te": "కలుద్దాం",
+     "rom": "kaluddām",
+     "needs": [
+      "ka",
+      "la",
+      "sign-u",
+      "cl-dda",
+      "sign-aa",
+      "anusvara"
+     ],
+     "hint": "let's meet"
+    }
+   ],
+   "alts": [
+    {
+     "te": "మంచిది, మళ్లీ కలుద్దాం",
+     "rom": "mañchidi, maḷlī kaluddām",
+     "units": [
+      {
+       "te": "మం",
+       "rom": "mañ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చి",
+       "rom": "chi",
+       "needs": [
+        "cha",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్లీ",
+       "rom": "ḷlī",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "ద్దాం",
+       "rom": "ddām",
+       "needs": [
+        "cl-dda",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "మంచిది, మళ్ళీ కలుద్దామండి",
+     "rom": "mañchidi, maḷḷī kaluddāmaṇḍi",
+     "units": [
+      {
+       "te": "మం",
+       "rom": "mañ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చి",
+       "rom": "chi",
+       "needs": [
+        "cha",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్ళీ",
+       "rom": "ḷḷī",
+       "needs": [
+        "cl-llla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "ద్దా",
+       "rom": "ddā",
+       "needs": [
+        "cl-dda",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "మం",
+       "rom": "maṇ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "మంచిది, మళ్లీ కలుద్దామండి",
+     "rom": "mañchidi, maḷlī kaluddāmaṇḍi",
+     "units": [
+      {
+       "te": "మం",
+       "rom": "mañ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చి",
+       "rom": "chi",
+       "needs": [
+        "cha",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్లీ",
+       "rom": "ḷlī",
+       "needs": [
+        "lla",
+        "cl-lla",
+        "sign-ii"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "ద్దా",
+       "rom": "ddā",
+       "needs": [
+        "cl-dda",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": "మం",
+       "rom": "maṇ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "డి",
+       "rom": "ḍi",
+       "needs": [
+        "dda",
+        "sign-i"
+       ]
+      }
+     ]
+    },
+    {
+     "te": "మంచిది, మళ్ళా కలుద్దాం",
+     "rom": "mañchidi, maḷḷā kaluddām",
+     "units": [
+      {
+       "te": "మం",
+       "rom": "mañ",
+       "needs": [
+        "ma",
+        "anusvara"
+       ]
+      },
+      {
+       "te": "చి",
+       "rom": "chi",
+       "needs": [
+        "cha",
+        "sign-i"
+       ]
+      },
+      {
+       "te": "ది",
+       "rom": "di",
+       "needs": [
+        "da",
+        "sign-i"
+       ]
+      },
+      {
+       "te": ",",
+       "rom": ",",
+       "needs": []
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "మ",
+       "rom": "ma",
+       "needs": [
+        "ma"
+       ]
+      },
+      {
+       "te": "ళ్ళా",
+       "rom": "ḷḷā",
+       "needs": [
+        "cl-llla",
+        "sign-aa"
+       ]
+      },
+      {
+       "te": " ",
+       "rom": " ",
+       "needs": []
+      },
+      {
+       "te": "క",
+       "rom": "ka",
+       "needs": [
+        "ka"
+       ]
+      },
+      {
+       "te": "లు",
+       "rom": "lu",
+       "needs": [
+        "la",
+        "sign-u"
+       ]
+      },
+      {
+       "te": "ద్దాం",
+       "rom": "ddām",
+       "needs": [
+        "cl-dda",
+        "sign-aa",
+        "anusvara"
+       ]
+      }
+     ]
+    }
+   ],
+   "forms": [],
+   "orders": [
+    [
+     "మంచిది",
+     "మళ్ళీ",
+     "కలుద్దాం"
+    ],
+    [
+     "మంచిది",
+     "మళ్లీ",
+     "కలుద్దాం"
+    ],
+    [
+     "మంచిది",
+     "మళ్ళీ",
+     "కలుద్దామండి"
+    ],
+    [
+     "మంచిది",
+     "మళ్లీ",
+     "కలుద్దామండి"
+    ],
+    [
+     "మంచిది",
+     "మళ్ళా",
+     "కలుద్దాం"
+    ]
+   ],
+   "audio": {
+    "f": "../audio/u01/d6159df3484dc069.f.mp3",
+    "m": "../audio/u01/39c926d99fa69b77.m.mp3"
+   },
+   "audio_hyd": {},
+   "confidence": "checked"
+  }
+ ]
+}

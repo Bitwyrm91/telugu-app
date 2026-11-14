@@ -1,0 +1,7161 @@
+{
+ "carrier": "న",
+ "letters": [
+  {
+   "id": "na",
+   "glyph": "న",
+   "type": "consonant",
+   "say": "న",
+   "rom": "na",
+   "shape_note": "A small open hook at the lower left that swings into one smooth bowl. The bowl's right side runs up into the tick. Most consonants wear this tick; a vowel sign usually takes its place.",
+   "confusable": "na-sa",
+   "audio": {
+    "f": "../audio/letters/61d9c96bbccc61ec.f.mp3",
+    "m": "../audio/letters/241b245353535b06.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "మన",
+    "en": "our (including you)",
+    "rom": "mana",
+    "units": [
+     {
+      "te": "మ",
+      "rom": "ma",
+      "needs": [
+       "ma"
+      ]
+     },
+     {
+      "te": "న",
+      "rom": "na",
+      "needs": [
+       "na"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/e09ab226c7b559c4.f.mp3",
+     "m": "../audio/letters/8e79171142e5095f.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ma",
+   "glyph": "మ",
+   "type": "consonant",
+   "say": "మ",
+   "rom": "ma",
+   "shape_note": "A small closed loop low on the left, then a cup whose right side rises as a free arm. The tick sits over the left part.",
+   "confusable": "ma-ya",
+   "audio": {
+    "f": "../audio/letters/00073b68cdc9ead5.f.mp3",
+    "m": "../audio/letters/72d7eb0daf89c299.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "మామ",
+    "en": "mother's brother; father-in-law",
+    "rom": "māma",
+    "units": [
+     {
+      "te": "మా",
+      "rom": "mā",
+      "needs": [
+       "ma",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "మ",
+      "rom": "ma",
+      "needs": [
+       "ma"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/87378b2ede2529f5.f.mp3",
+     "m": "../audio/letters/f956acd747024224.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-aa",
+   "glyph": "ా",
+   "type": "sign",
+   "say": "నా",
+   "rom": "nā",
+   "shape_note": "The long 'ā' sign. The tick on top is replaced by a bar that runs out to the right and ends in a small ring hanging from it.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/9ca232bd4f0c74b2.f.mp3",
+    "m": "../audio/letters/d3d6b7bb9d2ea3e4.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "నా",
+    "en": "my",
+    "rom": "nā",
+    "units": [
+     {
+      "te": "నా",
+      "rom": "nā",
+      "needs": [
+       "na",
+       "sign-aa"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/9ca232bd4f0c74b2.f.mp3",
+     "m": "../audio/letters/d3d6b7bb9d2ea3e4.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "a",
+   "glyph": "అ",
+   "type": "vowel",
+   "say": "అ",
+   "rom": "a",
+   "shape_note": "The short vowel 'a' written by itself, as at the start of a word. No tick.",
+   "confusable": "a-aa",
+   "audio": {
+    "f": "../audio/letters/16abfbefb1606a59.f.mp3",
+    "m": "../audio/letters/4c0af5f1eebb8dab.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": null
+  },
+  {
+   "id": "ra",
+   "glyph": "ర",
+   "type": "consonant",
+   "say": "ర",
+   "rom": "ra",
+   "shape_note": "The simplest consonant: a plain circle-like bowl with the tick on top.",
+   "confusable": "ra-ttha",
+   "audio": {
+    "f": "../audio/letters/a222154fefaa8600.f.mp3",
+    "m": "../audio/letters/8a2118cd9d5248c6.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "రా",
+    "en": "come (to a close friend or a child)",
+    "rom": "rā",
+    "units": [
+     {
+      "te": "రా",
+      "rom": "rā",
+      "needs": [
+       "ra",
+       "sign-aa"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/411e514a225df724.f.mp3",
+     "m": "../audio/letters/4262c5992ed9ad3c.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "aa",
+   "glyph": "ఆ",
+   "type": "vowel",
+   "say": "ఆ",
+   "rom": "ā",
+   "shape_note": "The long vowel 'ā' by itself. It is అ with the right side pinched in at the middle: the top-right curl closes into a ring with a short tail, and the bowl ends under it.",
+   "confusable": "a-aa",
+   "audio": {
+    "f": "../audio/letters/90e72983072aa550.f.mp3",
+    "m": "../audio/letters/b12ba1942f91de8f.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఆ",
+    "en": "that (before a noun)",
+    "rom": "ā",
+    "units": [
+     {
+      "te": "ఆ",
+      "rom": "ā",
+      "needs": [
+       "aa"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/90e72983072aa550.f.mp3",
+     "m": "../audio/letters/b12ba1942f91de8f.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "anusvara",
+   "glyph": "ం",
+   "type": "mark",
+   "say": "నం",
+   "rom": "nam",
+   "shape_note": "A circle as tall as the letter's body, written after the letter. It adds an 'm' or 'n' sound after the vowel; at the end of a word it sounds like 'm'.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/1fa2d965668bbd1d.f.mp3",
+    "m": "../audio/letters/83b75f13cfde7a6d.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "మనం",
+    "en": "we (including you)",
+    "rom": "manam",
+    "units": [
+     {
+      "te": "మ",
+      "rom": "ma",
+      "needs": [
+       "ma"
+      ]
+     },
+     {
+      "te": "నం",
+      "rom": "nam",
+      "needs": [
+       "na",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/937933518445e091.f.mp3",
+     "m": "../audio/letters/4a4bfeed30f148be.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ka",
+   "glyph": "క",
+   "type": "consonant",
+   "say": "క",
+   "rom": "ka",
+   "shape_note": "Under the tick, a rounded top bends back through a flat middle bar into a bottom bowl that opens to the left, a little like a rounded 5. It has no closed loop.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/9ee440198f36ac57.f.mp3",
+    "m": "../audio/letters/5cb57e24126807c7.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కారం",
+    "en": "chilli powder; spicy heat",
+    "rom": "kāram",
+    "units": [
+     {
+      "te": "కా",
+      "rom": "kā",
+      "needs": [
+       "ka",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "రం",
+      "rom": "ram",
+      "needs": [
+       "ra",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/3114e5d9c24b15c8.f.mp3",
+     "m": "../audio/letters/6111b9010df9f6e6.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "va",
+   "glyph": "వ",
+   "type": "consonant",
+   "say": "వ",
+   "rom": "va",
+   "shape_note": "A small closed loop at the lower left, then a bowl whose right side runs up into the tick, so the top is closed. The sound is between English 'v' and 'w'.",
+   "confusable": "pa-va",
+   "audio": {
+    "f": "../audio/letters/ba8b5c165ee5c312.f.mp3",
+    "m": "../audio/letters/d00a7d71e11ce84a.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "వాన",
+    "en": "rain",
+    "rom": "vāna",
+    "units": [
+     {
+      "te": "వా",
+      "rom": "vā",
+      "needs": [
+       "va",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "న",
+      "rom": "na",
+      "needs": [
+       "na"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/109bdbb46f3d45f3.f.mp3",
+     "m": "../audio/letters/0a37110dfeef443d.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-i",
+   "glyph": "ి",
+   "type": "sign",
+   "say": "ని",
+   "rom": "ni",
+   "shape_note": "The short 'i' sign. The tick is replaced by a small closed curl on top of the letter.",
+   "confusable": "sign-i-ii",
+   "audio": {
+    "f": "../audio/letters/e7381d9b53fa52f5.f.mp3",
+    "m": "../audio/letters/e0af7553a5f88cb8.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కాకి",
+    "en": "crow",
+    "rom": "kāki",
+    "units": [
+     {
+      "te": "కా",
+      "rom": "kā",
+      "needs": [
+       "ka",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "కి",
+      "rom": "ki",
+      "needs": [
+       "ka",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/786e9d497e9e8f28.f.mp3",
+     "m": "../audio/letters/6631251ed97440e1.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "i",
+   "glyph": "ఇ",
+   "type": "vowel",
+   "say": "ఇ",
+   "rom": "i",
+   "shape_note": "The short vowel 'i' by itself.",
+   "confusable": "i-ii",
+   "audio": {
+    "f": "../audio/letters/e350a0bf44cc8057.f.mp3",
+    "m": "../audio/letters/fbbf693aa2d8b98b.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఇవి",
+    "en": "these (things)",
+    "rom": "ivi",
+    "units": [
+     {
+      "te": "ఇ",
+      "rom": "i",
+      "needs": [
+       "i"
+      ]
+     },
+     {
+      "te": "వి",
+      "rom": "vi",
+      "needs": [
+       "va",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/0c9d9918f34ea6d7.f.mp3",
+     "m": "../audio/letters/4cef9e97925e36de.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "la",
+   "glyph": "ల",
+   "type": "consonant",
+   "say": "ల",
+   "rom": "la",
+   "shape_note": "A wide open curve with a small ring inside at the left. It has no tick.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/a4f3ffeb21945b77.f.mp3",
+    "m": "../audio/letters/1956dad94cd89d17.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కల",
+    "en": "dream",
+    "rom": "kala",
+    "units": [
+     {
+      "te": "క",
+      "rom": "ka",
+      "needs": [
+       "ka"
+      ]
+     },
+     {
+      "te": "ల",
+      "rom": "la",
+      "needs": [
+       "la"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/28c8fafa0d59c1a8.f.mp3",
+     "m": "../audio/letters/e1be12d02d798dd0.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-ii",
+   "glyph": "ీ",
+   "type": "sign",
+   "say": "నీ",
+   "rom": "nī",
+   "shape_note": "The long 'ī' sign. Like the short 'i' curl on top, but the curl carries on into a second small twist.",
+   "confusable": "sign-i-ii",
+   "audio": {
+    "f": "../audio/letters/e689cf5fdb73471a.f.mp3",
+    "m": "../audio/letters/7567cb2177d2d0bb.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "మీ",
+    "en": "your (polite or plural)",
+    "rom": "mī",
+    "units": [
+     {
+      "te": "మీ",
+      "rom": "mī",
+      "needs": [
+       "ma",
+       "sign-ii"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/f33daa9c5edf9488.f.mp3",
+     "m": "../audio/letters/40afa26d54476252.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ii",
+   "glyph": "ఈ",
+   "type": "vowel",
+   "say": "ఈ",
+   "rom": "ī",
+   "shape_note": "The long vowel 'ī' by itself. Not built from ఇ: learn it as its own shape.",
+   "confusable": "i-ii",
+   "audio": {
+    "f": "../audio/letters/dae9689639d83d91.f.mp3",
+    "m": "../audio/letters/d3526835a316c2e9.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఈ",
+    "en": "this (before a noun)",
+    "rom": "ī",
+    "units": [
+     {
+      "te": "ఈ",
+      "rom": "ī",
+      "needs": [
+       "ii"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/dae9689639d83d91.f.mp3",
+     "m": "../audio/letters/d3526835a316c2e9.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ta",
+   "glyph": "త",
+   "type": "consonant",
+   "say": "త",
+   "rom": "ta",
+   "shape_note": "Like అ with a tick on top: a wide bowl with a small ring inside at the left. Where అ has a flat bar on the right, త has a second small ring. The tongue touches the teeth.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/8b126fa8f19138db.f.mp3",
+    "m": "../audio/letters/189e9c8cda628101.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "తల",
+    "en": "head",
+    "rom": "tala",
+    "units": [
+     {
+      "te": "త",
+      "rom": "ta",
+      "needs": [
+       "ta"
+      ]
+     },
+     {
+      "te": "ల",
+      "rom": "la",
+      "needs": [
+       "la"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/91714f59bcb12d77.f.mp3",
+     "m": "../audio/letters/a004d608a74f8998.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "da",
+   "glyph": "ద",
+   "type": "consonant",
+   "say": "ద",
+   "rom": "da",
+   "shape_note": "A rounded body with a short notch rising from the middle of the bottom, with the tick on top. The tongue touches the teeth.",
+   "confusable": "da-dda",
+   "audio": {
+    "f": "../audio/letters/b2a9bf535eefce51.f.mp3",
+    "m": "../audio/letters/e131c8ebe7674497.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "దారి",
+    "en": "way, path",
+    "rom": "dāri",
+    "units": [
+     {
+      "te": "దా",
+      "rom": "dā",
+      "needs": [
+       "da",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "రి",
+      "rom": "ri",
+      "needs": [
+       "ra",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/a6dd9b6c131adfb1.f.mp3",
+     "m": "../audio/letters/714ee52cba3ef1de.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-u",
+   "glyph": "ు",
+   "type": "sign",
+   "say": "ను",
+   "rom": "nu",
+   "shape_note": "The short 'u' sign: a hook added on the right side of the letter. The tick on top stays.",
+   "confusable": "sign-u-uu",
+   "audio": {
+    "f": "../audio/letters/1e4934949aa22cd9.f.mp3",
+    "m": "../audio/letters/8df41b399772927f.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "మీరు",
+    "en": "you (polite or plural)",
+    "rom": "mīru",
+    "units": [
+     {
+      "te": "మీ",
+      "rom": "mī",
+      "needs": [
+       "ma",
+       "sign-ii"
+      ]
+     },
+     {
+      "te": "రు",
+      "rom": "ru",
+      "needs": [
+       "ra",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/bd360f06aff8b626.f.mp3",
+     "m": "../audio/letters/cbf0f7bf6737d53a.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "u",
+   "glyph": "ఉ",
+   "type": "vowel",
+   "say": "ఉ",
+   "rom": "u",
+   "shape_note": "The short vowel 'u' by itself.",
+   "confusable": "u-uu",
+   "audio": {
+    "f": "../audio/letters/838016310aed804d.f.mp3",
+    "m": "../audio/letters/d8f3345564c9e2cd.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఉంది",
+    "en": "there is, it is there",
+    "rom": "undi",
+    "units": [
+     {
+      "te": "ఉం",
+      "rom": "un",
+      "needs": [
+       "u",
+       "anusvara"
+      ]
+     },
+     {
+      "te": "ది",
+      "rom": "di",
+      "needs": [
+       "da",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/93be9d25dafca315.f.mp3",
+     "m": "../audio/letters/45126d057bc506ae.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "pa",
+   "glyph": "ప",
+   "type": "consonant",
+   "say": "ప",
+   "rom": "pa",
+   "shape_note": "Like వ, but open at the top: the body does not close under the tick.",
+   "confusable": "pa-va",
+   "audio": {
+    "f": "../audio/letters/6dca128dca7daefc.f.mp3",
+    "m": "../audio/letters/7ad1d54451911eae.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పని",
+    "en": "work",
+    "rom": "pani",
+    "units": [
+     {
+      "te": "ప",
+      "rom": "pa",
+      "needs": [
+       "pa"
+      ]
+     },
+     {
+      "te": "ని",
+      "rom": "ni",
+      "needs": [
+       "na",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/1d0774d7f4f296c6.f.mp3",
+     "m": "../audio/letters/8fe6825bed078965.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-uu",
+   "glyph": "ూ",
+   "type": "sign",
+   "say": "నూ",
+   "rom": "nū",
+   "shape_note": "The long 'ū' sign: the short 'u' hook on the right, plus a bar that runs on to the right and ends in a small hanging ring, like the 'ā' sign.",
+   "confusable": "sign-u-uu",
+   "audio": {
+    "f": "../audio/letters/f81075bf1de7505a.f.mp3",
+    "m": "../audio/letters/5deac04a2008dae1.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పూలు",
+    "en": "flowers",
+    "rom": "pūlu",
+    "units": [
+     {
+      "te": "పూ",
+      "rom": "pū",
+      "needs": [
+       "pa",
+       "sign-uu"
+      ]
+     },
+     {
+      "te": "లు",
+      "rom": "lu",
+      "needs": [
+       "la",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/c52623da2d7f2be8.f.mp3",
+     "m": "../audio/letters/a9522b6bb7afd856.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "uu",
+   "glyph": "ఊ",
+   "type": "vowel",
+   "say": "ఊ",
+   "rom": "ū",
+   "shape_note": "The long vowel 'ū' by itself. It is ఉ with a second upright stroke on top and an extra curl on the right.",
+   "confusable": "u-uu",
+   "audio": {
+    "f": "../audio/letters/0d1662858773d0ac.f.mp3",
+    "m": "../audio/letters/70aef7b2c1a27254.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఊరు",
+    "en": "village, home town",
+    "rom": "ūru",
+    "units": [
+     {
+      "te": "ఊ",
+      "rom": "ū",
+      "needs": [
+       "uu"
+      ]
+     },
+     {
+      "te": "రు",
+      "rom": "ru",
+      "needs": [
+       "ra",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/9bb4db2e7252baef.f.mp3",
+     "m": "../audio/letters/256ee57326bd2bc9.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-mma",
+   "glyph": "మ్మ",
+   "type": "cluster",
+   "say": "మ్మ",
+   "rom": "mma",
+   "shape_note": "Doubled 'm', held a little longer. The second మ changes shape: at the lower right it is a round curl with a small ring inside.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/14278fae41968aae.f.mp3",
+    "m": "../audio/letters/05337f3ebea112af.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "అమ్మ",
+    "en": "mother",
+    "rom": "amma",
+    "units": [
+     {
+      "te": "అ",
+      "rom": "a",
+      "needs": [
+       "a"
+      ]
+     },
+     {
+      "te": "మ్మ",
+      "rom": "mma",
+      "needs": [
+       "cl-mma"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/8e117cb772ff3e7c.f.mp3",
+     "m": "../audio/letters/f41663f33137d870.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-nna",
+   "glyph": "న్న",
+   "type": "cluster",
+   "say": "న్న",
+   "rom": "nna",
+   "shape_note": "Doubled 'n'. The second న hangs at the lower right without its tick, and its long arm sweeps up the right side of the first.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/30e05c12deebdd73.f.mp3",
+    "m": "../audio/letters/cc9b49bce08fd240.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "అన్న",
+    "en": "older brother",
+    "rom": "anna",
+    "units": [
+     {
+      "te": "అ",
+      "rom": "a",
+      "needs": [
+       "a"
+      ]
+     },
+     {
+      "te": "న్న",
+      "rom": "nna",
+      "needs": [
+       "cl-nna"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/dcbd0df368bfd1e7.f.mp3",
+     "m": "../audio/letters/62f0fc4e865e4f58.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-kka",
+   "glyph": "క్క",
+   "type": "cluster",
+   "say": "క్క",
+   "rom": "kka",
+   "shape_note": "Doubled 'k'. The second క changes shape: at the lower right it is a tall hook with a flat bar on top.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/6b29e5d7888e79e8.f.mp3",
+    "m": "../audio/letters/3bf2c0b22e7f2340.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "అక్క",
+    "en": "older sister",
+    "rom": "akka",
+    "units": [
+     {
+      "te": "అ",
+      "rom": "a",
+      "needs": [
+       "a"
+      ]
+     },
+     {
+      "te": "క్క",
+      "rom": "kka",
+      "needs": [
+       "cl-kka"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/ea56674311e38543.f.mp3",
+     "m": "../audio/letters/276c28205f2d1c93.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-lla",
+   "glyph": "ల్ల",
+   "type": "cluster",
+   "say": "ల్ల",
+   "rom": "lla",
+   "shape_note": "Doubled 'l'. The second ల changes shape: underneath it is a small arch with two humps.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/52bdc9061e0492a5.f.mp3",
+    "m": "../audio/letters/ac175de1ec667dcd.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పిల్లలు",
+    "en": "children",
+    "rom": "pillalu",
+    "units": [
+     {
+      "te": "పి",
+      "rom": "pi",
+      "needs": [
+       "pa",
+       "sign-i"
+      ]
+     },
+     {
+      "te": "ల్ల",
+      "rom": "lla",
+      "needs": [
+       "cl-lla"
+      ]
+     },
+     {
+      "te": "లు",
+      "rom": "lu",
+      "needs": [
+       "la",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/864e7a8e80e561d5.f.mp3",
+     "m": "../audio/letters/dd8a4e62887cd8c6.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-vva",
+   "glyph": "వ్వ",
+   "type": "cluster",
+   "say": "వ్వ",
+   "rom": "vva",
+   "shape_note": "Doubled 'v', as in నువ్వు, the close-friend 'you'. The second వ hangs at the lower right, nearly full size and without its tick; its long arm sweeps up the right side of the first and ends in a hook.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/998a7db699d93775.f.mp3",
+    "m": "../audio/letters/0ce6ecb292eb836a.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "నవ్వు",
+    "en": "laugh, smile",
+    "rom": "navvu",
+    "units": [
+     {
+      "te": "న",
+      "rom": "na",
+      "needs": [
+       "na"
+      ]
+     },
+     {
+      "te": "వ్వు",
+      "rom": "vvu",
+      "needs": [
+       "cl-vva",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/92f1fa92762c7e32.f.mp3",
+     "m": "../audio/letters/171d8750adc9750d.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ga",
+   "glyph": "గ",
+   "type": "consonant",
+   "say": "గ",
+   "rom": "ga",
+   "shape_note": "An arch open at the bottom, with the tick on top.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/d3c2ea899f309634.f.mp3",
+    "m": "../audio/letters/28308e54f6e05691.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "గది",
+    "en": "room",
+    "rom": "gadi",
+    "units": [
+     {
+      "te": "గ",
+      "rom": "ga",
+      "needs": [
+       "ga"
+      ]
+     },
+     {
+      "te": "ది",
+      "rom": "di",
+      "needs": [
+       "da",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/d3d0e72a9caffcbc.f.mp3",
+     "m": "../audio/letters/bc8d3f94605b0905.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cha",
+   "glyph": "చ",
+   "type": "consonant",
+   "say": "చ",
+   "rom": "cha",
+   "shape_note": "Like ద, but the left side starts with a flat bar sticking out to the left, and the body stays open above that bar. The tick is on top.",
+   "confusable": "cha-chha",
+   "audio": {
+    "f": "../audio/letters/d3a02f01f454d7ad.f.mp3",
+    "m": "../audio/letters/cf5635413b9b6cd9.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "చాలు",
+    "en": "enough",
+    "rom": "chālu",
+    "units": [
+     {
+      "te": "చా",
+      "rom": "chā",
+      "needs": [
+       "cha",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "లు",
+      "rom": "lu",
+      "needs": [
+       "la",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/fd547be55e6c90e3.f.mp3",
+     "m": "../audio/letters/6fc297b8cbfd805f.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-e",
+   "glyph": "ె",
+   "type": "sign",
+   "say": "నె",
+   "rom": "ne",
+   "shape_note": "The short 'e' sign. The tick is replaced by a flat bar on top that sticks out to the left.",
+   "confusable": "sign-e-ee",
+   "audio": {
+    "f": "../audio/letters/56354355cd7cee4e.f.mp3",
+    "m": "../audio/letters/4dd256369b50a794.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "నెల",
+    "en": "month",
+    "rom": "nela",
+    "units": [
+     {
+      "te": "నె",
+      "rom": "ne",
+      "needs": [
+       "na",
+       "sign-e"
+      ]
+     },
+     {
+      "te": "ల",
+      "rom": "la",
+      "needs": [
+       "la"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/6d84719d70799a7b.f.mp3",
+     "m": "../audio/letters/12f98f3c39c925bc.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "e",
+   "glyph": "ఎ",
+   "type": "vowel",
+   "say": "ఎ",
+   "rom": "e",
+   "shape_note": "The short vowel 'e' by itself.",
+   "confusable": "e-ee",
+   "audio": {
+    "f": "../audio/letters/20be7a3af19db459.f.mp3",
+    "m": "../audio/letters/573943b3ab666297.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఎవరు",
+    "en": "who",
+    "rom": "evaru",
+    "units": [
+     {
+      "te": "ఎ",
+      "rom": "e",
+      "needs": [
+       "e"
+      ]
+     },
+     {
+      "te": "వ",
+      "rom": "va",
+      "needs": [
+       "va"
+      ]
+     },
+     {
+      "te": "రు",
+      "rom": "ru",
+      "needs": [
+       "ra",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/7dcd6dffee92551c.f.mp3",
+     "m": "../audio/letters/024caa5812cbdacc.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "dda",
+   "glyph": "డ",
+   "type": "consonant",
+   "say": "డ",
+   "rom": "ḍa",
+   "shape_note": "A 'd' made with the tongue curled back. Like ద on the left and along the bottom, but the right side differs: the top stroke ends in a free tip at the upper right instead of coming down, and the bottom right curls into a small closed loop.",
+   "confusable": "da-dda",
+   "audio": {
+    "f": "../audio/letters/39161a81a4b0a7b6.f.mp3",
+    "m": "../audio/letters/bffae0c6916f35de.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "గుడి",
+    "en": "temple",
+    "rom": "guḍi",
+    "units": [
+     {
+      "te": "గు",
+      "rom": "gu",
+      "needs": [
+       "ga",
+       "sign-u"
+      ]
+     },
+     {
+      "te": "డి",
+      "rom": "ḍi",
+      "needs": [
+       "dda",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/6391910a7e635316.f.mp3",
+     "m": "../audio/letters/202360198cc86c6c.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-ee",
+   "glyph": "ే",
+   "type": "sign",
+   "say": "నే",
+   "rom": "nē",
+   "shape_note": "The long 'ē' sign. Like the short 'e' stroke on top, with an extra upward tail.",
+   "confusable": "sign-e-ee",
+   "audio": {
+    "f": "../audio/letters/b24560cbc71c45dd.f.mp3",
+    "m": "../audio/letters/40ca9e6abcf6eb18.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "నేను",
+    "en": "I",
+    "rom": "nēnu",
+    "units": [
+     {
+      "te": "నే",
+      "rom": "nē",
+      "needs": [
+       "na",
+       "sign-ee"
+      ]
+     },
+     {
+      "te": "ను",
+      "rom": "nu",
+      "needs": [
+       "na",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/25f679e0d12b73b2.f.mp3",
+     "m": "../audio/letters/6494784fee258ece.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ee",
+   "glyph": "ఏ",
+   "type": "vowel",
+   "say": "ఏ",
+   "rom": "ē",
+   "shape_note": "The long vowel 'ē' by itself. It is ఎ with one extra stroke on top.",
+   "confusable": "e-ee",
+   "audio": {
+    "f": "../audio/letters/2f9cffa2baa5e310.f.mp3",
+    "m": "../audio/letters/55f12f6ed71c8de2.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఏం",
+    "en": "what",
+    "rom": "ēm",
+    "units": [
+     {
+      "te": "ఏం",
+      "rom": "ēm",
+      "needs": [
+       "ee",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/ff745d166b601696.f.mp3",
+     "m": "../audio/letters/7ed238fe0efe7b81.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-tta",
+   "glyph": "త్త",
+   "type": "cluster",
+   "say": "త్త",
+   "rom": "tta",
+   "shape_note": "Doubled 't'. The second త changes shape: underneath it is a flat line that curls into one loop at the right, not a small త.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/ab6e162ab6267012.f.mp3",
+    "m": "../audio/letters/462913aaadac3560.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "అత్త",
+    "en": "father's sister; mother-in-law",
+    "rom": "atta",
+    "units": [
+     {
+      "te": "అ",
+      "rom": "a",
+      "needs": [
+       "a"
+      ]
+     },
+     {
+      "te": "త్త",
+      "rom": "tta",
+      "needs": [
+       "cl-tta"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/33ac75fe0b9da8b8.f.mp3",
+     "m": "../audio/letters/a5565a86c67ee0ec.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ppa",
+   "glyph": "ప్ప",
+   "type": "cluster",
+   "say": "ప్ప",
+   "rom": "ppa",
+   "shape_note": "Doubled 'p'. The second ప hangs at the lower right without its tick, and its long arm sweeps up the right side of the first.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/8482f574962fba57.f.mp3",
+    "m": "../audio/letters/c4e0dcd5f0f576f2.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "తప్పు",
+    "en": "mistake",
+    "rom": "tappu",
+    "units": [
+     {
+      "te": "త",
+      "rom": "ta",
+      "needs": [
+       "ta"
+      ]
+     },
+     {
+      "te": "ప్పు",
+      "rom": "ppu",
+      "needs": [
+       "cl-ppa",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/fca51d0f832a987f.f.mp3",
+     "m": "../audio/letters/96080ecee7cdd3fa.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-dda",
+   "glyph": "ద్ద",
+   "type": "cluster",
+   "say": "ద్ద",
+   "rom": "dda",
+   "shape_note": "Doubled 'd'. The second ద is written small underneath, without its tick.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/72105594eec8b339.f.mp3",
+    "m": "../audio/letters/1b436213240927ab.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పెద్ద",
+    "en": "big, elder",
+    "rom": "pedda",
+    "units": [
+     {
+      "te": "పె",
+      "rom": "pe",
+      "needs": [
+       "pa",
+       "sign-e"
+      ]
+     },
+     {
+      "te": "ద్ద",
+      "rom": "dda",
+      "needs": [
+       "cl-dda"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/d3e8ad8b4a4e1326.f.mp3",
+     "m": "../audio/letters/0d5c76bf02fd3d37.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-chcha",
+   "glyph": "చ్చ",
+   "type": "cluster",
+   "say": "చ్చ",
+   "rom": "chcha",
+   "shape_note": "Doubled 'ch'. The second చ hangs at the lower right without its tick, and its long arm sweeps up the right side of the first.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/aa2690bf8a8ffa60.f.mp3",
+    "m": "../audio/letters/cbf679ae2a319ee2.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "వచ్చాను",
+    "en": "I came",
+    "rom": "vachchānu",
+    "units": [
+     {
+      "te": "వ",
+      "rom": "va",
+      "needs": [
+       "va"
+      ]
+     },
+     {
+      "te": "చ్చా",
+      "rom": "chchā",
+      "needs": [
+       "cl-chcha",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "ను",
+      "rom": "nu",
+      "needs": [
+       "na",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/e314dd0da0345bb3.f.mp3",
+     "m": "../audio/letters/f37a9f93b07a6ab9.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sa",
+   "glyph": "స",
+   "type": "consonant",
+   "say": "స",
+   "rom": "sa",
+   "shape_note": "Like న, but the right side does not join the tick: it ends in a free tip, leaving a gap under the tick.",
+   "confusable": "na-sa",
+   "audio": {
+    "f": "../audio/letters/c279d14b15787cb4.f.mp3",
+    "m": "../audio/letters/b0c2723c7b0b8b28.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "సరే",
+    "en": "okay",
+    "rom": "sarē",
+    "units": [
+     {
+      "te": "స",
+      "rom": "sa",
+      "needs": [
+       "sa"
+      ]
+     },
+     {
+      "te": "రే",
+      "rom": "rē",
+      "needs": [
+       "ra",
+       "sign-ee"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/50290acd742bbda8.f.mp3",
+     "m": "../audio/letters/08de37d643578d58.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ya",
+   "glyph": "య",
+   "type": "consonant",
+   "say": "య",
+   "rom": "ya",
+   "shape_note": "Wider than మ. మ has a small loop low on the left; య has a big round ring there.",
+   "confusable": "ma-ya",
+   "audio": {
+    "f": "../audio/letters/d00c35a589219b8b.f.mp3",
+    "m": "../audio/letters/8d4a192036e048f1.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "వయసు",
+    "en": "age",
+    "rom": "vayasu",
+    "units": [
+     {
+      "te": "వ",
+      "rom": "va",
+      "needs": [
+       "va"
+      ]
+     },
+     {
+      "te": "య",
+      "rom": "ya",
+      "needs": [
+       "ya"
+      ]
+     },
+     {
+      "te": "సు",
+      "rom": "su",
+      "needs": [
+       "sa",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/8d2166941e9ce584.f.mp3",
+     "m": "../audio/letters/16ad77b7ec9b5ebf.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-o",
+   "glyph": "ొ",
+   "type": "sign",
+   "say": "నొ",
+   "rom": "no",
+   "shape_note": "The short 'o' sign. The tick is replaced by a curl on top that swings over to the right and ends in a small ring.",
+   "confusable": "sign-o-oo",
+   "audio": {
+    "f": "../audio/letters/6ac2c59c6cee17d4.f.mp3",
+    "m": "../audio/letters/bd536db6420625d3.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కొడుకు",
+    "en": "son",
+    "rom": "koḍuku",
+    "units": [
+     {
+      "te": "కొ",
+      "rom": "ko",
+      "needs": [
+       "ka",
+       "sign-o"
+      ]
+     },
+     {
+      "te": "డు",
+      "rom": "ḍu",
+      "needs": [
+       "dda",
+       "sign-u"
+      ]
+     },
+     {
+      "te": "కు",
+      "rom": "ku",
+      "needs": [
+       "ka",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/c729bb26f9d54d11.f.mp3",
+     "m": "../audio/letters/d9c4fcead989a1ce.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "o",
+   "glyph": "ఒ",
+   "type": "vowel",
+   "say": "ఒ",
+   "rom": "o",
+   "shape_note": "The short vowel 'o' by itself.",
+   "confusable": "o-oo",
+   "audio": {
+    "f": "../audio/letters/267d91bef6550681.f.mp3",
+    "m": "../audio/letters/e92c06fe8fcc577c.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఒక",
+    "en": "a, one (before a noun)",
+    "rom": "oka",
+    "units": [
+     {
+      "te": "ఒ",
+      "rom": "o",
+      "needs": [
+       "o"
+      ]
+     },
+     {
+      "te": "క",
+      "rom": "ka",
+      "needs": [
+       "ka"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/b987ed27cc16882d.f.mp3",
+     "m": "../audio/letters/0f20f618bac1f419.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "tta",
+   "glyph": "ట",
+   "type": "consonant",
+   "say": "ట",
+   "rom": "ṭa",
+   "shape_note": "A 't' made with the tongue curled back. An open cup with no tick. A short upright stroke stands on a ring at its top left.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/5a6672e0addbedca.f.mp3",
+    "m": "../audio/letters/0e4d0bb62a212d21.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "మాట",
+    "en": "word, something said",
+    "rom": "māṭa",
+    "units": [
+     {
+      "te": "మా",
+      "rom": "mā",
+      "needs": [
+       "ma",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "ట",
+      "rom": "ṭa",
+      "needs": [
+       "tta"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/6bb8eee028b4ca6d.f.mp3",
+     "m": "../audio/letters/55b11b00ed5e82db.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-oo",
+   "glyph": "ో",
+   "type": "sign",
+   "say": "నో",
+   "rom": "nō",
+   "shape_note": "The long 'ō' sign. Like the short 'o' curl on top, with an extra upward tail.",
+   "confusable": "sign-o-oo",
+   "audio": {
+    "f": "../audio/letters/34040be9d24b7aea.f.mp3",
+    "m": "../audio/letters/f7201eca524a7115.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కోతి",
+    "en": "monkey",
+    "rom": "kōti",
+    "units": [
+     {
+      "te": "కో",
+      "rom": "kō",
+      "needs": [
+       "ka",
+       "sign-oo"
+      ]
+     },
+     {
+      "te": "తి",
+      "rom": "ti",
+      "needs": [
+       "ta",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/98c389bb9d101c82.f.mp3",
+     "m": "../audio/letters/82dd796b430a8a1d.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "oo",
+   "glyph": "ఓ",
+   "type": "vowel",
+   "say": "ఓ",
+   "rom": "ō",
+   "shape_note": "The long vowel 'ō' by itself. It is ఒ with one extra stroke on top.",
+   "confusable": "o-oo",
+   "audio": {
+    "f": "../audio/letters/6c5b4aef133f5aed.f.mp3",
+    "m": "../audio/letters/d2736f2c209442ef.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఓటు",
+    "en": "vote",
+    "rom": "ōṭu",
+    "units": [
+     {
+      "te": "ఓ",
+      "rom": "ō",
+      "needs": [
+       "oo"
+      ]
+     },
+     {
+      "te": "టు",
+      "rom": "ṭu",
+      "needs": [
+       "tta",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/aff5831f8e97851a.f.mp3",
+     "m": "../audio/letters/ccea0e07e7dc8e53.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-yya",
+   "glyph": "య్య",
+   "type": "cluster",
+   "say": "య్య",
+   "rom": "yya",
+   "shape_note": "Doubled 'y'. The second య is not written underneath: it becomes a long tail on the right. You will see the same tail in అన్నయ్య, the usual way to call an older brother.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/b1f0372e3dd9a16e.f.mp3",
+    "m": "../audio/letters/02dcc68e9d63e3ab.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "అయ్యో",
+    "en": "oh no",
+    "rom": "ayyō",
+    "units": [
+     {
+      "te": "అ",
+      "rom": "a",
+      "needs": [
+       "a"
+      ]
+     },
+     {
+      "te": "య్యో",
+      "rom": "yyō",
+      "needs": [
+       "cl-yya",
+       "sign-oo"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/cc8c249e95f1346a.f.mp3",
+     "m": "../audio/letters/c8277e1fb2815652.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ba",
+   "glyph": "బ",
+   "type": "consonant",
+   "say": "బ",
+   "rom": "ba",
+   "shape_note": "It has no tick. The left side starts with a small curl at the top, and the bottom has a short notch in the middle. There is no closed loop.",
+   "confusable": "ba-bha",
+   "audio": {
+    "f": "../audio/letters/68408e693721618b.f.mp3",
+    "m": "../audio/letters/ffb34e46fc198980.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "బాగా",
+    "en": "well, nicely",
+    "rom": "bāgā",
+    "units": [
+     {
+      "te": "బా",
+      "rom": "bā",
+      "needs": [
+       "ba",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "గా",
+      "rom": "gā",
+      "needs": [
+       "ga",
+       "sign-aa"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/4f5dc5da6718f211.f.mp3",
+     "m": "../audio/letters/783b9b86f3041665.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ja",
+   "glyph": "జ",
+   "type": "consonant",
+   "say": "జ",
+   "rom": "ja",
+   "shape_note": "Close to బ, but the top-left curl runs on to the right and ends in a second hook at the top right, and the right arm stays short beneath that hook. It has no tick.",
+   "confusable": "ba-bha",
+   "audio": {
+    "f": "../audio/letters/b678e2c75cf775a8.f.mp3",
+    "m": "../audio/letters/4646f4130079dde6.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "రోజు",
+    "en": "day",
+    "rom": "rōju",
+    "units": [
+     {
+      "te": "రో",
+      "rom": "rō",
+      "needs": [
+       "ra",
+       "sign-oo"
+      ]
+     },
+     {
+      "te": "జు",
+      "rom": "ju",
+      "needs": [
+       "ja",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/b784804091df4180.f.mp3",
+     "m": "../audio/letters/a65102287f0fa0f6.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-ai",
+   "glyph": "ై",
+   "type": "sign",
+   "say": "నై",
+   "rom": "nai",
+   "shape_note": "The 'ai' sign has two parts: the 'e' stroke on top and a second mark under the letter, a loop with a flat line running right.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/93b1f391e2446665.f.mp3",
+    "m": "../audio/letters/3786edd07aa3bbf7.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పైన",
+    "en": "on top, above",
+    "rom": "paina",
+    "units": [
+     {
+      "te": "పై",
+      "rom": "pai",
+      "needs": [
+       "pa",
+       "sign-ai"
+      ]
+     },
+     {
+      "te": "న",
+      "rom": "na",
+      "needs": [
+       "na"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/c3c018869fa3d904.f.mp3",
+     "m": "../audio/letters/af3ebb8a377e6cc1.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ai",
+   "glyph": "ఐ",
+   "type": "vowel",
+   "say": "ఐ",
+   "rom": "ai",
+   "shape_note": "The vowel 'ai' by itself (as in English 'my').",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/2ffc0c5a1e4799ee.f.mp3",
+    "m": "../audio/letters/bd1855a1bd036ff6.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఐదు",
+    "en": "five",
+    "rom": "aidu",
+    "units": [
+     {
+      "te": "ఐ",
+      "rom": "ai",
+      "needs": [
+       "ai"
+      ]
+     },
+     {
+      "te": "దు",
+      "rom": "du",
+      "needs": [
+       "da",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/9cb67f9c370009ab.f.mp3",
+     "m": "../audio/letters/740c740a6001439a.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "lla",
+   "glyph": "ళ",
+   "type": "consonant",
+   "say": "ళ",
+   "rom": "ḷa",
+   "shape_note": "An 'l' made with the tongue curled back. It has a tick on top.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/a96ea54dc534a2ad.f.mp3",
+    "m": "../audio/letters/a026f623046edf42.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "తాళం",
+    "en": "lock",
+    "rom": "tāḷam",
+    "units": [
+     {
+      "te": "తా",
+      "rom": "tā",
+      "needs": [
+       "ta",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "ళం",
+      "rom": "ḷam",
+      "needs": [
+       "lla",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/e35763e6a03b80fd.f.mp3",
+     "m": "../audio/letters/56fb27d9f345582f.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "nna",
+   "glyph": "ణ",
+   "type": "consonant",
+   "say": "ణ",
+   "rom": "ṇa",
+   "shape_note": "An 'n' made with the tongue curled back. A wide letter with no tick.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/fd96f95fc177cbfc.f.mp3",
+    "m": "../audio/letters/e9f1bb93e825c082.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కారణం",
+    "en": "reason",
+    "rom": "kāraṇam",
+    "units": [
+     {
+      "te": "కా",
+      "rom": "kā",
+      "needs": [
+       "ka",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "ర",
+      "rom": "ra",
+      "needs": [
+       "ra"
+      ]
+     },
+     {
+      "te": "ణం",
+      "rom": "ṇam",
+      "needs": [
+       "nna",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/4fee11eda1cd814e.f.mp3",
+     "m": "../audio/letters/5412d6d67ab9cfb0.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-au",
+   "glyph": "ౌ",
+   "type": "sign",
+   "say": "నౌ",
+   "rom": "nau",
+   "shape_note": "The 'au' sign. It replaces the tick with the 'e' bar sticking out to the left, which runs on to the right and ends in a small hanging ring.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/0e31323b5d85fa29.f.mp3",
+    "m": "../audio/letters/5219e39284b6a873.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "గౌరవం",
+    "en": "respect",
+    "rom": "gauravam",
+    "units": [
+     {
+      "te": "గౌ",
+      "rom": "gau",
+      "needs": [
+       "ga",
+       "sign-au"
+      ]
+     },
+     {
+      "te": "ర",
+      "rom": "ra",
+      "needs": [
+       "ra"
+      ]
+     },
+     {
+      "te": "వం",
+      "rom": "vam",
+      "needs": [
+       "va",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/46449b1b964c0663.f.mp3",
+     "m": "../audio/letters/c5f20135b8c8d387.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "au",
+   "glyph": "ఔ",
+   "type": "vowel",
+   "say": "ఔ",
+   "rom": "au",
+   "shape_note": "The vowel 'au' by itself (as in English 'now').",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/203438b3a8e3f480.f.mp3",
+    "m": "../audio/letters/368a154f22969e91.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఔను",
+    "en": "yes (a less common spelling of అవును)",
+    "rom": "aunu",
+    "units": [
+     {
+      "te": "ఔ",
+      "rom": "au",
+      "needs": [
+       "au"
+      ]
+     },
+     {
+      "te": "ను",
+      "rom": "nu",
+      "needs": [
+       "na",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/4cd590ec23274d8b.f.mp3",
+     "m": "../audio/letters/48835e1fa4d30020.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ha",
+   "glyph": "హ",
+   "type": "consonant",
+   "say": "హ",
+   "rom": "ha",
+   "shape_note": "A body with a small loop at the lower left, with the tick on top. What marks it out: a bar running out to the right from the top, ending in a small ring.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/1e64797c91189132.f.mp3",
+    "m": "../audio/letters/9b2f355c5e4d2f37.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "హాయి",
+    "en": "ease, comfort",
+    "rom": "hāyi",
+    "units": [
+     {
+      "te": "హా",
+      "rom": "hā",
+      "needs": [
+       "ha",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "యి",
+      "rom": "yi",
+      "needs": [
+       "ya",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/0a668126fd0b84f5.f.mp3",
+     "m": "../audio/letters/5ae26cdb8e3b49dc.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sha",
+   "glyph": "శ",
+   "type": "consonant",
+   "say": "శ",
+   "rom": "śa",
+   "shape_note": "A soft 'sh'. It has a tick on top.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/fd6ae32c4319248a.f.mp3",
+    "m": "../audio/letters/892a1fa5860bcfa3.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "దేశం",
+    "en": "country",
+    "rom": "dēśam",
+    "units": [
+     {
+      "te": "దే",
+      "rom": "dē",
+      "needs": [
+       "da",
+       "sign-ee"
+      ]
+     },
+     {
+      "te": "శం",
+      "rom": "śam",
+      "needs": [
+       "sha",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/f5dd9bf16299bf34.f.mp3",
+     "m": "../audio/letters/7f31c7380d06c38e.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ssa",
+   "glyph": "ష",
+   "type": "consonant",
+   "say": "ష",
+   "rom": "ṣa",
+   "shape_note": "A 'sh' made with the tongue curled back. It is ప with one extra stroke that crosses the lower right corner and hangs below with a hook.",
+   "confusable": "pa-va",
+   "audio": {
+    "f": "../audio/letters/1233c1de1fa5b4a3.f.mp3",
+    "m": "../audio/letters/bdb48b2120186997.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "విషయం",
+    "en": "matter, topic",
+    "rom": "viṣayam",
+    "units": [
+     {
+      "te": "వి",
+      "rom": "vi",
+      "needs": [
+       "va",
+       "sign-i"
+      ]
+     },
+     {
+      "te": "ష",
+      "rom": "ṣa",
+      "needs": [
+       "ssa"
+      ]
+     },
+     {
+      "te": "యం",
+      "rom": "yam",
+      "needs": [
+       "ya",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/c19a2e6274caf0b1.f.mp3",
+     "m": "../audio/letters/2c9963ee9a136a52.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "virama",
+   "glyph": "్",
+   "type": "final",
+   "say": "న్",
+   "rom": "n",
+   "shape_note": "This mark removes the 'a' that a plain consonant carries: the consonant is said with no vowel after it. On a letter with a tick it takes the tick's place. Seen mostly at the end of borrowed words.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/19d6fd07d72c9827.f.mp3",
+    "m": "../audio/letters/4c57999459824d9f.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "బస్",
+    "en": "bus",
+    "rom": "bas",
+    "units": [
+     {
+      "te": "బస్",
+      "rom": "bas",
+      "needs": [
+       "ba",
+       "sa",
+       "virama"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/4412096e61ec596e.f.mp3",
+     "m": "../audio/letters/9339280956b375e2.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-pra",
+   "glyph": "ప్ర",
+   "type": "cluster",
+   "say": "ప్ర",
+   "rom": "pra",
+   "shape_note": "A consonant followed by 'r'. The ర turns into a wide cup drawn under the whole letter. It does not look like ర.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/548249915904f375.f.mp3",
+    "m": "../audio/letters/9caf8e4a08c69518.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ప్రేమ",
+    "en": "love",
+    "rom": "prēma",
+    "units": [
+     {
+      "te": "ప్రే",
+      "rom": "prē",
+      "needs": [
+       "cl-pra",
+       "sign-ee"
+      ]
+     },
+     {
+      "te": "మ",
+      "rom": "ma",
+      "needs": [
+       "ma"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/f82a0444a5b4d3a5.f.mp3",
+     "m": "../audio/letters/ca49d794405f3f1a.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ska",
+   "glyph": "స్క",
+   "type": "cluster",
+   "say": "స్క",
+   "rom": "ska",
+   "shape_note": "స with the under-form of క at its lower right, the same hook with a flat bar as in క్క.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/dec1dc9cd4052e18.f.mp3",
+    "m": "../audio/letters/3216f5b1e31a7a14.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "స్కూలు",
+    "en": "school",
+    "rom": "skūlu",
+    "units": [
+     {
+      "te": "స్కూ",
+      "rom": "skū",
+      "needs": [
+       "cl-ska",
+       "sign-uu"
+      ]
+     },
+     {
+      "te": "లు",
+      "rom": "lu",
+      "needs": [
+       "la",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/67f19644ad664cbe.f.mp3",
+     "m": "../audio/letters/93cf67ea30ce6bea.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ttta",
+   "glyph": "ట్ట",
+   "type": "cluster",
+   "say": "ట్ట",
+   "rom": "ṭṭa",
+   "shape_note": "Doubled ట. The second one is written small underneath, without its upright stroke.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/860dedeb500436fb.f.mp3",
+    "m": "../audio/letters/5b033b06f27311a1.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "చెట్టు",
+    "en": "tree",
+    "rom": "cheṭṭu",
+    "units": [
+     {
+      "te": "చె",
+      "rom": "che",
+      "needs": [
+       "cha",
+       "sign-e"
+      ]
+     },
+     {
+      "te": "ట్టు",
+      "rom": "ṭṭu",
+      "needs": [
+       "cl-ttta",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/3651fd8719c58e7a.f.mp3",
+     "m": "../audio/letters/f447b10a5cbeb7ed.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-sta",
+   "glyph": "స్త",
+   "type": "cluster",
+   "say": "స్త",
+   "rom": "sta",
+   "shape_note": "స with the under-form of త beneath it, the same flat line and loop as in త్త.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/7c73cccdea85d866.f.mp3",
+    "m": "../audio/letters/2a7f5abd44bb7bce.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పుస్తకం",
+    "en": "book",
+    "rom": "pustakam",
+    "units": [
+     {
+      "te": "పు",
+      "rom": "pu",
+      "needs": [
+       "pa",
+       "sign-u"
+      ]
+     },
+     {
+      "te": "స్త",
+      "rom": "sta",
+      "needs": [
+       "cl-sta"
+      ]
+     },
+     {
+      "te": "కం",
+      "rom": "kam",
+      "needs": [
+       "ka",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/08f4fbda56f055f3.f.mp3",
+     "m": "../audio/letters/83e3f5dbdbf77f47.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ssa",
+   "glyph": "స్స",
+   "type": "cluster",
+   "say": "స్స",
+   "rom": "ssa",
+   "shape_note": "Doubled 's'. The second స hangs at the lower right as a smaller స without its tick, and its long arm sweeps up the right side of the first.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/3cc41439c456e7db.f.mp3",
+    "m": "../audio/letters/17992786c56bcb95.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "బస్సు",
+    "en": "bus",
+    "rom": "bassu",
+    "units": [
+     {
+      "te": "బ",
+      "rom": "ba",
+      "needs": [
+       "ba"
+      ]
+     },
+     {
+      "te": "స్సు",
+      "rom": "ssu",
+      "needs": [
+       "cl-ssa",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/7ef1cdfe0f4828f7.f.mp3",
+     "m": "../audio/letters/81e87ea0d9ad3d55.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-shta",
+   "glyph": "ష్ట",
+   "type": "cluster",
+   "say": "ష్ట",
+   "rom": "ṣṭa",
+   "shape_note": "ష with a small ట underneath, without its upright stroke.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/ac18515fc70f9b95.f.mp3",
+    "m": "../audio/letters/5e2bacc98995f967.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఇష్టం",
+    "en": "liking",
+    "rom": "iṣṭam",
+    "units": [
+     {
+      "te": "ఇ",
+      "rom": "i",
+      "needs": [
+       "i"
+      ]
+     },
+     {
+      "te": "ష్టం",
+      "rom": "ṣṭam",
+      "needs": [
+       "cl-shta",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/cc88dbd702ecb71a.f.mp3",
+     "m": "../audio/letters/9e5e86f94e07d528.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "kha",
+   "glyph": "ఖ",
+   "type": "consonant",
+   "say": "ఖ",
+   "rom": "kha",
+   "shape_note": "'k' with a puff of air. Its own shape, not built from క. It has no tick, and a small stroke underneath like most of the other breathy letters.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/10b036f6ed15774f.f.mp3",
+    "m": "../audio/letters/52c7ebd83d376ea1.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "సుఖం",
+    "en": "comfort, happiness",
+    "rom": "sukham",
+    "units": [
+     {
+      "te": "సు",
+      "rom": "su",
+      "needs": [
+       "sa",
+       "sign-u"
+      ]
+     },
+     {
+      "te": "ఖం",
+      "rom": "kham",
+      "needs": [
+       "kha",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/f1b420cbe5363fa2.f.mp3",
+     "m": "../audio/letters/9b31f1042db168dc.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "gha",
+   "glyph": "ఘ",
+   "type": "consonant",
+   "say": "ఘ",
+   "rom": "gha",
+   "shape_note": "'g' with a puff of air. It has a small stroke underneath, the usual sign of a breathy letter.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/ee0b8ec492ce52c9.f.mp3",
+    "m": "../audio/letters/59a8006b106aa735.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఘాటు",
+    "en": "strong, pungent (of spice or smell)",
+    "rom": "ghāṭu",
+    "units": [
+     {
+      "te": "ఘా",
+      "rom": "ghā",
+      "needs": [
+       "gha",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "టు",
+      "rom": "ṭu",
+      "needs": [
+       "tta",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/833972fddd9ce90f.f.mp3",
+     "m": "../audio/letters/b1acda299b5c3ee0.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "tha",
+   "glyph": "థ",
+   "type": "consonant",
+   "say": "థ",
+   "rom": "tha",
+   "shape_note": "'t' with a puff of air (never the English 'th'). A round body with a dot in the middle and a small stroke underneath.",
+   "confusable": "tha-dha",
+   "audio": {
+    "f": "../audio/letters/4911de3a7b523aec.f.mp3",
+    "m": "../audio/letters/79023aecdc523433.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కథ",
+    "en": "story",
+    "rom": "katha",
+    "units": [
+     {
+      "te": "క",
+      "rom": "ka",
+      "needs": [
+       "ka"
+      ]
+     },
+     {
+      "te": "థ",
+      "rom": "tha",
+      "needs": [
+       "tha"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/6ef16d1e76fe845f.f.mp3",
+     "m": "../audio/letters/ccd57603dbf1dfb7.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "dha",
+   "glyph": "ధ",
+   "type": "consonant",
+   "say": "ధ",
+   "rom": "dha",
+   "shape_note": "'d' with a puff of air. It is ద with a small stroke underneath. థ has the same stroke and a dot in the middle as well.",
+   "confusable": "tha-dha",
+   "audio": {
+    "f": "../audio/letters/c79e35a1b79aea6f.f.mp3",
+    "m": "../audio/letters/48dfbf330d9955c0.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ధర",
+    "en": "price",
+    "rom": "dhara",
+    "units": [
+     {
+      "te": "ధ",
+      "rom": "dha",
+      "needs": [
+       "dha"
+      ]
+     },
+     {
+      "te": "ర",
+      "rom": "ra",
+      "needs": [
+       "ra"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/e5d6986f2e807f1c.f.mp3",
+     "m": "../audio/letters/e1e26f53c6b1bf0c.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "chha",
+   "glyph": "ఛ",
+   "type": "consonant",
+   "say": "ఛ",
+   "rom": "chha",
+   "shape_note": "'ch' with a puff of air. It is చ with a small stroke underneath.",
+   "confusable": "cha-chha",
+   "audio": {
+    "f": "../audio/letters/fd36dce2df82aae6.f.mp3",
+    "m": "../audio/letters/f09c4bae5fc67c17.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఛీ",
+    "en": "yuck!",
+    "rom": "chhī",
+    "units": [
+     {
+      "te": "ఛీ",
+      "rom": "chhī",
+      "needs": [
+       "chha",
+       "sign-ii"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/7855917800c8bd9c.f.mp3",
+     "m": "../audio/letters/2382e49d88140b6f.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "jha",
+   "glyph": "ఝ",
+   "type": "consonant",
+   "say": "ఝ",
+   "rom": "jha",
+   "shape_note": "'j' with a puff of air. A rare letter: learn to recognise it.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/5f85f9903e5a3285.f.mp3",
+    "m": "../audio/letters/3eda61d80514f988.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": null
+  },
+  {
+   "id": "cl-nya",
+   "glyph": "న్య",
+   "type": "cluster",
+   "say": "న్య",
+   "rom": "nya",
+   "shape_note": "A consonant followed by 'y'. The య becomes the same long tail on the right as in య్య.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/efdb19c3aed8bac0.f.mp3",
+    "m": "../audio/letters/82c5aee32d33b280.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "న్యాయం",
+    "en": "justice, fairness",
+    "rom": "nyāyam",
+    "units": [
+     {
+      "te": "న్యా",
+      "rom": "nyā",
+      "needs": [
+       "cl-nya",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "యం",
+      "rom": "yam",
+      "needs": [
+       "ya",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/ec53aec9985dca0e.f.mp3",
+     "m": "../audio/letters/09c500761a91dd1b.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-tva",
+   "glyph": "త్వ",
+   "type": "cluster",
+   "say": "త్వ",
+   "rom": "tva",
+   "shape_note": "A consonant followed by 'v'. The వ hangs at the lower right without its tick; its long arm sweeps up the right side of the first letter and ends in a hook.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/5caf0082081044e5.f.mp3",
+    "m": "../audio/letters/3db327c3b69c4fad.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "త్వరగా",
+    "en": "quickly",
+    "rom": "tvaragā",
+    "units": [
+     {
+      "te": "త్వ",
+      "rom": "tva",
+      "needs": [
+       "cl-tva"
+      ]
+     },
+     {
+      "te": "ర",
+      "rom": "ra",
+      "needs": [
+       "ra"
+      ]
+     },
+     {
+      "te": "గా",
+      "rom": "gā",
+      "needs": [
+       "ga",
+       "sign-aa"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/b0cfc9474ee61781.f.mp3",
+     "m": "../audio/letters/a0e3515bbe3d92bb.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-llla",
+   "glyph": "ళ్ళ",
+   "type": "cluster",
+   "say": "ళ్ళ",
+   "rom": "ḷḷa",
+   "shape_note": "Doubled ళ. The second ళ hangs at the lower right without its tick, and its long arm sweeps up the right side of the first.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/683cec3ade915147.f.mp3",
+    "m": "../audio/letters/96916b4053449285.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "నీళ్ళు",
+    "en": "water",
+    "rom": "nīḷḷu",
+    "units": [
+     {
+      "te": "నీ",
+      "rom": "nī",
+      "needs": [
+       "na",
+       "sign-ii"
+      ]
+     },
+     {
+      "te": "ళ్ళు",
+      "rom": "ḷḷu",
+      "needs": [
+       "cl-llla",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/94e025f719f73018.f.mp3",
+     "m": "../audio/letters/d4062b2a8cf3a65b.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-gga",
+   "glyph": "గ్గ",
+   "type": "cluster",
+   "say": "గ్గ",
+   "rom": "gga",
+   "shape_note": "Doubled 'g'. The second గ is written small underneath, without its tick.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/eb9a05c0f7b4060b.f.mp3",
+    "m": "../audio/letters/0dd94f7f0c30964c.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "సిగ్గు",
+    "en": "shyness",
+    "rom": "siggu",
+    "units": [
+     {
+      "te": "సి",
+      "rom": "si",
+      "needs": [
+       "sa",
+       "sign-i"
+      ]
+     },
+     {
+      "te": "గ్గు",
+      "rom": "ggu",
+      "needs": [
+       "cl-gga",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/a434dd2711031cf8.f.mp3",
+     "m": "../audio/letters/a1ac86be13b7243e.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ddda",
+   "glyph": "డ్డ",
+   "type": "cluster",
+   "say": "డ్డ",
+   "rom": "ḍḍa",
+   "shape_note": "Doubled డ. The second one is written small underneath, without its tick.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/96a3b4066174232b.f.mp3",
+    "m": "../audio/letters/5a7c777eaf7c3f55.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "బిడ్డ",
+    "en": "child; in Telangana often daughter",
+    "rom": "biḍḍa",
+    "units": [
+     {
+      "te": "బి",
+      "rom": "bi",
+      "needs": [
+       "ba",
+       "sign-i"
+      ]
+     },
+     {
+      "te": "డ్డ",
+      "rom": "ḍḍa",
+      "needs": [
+       "cl-ddda"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/314ad13d4fd0e27a.f.mp3",
+     "m": "../audio/letters/26b1f62404ff5f38.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-bba",
+   "glyph": "బ్బ",
+   "type": "cluster",
+   "say": "బ్బ",
+   "rom": "bba",
+   "shape_note": "Doubled 'b'. The second బ hangs at the lower right, and its long arm sweeps up the right side of the first.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/5415ed476bd62838.f.mp3",
+    "m": "../audio/letters/52e5873dc7e21565.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "డబ్బు",
+    "en": "money",
+    "rom": "ḍabbu",
+    "units": [
+     {
+      "te": "డ",
+      "rom": "ḍa",
+      "needs": [
+       "dda"
+      ]
+     },
+     {
+      "te": "బ్బు",
+      "rom": "bbu",
+      "needs": [
+       "cl-bba",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/d45ef6516cf76f7f.f.mp3",
+     "m": "../audio/letters/34c542aa7e05258e.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "pha",
+   "glyph": "ఫ",
+   "type": "consonant",
+   "say": "ఫ",
+   "rom": "pha",
+   "shape_note": "'p' with a puff of air; in borrowed words it is said as 'f'. It is ప with a small stroke underneath.",
+   "confusable": "pa-va",
+   "audio": {
+    "f": "../audio/letters/8821b6f1aaa18ad4.f.mp3",
+    "m": "../audio/letters/db08ecf00c600103.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఫోను",
+    "en": "phone",
+    "rom": "phōnu",
+    "units": [
+     {
+      "te": "ఫో",
+      "rom": "phō",
+      "needs": [
+       "pha",
+       "sign-oo"
+      ]
+     },
+     {
+      "te": "ను",
+      "rom": "nu",
+      "needs": [
+       "na",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/0abd0c38f9253a41.f.mp3",
+     "m": "../audio/letters/711d4309184c8679.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "bha",
+   "glyph": "భ",
+   "type": "consonant",
+   "say": "భ",
+   "rom": "bha",
+   "shape_note": "'b' with a puff of air. It is బ with a tick on top and a small stroke underneath.",
+   "confusable": "ba-bha",
+   "audio": {
+    "f": "../audio/letters/9f110e3691035c6a.f.mp3",
+    "m": "../audio/letters/14d5b540972b7fd4.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "భాష",
+    "en": "language",
+    "rom": "bhāṣa",
+    "units": [
+     {
+      "te": "భా",
+      "rom": "bhā",
+      "needs": [
+       "bha",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "ష",
+      "rom": "ṣa",
+      "needs": [
+       "ssa"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/8edb043c7e7e9797.f.mp3",
+     "m": "../audio/letters/6f37c3c632a467b8.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ttha",
+   "glyph": "ఠ",
+   "type": "consonant",
+   "say": "ఠ",
+   "rom": "ṭha",
+   "shape_note": "ట with a puff of air. It is ర with a dot in the middle.",
+   "confusable": "ra-ttha",
+   "audio": {
+    "f": "../audio/letters/e0241d4b854b079f.f.mp3",
+    "m": "../audio/letters/202784b61a83d1c4.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "పాఠం",
+    "en": "lesson",
+    "rom": "pāṭham",
+    "units": [
+     {
+      "te": "పా",
+      "rom": "pā",
+      "needs": [
+       "pa",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "ఠం",
+      "rom": "ṭham",
+      "needs": [
+       "ttha",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/9975e0ab11257d78.f.mp3",
+     "m": "../audio/letters/b9d5f5042e74d562.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ddha",
+   "glyph": "ఢ",
+   "type": "consonant",
+   "say": "ఢ",
+   "rom": "ḍha",
+   "shape_note": "డ with a puff of air. It is డ with a small stroke underneath.",
+   "confusable": "da-dda",
+   "audio": {
+    "f": "../audio/letters/61d107a08d8db5b0.f.mp3",
+    "m": "../audio/letters/fb12f7ba53a42afd.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఢిల్లీ",
+    "en": "Delhi",
+    "rom": "ḍhillī",
+    "units": [
+     {
+      "te": "ఢి",
+      "rom": "ḍhi",
+      "needs": [
+       "ddha",
+       "sign-i"
+      ]
+     },
+     {
+      "te": "ల్లీ",
+      "rom": "llī",
+      "needs": [
+       "cl-lla",
+       "sign-ii"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/b410bd634df4a104.f.mp3",
+     "m": "../audio/letters/6c1d51c46a749fb2.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "rra",
+   "glyph": "ఱ",
+   "type": "consonant",
+   "say": "ఱ",
+   "rom": "ṟa",
+   "shape_note": "An old second letter for 'r'. Modern writing uses ర instead: learn only to recognise it.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/b659980f35ee6d1b.f.mp3",
+    "m": "../audio/letters/e8de95d422e0faa1.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": null
+  },
+  {
+   "id": "cl-jja",
+   "glyph": "జ్జ",
+   "type": "cluster",
+   "say": "జ్జ",
+   "rom": "jja",
+   "shape_note": "Doubled 'j'. The second జ is written small underneath.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/d041c94911fd1e01.f.mp3",
+    "m": "../audio/letters/303ecbbf4e29e8e1.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "బొజ్జ",
+    "en": "tummy",
+    "rom": "bojja",
+    "units": [
+     {
+      "te": "బొ",
+      "rom": "bo",
+      "needs": [
+       "ba",
+       "sign-o"
+      ]
+     },
+     {
+      "te": "జ్జ",
+      "rom": "jja",
+      "needs": [
+       "cl-jja"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/819dd7d8f8dfcd0e.f.mp3",
+     "m": "../audio/letters/f90c065a43d080b3.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-rtha",
+   "glyph": "ర్థ",
+   "type": "cluster",
+   "say": "ర్థ",
+   "rom": "rtha",
+   "shape_note": "ర with a small థ underneath: 'r' followed by a breathy 't'.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/409505a9139ed8a9.f.mp3",
+    "m": "../audio/letters/587d0d0f19e104fd.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "అర్థం",
+    "en": "meaning",
+    "rom": "artham",
+    "units": [
+     {
+      "te": "అ",
+      "rom": "a",
+      "needs": [
+       "a"
+      ]
+     },
+     {
+      "te": "ర్థం",
+      "rom": "rtham",
+      "needs": [
+       "cl-rtha",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/7c05873dc4ecd15a.f.mp3",
+     "m": "../audio/letters/270ef8ff1056b89e.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "sign-ri",
+   "glyph": "ృ",
+   "type": "sign",
+   "say": "నృ",
+   "rom": "nṛ",
+   "shape_note": "A sign found in Sanskrit words, said 'ru' in everyday speech. A large hook that drops from the right side well below the letter and curls back; the tick stays.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/af152804777dce16.f.mp3",
+    "m": "../audio/letters/755050af474e17c9.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "కృషి",
+    "en": "effort, hard work",
+    "rom": "kṛṣi",
+    "units": [
+     {
+      "te": "కృ",
+      "rom": "kṛ",
+      "needs": [
+       "ka",
+       "sign-ri"
+      ]
+     },
+     {
+      "te": "షి",
+      "rom": "ṣi",
+      "needs": [
+       "ssa",
+       "sign-i"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/a40255564495e092.f.mp3",
+     "m": "../audio/letters/e8bea05cafb902a3.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "ri",
+   "glyph": "ఋ",
+   "type": "vowel",
+   "say": "ఋ",
+   "rom": "ṛ",
+   "shape_note": "A vowel found in a few Sanskrit words, said 'ru'.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/2d2e7c87277198d4.f.mp3",
+    "m": "../audio/letters/d965ba13f1ce7f08.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "ఋతువు",
+    "en": "season",
+    "rom": "ṛtuvu",
+    "units": [
+     {
+      "te": "ఋ",
+      "rom": "ṛ",
+      "needs": [
+       "ri"
+      ]
+     },
+     {
+      "te": "తు",
+      "rom": "tu",
+      "needs": [
+       "ta",
+       "sign-u"
+      ]
+     },
+     {
+      "te": "వు",
+      "rom": "vu",
+      "needs": [
+       "va",
+       "sign-u"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/0c9925f7922fa0e2.f.mp3",
+     "m": "../audio/letters/bafae14420321143.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "visarga",
+   "glyph": "ః",
+   "type": "mark",
+   "say": "నః",
+   "rom": "naḥ",
+   "shape_note": "Two small circles, one above the other, after the letter: a light 'h' after the vowel. Rare, in Sanskrit words.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/89d85d5de371d215.f.mp3",
+    "m": "../audio/letters/a4e86b241ce6f838.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "దుఃఖం",
+    "en": "sorrow",
+    "rom": "duḥkham",
+    "units": [
+     {
+      "te": "దుః",
+      "rom": "duḥ",
+      "needs": [
+       "da",
+       "sign-u",
+       "visarga"
+      ]
+     },
+     {
+      "te": "ఖం",
+      "rom": "kham",
+      "needs": [
+       "kha",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/5663c7d87aa90f70.f.mp3",
+     "m": "../audio/letters/07c70ae17e83a8f7.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ksha",
+   "glyph": "క్ష",
+   "type": "cluster",
+   "say": "క్ష",
+   "rom": "kṣa",
+   "shape_note": "'k' and 'sh' together. It is written as one special shape: learn it whole.",
+   "confusable": "ksa-ksha",
+   "audio": {
+    "f": "../audio/letters/fac06d62f975d852.f.mp3",
+    "m": "../audio/letters/cf36e9c900120f92.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "క్షణం",
+    "en": "a moment",
+    "rom": "kṣaṇam",
+    "units": [
+     {
+      "te": "క్ష",
+      "rom": "kṣa",
+      "needs": [
+       "cl-ksha"
+      ]
+     },
+     {
+      "te": "ణం",
+      "rom": "ṇam",
+      "needs": [
+       "nna",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/8a93f8315573ba6b.f.mp3",
+     "m": "../audio/letters/0fee1981c33bc87e.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "nga",
+   "glyph": "ఙ",
+   "type": "consonant",
+   "say": "ఙ",
+   "rom": "ṅa",
+   "shape_note": "The 'ng' sound of 'sing'. Almost never written by itself: recognise it only.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/128a65adac634ffe.f.mp3",
+    "m": "../audio/letters/abc4ddd23517f8c7.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": null
+  },
+  {
+   "id": "nya",
+   "glyph": "ఞ",
+   "type": "consonant",
+   "say": "ఞ",
+   "rom": "ña",
+   "shape_note": "The 'ny' sound of 'canyon'. Seen almost only inside జ్ఞ.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/ccfccd8d36d6a412.f.mp3",
+    "m": "../audio/letters/59015450464c38b9.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": null
+  },
+  {
+   "id": "cl-jnya",
+   "glyph": "జ్ఞ",
+   "type": "cluster",
+   "say": "జ్ఞ",
+   "rom": "jña",
+   "shape_note": "జ with a small ఞ underneath. In everyday speech it is said 'gny' or 'gy', not 'jny'.",
+   "confusable": null,
+   "audio": {
+    "f": "../audio/letters/237ee110edb6221a.f.mp3",
+    "m": "../audio/letters/540faecb7f3194ca.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "జ్ఞానం",
+    "en": "knowledge",
+    "rom": "jñānam",
+    "units": [
+     {
+      "te": "జ్ఞా",
+      "rom": "jñā",
+      "needs": [
+       "cl-jnya",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "నం",
+      "rom": "nam",
+      "needs": [
+       "na",
+       "anusvara"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/ff8c002f0265e59a.f.mp3",
+     "m": "../audio/letters/aff08462429333fa.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  },
+  {
+   "id": "cl-ksa",
+   "glyph": "క్స",
+   "type": "cluster",
+   "say": "క్స",
+   "rom": "ksa",
+   "shape_note": "క with a smaller స hanging at the lower right, its long arm sweeping up the right side of క. It turns up in English loans: 'taxi', 'box', 'thanks'. Don't mix it up with క్ష, which has its own shape.",
+   "confusable": "ksa-ksha",
+   "audio": {
+    "f": "../audio/letters/909dfbd24fcace4f.f.mp3",
+    "m": "../audio/letters/ce77ffa711fa04c0.m.mp3"
+   },
+   "sound": true,
+   "confidence": "checked",
+   "example": {
+    "te": "టాక్సీ",
+    "en": "taxi",
+    "rom": "ṭāksī",
+    "units": [
+     {
+      "te": "టా",
+      "rom": "ṭā",
+      "needs": [
+       "tta",
+       "sign-aa"
+      ]
+     },
+     {
+      "te": "క్సీ",
+      "rom": "ksī",
+      "needs": [
+       "cl-ksa",
+       "sign-ii"
+      ]
+     }
+    ],
+    "audio": {
+     "f": "../audio/letters/1118bdd3e002afc0.f.mp3",
+     "m": "../audio/letters/0f42469e3a47cc6e.m.mp3"
+    },
+    "confidence": "checked"
+   }
+  }
+ ],
+ "built": {
+  "na": {
+   "sign-aa": {
+    "te": "నా",
+    "rom": "nā"
+   },
+   "anusvara": {
+    "te": "నం",
+    "rom": "nam"
+   },
+   "sign-i": {
+    "te": "ని",
+    "rom": "ni"
+   },
+   "sign-ii": {
+    "te": "నీ",
+    "rom": "nī"
+   },
+   "sign-u": {
+    "te": "ను",
+    "rom": "nu"
+   },
+   "sign-uu": {
+    "te": "నూ",
+    "rom": "nū"
+   },
+   "sign-e": {
+    "te": "నె",
+    "rom": "ne"
+   },
+   "sign-ee": {
+    "te": "నే",
+    "rom": "nē"
+   },
+   "sign-o": {
+    "te": "నొ",
+    "rom": "no"
+   },
+   "sign-oo": {
+    "te": "నో",
+    "rom": "nō"
+   },
+   "sign-ai": {
+    "te": "నై",
+    "rom": "nai"
+   },
+   "sign-au": {
+    "te": "నౌ",
+    "rom": "nau"
+   },
+   "sign-ri": {
+    "te": "నృ",
+    "rom": "nṛ"
+   },
+   "visarga": {
+    "te": "నః",
+    "rom": "naḥ"
+   }
+  },
+  "ma": {
+   "sign-aa": {
+    "te": "మా",
+    "rom": "mā"
+   },
+   "anusvara": {
+    "te": "మం",
+    "rom": "mam"
+   },
+   "sign-i": {
+    "te": "మి",
+    "rom": "mi"
+   },
+   "sign-ii": {
+    "te": "మీ",
+    "rom": "mī"
+   },
+   "sign-u": {
+    "te": "ము",
+    "rom": "mu"
+   },
+   "sign-uu": {
+    "te": "మూ",
+    "rom": "mū"
+   },
+   "sign-e": {
+    "te": "మె",
+    "rom": "me"
+   },
+   "sign-ee": {
+    "te": "మే",
+    "rom": "mē"
+   },
+   "sign-o": {
+    "te": "మొ",
+    "rom": "mo"
+   },
+   "sign-oo": {
+    "te": "మో",
+    "rom": "mō"
+   },
+   "sign-ai": {
+    "te": "మై",
+    "rom": "mai"
+   },
+   "sign-au": {
+    "te": "మౌ",
+    "rom": "mau"
+   },
+   "sign-ri": {
+    "te": "మృ",
+    "rom": "mṛ"
+   },
+   "visarga": {
+    "te": "మః",
+    "rom": "maḥ"
+   }
+  },
+  "ra": {
+   "sign-aa": {
+    "te": "రా",
+    "rom": "rā"
+   },
+   "anusvara": {
+    "te": "రం",
+    "rom": "ram"
+   },
+   "sign-i": {
+    "te": "రి",
+    "rom": "ri"
+   },
+   "sign-ii": {
+    "te": "రీ",
+    "rom": "rī"
+   },
+   "sign-u": {
+    "te": "రు",
+    "rom": "ru"
+   },
+   "sign-uu": {
+    "te": "రూ",
+    "rom": "rū"
+   },
+   "sign-e": {
+    "te": "రె",
+    "rom": "re"
+   },
+   "sign-ee": {
+    "te": "రే",
+    "rom": "rē"
+   },
+   "sign-o": {
+    "te": "రొ",
+    "rom": "ro"
+   },
+   "sign-oo": {
+    "te": "రో",
+    "rom": "rō"
+   },
+   "sign-ai": {
+    "te": "రై",
+    "rom": "rai"
+   },
+   "sign-au": {
+    "te": "రౌ",
+    "rom": "rau"
+   },
+   "sign-ri": {
+    "te": "రృ",
+    "rom": "rṛ"
+   },
+   "visarga": {
+    "te": "రః",
+    "rom": "raḥ"
+   }
+  },
+  "ka": {
+   "sign-aa": {
+    "te": "కా",
+    "rom": "kā"
+   },
+   "anusvara": {
+    "te": "కం",
+    "rom": "kam"
+   },
+   "sign-i": {
+    "te": "కి",
+    "rom": "ki"
+   },
+   "sign-ii": {
+    "te": "కీ",
+    "rom": "kī"
+   },
+   "sign-u": {
+    "te": "కు",
+    "rom": "ku"
+   },
+   "sign-uu": {
+    "te": "కూ",
+    "rom": "kū"
+   },
+   "sign-e": {
+    "te": "కె",
+    "rom": "ke"
+   },
+   "sign-ee": {
+    "te": "కే",
+    "rom": "kē"
+   },
+   "sign-o": {
+    "te": "కొ",
+    "rom": "ko"
+   },
+   "sign-oo": {
+    "te": "కో",
+    "rom": "kō"
+   },
+   "sign-ai": {
+    "te": "కై",
+    "rom": "kai"
+   },
+   "sign-au": {
+    "te": "కౌ",
+    "rom": "kau"
+   },
+   "sign-ri": {
+    "te": "కృ",
+    "rom": "kṛ"
+   },
+   "visarga": {
+    "te": "కః",
+    "rom": "kaḥ"
+   }
+  },
+  "va": {
+   "sign-aa": {
+    "te": "వా",
+    "rom": "vā"
+   },
+   "anusvara": {
+    "te": "వం",
+    "rom": "vam"
+   },
+   "sign-i": {
+    "te": "వి",
+    "rom": "vi"
+   },
+   "sign-ii": {
+    "te": "వీ",
+    "rom": "vī"
+   },
+   "sign-u": {
+    "te": "వు",
+    "rom": "vu"
+   },
+   "sign-uu": {
+    "te": "వూ",
+    "rom": "vū"
+   },
+   "sign-e": {
+    "te": "వె",
+    "rom": "ve"
+   },
+   "sign-ee": {
+    "te": "వే",
+    "rom": "vē"
+   },
+   "sign-o": {
+    "te": "వొ",
+    "rom": "vo"
+   },
+   "sign-oo": {
+    "te": "వో",
+    "rom": "vō"
+   },
+   "sign-ai": {
+    "te": "వై",
+    "rom": "vai"
+   },
+   "sign-au": {
+    "te": "వౌ",
+    "rom": "vau"
+   },
+   "sign-ri": {
+    "te": "వృ",
+    "rom": "vṛ"
+   },
+   "visarga": {
+    "te": "వః",
+    "rom": "vaḥ"
+   }
+  },
+  "la": {
+   "sign-aa": {
+    "te": "లా",
+    "rom": "lā"
+   },
+   "anusvara": {
+    "te": "లం",
+    "rom": "lam"
+   },
+   "sign-i": {
+    "te": "లి",
+    "rom": "li"
+   },
+   "sign-ii": {
+    "te": "లీ",
+    "rom": "lī"
+   },
+   "sign-u": {
+    "te": "లు",
+    "rom": "lu"
+   },
+   "sign-uu": {
+    "te": "లూ",
+    "rom": "lū"
+   },
+   "sign-e": {
+    "te": "లె",
+    "rom": "le"
+   },
+   "sign-ee": {
+    "te": "లే",
+    "rom": "lē"
+   },
+   "sign-o": {
+    "te": "లొ",
+    "rom": "lo"
+   },
+   "sign-oo": {
+    "te": "లో",
+    "rom": "lō"
+   },
+   "sign-ai": {
+    "te": "లై",
+    "rom": "lai"
+   },
+   "sign-au": {
+    "te": "లౌ",
+    "rom": "lau"
+   },
+   "sign-ri": {
+    "te": "లృ",
+    "rom": "lṛ"
+   },
+   "visarga": {
+    "te": "లః",
+    "rom": "laḥ"
+   }
+  },
+  "ta": {
+   "sign-aa": {
+    "te": "తా",
+    "rom": "tā"
+   },
+   "anusvara": {
+    "te": "తం",
+    "rom": "tam"
+   },
+   "sign-i": {
+    "te": "తి",
+    "rom": "ti"
+   },
+   "sign-ii": {
+    "te": "తీ",
+    "rom": "tī"
+   },
+   "sign-u": {
+    "te": "తు",
+    "rom": "tu"
+   },
+   "sign-uu": {
+    "te": "తూ",
+    "rom": "tū"
+   },
+   "sign-e": {
+    "te": "తె",
+    "rom": "te"
+   },
+   "sign-ee": {
+    "te": "తే",
+    "rom": "tē"
+   },
+   "sign-o": {
+    "te": "తొ",
+    "rom": "to"
+   },
+   "sign-oo": {
+    "te": "తో",
+    "rom": "tō"
+   },
+   "sign-ai": {
+    "te": "తై",
+    "rom": "tai"
+   },
+   "sign-au": {
+    "te": "తౌ",
+    "rom": "tau"
+   },
+   "sign-ri": {
+    "te": "తృ",
+    "rom": "tṛ"
+   },
+   "visarga": {
+    "te": "తః",
+    "rom": "taḥ"
+   }
+  },
+  "da": {
+   "sign-aa": {
+    "te": "దా",
+    "rom": "dā"
+   },
+   "anusvara": {
+    "te": "దం",
+    "rom": "dam"
+   },
+   "sign-i": {
+    "te": "ది",
+    "rom": "di"
+   },
+   "sign-ii": {
+    "te": "దీ",
+    "rom": "dī"
+   },
+   "sign-u": {
+    "te": "దు",
+    "rom": "du"
+   },
+   "sign-uu": {
+    "te": "దూ",
+    "rom": "dū"
+   },
+   "sign-e": {
+    "te": "దె",
+    "rom": "de"
+   },
+   "sign-ee": {
+    "te": "దే",
+    "rom": "dē"
+   },
+   "sign-o": {
+    "te": "దొ",
+    "rom": "do"
+   },
+   "sign-oo": {
+    "te": "దో",
+    "rom": "dō"
+   },
+   "sign-ai": {
+    "te": "దై",
+    "rom": "dai"
+   },
+   "sign-au": {
+    "te": "దౌ",
+    "rom": "dau"
+   },
+   "sign-ri": {
+    "te": "దృ",
+    "rom": "dṛ"
+   },
+   "visarga": {
+    "te": "దః",
+    "rom": "daḥ"
+   }
+  },
+  "pa": {
+   "sign-aa": {
+    "te": "పా",
+    "rom": "pā"
+   },
+   "anusvara": {
+    "te": "పం",
+    "rom": "pam"
+   },
+   "sign-i": {
+    "te": "పి",
+    "rom": "pi"
+   },
+   "sign-ii": {
+    "te": "పీ",
+    "rom": "pī"
+   },
+   "sign-u": {
+    "te": "పు",
+    "rom": "pu"
+   },
+   "sign-uu": {
+    "te": "పూ",
+    "rom": "pū"
+   },
+   "sign-e": {
+    "te": "పె",
+    "rom": "pe"
+   },
+   "sign-ee": {
+    "te": "పే",
+    "rom": "pē"
+   },
+   "sign-o": {
+    "te": "పొ",
+    "rom": "po"
+   },
+   "sign-oo": {
+    "te": "పో",
+    "rom": "pō"
+   },
+   "sign-ai": {
+    "te": "పై",
+    "rom": "pai"
+   },
+   "sign-au": {
+    "te": "పౌ",
+    "rom": "pau"
+   },
+   "sign-ri": {
+    "te": "పృ",
+    "rom": "pṛ"
+   },
+   "visarga": {
+    "te": "పః",
+    "rom": "paḥ"
+   }
+  },
+  "ga": {
+   "sign-aa": {
+    "te": "గా",
+    "rom": "gā"
+   },
+   "anusvara": {
+    "te": "గం",
+    "rom": "gam"
+   },
+   "sign-i": {
+    "te": "గి",
+    "rom": "gi"
+   },
+   "sign-ii": {
+    "te": "గీ",
+    "rom": "gī"
+   },
+   "sign-u": {
+    "te": "గు",
+    "rom": "gu"
+   },
+   "sign-uu": {
+    "te": "గూ",
+    "rom": "gū"
+   },
+   "sign-e": {
+    "te": "గె",
+    "rom": "ge"
+   },
+   "sign-ee": {
+    "te": "గే",
+    "rom": "gē"
+   },
+   "sign-o": {
+    "te": "గొ",
+    "rom": "go"
+   },
+   "sign-oo": {
+    "te": "గో",
+    "rom": "gō"
+   },
+   "sign-ai": {
+    "te": "గై",
+    "rom": "gai"
+   },
+   "sign-au": {
+    "te": "గౌ",
+    "rom": "gau"
+   },
+   "sign-ri": {
+    "te": "గృ",
+    "rom": "gṛ"
+   },
+   "visarga": {
+    "te": "గః",
+    "rom": "gaḥ"
+   }
+  },
+  "cha": {
+   "sign-aa": {
+    "te": "చా",
+    "rom": "chā"
+   },
+   "anusvara": {
+    "te": "చం",
+    "rom": "cham"
+   },
+   "sign-i": {
+    "te": "చి",
+    "rom": "chi"
+   },
+   "sign-ii": {
+    "te": "చీ",
+    "rom": "chī"
+   },
+   "sign-u": {
+    "te": "చు",
+    "rom": "chu"
+   },
+   "sign-uu": {
+    "te": "చూ",
+    "rom": "chū"
+   },
+   "sign-e": {
+    "te": "చె",
+    "rom": "che"
+   },
+   "sign-ee": {
+    "te": "చే",
+    "rom": "chē"
+   },
+   "sign-o": {
+    "te": "చొ",
+    "rom": "cho"
+   },
+   "sign-oo": {
+    "te": "చో",
+    "rom": "chō"
+   },
+   "sign-ai": {
+    "te": "చై",
+    "rom": "chai"
+   },
+   "sign-au": {
+    "te": "చౌ",
+    "rom": "chau"
+   },
+   "sign-ri": {
+    "te": "చృ",
+    "rom": "chṛ"
+   },
+   "visarga": {
+    "te": "చః",
+    "rom": "chaḥ"
+   }
+  },
+  "dda": {
+   "sign-aa": {
+    "te": "డా",
+    "rom": "ḍā"
+   },
+   "anusvara": {
+    "te": "డం",
+    "rom": "ḍam"
+   },
+   "sign-i": {
+    "te": "డి",
+    "rom": "ḍi"
+   },
+   "sign-ii": {
+    "te": "డీ",
+    "rom": "ḍī"
+   },
+   "sign-u": {
+    "te": "డు",
+    "rom": "ḍu"
+   },
+   "sign-uu": {
+    "te": "డూ",
+    "rom": "ḍū"
+   },
+   "sign-e": {
+    "te": "డె",
+    "rom": "ḍe"
+   },
+   "sign-ee": {
+    "te": "డే",
+    "rom": "ḍē"
+   },
+   "sign-o": {
+    "te": "డొ",
+    "rom": "ḍo"
+   },
+   "sign-oo": {
+    "te": "డో",
+    "rom": "ḍō"
+   },
+   "sign-ai": {
+    "te": "డై",
+    "rom": "ḍai"
+   },
+   "sign-au": {
+    "te": "డౌ",
+    "rom": "ḍau"
+   },
+   "sign-ri": {
+    "te": "డృ",
+    "rom": "ḍṛ"
+   },
+   "visarga": {
+    "te": "డః",
+    "rom": "ḍaḥ"
+   }
+  },
+  "sa": {
+   "sign-aa": {
+    "te": "సా",
+    "rom": "sā"
+   },
+   "anusvara": {
+    "te": "సం",
+    "rom": "sam"
+   },
+   "sign-i": {
+    "te": "సి",
+    "rom": "si"
+   },
+   "sign-ii": {
+    "te": "సీ",
+    "rom": "sī"
+   },
+   "sign-u": {
+    "te": "సు",
+    "rom": "su"
+   },
+   "sign-uu": {
+    "te": "సూ",
+    "rom": "sū"
+   },
+   "sign-e": {
+    "te": "సె",
+    "rom": "se"
+   },
+   "sign-ee": {
+    "te": "సే",
+    "rom": "sē"
+   },
+   "sign-o": {
+    "te": "సొ",
+    "rom": "so"
+   },
+   "sign-oo": {
+    "te": "సో",
+    "rom": "sō"
+   },
+   "sign-ai": {
+    "te": "సై",
+    "rom": "sai"
+   },
+   "sign-au": {
+    "te": "సౌ",
+    "rom": "sau"
+   },
+   "sign-ri": {
+    "te": "సృ",
+    "rom": "sṛ"
+   },
+   "visarga": {
+    "te": "సః",
+    "rom": "saḥ"
+   }
+  },
+  "ya": {
+   "sign-aa": {
+    "te": "యా",
+    "rom": "yā"
+   },
+   "anusvara": {
+    "te": "యం",
+    "rom": "yam"
+   },
+   "sign-i": {
+    "te": "యి",
+    "rom": "yi"
+   },
+   "sign-ii": {
+    "te": "యీ",
+    "rom": "yī"
+   },
+   "sign-u": {
+    "te": "యు",
+    "rom": "yu"
+   },
+   "sign-uu": {
+    "te": "యూ",
+    "rom": "yū"
+   },
+   "sign-e": {
+    "te": "యె",
+    "rom": "ye"
+   },
+   "sign-ee": {
+    "te": "యే",
+    "rom": "yē"
+   },
+   "sign-o": {
+    "te": "యొ",
+    "rom": "yo"
+   },
+   "sign-oo": {
+    "te": "యో",
+    "rom": "yō"
+   },
+   "sign-ai": {
+    "te": "యై",
+    "rom": "yai"
+   },
+   "sign-au": {
+    "te": "యౌ",
+    "rom": "yau"
+   },
+   "sign-ri": {
+    "te": "యృ",
+    "rom": "yṛ"
+   },
+   "visarga": {
+    "te": "యః",
+    "rom": "yaḥ"
+   }
+  },
+  "tta": {
+   "sign-aa": {
+    "te": "టా",
+    "rom": "ṭā"
+   },
+   "anusvara": {
+    "te": "టం",
+    "rom": "ṭam"
+   },
+   "sign-i": {
+    "te": "టి",
+    "rom": "ṭi"
+   },
+   "sign-ii": {
+    "te": "టీ",
+    "rom": "ṭī"
+   },
+   "sign-u": {
+    "te": "టు",
+    "rom": "ṭu"
+   },
+   "sign-uu": {
+    "te": "టూ",
+    "rom": "ṭū"
+   },
+   "sign-e": {
+    "te": "టె",
+    "rom": "ṭe"
+   },
+   "sign-ee": {
+    "te": "టే",
+    "rom": "ṭē"
+   },
+   "sign-o": {
+    "te": "టొ",
+    "rom": "ṭo"
+   },
+   "sign-oo": {
+    "te": "టో",
+    "rom": "ṭō"
+   },
+   "sign-ai": {
+    "te": "టై",
+    "rom": "ṭai"
+   },
+   "sign-au": {
+    "te": "టౌ",
+    "rom": "ṭau"
+   },
+   "sign-ri": {
+    "te": "టృ",
+    "rom": "ṭṛ"
+   },
+   "visarga": {
+    "te": "టః",
+    "rom": "ṭaḥ"
+   }
+  },
+  "ba": {
+   "sign-aa": {
+    "te": "బా",
+    "rom": "bā"
+   },
+   "anusvara": {
+    "te": "బం",
+    "rom": "bam"
+   },
+   "sign-i": {
+    "te": "బి",
+    "rom": "bi"
+   },
+   "sign-ii": {
+    "te": "బీ",
+    "rom": "bī"
+   },
+   "sign-u": {
+    "te": "బు",
+    "rom": "bu"
+   },
+   "sign-uu": {
+    "te": "బూ",
+    "rom": "bū"
+   },
+   "sign-e": {
+    "te": "బె",
+    "rom": "be"
+   },
+   "sign-ee": {
+    "te": "బే",
+    "rom": "bē"
+   },
+   "sign-o": {
+    "te": "బొ",
+    "rom": "bo"
+   },
+   "sign-oo": {
+    "te": "బో",
+    "rom": "bō"
+   },
+   "sign-ai": {
+    "te": "బై",
+    "rom": "bai"
+   },
+   "sign-au": {
+    "te": "బౌ",
+    "rom": "bau"
+   },
+   "sign-ri": {
+    "te": "బృ",
+    "rom": "bṛ"
+   },
+   "visarga": {
+    "te": "బః",
+    "rom": "baḥ"
+   }
+  },
+  "ja": {
+   "sign-aa": {
+    "te": "జా",
+    "rom": "jā"
+   },
+   "anusvara": {
+    "te": "జం",
+    "rom": "jam"
+   },
+   "sign-i": {
+    "te": "జి",
+    "rom": "ji"
+   },
+   "sign-ii": {
+    "te": "జీ",
+    "rom": "jī"
+   },
+   "sign-u": {
+    "te": "జు",
+    "rom": "ju"
+   },
+   "sign-uu": {
+    "te": "జూ",
+    "rom": "jū"
+   },
+   "sign-e": {
+    "te": "జె",
+    "rom": "je"
+   },
+   "sign-ee": {
+    "te": "జే",
+    "rom": "jē"
+   },
+   "sign-o": {
+    "te": "జొ",
+    "rom": "jo"
+   },
+   "sign-oo": {
+    "te": "జో",
+    "rom": "jō"
+   },
+   "sign-ai": {
+    "te": "జై",
+    "rom": "jai"
+   },
+   "sign-au": {
+    "te": "జౌ",
+    "rom": "jau"
+   },
+   "sign-ri": {
+    "te": "జృ",
+    "rom": "jṛ"
+   },
+   "visarga": {
+    "te": "జః",
+    "rom": "jaḥ"
+   }
+  },
+  "lla": {
+   "sign-aa": {
+    "te": "ళా",
+    "rom": "ḷā"
+   },
+   "anusvara": {
+    "te": "ళం",
+    "rom": "ḷam"
+   },
+   "sign-i": {
+    "te": "ళి",
+    "rom": "ḷi"
+   },
+   "sign-ii": {
+    "te": "ళీ",
+    "rom": "ḷī"
+   },
+   "sign-u": {
+    "te": "ళు",
+    "rom": "ḷu"
+   },
+   "sign-uu": {
+    "te": "ళూ",
+    "rom": "ḷū"
+   },
+   "sign-e": {
+    "te": "ళె",
+    "rom": "ḷe"
+   },
+   "sign-ee": {
+    "te": "ళే",
+    "rom": "ḷē"
+   },
+   "sign-o": {
+    "te": "ళొ",
+    "rom": "ḷo"
+   },
+   "sign-oo": {
+    "te": "ళో",
+    "rom": "ḷō"
+   },
+   "sign-ai": {
+    "te": "ళై",
+    "rom": "ḷai"
+   },
+   "sign-au": {
+    "te": "ళౌ",
+    "rom": "ḷau"
+   },
+   "sign-ri": {
+    "te": "ళృ",
+    "rom": "ḷṛ"
+   },
+   "visarga": {
+    "te": "ళః",
+    "rom": "ḷaḥ"
+   }
+  },
+  "nna": {
+   "sign-aa": {
+    "te": "ణా",
+    "rom": "ṇā"
+   },
+   "anusvara": {
+    "te": "ణం",
+    "rom": "ṇam"
+   },
+   "sign-i": {
+    "te": "ణి",
+    "rom": "ṇi"
+   },
+   "sign-ii": {
+    "te": "ణీ",
+    "rom": "ṇī"
+   },
+   "sign-u": {
+    "te": "ణు",
+    "rom": "ṇu"
+   },
+   "sign-uu": {
+    "te": "ణూ",
+    "rom": "ṇū"
+   },
+   "sign-e": {
+    "te": "ణె",
+    "rom": "ṇe"
+   },
+   "sign-ee": {
+    "te": "ణే",
+    "rom": "ṇē"
+   },
+   "sign-o": {
+    "te": "ణొ",
+    "rom": "ṇo"
+   },
+   "sign-oo": {
+    "te": "ణో",
+    "rom": "ṇō"
+   },
+   "sign-ai": {
+    "te": "ణై",
+    "rom": "ṇai"
+   },
+   "sign-au": {
+    "te": "ణౌ",
+    "rom": "ṇau"
+   },
+   "sign-ri": {
+    "te": "ణృ",
+    "rom": "ṇṛ"
+   },
+   "visarga": {
+    "te": "ణః",
+    "rom": "ṇaḥ"
+   }
+  },
+  "ha": {
+   "sign-aa": {
+    "te": "హా",
+    "rom": "hā"
+   },
+   "anusvara": {
+    "te": "హం",
+    "rom": "ham"
+   },
+   "sign-i": {
+    "te": "హి",
+    "rom": "hi"
+   },
+   "sign-ii": {
+    "te": "హీ",
+    "rom": "hī"
+   },
+   "sign-u": {
+    "te": "హు",
+    "rom": "hu"
+   },
+   "sign-uu": {
+    "te": "హూ",
+    "rom": "hū"
+   },
+   "sign-e": {
+    "te": "హె",
+    "rom": "he"
+   },
+   "sign-ee": {
+    "te": "హే",
+    "rom": "hē"
+   },
+   "sign-o": {
+    "te": "హొ",
+    "rom": "ho"
+   },
+   "sign-oo": {
+    "te": "హో",
+    "rom": "hō"
+   },
+   "sign-ai": {
+    "te": "హై",
+    "rom": "hai"
+   },
+   "sign-au": {
+    "te": "హౌ",
+    "rom": "hau"
+   },
+   "sign-ri": {
+    "te": "హృ",
+    "rom": "hṛ"
+   },
+   "visarga": {
+    "te": "హః",
+    "rom": "haḥ"
+   }
+  },
+  "sha": {
+   "sign-aa": {
+    "te": "శా",
+    "rom": "śā"
+   },
+   "anusvara": {
+    "te": "శం",
+    "rom": "śam"
+   },
+   "sign-i": {
+    "te": "శి",
+    "rom": "śi"
+   },
+   "sign-ii": {
+    "te": "శీ",
+    "rom": "śī"
+   },
+   "sign-u": {
+    "te": "శు",
+    "rom": "śu"
+   },
+   "sign-uu": {
+    "te": "శూ",
+    "rom": "śū"
+   },
+   "sign-e": {
+    "te": "శె",
+    "rom": "śe"
+   },
+   "sign-ee": {
+    "te": "శే",
+    "rom": "śē"
+   },
+   "sign-o": {
+    "te": "శొ",
+    "rom": "śo"
+   },
+   "sign-oo": {
+    "te": "శో",
+    "rom": "śō"
+   },
+   "sign-ai": {
+    "te": "శై",
+    "rom": "śai"
+   },
+   "sign-au": {
+    "te": "శౌ",
+    "rom": "śau"
+   },
+   "sign-ri": {
+    "te": "శృ",
+    "rom": "śṛ"
+   },
+   "visarga": {
+    "te": "శః",
+    "rom": "śaḥ"
+   }
+  },
+  "ssa": {
+   "sign-aa": {
+    "te": "షా",
+    "rom": "ṣā"
+   },
+   "anusvara": {
+    "te": "షం",
+    "rom": "ṣam"
+   },
+   "sign-i": {
+    "te": "షి",
+    "rom": "ṣi"
+   },
+   "sign-ii": {
+    "te": "షీ",
+    "rom": "ṣī"
+   },
+   "sign-u": {
+    "te": "షు",
+    "rom": "ṣu"
+   },
+   "sign-uu": {
+    "te": "షూ",
+    "rom": "ṣū"
+   },
+   "sign-e": {
+    "te": "షె",
+    "rom": "ṣe"
+   },
+   "sign-ee": {
+    "te": "షే",
+    "rom": "ṣē"
+   },
+   "sign-o": {
+    "te": "షొ",
+    "rom": "ṣo"
+   },
+   "sign-oo": {
+    "te": "షో",
+    "rom": "ṣō"
+   },
+   "sign-ai": {
+    "te": "షై",
+    "rom": "ṣai"
+   },
+   "sign-au": {
+    "te": "షౌ",
+    "rom": "ṣau"
+   },
+   "sign-ri": {
+    "te": "షృ",
+    "rom": "ṣṛ"
+   },
+   "visarga": {
+    "te": "షః",
+    "rom": "ṣaḥ"
+   }
+  },
+  "kha": {
+   "sign-aa": {
+    "te": "ఖా",
+    "rom": "khā"
+   },
+   "anusvara": {
+    "te": "ఖం",
+    "rom": "kham"
+   },
+   "sign-i": {
+    "te": "ఖి",
+    "rom": "khi"
+   },
+   "sign-ii": {
+    "te": "ఖీ",
+    "rom": "khī"
+   },
+   "sign-u": {
+    "te": "ఖు",
+    "rom": "khu"
+   },
+   "sign-uu": {
+    "te": "ఖూ",
+    "rom": "khū"
+   },
+   "sign-e": {
+    "te": "ఖె",
+    "rom": "khe"
+   },
+   "sign-ee": {
+    "te": "ఖే",
+    "rom": "khē"
+   },
+   "sign-o": {
+    "te": "ఖొ",
+    "rom": "kho"
+   },
+   "sign-oo": {
+    "te": "ఖో",
+    "rom": "khō"
+   },
+   "sign-ai": {
+    "te": "ఖై",
+    "rom": "khai"
+   },
+   "sign-au": {
+    "te": "ఖౌ",
+    "rom": "khau"
+   },
+   "sign-ri": {
+    "te": "ఖృ",
+    "rom": "khṛ"
+   },
+   "visarga": {
+    "te": "ఖః",
+    "rom": "khaḥ"
+   }
+  },
+  "gha": {
+   "sign-aa": {
+    "te": "ఘా",
+    "rom": "ghā"
+   },
+   "anusvara": {
+    "te": "ఘం",
+    "rom": "gham"
+   },
+   "sign-i": {
+    "te": "ఘి",
+    "rom": "ghi"
+   },
+   "sign-ii": {
+    "te": "ఘీ",
+    "rom": "ghī"
+   },
+   "sign-u": {
+    "te": "ఘు",
+    "rom": "ghu"
+   },
+   "sign-uu": {
+    "te": "ఘూ",
+    "rom": "ghū"
+   },
+   "sign-e": {
+    "te": "ఘె",
+    "rom": "ghe"
+   },
+   "sign-ee": {
+    "te": "ఘే",
+    "rom": "ghē"
+   },
+   "sign-o": {
+    "te": "ఘొ",
+    "rom": "gho"
+   },
+   "sign-oo": {
+    "te": "ఘో",
+    "rom": "ghō"
+   },
+   "sign-ai": {
+    "te": "ఘై",
+    "rom": "ghai"
+   },
+   "sign-au": {
+    "te": "ఘౌ",
+    "rom": "ghau"
+   },
+   "sign-ri": {
+    "te": "ఘృ",
+    "rom": "ghṛ"
+   },
+   "visarga": {
+    "te": "ఘః",
+    "rom": "ghaḥ"
+   }
+  },
+  "tha": {
+   "sign-aa": {
+    "te": "థా",
+    "rom": "thā"
+   },
+   "anusvara": {
+    "te": "థం",
+    "rom": "tham"
+   },
+   "sign-i": {
+    "te": "థి",
+    "rom": "thi"
+   },
+   "sign-ii": {
+    "te": "థీ",
+    "rom": "thī"
+   },
+   "sign-u": {
+    "te": "థు",
+    "rom": "thu"
+   },
+   "sign-uu": {
+    "te": "థూ",
+    "rom": "thū"
+   },
+   "sign-e": {
+    "te": "థె",
+    "rom": "the"
+   },
+   "sign-ee": {
+    "te": "థే",
+    "rom": "thē"
+   },
+   "sign-o": {
+    "te": "థొ",
+    "rom": "tho"
+   },
+   "sign-oo": {
+    "te": "థో",
+    "rom": "thō"
+   },
+   "sign-ai": {
+    "te": "థై",
+    "rom": "thai"
+   },
+   "sign-au": {
+    "te": "థౌ",
+    "rom": "thau"
+   },
+   "sign-ri": {
+    "te": "థృ",
+    "rom": "thṛ"
+   },
+   "visarga": {
+    "te": "థః",
+    "rom": "thaḥ"
+   }
+  },
+  "dha": {
+   "sign-aa": {
+    "te": "ధా",
+    "rom": "dhā"
+   },
+   "anusvara": {
+    "te": "ధం",
+    "rom": "dham"
+   },
+   "sign-i": {
+    "te": "ధి",
+    "rom": "dhi"
+   },
+   "sign-ii": {
+    "te": "ధీ",
+    "rom": "dhī"
+   },
+   "sign-u": {
+    "te": "ధు",
+    "rom": "dhu"
+   },
+   "sign-uu": {
+    "te": "ధూ",
+    "rom": "dhū"
+   },
+   "sign-e": {
+    "te": "ధె",
+    "rom": "dhe"
+   },
+   "sign-ee": {
+    "te": "ధే",
+    "rom": "dhē"
+   },
+   "sign-o": {
+    "te": "ధొ",
+    "rom": "dho"
+   },
+   "sign-oo": {
+    "te": "ధో",
+    "rom": "dhō"
+   },
+   "sign-ai": {
+    "te": "ధై",
+    "rom": "dhai"
+   },
+   "sign-au": {
+    "te": "ధౌ",
+    "rom": "dhau"
+   },
+   "sign-ri": {
+    "te": "ధృ",
+    "rom": "dhṛ"
+   },
+   "visarga": {
+    "te": "ధః",
+    "rom": "dhaḥ"
+   }
+  },
+  "chha": {
+   "sign-aa": {
+    "te": "ఛా",
+    "rom": "chhā"
+   },
+   "anusvara": {
+    "te": "ఛం",
+    "rom": "chham"
+   },
+   "sign-i": {
+    "te": "ఛి",
+    "rom": "chhi"
+   },
+   "sign-ii": {
+    "te": "ఛీ",
+    "rom": "chhī"
+   },
+   "sign-u": {
+    "te": "ఛు",
+    "rom": "chhu"
+   },
+   "sign-uu": {
+    "te": "ఛూ",
+    "rom": "chhū"
+   },
+   "sign-e": {
+    "te": "ఛె",
+    "rom": "chhe"
+   },
+   "sign-ee": {
+    "te": "ఛే",
+    "rom": "chhē"
+   },
+   "sign-o": {
+    "te": "ఛొ",
+    "rom": "chho"
+   },
+   "sign-oo": {
+    "te": "ఛో",
+    "rom": "chhō"
+   },
+   "sign-ai": {
+    "te": "ఛై",
+    "rom": "chhai"
+   },
+   "sign-au": {
+    "te": "ఛౌ",
+    "rom": "chhau"
+   },
+   "sign-ri": {
+    "te": "ఛృ",
+    "rom": "chhṛ"
+   },
+   "visarga": {
+    "te": "ఛః",
+    "rom": "chhaḥ"
+   }
+  },
+  "jha": {
+   "sign-aa": {
+    "te": "ఝా",
+    "rom": "jhā"
+   },
+   "anusvara": {
+    "te": "ఝం",
+    "rom": "jham"
+   },
+   "sign-i": {
+    "te": "ఝి",
+    "rom": "jhi"
+   },
+   "sign-ii": {
+    "te": "ఝీ",
+    "rom": "jhī"
+   },
+   "sign-u": {
+    "te": "ఝు",
+    "rom": "jhu"
+   },
+   "sign-uu": {
+    "te": "ఝూ",
+    "rom": "jhū"
+   },
+   "sign-e": {
+    "te": "ఝె",
+    "rom": "jhe"
+   },
+   "sign-ee": {
+    "te": "ఝే",
+    "rom": "jhē"
+   },
+   "sign-o": {
+    "te": "ఝొ",
+    "rom": "jho"
+   },
+   "sign-oo": {
+    "te": "ఝో",
+    "rom": "jhō"
+   },
+   "sign-ai": {
+    "te": "ఝై",
+    "rom": "jhai"
+   },
+   "sign-au": {
+    "te": "ఝౌ",
+    "rom": "jhau"
+   },
+   "sign-ri": {
+    "te": "ఝృ",
+    "rom": "jhṛ"
+   },
+   "visarga": {
+    "te": "ఝః",
+    "rom": "jhaḥ"
+   }
+  },
+  "pha": {
+   "sign-aa": {
+    "te": "ఫా",
+    "rom": "phā"
+   },
+   "anusvara": {
+    "te": "ఫం",
+    "rom": "pham"
+   },
+   "sign-i": {
+    "te": "ఫి",
+    "rom": "phi"
+   },
+   "sign-ii": {
+    "te": "ఫీ",
+    "rom": "phī"
+   },
+   "sign-u": {
+    "te": "ఫు",
+    "rom": "phu"
+   },
+   "sign-uu": {
+    "te": "ఫూ",
+    "rom": "phū"
+   },
+   "sign-e": {
+    "te": "ఫె",
+    "rom": "phe"
+   },
+   "sign-ee": {
+    "te": "ఫే",
+    "rom": "phē"
+   },
+   "sign-o": {
+    "te": "ఫొ",
+    "rom": "pho"
+   },
+   "sign-oo": {
+    "te": "ఫో",
+    "rom": "phō"
+   },
+   "sign-ai": {
+    "te": "ఫై",
+    "rom": "phai"
+   },
+   "sign-au": {
+    "te": "ఫౌ",
+    "rom": "phau"
+   },
+   "sign-ri": {
+    "te": "ఫృ",
+    "rom": "phṛ"
+   },
+   "visarga": {
+    "te": "ఫః",
+    "rom": "phaḥ"
+   }
+  },
+  "bha": {
+   "sign-aa": {
+    "te": "భా",
+    "rom": "bhā"
+   },
+   "anusvara": {
+    "te": "భం",
+    "rom": "bham"
+   },
+   "sign-i": {
+    "te": "భి",
+    "rom": "bhi"
+   },
+   "sign-ii": {
+    "te": "భీ",
+    "rom": "bhī"
+   },
+   "sign-u": {
+    "te": "భు",
+    "rom": "bhu"
+   },
+   "sign-uu": {
+    "te": "భూ",
+    "rom": "bhū"
+   },
+   "sign-e": {
+    "te": "భె",
+    "rom": "bhe"
+   },
+   "sign-ee": {
+    "te": "భే",
+    "rom": "bhē"
+   },
+   "sign-o": {
+    "te": "భొ",
+    "rom": "bho"
+   },
+   "sign-oo": {
+    "te": "భో",
+    "rom": "bhō"
+   },
+   "sign-ai": {
+    "te": "భై",
+    "rom": "bhai"
+   },
+   "sign-au": {
+    "te": "భౌ",
+    "rom": "bhau"
+   },
+   "sign-ri": {
+    "te": "భృ",
+    "rom": "bhṛ"
+   },
+   "visarga": {
+    "te": "భః",
+    "rom": "bhaḥ"
+   }
+  },
+  "ttha": {
+   "sign-aa": {
+    "te": "ఠా",
+    "rom": "ṭhā"
+   },
+   "anusvara": {
+    "te": "ఠం",
+    "rom": "ṭham"
+   },
+   "sign-i": {
+    "te": "ఠి",
+    "rom": "ṭhi"
+   },
+   "sign-ii": {
+    "te": "ఠీ",
+    "rom": "ṭhī"
+   },
+   "sign-u": {
+    "te": "ఠు",
+    "rom": "ṭhu"
+   },
+   "sign-uu": {
+    "te": "ఠూ",
+    "rom": "ṭhū"
+   },
+   "sign-e": {
+    "te": "ఠె",
+    "rom": "ṭhe"
+   },
+   "sign-ee": {
+    "te": "ఠే",
+    "rom": "ṭhē"
+   },
+   "sign-o": {
+    "te": "ఠొ",
+    "rom": "ṭho"
+   },
+   "sign-oo": {
+    "te": "ఠో",
+    "rom": "ṭhō"
+   },
+   "sign-ai": {
+    "te": "ఠై",
+    "rom": "ṭhai"
+   },
+   "sign-au": {
+    "te": "ఠౌ",
+    "rom": "ṭhau"
+   },
+   "sign-ri": {
+    "te": "ఠృ",
+    "rom": "ṭhṛ"
+   },
+   "visarga": {
+    "te": "ఠః",
+    "rom": "ṭhaḥ"
+   }
+  },
+  "ddha": {
+   "sign-aa": {
+    "te": "ఢా",
+    "rom": "ḍhā"
+   },
+   "anusvara": {
+    "te": "ఢం",
+    "rom": "ḍham"
+   },
+   "sign-i": {
+    "te": "ఢి",
+    "rom": "ḍhi"
+   },
+   "sign-ii": {
+    "te": "ఢీ",
+    "rom": "ḍhī"
+   },
+   "sign-u": {
+    "te": "ఢు",
+    "rom": "ḍhu"
+   },
+   "sign-uu": {
+    "te": "ఢూ",
+    "rom": "ḍhū"
+   },
+   "sign-e": {
+    "te": "ఢె",
+    "rom": "ḍhe"
+   },
+   "sign-ee": {
+    "te": "ఢే",
+    "rom": "ḍhē"
+   },
+   "sign-o": {
+    "te": "ఢొ",
+    "rom": "ḍho"
+   },
+   "sign-oo": {
+    "te": "ఢో",
+    "rom": "ḍhō"
+   },
+   "sign-ai": {
+    "te": "ఢై",
+    "rom": "ḍhai"
+   },
+   "sign-au": {
+    "te": "ఢౌ",
+    "rom": "ḍhau"
+   },
+   "sign-ri": {
+    "te": "ఢృ",
+    "rom": "ḍhṛ"
+   },
+   "visarga": {
+    "te": "ఢః",
+    "rom": "ḍhaḥ"
+   }
+  },
+  "rra": {
+   "sign-aa": {
+    "te": "ఱా",
+    "rom": "ṟā"
+   },
+   "anusvara": {
+    "te": "ఱం",
+    "rom": "ṟam"
+   },
+   "sign-i": {
+    "te": "ఱి",
+    "rom": "ṟi"
+   },
+   "sign-ii": {
+    "te": "ఱీ",
+    "rom": "ṟī"
+   },
+   "sign-u": {
+    "te": "ఱు",
+    "rom": "ṟu"
+   },
+   "sign-uu": {
+    "te": "ఱూ",
+    "rom": "ṟū"
+   },
+   "sign-e": {
+    "te": "ఱె",
+    "rom": "ṟe"
+   },
+   "sign-ee": {
+    "te": "ఱే",
+    "rom": "ṟē"
+   },
+   "sign-o": {
+    "te": "ఱొ",
+    "rom": "ṟo"
+   },
+   "sign-oo": {
+    "te": "ఱో",
+    "rom": "ṟō"
+   },
+   "sign-ai": {
+    "te": "ఱై",
+    "rom": "ṟai"
+   },
+   "sign-au": {
+    "te": "ఱౌ",
+    "rom": "ṟau"
+   },
+   "sign-ri": {
+    "te": "ఱృ",
+    "rom": "ṟṛ"
+   },
+   "visarga": {
+    "te": "ఱః",
+    "rom": "ṟaḥ"
+   }
+  },
+  "nga": {
+   "sign-aa": {
+    "te": "ఙా",
+    "rom": "ṅā"
+   },
+   "anusvara": {
+    "te": "ఙం",
+    "rom": "ṅam"
+   },
+   "sign-i": {
+    "te": "ఙి",
+    "rom": "ṅi"
+   },
+   "sign-ii": {
+    "te": "ఙీ",
+    "rom": "ṅī"
+   },
+   "sign-u": {
+    "te": "ఙు",
+    "rom": "ṅu"
+   },
+   "sign-uu": {
+    "te": "ఙూ",
+    "rom": "ṅū"
+   },
+   "sign-e": {
+    "te": "ఙె",
+    "rom": "ṅe"
+   },
+   "sign-ee": {
+    "te": "ఙే",
+    "rom": "ṅē"
+   },
+   "sign-o": {
+    "te": "ఙొ",
+    "rom": "ṅo"
+   },
+   "sign-oo": {
+    "te": "ఙో",
+    "rom": "ṅō"
+   },
+   "sign-ai": {
+    "te": "ఙై",
+    "rom": "ṅai"
+   },
+   "sign-au": {
+    "te": "ఙౌ",
+    "rom": "ṅau"
+   },
+   "sign-ri": {
+    "te": "ఙృ",
+    "rom": "ṅṛ"
+   },
+   "visarga": {
+    "te": "ఙః",
+    "rom": "ṅaḥ"
+   }
+  },
+  "nya": {
+   "sign-aa": {
+    "te": "ఞా",
+    "rom": "ñā"
+   },
+   "anusvara": {
+    "te": "ఞం",
+    "rom": "ñam"
+   },
+   "sign-i": {
+    "te": "ఞి",
+    "rom": "ñi"
+   },
+   "sign-ii": {
+    "te": "ఞీ",
+    "rom": "ñī"
+   },
+   "sign-u": {
+    "te": "ఞు",
+    "rom": "ñu"
+   },
+   "sign-uu": {
+    "te": "ఞూ",
+    "rom": "ñū"
+   },
+   "sign-e": {
+    "te": "ఞె",
+    "rom": "ñe"
+   },
+   "sign-ee": {
+    "te": "ఞే",
+    "rom": "ñē"
+   },
+   "sign-o": {
+    "te": "ఞొ",
+    "rom": "ño"
+   },
+   "sign-oo": {
+    "te": "ఞో",
+    "rom": "ñō"
+   },
+   "sign-ai": {
+    "te": "ఞై",
+    "rom": "ñai"
+   },
+   "sign-au": {
+    "te": "ఞౌ",
+    "rom": "ñau"
+   },
+   "sign-ri": {
+    "te": "ఞృ",
+    "rom": "ñṛ"
+   },
+   "visarga": {
+    "te": "ఞః",
+    "rom": "ñaḥ"
+   }
+  }
+ },
+ "lessons": [
+  {
+   "id": "u01.a1",
+   "unit": "u01",
+   "letters": [
+    "na",
+    "ma",
+    "sign-aa",
+    "a"
+   ],
+   "syllables": [
+    {
+     "te": "నా",
+     "rom": "nā",
+     "parts": {
+      "c": "న",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/9ca232bd4f0c74b2.f.mp3",
+      "m": "../audio/letters/d3d6b7bb9d2ea3e4.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "మా",
+     "rom": "mā",
+     "parts": {
+      "c": "మ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/728f84b19d69edbd.f.mp3",
+      "m": "../audio/letters/21846bd843ce81ab.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 14,
+   "secs": 128
+  },
+  {
+   "id": "u01.a2",
+   "unit": "u01",
+   "letters": [
+    "ra",
+    "aa",
+    "anusvara"
+   ],
+   "syllables": [
+    {
+     "te": "రా",
+     "rom": "rā",
+     "parts": {
+      "c": "ర",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/411e514a225df724.f.mp3",
+      "m": "../audio/letters/4262c5992ed9ad3c.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "నం",
+     "rom": "nam",
+     "parts": {
+      "c": "న",
+      "s": "ం"
+     },
+     "audio": {
+      "f": "../audio/letters/1fa2d965668bbd1d.f.mp3",
+      "m": "../audio/letters/83b75f13cfde7a6d.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "మం",
+     "rom": "mam",
+     "parts": {
+      "c": "మ",
+      "s": "ం"
+     },
+     "audio": {
+      "f": "../audio/letters/166f9ef7f41d990b.f.mp3",
+      "m": "../audio/letters/4dcf59db03526bfd.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 15,
+   "secs": 138
+  },
+  {
+   "id": "u02.a1",
+   "unit": "u02",
+   "letters": [
+    "ka",
+    "va",
+    "sign-i",
+    "i"
+   ],
+   "syllables": [
+    {
+     "te": "కా",
+     "rom": "kā",
+     "parts": {
+      "c": "క",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/e9da7de0a6842d51.f.mp3",
+      "m": "../audio/letters/4691d08d89b44359.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "కి",
+     "rom": "ki",
+     "parts": {
+      "c": "క",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/4f7257c2b63074c8.f.mp3",
+      "m": "../audio/letters/9701d25dd88ddaa6.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "వి",
+     "rom": "vi",
+     "parts": {
+      "c": "వ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/ce29f32d058ee886.f.mp3",
+      "m": "../audio/letters/88366c8b336293d3.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "రి",
+     "rom": "ri",
+     "parts": {
+      "c": "ర",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/f357a2075cdb054e.f.mp3",
+      "m": "../audio/letters/9155103f4ac90b0c.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u02.a2",
+   "unit": "u02",
+   "letters": [
+    "la",
+    "sign-ii",
+    "ii"
+   ],
+   "syllables": [
+    {
+     "te": "లా",
+     "rom": "lā",
+     "parts": {
+      "c": "ల",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/33117e94539062f0.f.mp3",
+      "m": "../audio/letters/9a296c0a18caafab.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "లీ",
+     "rom": "lī",
+     "parts": {
+      "c": "ల",
+      "s": "ీ"
+     },
+     "audio": {
+      "f": "../audio/letters/21ba0dfed09d5ef5.f.mp3",
+      "m": "../audio/letters/2bd76fe406ae34cf.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "మీ",
+     "rom": "mī",
+     "parts": {
+      "c": "మ",
+      "s": "ీ"
+     },
+     "audio": {
+      "f": "../audio/letters/f33daa9c5edf9488.f.mp3",
+      "m": "../audio/letters/40afa26d54476252.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "వీ",
+     "rom": "vī",
+     "parts": {
+      "c": "వ",
+      "s": "ీ"
+     },
+     "audio": {
+      "f": "../audio/letters/f67d7b6b3f8dbf4f.f.mp3",
+      "m": "../audio/letters/ce5cc0167ad85e16.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 16,
+   "secs": 146
+  },
+  {
+   "id": "u03.a1",
+   "unit": "u03",
+   "letters": [
+    "ta",
+    "da",
+    "sign-u",
+    "u"
+   ],
+   "syllables": [
+    {
+     "te": "తు",
+     "rom": "tu",
+     "parts": {
+      "c": "త",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/4400ff90f0d420bb.f.mp3",
+      "m": "../audio/letters/9d658acd57eefbf7.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "దు",
+     "rom": "du",
+     "parts": {
+      "c": "ద",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/6667493163495e04.f.mp3",
+      "m": "../audio/letters/4f6e76f289b8f9d8.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "కు",
+     "rom": "ku",
+     "parts": {
+      "c": "క",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/d4a220542e112329.f.mp3",
+      "m": "../audio/letters/363bef4f4e1260ee.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "రు",
+     "rom": "ru",
+     "parts": {
+      "c": "ర",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/d6f9e49fde534c06.f.mp3",
+      "m": "../audio/letters/c65ee1c258352b65.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u03.a2",
+   "unit": "u03",
+   "letters": [
+    "pa",
+    "sign-uu",
+    "uu",
+    "cl-mma"
+   ],
+   "syllables": [
+    {
+     "te": "పా",
+     "rom": "pā",
+     "parts": {
+      "c": "ప",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/4da8b0d9efc55bfe.f.mp3",
+      "m": "../audio/letters/c6f09bdf0866ac8e.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "పు",
+     "rom": "pu",
+     "parts": {
+      "c": "ప",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/461c5b33fda0546a.f.mp3",
+      "m": "../audio/letters/ac574b36d42780fd.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "పూ",
+     "rom": "pū",
+     "parts": {
+      "c": "ప",
+      "s": "ూ"
+     },
+     "audio": {
+      "f": "../audio/letters/4883794976243d89.f.mp3",
+      "m": "../audio/letters/86cc5847af59fe66.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "మూ",
+     "rom": "mū",
+     "parts": {
+      "c": "మ",
+      "s": "ూ"
+     },
+     "audio": {
+      "f": "../audio/letters/699f5e9a7cac91a4.f.mp3",
+      "m": "../audio/letters/ad1693986ff7e7f0.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 20,
+   "secs": 180
+  },
+  {
+   "id": "u03.a3",
+   "unit": "u03",
+   "letters": [
+    "cl-nna",
+    "cl-kka",
+    "cl-lla",
+    "cl-vva"
+   ],
+   "syllables": [
+    {
+     "te": "తీ",
+     "rom": "tī",
+     "parts": {
+      "c": "త",
+      "s": "ీ"
+     },
+     "audio": {
+      "f": "../audio/letters/1740ba95187c6f70.f.mp3",
+      "m": "../audio/letters/5f99e4aa353e2552.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "దీ",
+     "rom": "dī",
+     "parts": {
+      "c": "ద",
+      "s": "ీ"
+     },
+     "audio": {
+      "f": "../audio/letters/f2f3680fe15d66b0.f.mp3",
+      "m": "../audio/letters/c27db0af7d950187.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "పి",
+     "rom": "pi",
+     "parts": {
+      "c": "ప",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/92b7e55997d46b30.f.mp3",
+      "m": "../audio/letters/0079d1df5516257d.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u04.a1",
+   "unit": "u04",
+   "letters": [
+    "ga",
+    "cha",
+    "sign-e",
+    "e"
+   ],
+   "syllables": [
+    {
+     "te": "గా",
+     "rom": "gā",
+     "parts": {
+      "c": "గ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/6fd656c1a9043420.f.mp3",
+      "m": "../audio/letters/f753a376044c2f68.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "చి",
+     "rom": "chi",
+     "parts": {
+      "c": "చ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/15a67d18aaa4e080.f.mp3",
+      "m": "../audio/letters/cf86f3dfbcc01439.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "గె",
+     "rom": "ge",
+     "parts": {
+      "c": "గ",
+      "s": "ె"
+     },
+     "audio": {
+      "f": "../audio/letters/fa3d4f4e3f79fe2b.f.mp3",
+      "m": "../audio/letters/cf8acd33501d8bd0.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "చె",
+     "rom": "che",
+     "parts": {
+      "c": "చ",
+      "s": "ె"
+     },
+     "audio": {
+      "f": "../audio/letters/6d7191dbd27cb133.f.mp3",
+      "m": "../audio/letters/256d1c90926c2a3b.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u04.a2",
+   "unit": "u04",
+   "letters": [
+    "dda",
+    "sign-ee",
+    "ee"
+   ],
+   "syllables": [
+    {
+     "te": "డి",
+     "rom": "ḍi",
+     "parts": {
+      "c": "డ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/586049e197ebd72e.f.mp3",
+      "m": "../audio/letters/bb167c631b5c8030.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "కే",
+     "rom": "kē",
+     "parts": {
+      "c": "క",
+      "s": "ే"
+     },
+     "audio": {
+      "f": "../audio/letters/aae21761745954ec.f.mp3",
+      "m": "../audio/letters/3b956b62dd33054e.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "లే",
+     "rom": "lē",
+     "parts": {
+      "c": "ల",
+      "s": "ే"
+     },
+     "audio": {
+      "f": "../audio/letters/57f9a04e5017172d.f.mp3",
+      "m": "../audio/letters/d9f5ce6047007ee5.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "మే",
+     "rom": "mē",
+     "parts": {
+      "c": "మ",
+      "s": "ే"
+     },
+     "audio": {
+      "f": "../audio/letters/4bc5d2eb458d98ea.f.mp3",
+      "m": "../audio/letters/68b9e29451624b99.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 154
+  },
+  {
+   "id": "u04.a3",
+   "unit": "u04",
+   "letters": [
+    "cl-tta",
+    "cl-ppa",
+    "cl-dda",
+    "cl-chcha"
+   ],
+   "syllables": [
+    {
+     "te": "గి",
+     "rom": "gi",
+     "parts": {
+      "c": "గ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/d3670fa39d385ba2.f.mp3",
+      "m": "../audio/letters/34b06be03608f64b.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "చా",
+     "rom": "chā",
+     "parts": {
+      "c": "చ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/363b8abdf3965bba.f.mp3",
+      "m": "../audio/letters/858933688784b45e.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "డా",
+     "rom": "ḍā",
+     "parts": {
+      "c": "డ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/e29935bf65577489.f.mp3",
+      "m": "../audio/letters/dc95a1b974e0b8e9.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u05.a1",
+   "unit": "u05",
+   "letters": [
+    "sa",
+    "ya",
+    "sign-o",
+    "o"
+   ],
+   "syllables": [
+    {
+     "te": "సా",
+     "rom": "sā",
+     "parts": {
+      "c": "స",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/fd8a3fbaa6b5d603.f.mp3",
+      "m": "../audio/letters/eb662bc51a598c1c.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "సు",
+     "rom": "su",
+     "parts": {
+      "c": "స",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/1f69b8d2ec8a15b1.f.mp3",
+      "m": "../audio/letters/af06f836a33285a5.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "యా",
+     "rom": "yā",
+     "parts": {
+      "c": "య",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/5aa4d2ebc3ce0074.f.mp3",
+      "m": "../audio/letters/2b4c9d71ed56b179.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "కొ",
+     "rom": "ko",
+     "parts": {
+      "c": "క",
+      "s": "ొ"
+     },
+     "audio": {
+      "f": "../audio/letters/f90846c1d22fe21f.f.mp3",
+      "m": "../audio/letters/9615a4b40b77791c.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 19,
+   "secs": 172
+  },
+  {
+   "id": "u05.a2",
+   "unit": "u05",
+   "letters": [
+    "tta",
+    "sign-oo",
+    "oo",
+    "cl-yya"
+   ],
+   "syllables": [
+    {
+     "te": "టా",
+     "rom": "ṭā",
+     "parts": {
+      "c": "ట",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/d323237cba7dd01b.f.mp3",
+      "m": "../audio/letters/3579f129dee2fe63.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "టి",
+     "rom": "ṭi",
+     "parts": {
+      "c": "ట",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/7c1fc7304e48eded.f.mp3",
+      "m": "../audio/letters/d1f1ec93bc6c2e60.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "కో",
+     "rom": "kō",
+     "parts": {
+      "c": "క",
+      "s": "ో"
+     },
+     "audio": {
+      "f": "../audio/letters/83b17910013493ee.f.mp3",
+      "m": "../audio/letters/039d4ca851e5ef3b.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "లో",
+     "rom": "lō",
+     "parts": {
+      "c": "ల",
+      "s": "ో"
+     },
+     "audio": {
+      "f": "../audio/letters/323028a16ebf3794.f.mp3",
+      "m": "../audio/letters/39e28c020398af86.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 19,
+   "secs": 172
+  },
+  {
+   "id": "u06.a1",
+   "unit": "u06",
+   "letters": [
+    "ba",
+    "ja",
+    "sign-ai",
+    "ai"
+   ],
+   "syllables": [
+    {
+     "te": "బా",
+     "rom": "bā",
+     "parts": {
+      "c": "బ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/3176490d1bc924c3.f.mp3",
+      "m": "../audio/letters/c8db05ed2bfb1394.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "జా",
+     "rom": "jā",
+     "parts": {
+      "c": "జ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/9b472cace438624d.f.mp3",
+      "m": "../audio/letters/5033d0cccf0a9702.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "పై",
+     "rom": "pai",
+     "parts": {
+      "c": "ప",
+      "s": "ై"
+     },
+     "audio": {
+      "f": "../audio/letters/3b6a1c01318f5dbb.f.mp3",
+      "m": "../audio/letters/77d591280df2301b.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "బి",
+     "rom": "bi",
+     "parts": {
+      "c": "బ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/0289e7380f6c3328.f.mp3",
+      "m": "../audio/letters/841aca7cab1ec621.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 19,
+   "secs": 172
+  },
+  {
+   "id": "u06.a2",
+   "unit": "u06",
+   "letters": [
+    "lla",
+    "nna",
+    "sign-au",
+    "au"
+   ],
+   "syllables": [
+    {
+     "te": "ళి",
+     "rom": "ḷi",
+     "parts": {
+      "c": "ళ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/25e01bb9b0f703ca.f.mp3",
+      "m": "../audio/letters/77d01df877d01bf1.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ణా",
+     "rom": "ṇā",
+     "parts": {
+      "c": "ణ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/d1d1c7fd7f636382.f.mp3",
+      "m": "../audio/letters/a1c1d51f38254281.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "కౌ",
+     "rom": "kau",
+     "parts": {
+      "c": "క",
+      "s": "ౌ"
+     },
+     "audio": {
+      "f": "../audio/letters/a0083f8f4cb71667.f.mp3",
+      "m": "../audio/letters/d15336e8874c8281.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "జు",
+     "rom": "ju",
+     "parts": {
+      "c": "జ",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/eff0b50b131a099f.f.mp3",
+      "m": "../audio/letters/4a6f642faa95739a.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u07.a1",
+   "unit": "u07",
+   "letters": [
+    "ha",
+    "sha",
+    "ssa",
+    "virama"
+   ],
+   "syllables": [
+    {
+     "te": "హా",
+     "rom": "hā",
+     "parts": {
+      "c": "హ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/9f1dff50b815241f.f.mp3",
+      "m": "../audio/letters/372730b53180460d.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "శా",
+     "rom": "śā",
+     "parts": {
+      "c": "శ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/df6f82c5c0850032.f.mp3",
+      "m": "../audio/letters/c468e637d9d1286e.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "షి",
+     "rom": "ṣi",
+     "parts": {
+      "c": "ష",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/dcc521b6ee38bd60.f.mp3",
+      "m": "../audio/letters/2e344f325c91b376.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "హి",
+     "rom": "hi",
+     "parts": {
+      "c": "హ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/c2a4ed68392e3aff.f.mp3",
+      "m": "../audio/letters/8bf65a54c6c8be02.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 18,
+   "secs": 164
+  },
+  {
+   "id": "u07.a2",
+   "unit": "u07",
+   "letters": [
+    "cl-pra",
+    "cl-ska",
+    "cl-ttta",
+    "cl-sta"
+   ],
+   "syllables": [
+    {
+     "te": "హు",
+     "rom": "hu",
+     "parts": {
+      "c": "హ",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/d45e5b0d67bd64f4.f.mp3",
+      "m": "../audio/letters/c1849067847defdb.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "శి",
+     "rom": "śi",
+     "parts": {
+      "c": "శ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/ef61526c8b1599d3.f.mp3",
+      "m": "../audio/letters/2e1f34f866e47752.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "షా",
+     "rom": "ṣā",
+     "parts": {
+      "c": "ష",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/d5977e542a17c5cb.f.mp3",
+      "m": "../audio/letters/5eb4bfc29ef23b86.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u07.a3",
+   "unit": "u07",
+   "letters": [
+    "cl-ssa",
+    "cl-shta"
+   ],
+   "syllables": [
+    {
+     "te": "శు",
+     "rom": "śu",
+     "parts": {
+      "c": "శ",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/4d0a7e25f4bfd299.f.mp3",
+      "m": "../audio/letters/663db1163dfec461.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "షు",
+     "rom": "ṣu",
+     "parts": {
+      "c": "ష",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/ef19ce8da67a30e9.f.mp3",
+      "m": "../audio/letters/640e1475b09db966.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "హో",
+     "rom": "hō",
+     "parts": {
+      "c": "హ",
+      "s": "ో"
+     },
+     "audio": {
+      "f": "../audio/letters/ea05bda02e84652a.f.mp3",
+      "m": "../audio/letters/a1d605009b08c591.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 11,
+   "secs": 104
+  },
+  {
+   "id": "u08.a1",
+   "unit": "u08",
+   "letters": [
+    "kha",
+    "gha",
+    "tha",
+    "dha"
+   ],
+   "syllables": [
+    {
+     "te": "ఖా",
+     "rom": "khā",
+     "parts": {
+      "c": "ఖ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/46d011614815f546.f.mp3",
+      "m": "../audio/letters/3b51df51081992b6.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ఘా",
+     "rom": "ghā",
+     "parts": {
+      "c": "ఘ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/d9596aad2b332629.f.mp3",
+      "m": "../audio/letters/16f45c0ada645e85.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "థా",
+     "rom": "thā",
+     "parts": {
+      "c": "థ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/d2be64730d72d9ef.f.mp3",
+      "m": "../audio/letters/d4c019845faeb370.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ధి",
+     "rom": "dhi",
+     "parts": {
+      "c": "ధ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/378cdce033de7b59.f.mp3",
+      "m": "../audio/letters/7cdf5b192c17415e.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 19,
+   "secs": 172
+  },
+  {
+   "id": "u08.a2",
+   "unit": "u08",
+   "letters": [
+    "chha",
+    "jha",
+    "cl-nya",
+    "cl-tva"
+   ],
+   "syllables": [
+    {
+     "te": "ఛా",
+     "rom": "chhā",
+     "parts": {
+      "c": "ఛ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/f8e5e6caa51827e9.f.mp3",
+      "m": "../audio/letters/50f8c564e1fbcacb.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ఝా",
+     "rom": "jhā",
+     "parts": {
+      "c": "ఝ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/800d12c9ea17c6f1.f.mp3",
+      "m": "../audio/letters/cca3147d4b7fd748.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ధా",
+     "rom": "dhā",
+     "parts": {
+      "c": "ధ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/e331d17e68f33e4b.f.mp3",
+      "m": "../audio/letters/36090d3a4dd5b476.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ఖి",
+     "rom": "khi",
+     "parts": {
+      "c": "ఖ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/09fea9c4153c82f6.f.mp3",
+      "m": "../audio/letters/e856c7820488d86b.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 18,
+   "secs": 164
+  },
+  {
+   "id": "u08.a3",
+   "unit": "u08",
+   "letters": [
+    "cl-llla",
+    "cl-gga",
+    "cl-ddda",
+    "cl-bba"
+   ],
+   "syllables": [
+    {
+     "te": "ఘు",
+     "rom": "ghu",
+     "parts": {
+      "c": "ఘ",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/9bb4f1374aa29d62.f.mp3",
+      "m": "../audio/letters/5396e99db35ad344.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "థి",
+     "rom": "thi",
+     "parts": {
+      "c": "థ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/4568494ab5c3a36b.f.mp3",
+      "m": "../audio/letters/b49363d82a3e1075.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ధు",
+     "rom": "dhu",
+     "parts": {
+      "c": "ధ",
+      "s": "ు"
+     },
+     "audio": {
+      "f": "../audio/letters/041c7bdef3c78ff6.f.mp3",
+      "m": "../audio/letters/acce88fabef70cf9.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u09.a1",
+   "unit": "u09",
+   "letters": [
+    "pha",
+    "bha",
+    "ttha",
+    "ddha"
+   ],
+   "syllables": [
+    {
+     "te": "ఫా",
+     "rom": "phā",
+     "parts": {
+      "c": "ఫ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/80676439e00254fd.f.mp3",
+      "m": "../audio/letters/85b3bc0b6b40d230.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "భా",
+     "rom": "bhā",
+     "parts": {
+      "c": "భ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/7f4b3dec3fb1507f.f.mp3",
+      "m": "../audio/letters/489ec933fd353606.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ఠా",
+     "rom": "ṭhā",
+     "parts": {
+      "c": "ఠ",
+      "s": "ా"
+     },
+     "audio": {
+      "f": "../audio/letters/2d975475a6bf1a6d.f.mp3",
+      "m": "../audio/letters/d668cc01d545f888.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ఢి",
+     "rom": "ḍhi",
+     "parts": {
+      "c": "ఢ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/a529ef98ee96ac71.f.mp3",
+      "m": "../audio/letters/a8986e7ecb44c2b2.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 21,
+   "secs": 188
+  },
+  {
+   "id": "u09.a2",
+   "unit": "u09",
+   "letters": [
+    "rra",
+    "cl-jja",
+    "cl-rtha"
+   ],
+   "syllables": [
+    {
+     "te": "ఫి",
+     "rom": "phi",
+     "parts": {
+      "c": "ఫ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/1e5206c01fce8ae9.f.mp3",
+      "m": "../audio/letters/48887373b3fcd3fe.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "భూ",
+     "rom": "bhū",
+     "parts": {
+      "c": "భ",
+      "s": "ూ"
+     },
+     "audio": {
+      "f": "../audio/letters/2e4cb5e73a08f925.f.mp3",
+      "m": "../audio/letters/9c5d1615bc824284.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "ఠి",
+     "rom": "ṭhi",
+     "parts": {
+      "c": "ఠ",
+      "s": "ి"
+     },
+     "audio": {
+      "f": "../audio/letters/eff8bb0bee3d27b4.f.mp3",
+      "m": "../audio/letters/9eb022f9275a228e.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 14,
+   "secs": 130
+  },
+  {
+   "id": "u10.a1",
+   "unit": "u10",
+   "letters": [
+    "sign-ri",
+    "ri",
+    "visarga",
+    "cl-ksha"
+   ],
+   "syllables": [
+    {
+     "te": "కృ",
+     "rom": "kṛ",
+     "parts": {
+      "c": "క",
+      "s": "ృ"
+     },
+     "audio": {
+      "f": "../audio/letters/cd8d35ef072d9e81.f.mp3",
+      "m": "../audio/letters/fdfbc6633b756437.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "మృ",
+     "rom": "mṛ",
+     "parts": {
+      "c": "మ",
+      "s": "ృ"
+     },
+     "audio": {
+      "f": "../audio/letters/0117b23c8230aea1.f.mp3",
+      "m": "../audio/letters/57155ceaf34bdd27.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "నః",
+     "rom": "naḥ",
+     "parts": {
+      "c": "న",
+      "s": "ః"
+     },
+     "audio": {
+      "f": "../audio/letters/89d85d5de371d215.f.mp3",
+      "m": "../audio/letters/a4e86b241ce6f838.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 156
+  },
+  {
+   "id": "u10.a2",
+   "unit": "u10",
+   "letters": [
+    "nga",
+    "nya",
+    "cl-jnya",
+    "cl-ksa"
+   ],
+   "syllables": [
+    {
+     "te": "పృ",
+     "rom": "pṛ",
+     "parts": {
+      "c": "ప",
+      "s": "ృ"
+     },
+     "audio": {
+      "f": "../audio/letters/be85c3042f4e7fcf.f.mp3",
+      "m": "../audio/letters/6a9812c8cb91a9af.m.mp3"
+     },
+     "confidence": "low"
+    },
+    {
+     "te": "వృ",
+     "rom": "vṛ",
+     "parts": {
+      "c": "వ",
+      "s": "ృ"
+     },
+     "audio": {
+      "f": "../audio/letters/4c9044d12ba9aaa2.f.mp3",
+      "m": "../audio/letters/c6203e3fe4b95965.m.mp3"
+     },
+     "confidence": "low"
+    }
+   ],
+   "steps": 17,
+   "secs": 152
+  }
+ ],
+ "audio_bytes": 3222856
+}
