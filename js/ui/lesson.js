@@ -62,7 +62,7 @@ function icon2(name, cls = '') {
 
 // ---- small helpers ----------------------------------------------------------------------------
 
-const UNGRADED = new Set(['intro', 'letter_intro']);
+const UNGRADED = new Set(['intro', 'letter_intro', 'letter_draw']);
 const DONE_KEY = 'telugu.summary-shown';
 let firstRender = true;
 function pageWasReloaded() {
@@ -199,11 +199,21 @@ export async function render(el, route) {
     try { await import('../ex/speak.js'); canSpeak = true; } catch { canSpeak = false; }
   }
 
+  // S16: stroke data for `letter_draw`; missing or unloadable = no draw steps, no message.
+  let strokes = null;
+  if (isLetters) {
+    try {
+      const s = await content.loadStrokes();
+      strokes = s && s.letters && typeof s.letters === 'object' ? s : null;
+    } catch { strokes = null; }
+  }
+
   function generate(seed) {
     const cards = store.get('cards');
     if (isLetters) {
       return exgen.forLetters(lesson, session.knownIds(cards, ids),
-        { seed, built: letters.built, letters: letters.letters, lessons: letters.lessons });
+        { seed, built: letters.built, letters: letters.letters, lessons: letters.lessons,
+          strokes: strokes ? strokes.letters : null });
     }
     return exgen.forLesson(unit, lessonId, session.priorIds(cards, ids),
       { seed, speak: canSpeak, typing: settings.typing || 'tiles', pool });
@@ -398,7 +408,8 @@ export async function render(el, route) {
     page.dataset.type = exercise.type;
     page.dataset.k = String(k);
     const ctx = { item: id => items.get(id) || null, settings, verdict: false,
-      letters: letters ? letters.letters : [], built: letters ? letters.built : {}, letter: id => letterById.get(id) || null };
+      letters: letters ? letters.letters : [], built: letters ? letters.built : {}, letter: id => letterById.get(id) || null,
+      strokes };
     let answered = false;
     const onAnswer = answer => {
       if (answered || ticket !== mine) return;

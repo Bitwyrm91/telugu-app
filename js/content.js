@@ -4,6 +4,7 @@
 //   loadUnit(id)   -> content/units/<id>.json
 //   loadLetters()  -> content/letters.json
 //   loadOnboard()  -> content/onboard.json
+//   loadStrokes()  -> content/strokes.json (S16 letter drawing; may be missing)
 //   contentIds(units, letters) -> Set of every item id, letter id, 'L:'+letter id and lesson id
 //   audioUrl(path) -> absolute URL of an audio path written by the build
 //
@@ -50,6 +51,8 @@ export const loadIndex = () => load('index.json');
 export const loadUnit = (id) => load(`units/${encodeURIComponent(id)}.json`);
 export const loadLetters = () => load('letters.json');
 export const loadOnboard = () => load('onboard.json');
+// S16: optional. A missing or broken file means "no stroke data": callers catch and carry on.
+export const loadStrokes = () => load('strokes.json');
 
 // Every id a stored card or lesson entry can have that is in the compiled content.
 // A card or lesson whose id is not here is kept in the store but not counted (SPECS S3).

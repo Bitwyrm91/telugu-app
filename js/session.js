@@ -3,7 +3,7 @@
 // A run is an exercise list (from exgen) plus `results`, one entry per answer, in order:
 //   {k, state, first, wrong?, t}
 //     k      index of the exercise in the list
-//     state  'right' | 'close' | 'wrong' | 'skipped' | 'seen' (intro / letter_intro)
+//     state  'right' | 'close' | 'wrong' | 'skipped' | 'seen' (intro / letter_intro / letter_draw)
 //     first  true on the exercise's first showing, false on its re-queued retry
 //     wrong  match only: item ids that had a miss (from grade.check perItem)
 //     t      seconds since the run began, when this answer was given (gives `secs` after a resume)
@@ -23,7 +23,7 @@
 import * as store from './store.js';
 import * as srs from './srs.js';
 
-const UNGRADED = new Set(['intro', 'letter_intro']);
+const UNGRADED = new Set(['intro', 'letter_intro', 'letter_draw']);
 const RANK = { good: 0, hard: 1, again: 2 };
 
 export function stateOf(r) {

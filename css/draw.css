@@ -1,0 +1,90 @@
+/* draw.css: letter drawing panel (task D3; SPECS S16; DESIGN tokens only, no raw colours). */
+
+.draw { width: 100%; max-width: 340px; margin-inline: auto; display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+.draw-head { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.draw-dots { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.draw-dots li { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--border); background: transparent; }
+.draw-dots li[data-past] { background: var(--border); }
+.draw-dots li[data-on] { background: var(--primary); border-color: var(--primary); width: 24px; border-radius: 5px; }
+.draw-line { margin: 0; min-height: 3em; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--ink); font-weight: 600; }
+.draw-line:focus { outline: none; }
+.draw-line:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+.draw-line[data-hint] { color: var(--close); }
+.draw-line .draw-glyph { margin-inline-start: 2px; }
+
+.draw-box { width: 100%; aspect-ratio: 1; border-radius: 16px; background: var(--surface); border: 2px solid var(--border); overflow: hidden; }
+.draw-svg { display: block; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; cursor: default; }
+/* R4 / R8: no page scroll and a crosshair only while a stroke can be drawn */
+.draw.is-drawable .draw-svg { touch-action: none; cursor: crosshair; }
+
+/* R6: outline fill >= 1.3:1 against the box (--line: 1.49 / 1.45), edge >= 3:1 (--border: 3.9 / 4.2) */
+.draw-outline { fill: var(--line); stroke: var(--border); stroke-width: 8; paint-order: stroke; }   /* fill over the stroke: no seams where contours overlap */
+.draw.is-free .draw-outline { display: none; }
+/* R2: a finished stage shows the real glyph in the accent colour */
+.draw.is-finished .draw-outline { display: inline; fill: var(--accent); stroke: var(--ink); }
+.draw.is-finished .draw-done { display: none; }
+/* the carrier of a sign is part of the finished glyph: no grey strokes over the accent fill */
+.draw.is-finished .draw-ghost { display: none; }
+.draw-baseline { stroke: var(--border); stroke-width: 4; stroke-dasharray: 2 14; stroke-linecap: round; display: none; }
+.draw.is-free .draw-baseline { display: inline; }
+
+.draw-ghost-stroke polyline, .draw-done-stroke polyline, .draw-pen-line, .draw-ink-line, .draw-guide-line {
+  fill: none; stroke-linecap: round; stroke-linejoin: round;
+}
+/* ghost strokes: the carrier, already written; a neutral grey (>= 3:1 on the box, not the ink colour) */
+.draw-ghost-stroke .draw-edge, .draw-ghost-stroke .draw-fill { stroke: var(--border); stroke-width: var(--draw-w, 56px); }
+/* finished strokes: accent fill inside an ink edge (DESIGN: accent is fill only); R2: the glyph's width */
+.draw-done-stroke .draw-edge { stroke: var(--ink); stroke-width: var(--draw-w, 56px); }
+.draw-done-stroke .draw-fill { stroke: var(--accent); stroke-width: calc(var(--draw-w, 56px) - 14px); }
+.draw-pen-line { stroke: var(--primary); stroke-width: var(--draw-w, 56px); }
+.draw-pen { fill: var(--ink); stroke: var(--surface); stroke-width: 6; }
+/* R6: direction on the still picture: an ink arrowhead with a surface rim, surface chevrons on the ink */
+.draw-arrow { fill: var(--ink); stroke: var(--surface); stroke-width: 6; stroke-linejoin: round; }
+.draw-guide .draw-arrow { fill: var(--ink-2); stroke: none; }
+.draw-chev { fill: none; stroke: var(--surface); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.draw-guide-line { stroke: var(--ink-2); stroke-width: 10; stroke-dasharray: 26 22; }
+/* R6: the start dot shows on ink: surface fill, ink ring */
+.draw-start { fill: var(--surface); stroke: var(--ink); stroke-width: 8; }
+.draw-num { fill: var(--ink); font-family: var(--font-ui), sans-serif; font-size: 64px; font-weight: 700; paint-order: stroke; stroke: var(--surface); stroke-width: 10px; }
+.draw-hair { stroke: var(--ink-2); stroke-width: 3; stroke-linecap: round; }
+.draw-ink-line { stroke: var(--ink); stroke-width: 50; opacity: .85; }
+.draw-ink-line.draw-fade { opacity: 0; transition: opacity 300ms ease-out; }
+.draw-start.draw-pulse { transform-box: fill-box; transform-origin: center; animation: draw-pulse 1.2s ease-in-out infinite; }
+@keyframes draw-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+
+.draw-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.draw-actions:empty { display: none; }
+.draw-actions .btn { min-height: 48px; flex: 1 1 110px; white-space: nowrap; }
+.draw-actions .btn-main { flex: 2 1 auto; }
+.draw-actions .btn-quiet { flex: 0 1 auto; }
+/* R5: one compact block: icon, label and the sentence, at most 2 lines at 360 px */
+.draw-conf { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 6px; font-size: var(--en-small); line-height: 1.3; color: var(--ink-2); text-align: center; }
+.draw-conf .conf-wrap { display: contents; }
+.draw-conf .conf { min-height: 44px; padding-block: 0; }
+.draw-conf .conf-help { flex: 1 1 100%; }
+
+/* short screens (a phone browser with its bars showing): the label alone, so the notice stays above the buttons of the step */
+@media (max-height: 660px) { .ex-draw .draw-conf-text { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-start.draw-pulse { animation: none; }
+  .draw-ink-line.draw-fade { transition: none; }
+}
+
+/* the Letters card: button and panel */
+.lc-write { min-height: 48px; }
+.lc-draw-slot:empty { display: none; }
+.lc-draw-slot { width: 100%; scroll-margin-bottom: 96px; scroll-margin-top: 16px; }   /* clear of the bottom bar */
+
+/* the lesson step (R5: the whole step fits without scrolling; the box shrinks, never below 220 px) */
+.ex-draw .draw-slot { width: 100%; }
+.ex-draw .draw { max-width: clamp(220px, calc(100dvh - var(--draw-chrome, 440px)), 340px); gap: 8px; }
+.ex-draw .draw-line { min-height: 2.6em; }
+.ex-draw .ex-title { margin-block: 0; }
+.ex-draw .draw-note { margin: 0; font-size: var(--en-small); color: var(--ink-2); text-align: center; }
+.ex-draw .draw-note[hidden] { display: none; }
+/* R8: Continue first (DOM and screen), "Can't draw now" beside it */
+.draw-step-actions { flex-wrap: nowrap; justify-content: center; }
+.draw-step-actions .btn { min-width: 0; }
+.draw-step-actions .draw-skip.btn-quiet { flex: 0 1 auto; white-space: nowrap; }
+.draw-step-actions .ex-continue { flex: 1 1 auto; }

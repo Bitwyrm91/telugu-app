@@ -18,6 +18,8 @@ import { teNode } from './te.js';
 import { pathModel } from './home.js';
 import { h, icon, ensureStyles, makeCtx, audioMsg, playWithMsg } from '../ex/common.js';
 import { letterCard, shownGlyph, letterStyles } from '../ex/letter.js';
+import { mountDraw, drawStyles } from './draw.js';
+import { strokeEntryOk } from '../exgen.js';
 
 export function lessonHeading(id) {
   const m = /^u(\d+)\.a(\d+)$/.exec(String(id));
@@ -70,6 +72,52 @@ export async function render(el) {
   const rest = all.filter(l => !placed.has(l.id));
   if (rest.length) groups.push({ id: 'more', heading: 'More letters', letters: rest });
 
+  // S16: "Learn to write" on the card of a letter with stroke data (no data: no button, no message)
+  let strokes = null;
+  try {
+    const s = await content.loadStrokes();
+    strokes = s && s.letters && typeof s.letters === 'object' ? s : null;
+  } catch { strokes = null; }
+  let drawM = null;
+  const stopDraw = () => { if (drawM) { drawM.destroy(); drawM = null; } };
+  function addWrite(card, l) {
+    const rec = strokes && strokes.letters[l.id];
+    if (!strokeEntryOk(rec)) return;
+    drawStyles();
+    // R8: the button controls the panel; the panel is a labelled group; Escape closes it
+    const slotId = `lc-draw-${String(l.id).replace(/[^\w-]/g, '_')}`;
+    const btn = h('button', { type: 'button', class: 'btn btn-secondary lc-write', 'aria-expanded': 'false',
+      'aria-controls': slotId, text: 'Learn to write' });
+    const slot = h('div', { class: 'lc-draw-slot', id: slotId, role: 'group', 'aria-live': 'off', 'aria-label': `Learn to write ${l.rom || l.id}` });   // off: the panel has its own live line
+    const close = () => {
+      stopDraw();
+      slot.replaceChildren();
+      btn.setAttribute('aria-expanded', 'false');
+      try { btn.focus({ preventScroll: true }); } catch { /* ignore */ }
+    };
+    slot.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && slot.firstChild) { e.preventDefault(); e.stopPropagation(); close(); }
+    });
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { e.preventDefault(); e.stopPropagation(); close(); }
+    });
+    btn.addEventListener('click', () => {
+      if (btn.getAttribute('aria-expanded') === 'true') { close(); return; }
+      stopDraw();
+      btn.setAttribute('aria-expanded', 'true');
+      // R5: the panel comes into view; the watch starts once the box is 60 % visible
+      drawM = mountDraw(slot, l.id, { data: strokes, letter: l, onDone: close, waitVisible: true });
+      drawM.ready.then(ok => {
+        if (!ok || !slot.isConnected) return;
+        let reduce = false;
+        try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* ignore */ }
+        try { slot.scrollIntoView({ block: 'nearest', behavior: reduce ? 'instant' : 'smooth' }); } catch { /* ignore */ }
+      });
+    });
+    const row = card.querySelector('.lc-row');
+    if (row) row.after(btn, slot); else card.append(btn, slot);
+  }
+
   let openCell = null;
   const gridBox = h('div', { class: 'lg-groups' });
   for (const g of groups) {
@@ -85,14 +133,14 @@ export async function render(el) {
         playWithMsg(l, cx, msg);
         if (openCell === b) {
           b.setAttribute('aria-expanded', 'false');
-          slot.replaceChildren();
+          stopDraw(); slot.replaceChildren();
           openCell = null;
           return;
         }
         if (openCell) {
           openCell.setAttribute('aria-expanded', 'false');
           const old = openCell.closest('.lg-group').querySelector('.lg-card-slot');
-          if (old) old.replaceChildren();
+          stopDraw(); if (old) old.replaceChildren();
         }
         openCell = b;
         b.setAttribute('aria-expanded', 'true');
@@ -104,11 +152,13 @@ export async function render(el) {
         const close = h('button', { type: 'button', class: 'lg-card-close', 'aria-label': 'Close' }, icon('cross'));
         close.addEventListener('click', () => {
           b.setAttribute('aria-expanded', 'false');
-          slot.replaceChildren();
+          stopDraw(); slot.replaceChildren();
           openCell = null;
           try { b.focus({ preventScroll: true }); } catch { /* ignore */ }
         });
-        const wrap = h('div', { class: 'lg-card-wrap' }, ...[note, letterCard(l, cx), close].filter(Boolean));
+        const card = letterCard(l, cx);
+        addWrite(card, l);
+        const wrap = h('div', { class: 'lg-card-wrap' }, ...[note, card, close].filter(Boolean));
         slot.replaceChildren(wrap);
         try { wrap.scrollIntoView({ block: 'nearest', behavior: 'instant' }); } catch { /* ignore */ }
       });
@@ -152,5 +202,5 @@ export async function render(el) {
   page.append(gridBox,
     h('section', { class: 'll' }, h('h2', { class: 'lg-heading', text: 'Letter lessons' }), list, more));
   el.replaceChildren(page);
-  return () => { audio.stop(); };
+  return () => { stopDraw(); audio.stop(); };
 }

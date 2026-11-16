@@ -4,7 +4,7 @@
 //
 // forLesson(unit, lessonId, prior, opts)   opts = {seed, speak, typing, pool: [items]}
 // forReview(items, pool, opts)             opts = {seed, typing, letters?, names?, loan?, bank_avoid?}
-// forLetters(lesson, known, opts)          opts = {seed, built, letters?}
+// forLetters(lesson, known, opts)          opts = {seed, built, letters?, strokes?}  (strokes: S16 letter_draw)
 //
 // Items are compiled items (PLAN 4.3). `prior` may hold item objects or ids
 // (ids are looked up in the unit and the pool). Letters may be letter objects
@@ -451,6 +451,29 @@ function buildEx(syl, taught, extra, findGlyph, rank, built, rng) {
            syllable: { te: syl.te, rom: syl.rom, confidence: syl.confidence ?? null } };
 }
 
+/** S16 R3: a strokes.json entry is usable only when strokes is a non-empty list of polylines of at
+ *  least 2 [number, number] points, and every ghost item passes the same test. */
+const okPoint = p => Array.isArray(p) && p.length >= 2 && Number.isFinite(p[0]) && Number.isFinite(p[1]);
+const okLine = l => Array.isArray(l) && l.length >= 2 && l.every(okPoint);
+export function strokeEntryOk(e) {
+  if (!e || typeof e !== 'object' || !Array.isArray(e.strokes) || !e.strokes.length || !e.strokes.every(okLine)) return false;
+  if (e.ghost !== undefined && e.ghost !== null && !(Array.isArray(e.ghost) && e.ghost.every(okLine))) return false;
+  return true;
+}
+
+function strokeTest(strokes) {
+  if (!strokes) return () => false;
+  if (strokes instanceof Set) return id => strokes.has(id);
+  if (Array.isArray(strokes)) return id => strokes.includes(id);
+  if (typeof strokes === 'object') {
+    return id => {
+      const e = Object.prototype.hasOwnProperty.call(strokes, id) ? strokes[id] : null;
+      return strokeEntryOk(e);
+    };
+  }
+  return () => false;
+}
+
 export function forLetters(lesson, known = [], opts = {}) {
   const rng = mulberry32(opts.seed ?? 0);
   const resolve = letterResolver(opts);
@@ -464,7 +487,13 @@ export function forLetters(lesson, known = [], opts = {}) {
   const rank = l => (order.has(l.id) ? order.get(l.id) : 1e9);
 
   const out = [];
-  for (const l of L) out.push({ type: 'letter_intro', itemIds: ['L:' + l.id], isNew: true, letter: l });
+  // S16: a `letter_draw` right after each new letter's intro, only for letters with stroke data
+  // (opts.strokes: the `letters` map of strokes.json, or a Set / list of letter ids).
+  const hasStrokes = strokeTest(opts.strokes);
+  for (const l of L) {
+    out.push({ type: 'letter_intro', itemIds: ['L:' + l.id], isNew: true, letter: l });
+    if (hasStrokes(l.id)) out.push({ type: 'letter_draw', itemIds: ['L:' + l.id], isNew: true, letterId: l.id });
+  }
 
   const drills = [];
   for (const l of L) {

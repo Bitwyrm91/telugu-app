@@ -28,6 +28,7 @@ const LATER = {
   letter_sound: './letter.js',
   letter_name: './letter.js',
   letter_build: './letter.js',
+  letter_draw: './draw.js',
 };
 
 export function moduleFor(type) {
