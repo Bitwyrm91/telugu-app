@@ -15,15 +15,16 @@
 export const RULES = Object.freeze({
   waves: 6,
   sizes: [8, 9, 10, 10, 12, 12],
-  maxOn: [2, 2, 3, 3, 4, 4],
-  fall0: 9.0, fallStep: 0.7, fallMin: 4.5,
-  firstSpawn: 0.6, spawnGap: 1.2,
+  maxOn: [2, 2, 2, 3, 3, 4],
+  fall0: 10.0, fallStep: 0.7, fallMin: 6.0,
+  firstSpawn: 0.6, spawnGap: 1.5,
   jam: 1.0, freeze: 1.5, banner: 1.5,
   streakWide: 5, wideRange: 0.25,
   towns: 4, townHp: 2,
   hit: 100, wideHit: 50, waveBonus: 200, crack: 100, bossBonus: 200,
   maxSet: 12, minMet: 6, fallbackN: 8, minWords: 8,
   bossBase: 10, bossPerWord: 4,
+  easeStep: 0.7, easeMax: 8, easeOn: 3,
 });
 
 export const TOWN_X = Object.freeze([0.125, 0.375, 0.625, 0.875]);
@@ -37,6 +38,13 @@ export const MODES = Object.freeze({
 });
 
 export const fallTime = wave => Math.max(RULES.fallMin, RULES.fall0 - RULES.fallStep * (wave - 1));
+// Adaptive pace: every landing adds one ease step (slower falls for the rest of the run, and one
+// fewer target on screen per `easeOn` steps); a wave with no miss takes one step back.
+export const fallNow = state => fallTime(state.wave) + RULES.easeStep * (state.ease || 0);
+export const maxOnNow = state => {
+  const base = RULES.maxOn[state.wave - 1];
+  return Math.max(Math.min(2, base), base - Math.floor((state.ease || 0) / RULES.easeOn));
+};
 export const launcherCount = wave => (wave <= 3 ? 3 : 4);
 
 // ---- random -------------------------------------------------------------------------------------
@@ -190,7 +198,7 @@ export function createRun({ letters = [], words = [], sentences = [], mode = 'l2
     missed: [], wavesCleared: 0,
     waveMisses: 0, waveLandings: 0, requeued: new Set(), spawnIn: 0,
     reveal: null, boss: bossItem, bossFill: [...new Set(bossFill)], bossDone: !bossItem, bossTarget: null,
-    hits: 0, wrong: 0, landings: 0,
+    hits: 0, wrong: 0, landings: 0, ease: 0,
   };
   startWave(state, 1, []);
   return state;
@@ -247,7 +255,7 @@ function spawn(state, events) {
   const town = pickTown(state);
   const x1 = TOWN_X[town];
   const x0 = Math.min(0.92, Math.max(0.08, x1 + (state.rand() - 0.5) * 0.16));
-  const t = { tid: state.nextTid++, id, town, x0, x1, x: x0, y: 0, fall: fallTime(state.wave), boss: false };
+  const t = { tid: state.nextTid++, id, town, x0, x1, x: x0, y: 0, fall: fallNow(state), boss: false };
   state.targets.push(t);
   relabel(state);
   events.push({ type: 'spawn', tid: t.tid, id, town, x: t.x, y: 0 });
@@ -273,7 +281,7 @@ function markMissed(state, id) {
 }
 
 function removeTarget(state, t) {
-  const full = state.targets.length >= RULES.maxOn[state.wave - 1];
+  const full = state.targets.length >= maxOnNow(state);
   state.targets = state.targets.filter(x => x !== t);
   if (t.boss) state.bossTarget = null;
   if (full && state.spawnIn <= 0) state.spawnIn = RULES.spawnGap;
@@ -333,6 +341,7 @@ function land(state, t, events) {
   state.waveLandings += 1;
   state.waveMisses += 1;
   state.landings += 1;
+  state.ease = Math.min(RULES.easeMax, state.ease + 1);
   markMissed(state, t.id);
   if (!t.boss && !state.requeued.has(t.id)) {
     state.requeued.add(t.id);
@@ -376,7 +385,7 @@ export function step(state, dt) {
   const down = lowestFirst(state.targets).find(t => t.y >= 1);
   if (down) { land(state, down, events); return events; }
 
-  const room = state.targets.length < RULES.maxOn[state.wave - 1];
+  const room = state.targets.length < maxOnNow(state);
   if (state.queue.length && room) {
     state.spawnIn -= dt;
     if (state.spawnIn <= 0) {
@@ -389,6 +398,7 @@ export function step(state, dt) {
     const perfect = state.waveMisses === 0 && state.waveLandings === 0;
     let repaired = null;
     if (perfect) {
+      state.ease = Math.max(0, state.ease - 1);
       let lo = RULES.townHp, at = -1;
       state.towns.forEach((h, i) => { if (h < lo) { lo = h; at = i; } });
       if (at >= 0) { state.towns[at] += 1; repaired = at; }
