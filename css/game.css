@@ -87,7 +87,10 @@
 .game-chip-te { font-size: var(--te-lg); line-height: 1.35; }
 .game-chip-te.is-letter { font-size: 2rem; line-height: 1.3; }
 .game-chip-en { font-size: 1.375rem; line-height: 1.25; font-weight: 600; }
-.game-chip.is-audio { pointer-events: auto; cursor: pointer; width: 60px; height: 60px; padding: 0; font: inherit; }
+.game-chip.is-tap { pointer-events: auto; cursor: pointer; font: inherit; opacity: 0.72; }
+.game-chip.is-tap.is-aim { opacity: 1; outline: 3px solid var(--ink); outline-offset: 3px; }
+.game-chip.is-hot { border-color: var(--wrong); box-shadow: 0 0 18px var(--wrong); }
+.game-chip.is-audio { width: 60px; height: 60px; padding: 0; font: inherit; }
 .game-chip.is-audio .icon { width: 30px; height: 30px; }
 .game-chip.is-boss { max-width: 86%; border-radius: 20px; padding: 8px 16px; border-color: var(--wrong); box-shadow: 0 0 24px var(--wrong); }
 .game-chip.is-boss .game-chip-en { font-size: 1.125rem; }
@@ -167,4 +170,99 @@
   .game-chip { box-shadow: none; }
   .game-chip.is-shake { animation: none; }
   .game-launcher:active { transform: none; }
+}
+
+/* ---- way to play (mode screen) ---- */
+.game-types { margin: 0 0 4px; padding: 0; border: 0; min-width: 0; }
+.game-types .game-group { margin-top: 4px; padding: 0; }
+.game-type-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.game-type {
+  display: flex; align-items: flex-start; gap: 10px; min-height: 56px; padding: 8px 10px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--surface); cursor: pointer;
+}
+.game-type:has(.game-radio:checked) { border: 2px solid var(--primary); background: var(--primary-bg); padding: 7px 9px; }
+.game-radio { width: 22px; height: 22px; flex: none; margin: 1px 0 0; accent-color: var(--primary); }
+.game-type-text { display: grid; min-width: 0; }
+.game-type-title { font-weight: 600; }
+.game-type-how { font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); }
+@media (max-width: 380px) { .game-type-list { grid-template-columns: 1fr; } .game-type { min-height: 48px; } }
+
+/* ---- Arcade run: sky (about 58 % of the height), ammo row, reload card ---- */
+.game-run.is-arcade { gap: 6px; }
+.game-field.is-arcade { flex: 1 1 58%; cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none; }
+.game-field.is-arcade .game-overlay[data-kind="banner"] { pointer-events: none; }
+.game-field.is-arcade .game-wide { top: 8px; bottom: auto; }
+
+.game-ammo { display: flex; align-items: center; gap: 8px; flex: none; min-height: 28px; }
+.game-ammo-k { font-size: 0.75rem; color: var(--ink-2); }
+.game-ammo-pips { display: flex; gap: 2px; flex: 1 1 auto; min-width: 0; }
+.game-ammo-pip { display: inline-flex; color: var(--line); }
+.game-ammo-pip .icon { width: 22px; height: 22px; }
+.game-ammo-pip.is-full { color: var(--primary); }
+.game-ammo.is-big .game-ammo-pip.is-full:first-child { color: var(--accent); }
+.game-ammo-n { font-size: var(--en-body); font-weight: 600; font-variant-numeric: tabular-nums; min-width: 1.5em; text-align: end; }
+.game-ammo.is-empty .game-ammo-n { color: var(--wrong); }
+
+.game-reload {
+  position: relative; overflow: hidden; flex: none;
+  display: grid; grid-template-columns: minmax(84px, 30%) 1fr; gap: 10px;
+  padding: 8px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line);
+}
+.game-reload.is-nudge { animation: game-nudge 0.4s; }
+@keyframes game-nudge { 30% { border-color: var(--wrong); box-shadow: 0 0 0 2px var(--wrong); } }
+.game-prompt-wrap { display: flex; flex-direction: column; align-items: stretch; gap: 4px; min-width: 0; }
+.game-prompt {
+  flex: 1 1 auto; display: flex; align-items: center; justify-content: center; min-height: 96px; min-width: 0;
+  padding: 6px; font: inherit; color: var(--ink); background: var(--surface-2);
+  border: 2px solid var(--line); border-radius: 14px; cursor: pointer; touch-action: manipulation;
+}
+.game-prompt:hover:not(:disabled) { border-color: var(--primary); }
+.game-prompt:disabled { cursor: default; }
+.game-prompt .te { color: var(--ink); padding-block: 0; }
+.game-prompt-te { font-size: var(--te-lg); line-height: 1.4; overflow-wrap: anywhere; }
+.game-prompt-te.is-letter { font-size: 3rem; line-height: 1.3; }
+.game-prompt-en { font-size: 1.125rem; line-height: 1.25; font-weight: 600; overflow-wrap: anywhere; text-align: center; }
+.game-prompt[data-kind="audio"] { color: var(--primary); }
+.game-prompt[data-kind="audio"] .icon { width: 40px; height: 40px; }
+.game-prompt-hint { font-size: 0.75rem; color: var(--ink-2); text-align: center; }
+.game-reload.no-audio .game-prompt-hint { visibility: hidden; }
+.game-reload-main { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.game-answers { display: grid; gap: 6px; }
+.game-answer {
+  position: relative; display: flex; align-items: center; gap: 8px;
+  min-height: 56px; min-width: 0; padding: 4px 10px 4px 28px;
+  font: inherit; color: var(--ink); text-align: start; background: var(--surface);
+  border: 2px solid var(--primary); border-radius: 14px; cursor: pointer; touch-action: manipulation;
+}
+.game-answer:hover { background: var(--primary-bg); }
+.game-answer[aria-disabled="true"] { cursor: not-allowed; }
+.game-answer[aria-disabled="true"]:not(.is-answer):not(.is-wrong) { border-color: var(--line); color: var(--ink-2); }
+.game-answer[aria-disabled="true"]:hover { background: var(--surface); }
+.game-answer .game-key { left: 9px; top: 50%; transform: translateY(-50%); }
+.game-answer .game-lab { flex: 1 1 auto; text-align: start; }
+.game-answer.is-wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+.game-answer.is-answer { border: 2px dashed var(--right); background: var(--right-bg); }
+.game-answer.is-wrong[aria-disabled="true"]:hover { background: var(--wrong-bg); }
+.game-answer.is-answer[aria-disabled="true"]:hover { background: var(--right-bg); }
+.game-mark { display: inline-flex; align-items: center; gap: 4px; flex: none; font-size: var(--en-small); font-weight: 600; }
+.game-mark:empty { display: none; }
+.game-mark .icon { width: 18px; height: 18px; }
+.game-answer.is-wrong .game-mark { color: var(--wrong); }
+.game-answer.is-answer .game-mark { color: var(--right); }
+.game-reload-note { display: flex; align-items: center; gap: 6px; min-height: 20px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); }
+.game-reload-note .icon { width: 18px; height: 18px; flex: none; }
+.game-reload-note span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.game-reload-note[data-kind="right"] .icon { color: var(--right); }
+.game-reload-note[data-kind="wrong"] .icon { color: var(--wrong); }
+.game-lock { position: absolute; left: 0; bottom: 0; height: 4px; width: calc(var(--lock, 0) * 100%); background: var(--wrong); }
+
+@media (max-height: 820px) {
+  .game-answer { min-height: 52px; }
+}
+@media (max-height: 700px) {
+  .game-prompt { min-height: 72px; }
+  .game-answer { min-height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-reload.is-nudge { animation: none; }
 }

@@ -25,6 +25,7 @@ export const RULES = Object.freeze({
   maxSet: 12, minMet: 6, fallbackN: 8, minWords: 8,
   bossBase: 10, bossPerWord: 4,
   easeStep: 0.7, easeMax: 8, easeOn: 3,
+  tries: 2,
 });
 
 export const TOWN_X = Object.freeze([0.125, 0.375, 0.625, 0.875]);
@@ -160,6 +161,19 @@ function wordEntry(w, mode) {
     show: label[m.show], ans: label[m.ans] };
 }
 
+/** The items a run plays (shared with game/arcade.js): the mode's entries, unique answers, shuffled
+ *  with `rand`, at most RULES.maxSet. Same steps as createRun below (which is left as it was). */
+export function playSet({ letters = [], words = [], mode = 'l2s', rand, max = RULES.maxSet }) {
+  const m = MODES[mode];
+  if (!m) throw new Error(`game: unknown mode ${mode}`);
+  let src = m.kind === 'letters' ? letters : words;
+  if (m.show === 'audio') src = src.filter(hasAudio);
+  let entries = m.kind === 'letters' ? src.map(l => letterEntry(l, mode, src)) : src.map(w => wordEntry(w, mode));
+  entries = uniqueBy(entries, e => e.ans.text);
+  return shuffle(entries, rand).slice(0, max);
+}
+export { shuffle, hasAudio };
+
 // ---- the run ----------------------------------------------------------------------------------
 
 export function createRun({ letters = [], words = [], sentences = [], mode = 'l2s', seed = 1, relaxed = false } = {}) {
@@ -198,7 +212,7 @@ export function createRun({ letters = [], words = [], sentences = [], mode = 'l2
     missed: [], wavesCleared: 0,
     waveMisses: 0, waveLandings: 0, requeued: new Set(), spawnIn: 0,
     reveal: null, boss: bossItem, bossFill: [...new Set(bossFill)], bossDone: !bossItem, bossTarget: null,
-    hits: 0, wrong: 0, landings: 0, ease: 0,
+    hits: 0, wrong: 0, landings: 0, ease: 0, aim: null,
   };
   startWave(state, 1, []);
   return state;
@@ -236,6 +250,20 @@ function startWave(state, w, events) {
 
 const alive = (state, t) => state.relaxed || state.towns[t] > 0;
 const lowestFirst = list => list.slice().sort((a, b) => b.y - a.y);
+
+/** The target the launchers fire at: the one the player picked (aimAt), else the lowest. */
+export function aimed(state) {
+  if (state.bossTarget) return state.bossTarget;
+  return state.targets.find(t => t.tid === state.aim) || lowestFirst(state.targets)[0] || null;
+}
+/** Pick a target on screen to fire at. Returns true when it is there. */
+export function aimAt(state, tid) {
+  const t = state.targets.find(x => x.tid === tid && !x.boss);
+  if (!t) return false;
+  state.aim = tid;
+  relabel(state);
+  return true;
+}
 const ansOf = (state, t) => (t.boss ? null : state.byId.get(t.id).ans.text);
 
 function pickTown(state, prefer = null) {
@@ -255,7 +283,7 @@ function spawn(state, events) {
   const town = pickTown(state);
   const x1 = TOWN_X[town];
   const x0 = Math.min(0.92, Math.max(0.08, x1 + (state.rand() - 0.5) * 0.16));
-  const t = { tid: state.nextTid++, id, town, x0, x1, x: x0, y: 0, fall: fallNow(state), boss: false };
+  const t = { tid: state.nextTid++, id, town, x0, x1, x: x0, y: 0, fall: fallNow(state), boss: false, wrong: 0 };
   state.targets.push(t);
   relabel(state);
   events.push({ type: 'spawn', tid: t.tid, id, town, x: t.x, y: 0 });
@@ -304,8 +332,9 @@ function relabel(state) {
   const n = launcherCount(state.wave);
   const want = [];
   const add = s => { if (s != null && !want.includes(s) && want.length < n) want.push(s); };
-  const on = lowestFirst(state.targets);
   const boss = state.bossTarget;
+  const aimT = boss ? null : aimed(state);
+  const on = aimT ? [aimT, ...lowestFirst(state.targets).filter(t => t !== aimT)] : [];
   if (boss) {
     for (const w of boss.words.slice(boss.next)) add(w);
     for (const w of shuffle(state.bossFill, state.rand)) add(w);
@@ -334,6 +363,7 @@ function relabel(state) {
 
 function land(state, t, events) {
   removeTarget(state, t);
+  if (state.aim === t.tid) state.aim = null;
   let hp = state.towns[t.town];
   if (!state.relaxed && hp > 0) { hp -= 1; state.towns[t.town] = hp; }
   state.streak = 0;
@@ -453,10 +483,11 @@ export function tap(state, i) {
     return events;
   }
 
-  const matches = state.targets.filter(t => ansOf(state, t) === label);
-  if (matches.length) {
-    const t = lowestFirst(matches)[0];
+  // Only the aimed target can be shot: an answer for another target on screen is a wrong answer.
+  const t = aimed(state);
+  if (ansOf(state, t) === label) {
     removeTarget(state, t);
+    state.aim = null;
     state.score += RULES.hit;
     state.hits += 1;
     const hit = { type: 'hit', tid: t.tid, id: t.id, x: t.x, y: t.y, launcher: i, wide: [] };
@@ -483,20 +514,22 @@ export function tap(state, i) {
     return events;
   }
 
-  const low = lowestFirst(state.targets)[0];
-  state.jam[i] = RULES.jam;
+  // Wrong: every launcher jams, and the second wrong answer on one target lets it through.
+  state.jam = state.jam.map(() => RULES.jam);
   state.streak = 0;
   state.wideReady = false;
   state.waveMisses += 1;
   state.wrong += 1;
-  markMissed(state, low.id);
-  events.push({ type: 'miss', launcher: i, id: low.id, tid: low.tid });
+  t.wrong = (t.wrong || 0) + 1;
+  markMissed(state, t.id);
+  events.push({ type: 'miss', launcher: i, id: t.id, tid: t.tid, left: RULES.tries - t.wrong });
+  if (t.wrong >= RULES.tries) { state.aim = null; land(state, t, events); }
   return events;
 }
 
 /** The launcher index holding the right answer for the lowest target (or the boss's next word), or -1. */
 export function rightLauncher(state) {
   if (state.bossTarget) return state.launchers.indexOf(state.bossTarget.words[state.bossTarget.next]);
-  const low = lowestFirst(state.targets)[0];
-  return low ? state.launchers.indexOf(ansOf(state, low)) : -1;
+  const t = aimed(state);
+  return t ? state.launchers.indexOf(ansOf(state, t)) : -1;
 }

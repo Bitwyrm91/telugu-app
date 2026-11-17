@@ -1,7 +1,7 @@
 // game/sfx.js: short effect tones made with WebAudio (no files). Speech wins: while the app's
 // <audio> element plays, effects are lowered to DUCK of their level.
 //
-//   sfx.play(name)      name: launch | hit | wrong | land | wave
+//   sfx.play(name)      name: launch | hit | wrong | land | wave | reload | empty
 //   sfx.setMuted(bool)  sfx.isMuted()
 //   sfx.attach(audioEl) follow this element's play/pause/ended for ducking; returns detach()
 //   sfx.level()         the master gain the next tone uses (1, DUCK, or 0 when muted)
@@ -16,6 +16,8 @@ const TONES = {
   hit: [['square', 660, 990, 0.08, 0.5, 0], ['triangle', 990, 1320, 0.12, 0.6, 0.07]],
   wrong: [['sawtooth', 180, 120, 0.22, 0.5, 0]],
   land: [['sine', 140, 50, 0.45, 1, 0], ['sawtooth', 90, 40, 0.3, 0.35, 0]],
+  reload: [['triangle', 440, 660, 0.08, 0.5, 0], ['triangle', 660, 880, 0.1, 0.5, 0.08]],
+  empty: [['square', 220, 200, 0.06, 0.35, 0], ['square', 220, 200, 0.06, 0.35, 0.1]],
   wave: [['triangle', 523, 523, 0.12, 0.6, 0], ['triangle', 659, 659, 0.12, 0.6, 0.12], ['triangle', 784, 784, 0.22, 0.6, 0.24]],
 };
 
