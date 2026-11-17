@@ -12,6 +12,7 @@ const ROUTES = [
   { re: /^\/notes\/([^/]+)$/, name: 'notes', keys: ['unitId'] },
   { re: /^\/settings$/, name: 'settings', keys: [] },
   { re: /^\/dev\/type$/, name: 'devType', keys: [] },
+  { re: /^\/game$/, name: 'game', keys: [] }, // game (GAME-PLAN.md)
 ];
 
 export const HOME = Object.freeze({ name: 'home', params: {}, path: '/' });

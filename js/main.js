@@ -23,6 +23,7 @@ const SCREENS = {
   notes: ['notes', 'Grammar note', 'nav'],
   settings: ['settings', 'Settings', 'nav'],
   devType: ['devtype', 'Typography', 'nav'],
+  game: ['../game/view', 'Play', 'focus'], // js/game/view.js (GAME-PLAN.md)
 };
 
 // Which main-navigation entry a route belongs to.

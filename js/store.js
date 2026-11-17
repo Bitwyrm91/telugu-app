@@ -11,7 +11,7 @@
 // "Progress can't be saved in this browser" and carries on in memory.
 
 const PREFIX = 'telugu.';
-const EXPORTED = ['meta', 'settings', 'progress', 'cards', 'streak', 'reports'];
+const EXPORTED = ['meta', 'settings', 'progress', 'cards', 'streak', 'reports', 'game'];
 
 // Shapes returned by get() when nothing is stored yet.
 const DEFAULTS = {
@@ -25,6 +25,7 @@ const DEFAULTS = {
   reports: [],
   resume: null,
   meta: null,
+  game: { best: {}, runs: {}, mute: false }, // game (GAME-PLAN.md): best score and runs per mode
 };
 
 const mem = new Map();     // key -> JSON text; this session's truth, written through to storage
@@ -145,7 +146,7 @@ export function exportAll() {
   meta.exported = nowIso();
   writeRaw('meta', JSON.stringify(meta));
   const out = {};
-  for (const k of EXPORTED) out[k] = get(k);
+  for (const k of EXPORTED) if (k !== 'game' || readRaw(k) != null) out[k] = get(k); // game: once played
   return out;
 }
 
@@ -223,6 +224,22 @@ function mergeReports(a, b) {
   return out;
 }
 
+// Game: the higher best score and run count per mode; this device keeps its own mute switch.
+function mergeGame(a, b) {
+  const out = isObj(a) ? clone(a) : clone(DEFAULTS.game);
+  if (!isObj(out.best)) out.best = {};
+  if (!isObj(out.runs)) out.runs = {};
+  if (!isObj(b)) return out;
+  for (const k of ['best', 'runs']) {
+    if (!isObj(b[k])) continue;
+    for (const [mode, n] of Object.entries(b[k])) {
+      const v = higher(out[k][mode], n);
+      if (v !== undefined && v !== null) out[k][mode] = v;
+    }
+  }
+  return out;
+}
+
 // Merges an exported object into this device's data. `meta` and `resume` are never imported.
 export function importAll(obj, opts = {}) {
   if (!isObj(obj)) throw new Error('Not a progress file');
@@ -238,6 +255,7 @@ export function importAll(obj, opts = {}) {
     cards: mergeMap(get('cards'), obj.cards, mergeCard),
     streak: mergeStreak(get('streak'), obj.streak),
     reports: mergeReports(get('reports'), obj.reports),
+    game: mergeGame(get('game'), obj.game),
   };
   if (opts && opts.settings && isObj(obj.settings)) next.settings = { ...get('settings'), ...obj.settings };
   for (const [k, v] of Object.entries(next)) {

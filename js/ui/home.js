@@ -288,6 +288,12 @@ export async function render(el) {
     }
     path.append(section);
   }
+  // Game: a "Play" card at the end of the path (#/game).
+  path.append(h('a', { class: 'home-play', href: '#/game', 'data-game': '' },
+    h('span', { class: 'home-play-icon' }, icon('play')),
+    h('span', { class: 'home-play-text' },
+      h('span', { class: 'home-play-title', text: 'Play' }),
+      h('span', { class: 'home-play-note', text: 'Sky Shield: shoot down falling letters and words' }))));
   const run = streakRun();
   el.append(header, homeStrip(model.next, model.units, run), path);
   sidePanel(document.getElementById('side'), model.next, model.units, run);
