@@ -193,8 +193,11 @@ export class ArcadeRun extends RunBase {
             const from = this.burstAt.get(e.by);
             if (e.chain && from) fx.link(from.x, from.y, q.x, q.y);
             if (this.combo >= 2) {
-              fx.text(e.chain ? `CHAIN x${this.combo}` : `COMBO x${this.combo}`, q.x, q.y - 34,
-                { cols: this.combo >= 5 ? TEXT.hot : e.chain ? TEXT.cool : TEXT.gold, scale: this.combo >= 4 ? 3 : 2 });
+              // above the points popup (which may itself have been stacked), rising a little faster
+              const pq = this.popups[this.popups.length - 1];
+              const py = pq ? pq.y : q.y;
+              fx.text(e.chain ? `CHAIN x${this.combo}` : `COMBO x${this.combo}`, q.x, py - 14 - 36,
+                { cols: this.combo >= 5 ? TEXT.hot : e.chain ? TEXT.cool : TEXT.gold, scale: this.combo >= 4 ? 3 : 2, rise: -40 });
             }
           }
           break;
@@ -202,7 +205,6 @@ export class ArcadeRun extends RunBase {
         case 'burst': {
           if (e.kind === 'chain') sfx.play('chain', { pan: pan(e.x) });
           else sfx.play(e.kind === 'big' ? 'bigboom' : 'boom', { pan: pan(e.x) });
-          if (e.kind === 'big' && !this.reduced) this.glare = 0.18;
           if (on) {
             const q = this.px(e.x, e.y);
             this.burstAt.set(e.bid, q);
@@ -213,7 +215,7 @@ export class ArcadeRun extends RunBase {
         }
         case 'split': {
           sfx.play('split', { pan: pan(e.x) });
-          if (on) { const q = this.px(e.x, e.y); fx.splitPop(q.x, q.y); }
+          if (on) { const q = this.px(e.x, e.y); fx.splitPop(q.x, q.y); fx.text('SPLIT', q.x, q.y - 26, { cols: TEXT.pink, scale: 2, life: 0.7 }); }
           break;
         }
         case 'land': {
@@ -480,12 +482,17 @@ export class ArcadeRun extends RunBase {
     const bx = this.R.baseX * W;
     const last = s.rockets[s.rockets.length - 1];
     if (last) { const to = this.px(last.x, last.y); this.aim = Math.atan2(to.x - bx, ground - to.y); }
-    sprites.drawBase(c, bx, ground, H, { aim: this.aim, anim: this.anim, reduced: RM, col, empty: s.ammo === 0, flash: this.muzzle / 0.14, recoil: this.recoil, charge: !!s.bigReady });
-    if (s.ammo === 0 && s.phase === 'play' && (RM || Math.floor(this.anim * 3) % 2 === 0)) drawText(c, 'NO AMMO', bx, ground - 30, 2, TEXT.red);
+    sprites.drawBase(c, bx, ground, H, { aim: this.aim, anim: this.anim, reduced: RM, col, empty: s.ammo === 0, flash: this.muzzle / 0.14, recoil: this.recoil, charge: !!s.bigReady, ammo: s.ammo, ammoMax: this.R.ammoMax });
+    if (s.ammo === 0 && s.phase === 'play' && (RM || Math.floor(this.anim * 3) % 2 === 0)) drawText(c, 'NO AMMO', bx, ground - 44, 2, TEXT.red);
+    else if (s.ammo > 0 && s.ammo <= 2 && s.phase === 'play') drawText(c, 'LOW', bx, ground - 44, 1, TEXT.hot, RM ? 0.9 : 0.6 + 0.4 * Math.sin(this.anim * 6));
 
-    // meteors: a rock with a flame tail; a meteor that will split has a ring
+    // meteors: a rock with a flame tail; a meteor that will split has a glowing seam
     const rr = Math.max(10, this.R.meteorR * W * 1.2);
     const top = this.geom().top;
+    // danger: a red mark on the ground under each meteor in the lower part of the sky
+    if (!s.relaxed && s.phase === 'play') {
+      for (const m of s.meteors) if (m.y > 0.68) sprites.drawDanger(c, m.x1 * W, ground, Math.min(1, (m.y - 0.68) / 0.3), { anim: this.anim, reduced: RM });
+    }
     for (const m of s.meteors) {
       const p = this.px(m.x, m.y);
       const dx = (m.x1 - m.sx) * W, dy = (ground - top) * (1 - m.sy);
@@ -517,12 +524,6 @@ export class ArcadeRun extends RunBase {
     // one town left: a slow red pulse at the edges (steady under reduced motion)
     if (!s.relaxed && s.phase !== 'end' && s.towns.filter(t => t > 0).length === 1) {
       drawVignette(c, W, H, RM ? 0.22 : 0.2 + 0.1 * Math.sin(this.anim * 3), col.hurt || '#E23D3D');
-    }
-    if (this.glare > 0) {
-      c.globalAlpha = 0.16 * (this.glare / 0.18);
-      c.fillStyle = sprites.PAL.white;
-      c.fillRect(0, 0, W, H);
-      c.globalAlpha = 1;
     }
   }
 }

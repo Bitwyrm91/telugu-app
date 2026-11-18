@@ -11,7 +11,7 @@ import * as sprites from './sprites.js';
 import * as scenery from './scenery.js';
 import { TOWN_SHAPE } from './scenery.js';
 
-export const BUILD = '2026-11-18 i';
+export const BUILD = '2026-11-18 k';
 
 // ---- styles and icons ---------------------------------------------------------------------------
 
@@ -114,25 +114,26 @@ export function drawSky(c, W, H, col) {
 export function drawCity(c, o) {
   const { W, H, ground, col, anim, reduced: R, towns, relaxed, flash, townX, light } = o;
   const dpr = dprOf(c);
-  sprites.drawBackdrop(c, W, ground, { anim, reduced: R });
+  // small stars first, then big stars, shooting star and the moon (so no star sits on the moon)
   c.fillStyle = col.star;
   for (const st of STARS) {
     c.globalAlpha = R ? 0.7 : 0.45 + 0.4 * Math.sin(anim * 1.5 + st.p) ** 2;
-    c.fillRect(st.x * W, st.y * ground, st.s, st.s);
+    c.fillRect(Math.round(st.x * W), Math.round(st.y * ground), st.s > 1.2 ? 2 : 1, st.s > 1.2 ? 2 : 1);
   }
   c.globalAlpha = 1;
-  // two layers of cloud drifting at different speeds (still under reduced motion)
-  const cl = scenery.cloudLayer(W, ground, col, dpr);
-  if (cl) {
-    const strips = [[ground * 0.16, 5, 0.3], [ground * 0.46, 11, 0.42]];
-    strips.forEach(([y, v, a], j) => {
-      const off = R ? W * 0.3 * j : (anim * v + W * 0.3 * j) % W;
-      c.globalAlpha = a;
-      c.drawImage(cl.cv, Math.round(off - W), Math.round(y), W, cl.h);
-      c.drawImage(cl.cv, Math.round(off), Math.round(y), W, cl.h);
-    });
-    c.globalAlpha = 1;
-  }
+  sprites.drawBackdrop(c, W, ground, { anim, reduced: R, dpr });
+  // two layers of cloud drifting at different speeds (still under reduced motion), in front of the moon
+    // the short end-screen strip keeps its sky clear (no clouds) for the fireworks and the moon
+  const strips = ground < 200 ? [] : [[ground * 0.1, 4, 0.55, 0], [ground * 0.42, 9, 0.75, 1]];
+  strips.forEach(([y, v, a, variant], j) => {
+    const cl = scenery.cloudLayer(W, ground, col, dpr, variant);
+    if (!cl) return;
+    const off = R ? W * 0.3 * j : (anim * v + W * 0.3 * j) % W;
+    c.globalAlpha = a;
+    c.drawImage(cl.cv, Math.round(off - W), Math.round(y), W, cl.h);
+    c.drawImage(cl.cv, Math.round(off), Math.round(y), W, cl.h);
+  });
+  c.globalAlpha = 1;
   const base = H;
   const rl = scenery.ridgeLayer(W, H, ground, col, dpr);
   if (rl) c.drawImage(rl, 0, 0, W, H);
@@ -167,7 +168,7 @@ export function drawCity(c, o) {
       }
     }
     // a damaged town smokes; a ruined one burns
-    if (hp <= 1 && !relaxed) sprites.drawSmoke(c, cx - tw * 0.1, base - tall * (hp === 0 ? 0.3 : 0.75), { anim, reduced: R, fire: hp === 0 });
+    if (hp <= 1 && !relaxed) sprites.drawTownFire(c, cx, base, tw, tall, { anim, reduced: R, hp, seed: i + 1 });
     if (flash[i] > 0 && !R) {
       c.globalAlpha = flash[i] * 0.6;
       c.fillStyle = col.hurt;

@@ -267,8 +267,9 @@ export async function render(el) {
     screen.prepend(sky);
     el.replaceChildren(screen);
     try {
-      const towns = state.towns.slice();
-      const relaxed = state.relaxed;
+      // a win shows the towns standing under fireworks; a loss, every town burning under a red sky
+      const towns = state.towns.map(() => (won ? 2 : 0));
+      const relaxed = false;
       const flash = [0, 0, 0, 0];
       const rm = reducedMotion();
       let col = null;
@@ -276,8 +277,16 @@ export async function render(el) {
         won, reduced: rm,
         draw: (c, W, H, anim, fx) => {
           if (!col) col = readColors(sky);
-          const ground = Math.round(H * 0.62);
+          const ground = Math.round(H * 0.66);
           drawSky(c, W, H, col);
+          if (!won) {
+            const g = c.createLinearGradient(0, H * 0.3, 0, H);
+            g.addColorStop(0, 'rgba(226,61,61,0)');
+            g.addColorStop(0.7, 'rgba(226,90,40,0.28)');
+            g.addColorStop(1, 'rgba(255,138,31,0.4)');
+            c.fillStyle = g;
+            c.fillRect(0, H * 0.3, W, H * 0.7);
+          }
           drawCity(c, { W, H, ground, col, anim, reduced: rm, towns, relaxed, flash, townX: core.TOWN_X, light: fx });
         },
       });
@@ -732,7 +741,7 @@ class Run extends RunBase {
       const p = t._px || this.px(t.x, t.y);
       const vx = (t.x1 - t.x0) * W, vy = ground;
       const len = Math.hypot(vx, vy) || 1;
-      sprites.drawMeteor(c, p.x, p.y, t.boss ? 50 : 30, -vx / len, -vy / len,
+      sprites.drawMeteor(c, p.x, p.y, t.boss ? 38 : 26, -vx / len, -vy / len,
         { anim: this.anim, reduced: R, kind: t.boss ? 'boss' : 'rock', seed: (t.tid | 0) + 1, col });
     }
     // rockets

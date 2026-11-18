@@ -60,6 +60,23 @@ export function skyLayer(W, H, col, dpr) {
         x.fillRect(cx, cy, p, p);
       }
     }
+    // a faint aurora: a few dithered curtains hanging from a wavy line high on the left
+    const ap = 2;
+    for (let cx = 0; cx < W * 0.62; cx += ap) {
+      const xf = cx / W;
+      const fade = Math.sin(Math.min(1, xf / 0.62) * Math.PI);
+      const top = H * (0.05 + 0.05 * Math.sin(xf * 11 + 0.8) + 0.02 * Math.sin(xf * 29));
+      const len = H * (0.1 + 0.06 * Math.sin(xf * 7 + 2) ** 2) * fade;
+      const fold = 0.5 + 0.5 * Math.sin(xf * 47);
+      for (let cy = 0; cy < len; cy += ap) {
+        const q = cy / Math.max(1, len);
+        const dens = fade * (1 - q) * (0.35 + 0.65 * fold) * (q < 0.12 ? q / 0.12 : 1);
+        if ((hash(cx, Math.round(cy), 53) % 100) > dens * 55) continue;
+        x.globalAlpha = 0.07 + 0.13 * dens;
+        x.fillStyle = q < 0.3 ? '#8CF2C8' : q < 0.7 ? '#4FC8A8' : '#5A78C0';
+        x.fillRect(cx, snap(top + cy, ap), ap, ap);
+      }
+    }
     // dim far stars (the twinkling ones are drawn live)
     x.fillStyle = '#C8C4E8';
     for (let i = 0; i < 140; i++) {
@@ -71,9 +88,9 @@ export function skyLayer(W, H, col, dpr) {
   });
 }
 
-// a ridge line: height (0..1) along x, from a few summed waves with a seed
+// a ridge line: height (0..1) along x, from a few summed waves with a seed (smooth: no high-frequency term)
 function ridge(xf, seed) {
-  return 0.55 + 0.25 * Math.sin(xf * 7.3 + seed) + 0.13 * Math.sin(xf * 17.1 + seed * 2.1) + 0.07 * Math.sin(xf * 41 + seed * 3.7);
+  return 0.55 + 0.27 * Math.sin(xf * 6.1 + seed) + 0.14 * Math.sin(xf * 13.7 + seed * 2.1) + 0.04 * Math.sin(xf * 29 + seed * 3.7);
 }
 
 export function ridgeLayer(W, H, ground, col, dpr) {
@@ -81,25 +98,50 @@ export function ridgeLayer(W, H, ground, col, dpr) {
     const L = layer(W, H, dpr);
     if (!L) return null;
     const { x } = L;
-    const p = 4;
-    const ridges = [
-      { seed: 1.3, top: ground - H * 0.2, span: H * 0.15, body: mix(col.sky2, col.far, 0.75), lit: mix(mix(col.sky2, col.far, 0.75), '#A9A2D8', 0.16), snow: true },
-      { seed: 4.1, top: ground - H * 0.11, span: H * 0.1, body: mix(col.far, col.sky1, 0.15), lit: mix(mix(col.far, col.sky1, 0.15), '#8C86C0', 0.14), snow: false },
+    const p = 2;
+    // solid silhouettes, far to near: the far ridge light and hazy, each nearer one darker. Slopes that
+    // face the moon (falling to the right) get a short highlight just inside their own edge near the
+    // top; the slopes turned away a step of shade. The nearest ridge is a plain dark shape, so nothing
+    // on it reads as a line between the buildings. A short strip (the end screen) gets two low ridges.
+    const short = ground < 200;
+    const farTone = mix(col.sky2, '#9A92D0', 0.4);
+    const midTone = mix(col.sky2, '#4A4488', 0.5);
+    const nearTone = mix(col.sky1, '#2A2650', 0.45);
+    const ridges = short ? [
+      { seed: 1.3, top: ground * 0.74, span: ground * 0.16, body: farTone, rim: '#BDB6EA', snow: false },
+      { seed: 4.1, top: ground * 0.88, span: ground * 0.08, body: midTone, rim: null, snow: false },
+    ] : [
+      { seed: 1.3, top: ground - H * 0.27, span: H * 0.15, body: farTone, rim: '#BDB6EA', snow: true },
+      { seed: 4.1, top: ground - H * 0.16, span: H * 0.1, body: midTone, rim: '#9890D0', snow: false },
+      { seed: 2.6, top: ground - H * 0.06, span: H * 0.045, body: nearTone, rim: null, snow: false },
     ];
     for (const r of ridges) {
-      let prev = null;
-      for (let cx = 0; cx < W + p; cx += p) {
-        const hgt = ridge(cx / W, r.seed);
-        const y = snap(r.top + (1 - hgt) * r.span, p);
-        x.fillStyle = r.body;
-        x.fillRect(cx, y, p, H - y);
-        // the moon is up to the right: slopes rising to the right catch its light
-        const nh = ridge((cx + p) / W, r.seed);
-        if (nh >= hgt) { x.fillStyle = r.lit; x.fillRect(cx, y, p, p); }
-        if (r.snow && hgt > 0.82) { x.fillStyle = '#C9C3E6'; x.globalAlpha = 0.35; x.fillRect(cx, y, p, p); x.globalAlpha = 1; }
-        prev = y;
+      const n = Math.ceil(W / p) + 2;
+      const raw = [], ys = [];
+      for (let i = 0; i < n; i++) { raw.push(r.top + (1 - ridge((i * p) / W, r.seed)) * r.span); ys.push(snap(raw[i], p)); }
+      const shade = mix(r.body, col.sky1, 0.3);
+      const litFace = r.rim ? mix(r.body, r.rim, 0.28) : r.body;
+      x.fillStyle = r.body;
+      for (let i = 0; i < n - 1; i++) x.fillRect(i * p, ys[i], p, H - ys[i]);
+      if (!r.rim) continue;
+      for (let i = 1; i < n - 1; i++) {
+        const y = ys[i], cx = i * p;
+        const slope = (raw[i + 1] - raw[i - 1]) / (2 * p);   // > 0: falling to the right, facing the moon
+        const high = (y - r.top) / r.span;                     // 0 at the top of the ridge's range
+        if (slope > 0.12 && high < 0.6) {
+          // a lit face just under the edge, near the top of the slope; a bright rim only near the crest
+          x.fillStyle = litFace;
+          x.fillRect(cx, y, p, 8);
+          if (high < 0.3) { x.fillStyle = r.rim; x.fillRect(cx, y, p, 2); }
+        } else if (slope < -0.12) {
+          x.fillStyle = shade;
+          x.fillRect(cx, y, p, 6);
+        }
+        if (r.snow && high < 0.18) {
+          x.fillStyle = '#E2DCF6';
+          x.fillRect(cx, y, p, (i % 3 === 0) ? 4 : 2);
+        }
       }
-      void prev;
     }
     // the far skyline, with a few dim windows
     const base = H;
@@ -120,24 +162,74 @@ export function ridgeLayer(W, H, ground, col, dpr) {
   });
 }
 
-export function cloudLayer(W, ground, col, dpr) {
-  const Hc = 40;
-  return cached(`cloud|${W}|${ground}|${dpr}|${colKey(col)}`, () => {
+/**
+ * A strip of clouds (it tiles across W): each cloud a union of puffs on a flat base, lit along its
+ * upper right edge by the moon, a shaded underside, a dithered fringe. variant picks the shapes.
+ */
+export function cloudLayer(W, ground, col, dpr, variant = 0) {
+  const Hc = 52;
+  return cached(`cloud|${W}|${ground}|${dpr}|${variant}|${colKey(col)}`, () => {
     const L = layer(W, Hc, dpr);
     if (!L) return null;
     const { x } = L;
-    const p = 4;
-    const top = mix(col.sky2, '#9A90C8', 0.35), bot = mix(col.sky1, col.sky2, 0.5);
-    const n = Math.max(3, Math.round(W / 140));
+    const p = 3;
+    const body = mix(col.sky2, '#7A72B0', 0.6), lit = mix(col.sky2, '#D8D0F4', 0.6), rim = '#ECE6FF';
+    const under = mix(col.sky1, col.sky2, 0.55);
+    const n = Math.max(2, Math.round(W / 170));
+    const cols = Math.ceil(W / p), rows = Math.ceil(Hc / p);
+    // which cell belongs to a cloud: a puff list per cloud, then test cells against it (made once)
+    const puffs = [];
     for (let k = 0; k < n; k++) {
-      const cx = ((k + 0.3 + (hash(k, 1, 3) % 40) / 100) / n) * W;
-      const w = 50 + (hash(k, 2, 3) % 50);
-      for (let j = 0; j < 5; j++) {
-        const pw = snap(w * (0.35 + (hash(k, j, 5) % 40) / 100), p);
-        const ph = snap(8 + (hash(k, j, 6) % 12), p);
-        const px = snap(cx - w / 2 + (j / 4) * (w - pw), p), py = snap(Hc - 8 - ph - (j === 2 ? 6 : 0), p);
-        x.fillStyle = top; x.fillRect(px, py, pw, ph);
-        x.fillStyle = bot; x.fillRect(px, py + ph - p, pw, p);
+      const cx = ((k + 0.25 + (hash(k, 1, 3 + variant) % 50) / 100) / n) * W;
+      const w = 70 + (hash(k, 2, 3 + variant) % 70);
+      const np = 4 + (hash(k, 3, 3 + variant) % 3);
+      for (let j = 0; j < np; j++) {
+        const f = j / (np - 1);
+        const r = (13 + (hash(k, j, 5 + variant) % 10)) * (1 - Math.abs(f - 0.45) * 0.75);
+        puffs.push({ x: cx - w / 2 + f * w, y: Hc - 7 - r * 0.45, r: Math.max(8, r) });
+      }
+    }
+    const inside = (px, py) => {
+      if (py > Hc - 6) return false;
+      for (const q of puffs) {
+        let dx = px - q.x;
+        if (dx > W / 2) dx -= W; else if (dx < -W / 2) dx += W;
+        if (dx * dx + (py - q.y) * (py - q.y) < q.r * q.r) return true;
+      }
+      return false;
+    };
+    let grid = [];
+    for (let gy = 0; gy < rows; gy++) for (let gx = 0; gx < cols; gx++) grid.push(inside(gx * p + p / 2, gy * p + p / 2));
+    const at = (gx, gy) => gy >= 0 && gy < rows && grid[gy * cols + ((gx + cols) % cols)];
+    // solid bodies only: drop any cell that is one cell thick (thin arcs, slivers between puffs), twice
+    for (let pass = 0; pass < 2; pass++) {
+      const next = grid.slice();
+      for (let gy = 0; gy < rows; gy++) {
+        for (let gx = 0; gx < cols; gx++) {
+          if (!at(gx, gy)) continue;
+          const v = at(gx, gy - 1) || at(gx, gy + 1), hz = at(gx - 1, gy) || at(gx + 1, gy);
+          const vv = at(gx, gy - 1) + at(gx, gy + 1), hh = at(gx - 1, gy) + at(gx + 1, gy);
+          if (!v || !hz || (vv + hh) < 2) next[gy * cols + gx] = false;
+        }
+      }
+      grid = next;
+    }
+    for (let gy = 0; gy < rows; gy++) {
+      for (let gx = 0; gx < cols; gx++) {
+        if (!at(gx, gy)) {
+          // a dithered fringe below a cloud's base
+          continue;
+        }
+        const openUp = !at(gx, gy - 1), openRight = !at(gx + 1, gy), openUR = !at(gx + 1, gy - 1);
+        const openDown = !at(gx, gy + 1) || !at(gx, gy + 2);
+        let fill = body;
+        if (openUp && (openRight || openUR)) fill = rim;
+        else if (openUp) fill = lit;
+        else if (!at(gx, gy - 2) && hash(gx, gy, 4) % 2) fill = lit;
+        else if (openDown) fill = under;
+        else if (!at(gx - 1, gy)) fill = mix(body, under, 0.5);
+        x.fillStyle = fill;
+        x.fillRect(gx * p, gy * p, p, p);
       }
     }
     return { cv: L.cv, h: Hc };

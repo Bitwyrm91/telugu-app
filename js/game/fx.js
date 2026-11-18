@@ -14,12 +14,14 @@
 //   fx.ash = {W, H} | null   (embers drifting down after a lost run)
 //   endScene(canvas, o) -> stop()   the small sky over the end screen (fireworks or embers)
 
-import { PAL } from './sprites.js';
+import { PAL, drawPuff, SMOKE_RAMP } from './sprites.js';
 import { snap, hash, drawGlow, drawText } from './pixel.js';
 
 const MAXP = 340;
 const K = { SPARK: 0, DEBRIS: 1, SMOKE: 2, EMBER: 3, TRAIL: 4, STAR: 5, SHELL: 6, FIRE: 7, GLINT: 8, DUST: 9 };
 const BACK = new Set([K.SMOKE, K.TRAIL, K.DUST]);
+// the cells of a tumbling debris chunk, four turns of an irregular L
+const CHUNK = [[[0, 0], [1, 0], [0, 1]], [[0, 0], [1, 0], [1, 1]], [[1, 0], [1, 1], [0, 1]], [[0, 0], [0, 1], [1, 1]]];
 const ROCK = ['#8A7468', '#5B4A43', '#6E5A50', '#3B2F2B'];
 const FIREWORK = ['#FFD23F', '#62D2C5', '#FF5D9E', '#B8FFF4', '#FF8A1F', '#9C7BFF'];
 export const TEXT = {
@@ -84,7 +86,7 @@ export class Fx {
     const sp = o.speed || 140;
     for (let i = 0; i < n; i++) {
       const a = (o.up ? -Math.PI / 2 + rnd(-1.1, 1.1) : Math.random() * 6.283), v = sp * rnd(0.4, 1);
-      const p = this.add(K.DEBRIS, x + rnd(-4, 4), y + rnd(-4, 4), Math.cos(a) * v, Math.sin(a) * v - 40, rnd(0.8, 1.3), Math.random() < 0.4 ? 5 : Math.random() < 0.5 ? 4 : 3);
+      const p = this.add(K.DEBRIS, x + rnd(-4, 4), y + rnd(-4, 4), Math.cos(a) * v, Math.sin(a) * v - 40, rnd(0.5, 0.8), Math.random() < 0.35 ? 3 : 2);
       p.g = 380; p.col = o.cols ? o.cols[i % o.cols.length] : ROCK[i % ROCK.length]; p.floor = o.floor ?? 1e9;
     }
   }
@@ -94,8 +96,8 @@ export class Fx {
     for (let i = 0; i < n; i++) {
       const p = this.add(K.SMOKE, x + rnd(-1, 1) * (o.spread || 10), y + rnd(-1, 1) * (o.spread || 10) * 0.6,
         rnd(-12, 12) + (o.vx || 0), rnd(-30, -12) * (o.rise || 1), rnd(1.1, 1.8) * (o.long || 1), Math.round(rnd(5, 9) * (o.size || 1)), (o.delay || 0) + rnd(0, 0.18));
-      p.drag = 0.8; p.col = Math.random() < 0.5 ? '#4A465E' : PAL.smoke;
-      if (o.dark) p.col = Math.random() < 0.5 ? '#2E2A3E' : '#3E3850';
+      p.drag = 0.8; p.col = 'mid';
+      if (o.dark) p.col = 'dark';
     }
   }
 
@@ -121,15 +123,15 @@ export class Fx {
   explode(x, y, rad, kind = 'shot') {
     if (this.reduced) return;
     const big = kind === 'big', chain = kind === 'chain';
-    this.light(x, y, rad * (big ? 3.4 : 2.6), big ? 0.75 : chain ? 0.4 : 0.55, big ? 0.45 : 0.3, big ? '#9FFFF0' : '#FFB040');
-    this.sparks(x, y, big ? 26 : chain ? 9 : 14, rad * (big ? 4.2 : 3.4), { col: big ? 'cool' : '' });
+    // the light mostly tints the towns (tint() uses the full radius); what is drawn is small
+    this.light(x, y, rad * (big ? 3.4 : 2.6), big ? 0.75 : chain ? 0.4 : 0.55, big ? 0.45 : 0.3, big ? '#9FFFF0' : chain ? '#FF70B0' : '#FFB040');
+    this.sparks(x, y, big ? 20 : chain ? 9 : 12, rad * (big ? 1.9 : 1.6), { col: big ? 'cool' : chain ? 'pink' : '', up: 10 });
     if (big) {
-      this.ring(x, y, rad * 0.2, rad * 0.98, 0.32, PAL.glow, { p: 4 });
-      this.ring(x, y, rad * 0.1, rad * 0.7, 0.42, PAL.yellow, { delay: 0.1, p: 3 });
-      this.fire(x, y, 6, { spread: rad * 0.3, size: 1.4, rise: 0.6 });
+      this.ring(x, y, rad * 0.1, rad * 0.62, 0.42, PAL.yellow, { delay: 0.1, p: 3 });
+      this.fire(x, y, 5, { spread: rad * 0.25, size: 1.2, rise: 0.5 });
     }
-    this.smoke(x, y, big ? 9 : chain ? 3 : 5, { spread: rad * 0.45, size: big ? 1.5 : 1, delay: 0.18 });
-    this.embers(x, y, big ? 8 : 4, { speed: rad * 1.4, spread: rad * 0.3 });
+    this.smoke(x, y, big ? 7 : chain ? 3 : 4, { spread: rad * 0.4, size: big ? 1.3 : 1, delay: 0.22 });
+    this.embers(x, y, big ? 8 : 4, { speed: rad * 0.9, spread: rad * 0.3 });
   }
 
   /** A meteor destroyed: chunks of rock, a few still glowing. */
@@ -149,7 +151,7 @@ export class Fx {
     for (let i = 0; i < 8; i++) {
       const dir = i % 2 ? 1 : -1;
       const p = this.add(K.DUST, x + dir * rnd(4, 14), ground - rnd(0, 6), dir * rnd(50, 110), rnd(-14, -4), rnd(0.8, 1.3), Math.round(rnd(6, 10)), rnd(0, 0.1));
-      p.drag = 2.2; p.col = i % 3 ? '#5A4E5E' : '#6E6A86';
+      p.drag = 2.2; p.col = 'mid';
     }
     this.debris(x, ground - 6, 12, { speed: 200, up: true, floor: ground + 30 });
     this.sparks(x, ground - 6, 16, 220, { up: 120 });
@@ -167,8 +169,13 @@ export class Fx {
   /** Rocket exhaust: a puff where the rocket is, a spark now and then for the big one. */
   trail(x, y, ux, uy, big) {
     if (this.reduced) return;
-    const p = this.add(K.TRAIL, x - ux * 10 + rnd(-1.5, 1.5), y - uy * 10 + rnd(-1.5, 1.5), -ux * 20 + rnd(-8, 8), -uy * 20 + rnd(-8, 8), big ? 0.75 : 0.55, big ? 5 : 4);
+    const p = this.add(K.TRAIL, x - ux * 14 + rnd(-1.5, 1.5), y - uy * 14 + rnd(-1.5, 1.5), -ux * 16 + rnd(-6, 6), -uy * 16 + rnd(-6, 6) - 4, big ? 0.8 : 0.6, big ? 7 : 6);
     p.drag = 2;
+    // now and then a hot ember shed from the exhaust
+    if (Math.random() < 0.35) {
+      const q = this.add(K.EMBER, x - ux * 16, y - uy * 16, -ux * 30 + rnd(-20, 20), -uy * 30 + rnd(-20, 20), rnd(0.25, 0.45), 2);
+      q.g = 30; q.drag = 2;
+    }
     if (big && Math.random() < 0.6) {
       const q = this.add(K.STAR, x - ux * 12, y - uy * 12, rnd(-40, 40), rnd(-40, 40), rnd(0.3, 0.55), 2);
       q.col = Math.random() < 0.5 ? PAL.yellow : PAL.glow; q.g = 40; q.drag = 2;
@@ -181,7 +188,7 @@ export class Fx {
     for (let i = 0; i < 6; i++) {
       const dir = i % 2 ? 1 : -1;
       const p = this.add(K.SMOKE, x + dir * 6, y - 4, dir * rnd(30, 70), rnd(-20, -4), rnd(0.5, 0.9), Math.round(rnd(4, 7)));
-      p.drag = 2.5; p.col = i % 3 ? '#B8B4CC' : PAL.smoke;
+      p.drag = 2.5; p.col = 'light';
     }
     for (let i = 0; i < (big ? 10 : 5); i++) {
       const v = rnd(80, 200);
@@ -219,12 +226,19 @@ export class Fx {
     if (this.links.length > 12) this.links.shift();
   }
 
+  /** A split meteor breaks: a pink crack of light, a ring, violet chunks and a lot of sparks. */
   splitPop(x, y) {
     if (this.reduced) return;
-    this.light(x, y, 90, 0.5, 0.3, '#E070FF');
-    this.ring(x, y, 4, 34, 0.3, '#FF9CF2', { p: 3 });
-    this.sparks(x, y, 12, 160, { col: 'pink' });
-    this.debris(x, y, 5, { speed: 110, cols: ['#A85C7E', '#7A3E5A', '#4E2439'] });
+    this.light(x, y, 110, 0.7, 0.35, '#E070FF');
+    this.ring(x, y, 4, 40, 0.32, PAL.white, { p: 3 });
+    this.ring(x, y, 2, 26, 0.42, '#FF9CF2', { p: 3, delay: 0.06 });
+    this.sparks(x, y, 18, 170, { col: 'pink' });
+    this.debris(x, y, 8, { speed: 120, cols: ['#9A84B0', '#5E4A72', '#3A2C50', '#E050C8'] });
+    for (let i = 0; i < 8; i++) {
+      const a = (i / 8) * 6.283;
+      const p = this.add(K.GLINT, x, y, Math.cos(a) * 90, Math.sin(a) * 90, 0.3, 2);
+      p.col = i % 2 ? PAL.white : '#FF9CF2'; p.drag = 3;
+    }
   }
 
   /** A meteor appears: a brief glint where it breaks through. */
@@ -234,6 +248,11 @@ export class Fx {
     for (let i = 0; i < 5; i++) {
       const p = this.add(K.GLINT, x + rnd(-8, 8), y + rnd(0, 6), rnd(-30, 30), rnd(10, 60), rnd(0.25, 0.4), 2);
       p.col = PAL.white;
+    }
+    // a short streak where it tore through: a line of sparks hanging in the air
+    for (let i = 0; i < 6; i++) {
+      const p = this.add(K.STAR, x + rnd(-2, 2), y - i * 6, 0, 8, 0.35 + i * 0.04, 2);
+      p.col = i < 2 ? PAL.yellow : PAL.orange; p.drag = 1;
     }
   }
 
@@ -245,6 +264,14 @@ export class Fx {
 
   /** A short word that pops up and drifts (a combo, a chain, NO AMMO). o: {scale, cols, life, rise} */
   text(str, x, y, o = {}) {
+    // stack above any live popup word it would overlap
+    const sc = o.scale || 2;
+    for (let tries = 0; tries < 6; tries++) {
+      const clash = this.texts.find(t => t.kind === 'pop' && Math.abs(t.x - x) < (t.text.length * t.scale + str.length * sc) * 3 + 8
+        && Math.abs(t.y - y) < (t.scale + sc) * 3.5 + 6);
+      if (!clash) break;
+      y = clash.y - (clash.scale + sc) * 3.5 - 8;
+    }
     this.texts.push({ kind: 'pop', text: str, x, y, t: 0, life: o.life || 0.9, scale: o.scale || 2, cols: o.cols || TEXT.gold, vy: o.rise ?? -22 });
     if (this.texts.length > 8) this.texts.shift();
   }
@@ -265,14 +292,21 @@ export class Fx {
   firework(x, y, colour) {
     if (this.reduced) return;
     const col = colour || FIREWORK[(Math.random() * FIREWORK.length) | 0];
-    const n = 26, sp = rnd(90, 140);
+    const col2 = FIREWORK[(FIREWORK.indexOf(col) + 2 + FIREWORK.length) % FIREWORK.length];
+    const n = 28, sp = rnd(80, 120);
     for (let i = 0; i < n; i++) {
-      const a = (i / n) * 6.283 + rnd(-0.1, 0.1), v = sp * rnd(0.75, 1.05);
-      const p = this.add(K.STAR, x, y, Math.cos(a) * v, Math.sin(a) * v, rnd(0.9, 1.4), i % 4 ? 2 : 3);
-      p.col = i % 5 ? col : PAL.white; p.g = 70; p.drag = 1.3;
+      const a = (i / n) * 6.283 + rnd(-0.06, 0.06), v = sp * rnd(0.9, 1.05);
+      const p = this.add(K.STAR, x, y, Math.cos(a) * v, Math.sin(a) * v, rnd(1.0, 1.4), i % 2 ? 2 : 3);
+      p.col = col; p.g = 60; p.drag = 1.3; p.floor = 1; // floor flags a streaked star
+    }
+    // an inner ring of a second colour
+    for (let i = 0; i < 12; i++) {
+      const a = (i / 12) * 6.283 + 0.26, v = sp * 0.5;
+      const p = this.add(K.STAR, x, y, Math.cos(a) * v, Math.sin(a) * v, rnd(0.7, 0.9), 2);
+      p.col = col2; p.g = 50; p.drag = 1.4;
     }
     this.light(x, y, 120, 0.4, 0.4, col);
-    this.ring(x, y, 4, sp * 0.45, 0.25, PAL.white, { p: 2 });
+    this.ring(x, y, 2, sp * 0.3, 0.18, PAL.white, { p: 2 });
   }
 
   shell(x0, y0, x1, y1, delay = 0, colour) {
@@ -353,28 +387,32 @@ export class Fx {
           break;
         }
         case K.DEBRIS: {
-          c.globalAlpha = k > 0.75 ? (1 - k) * 4 : 1;
-          const hot = k < 0.25;
-          c.fillStyle = hot ? PAL.orange : PAL.outline;
-          c.fillRect(X - 1, Y - 1, p.s + 2, p.s + 2);
-          c.fillStyle = hot && k < 0.1 ? PAL.yellow : p.col;
-          c.fillRect(X, Y, p.s, p.s);
+          // a small irregular chunk (an L of 2-3 cells) that tumbles as it falls, hot at first, and
+          // crumbles away cell by cell before it ends
+          const q = p.s >= 3 ? 3 : 2;
+          const rot = this.reduced ? 0 : (Math.floor(this.time * 14 + p.ph * 4)) & 3;
+          const cells = CHUNK[rot];
+          const left = k < 0.6 ? 3 : k < 0.8 ? 2 : 1;
+          c.globalAlpha = 1;
+          for (let i = 0; i < left; i++) {
+            const [cx, cy] = cells[i];
+            c.fillStyle = k < 0.12 ? PAL.yellow : k < 0.3 && i === 0 ? PAL.orange : i === 2 ? PAL.outline : p.col;
+            c.fillRect(X + cx * q, Y + cy * q, q, q);
+          }
           break;
         }
         case K.SMOKE: {
-          const s = snap(p.s * (1 + k * 1.6), 2);
-          c.globalAlpha = 0.5 * (1 - k) * Math.min(1, p.t * 8);
-          c.fillStyle = p.col;
-          c.fillRect(X - s / 2, Y - s / 2, s, s);
-          c.globalAlpha *= 0.6;
-          c.fillRect(X - s / 2 + 2, Y - s / 2 - 2, s - 4, 2);
-          c.fillRect(X - s / 2 - 2, Y - s / 2 + 2, 2, s - 4);
+          // a hard-edged puff that grows, steps down its ramp and breaks into a thinning checker
+          const s = Math.max(4, p.s * (1 + k * 1.1));
+          if (p.t < 0.05) break;
+          drawPuff(c, X, Y, s, k, SMOKE_RAMP[p.col] || SMOKE_RAMP.mid, (p.ph * 10) | 0);
           break;
         }
         case K.FIRE: {
           const s = snap(p.s * (0.6 + k * 1.3), 2);
-          c.globalAlpha = Math.max(0, 1 - k * k);
-          c.fillStyle = k < 0.15 ? PAL.white : k < 0.35 ? PAL.yellow : k < 0.6 ? PAL.orange : k < 0.8 ? PAL.red : PAL.smoke;
+          if (k > 0.75 && ((p.ph * 10) | 0) % 2) break;
+          c.globalAlpha = 1;
+          c.fillStyle = k < 0.15 ? PAL.white : k < 0.35 ? PAL.yellow : k < 0.6 ? PAL.orange : k < 0.8 ? PAL.red : '#4A3446';
           c.fillRect(X - s / 2, Y - s / 2, s, s);
           if (k < 0.5) { c.fillStyle = k < 0.25 ? PAL.white : PAL.yellow; c.fillRect(X - s / 4, Y - s / 4, snap(s / 2, 2), snap(s / 2, 2)); }
           break;
@@ -387,17 +425,31 @@ export class Fx {
           break;
         }
         case K.TRAIL: {
-          const s = snap(p.s * (1 + k * 2.2), 2);
-          c.globalAlpha = 0.65 * (1 - k);
-          c.fillStyle = k < 0.12 ? PAL.yellow : k < 0.3 ? PAL.steel : k < 0.6 ? '#A9A6C0' : PAL.smoke;
-          c.fillRect(X - s / 2, Y - s / 2, s, s);
+          // a small cluster of hard-edged puffs that shrinks and cools: yellow, white, lavender, grey,
+          // then thins out cell by cell
+          const s = Math.max(2, snap(p.s * (k < 0.15 ? 0.6 + k * 2.6 : 1 - (k - 0.15) * 0.75), 2));
+          c.globalAlpha = 1;
+          c.fillStyle = k < 0.1 ? PAL.yellow : k < 0.28 ? PAL.steel : k < 0.55 ? '#A9A6C0' : k < 0.8 ? '#6E6A86' : '#4A465E';
+          const d = Math.max(2, snap(s * 0.5, 2));
+          const ph = (p.ph * 10) | 0;
+          if (k < 0.7 || ph % 2) c.fillRect(X - s / 2, Y - s / 2, s, s);
+          if (k < 0.55 || ph % 3 === 0) c.fillRect(X + d - s / 2, Y - d - s / 4, snap(s * 0.6, 2) || 2, snap(s * 0.6, 2) || 2);
+          if (k < 0.4) c.fillRect(X - d - s / 4, Y + d / 2 - s / 4, snap(s * 0.5, 2) || 2, snap(s * 0.5, 2) || 2);
           break;
         }
         case K.STAR: {
-          const tw = k > 0.6 && !this.reduced && Math.sin(this.time * 40 + p.ph) < 0 ? 0.3 : 1;
-          c.globalAlpha = Math.max(0, (1 - k * k) * tw);
+          // full brightness, then a blinking fade at the end of its life
+          if (k > 0.65 && !this.reduced && Math.sin(this.time * 40 + p.ph) < (k - 0.65) * 2.4 - 0.4) break;
+          c.globalAlpha = 1;
           c.fillStyle = k < 0.15 ? PAL.white : p.col;
           c.fillRect(X, Y, p.s, p.s);
+          // a streaked firework star draws a short fading tail along its path
+          if (p.floor === 1 && k < 0.7) {
+            c.globalAlpha *= 0.5;
+            c.fillRect(snap(p.x - p.vx * 0.04, 2), snap(p.y - p.vy * 0.04, 2), 2, 2);
+            c.globalAlpha *= 0.5;
+            c.fillRect(snap(p.x - p.vx * 0.08, 2), snap(p.y - p.vy * 0.08, 2), 2, 2);
+          }
           break;
         }
         case K.SHELL: {
@@ -414,10 +466,8 @@ export class Fx {
           break;
         }
         case K.DUST: {
-          const s = snap(p.s * (1 + k * 1.8), 2);
-          c.globalAlpha = 0.45 * (1 - k);
-          c.fillStyle = p.col;
-          c.fillRect(X - s / 2, Y - s, s, s);
+          const s = p.s * (1 + k * 1.8);
+          drawPuff(c, X, Y - s / 2, s, 0.3 + k * 0.7, SMOKE_RAMP.mid, (p.ph * 10) | 0);
           break;
         }
         default: break;
@@ -427,7 +477,7 @@ export class Fx {
     if (back) return;
     for (const l of this.lights) {
       const k = l.t / l.life;
-      drawGlow(c, l.x, l.y, l.r * 0.55, l.col, l.a * 0.45 * (1 - k) * (1 - k));
+      drawGlow(c, l.x, l.y, l.r * 0.3, l.col, l.a * 0.4 * (1 - k) * (1 - k));
     }
     for (const r of this.rings) this.drawRing(c, r);
     for (const l of this.links) this.drawLink(c, l);
@@ -505,7 +555,18 @@ export class Fx {
       if (!R && t.t < 0.25) { const q = 1 - t.t / 0.25; x = t.x + q * q * (t.W || 300) * 0.6; }
       a = k > 0.75 ? (1 - k) / 0.25 : Math.min(1, t.t * 8);
       if (!R && k > 0.75) y = t.y - (k - 0.75) * 40;
-      if (!R && t.t > 0.25 && t.t < 0.4) drawGlow(c, x, y, scale * 30, '#FFC860', 0.35 * (1 - (t.t - 0.25) / 0.15));
+      // a dark band behind it, with thin gold rules above and below
+      const bh = scale * 7 + 16, W = t.W || 300;
+      c.globalAlpha = a * 0.55;
+      c.fillStyle = '#0A0818';
+      c.fillRect(0, Math.round(t.y - bh / 2), W, bh);
+      c.globalAlpha = a * 0.9;
+      c.fillStyle = PAL.yellow;
+      const rw = Math.min(W, t.text.length * scale * 6 + 60);
+      c.fillRect(Math.round(x - rw / 2), Math.round(t.y - bh / 2), rw, 2);
+      c.fillRect(Math.round(x - rw / 2), Math.round(t.y + bh / 2 - 2), rw, 2);
+      c.globalAlpha = 1;
+      if (!R && t.t > 0.25 && t.t < 0.4) drawGlow(c, x, y, scale * 18, '#FFC860', 0.3 * (1 - (t.t - 0.25) / 0.15));
     }
     drawText(c, t.text, x, y, Math.max(1, Math.round(scale)), t.cols, a);
   }
@@ -534,8 +595,8 @@ export function endScene(canvas, o) {
     if (o.won && anim < 7) {
       next -= dt;
       if (next <= 0) {
-        next = 0.35 + Math.random() * 0.5;
-        fx.shell(W * (0.15 + Math.random() * 0.7), H + 4, W * (0.1 + Math.random() * 0.8), H * (0.18 + Math.random() * 0.3));
+        next = 0.22 + Math.random() * 0.35;
+        fx.shell(W * (0.15 + Math.random() * 0.6), H + 4, W * (0.08 + Math.random() * 0.6), H * (0.14 + Math.random() * 0.22));
       }
     }
     fx.step(dt);
