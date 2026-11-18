@@ -1,7 +1,7 @@
 /* game.css: "Sky Shield" (route #/game; GAME-PLAN.md). Tokens only outside the token block. */
 
 /* ---- tokens: the night scene is dark in both themes ---- */
-.game-field {
+.game-field, .game-end-sky {
   --game-sky-1: #0B1430;
   --game-sky-2: #2A2350;
   --game-star: #F4EDE4;
@@ -124,6 +124,10 @@
 .game-banner { display: grid; gap: 4px; padding: 12px 24px; border-radius: 16px; background: var(--surface); color: var(--ink); text-align: center; border: 2px solid var(--accent); }
 .game-banner-title { font-size: var(--en-h1); font-weight: 600; }
 .game-banner-note { font-size: var(--en-small); color: var(--ink-2); }
+@media (prefers-reduced-motion: no-preference) {
+  .game-banner { animation: game-banner-in 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+  @keyframes game-banner-in { from { transform: scale(0.6); opacity: 0; } to { transform: none; opacity: 1; } }
+}
 
 .game-launchers { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; flex: none; }
 .game-launchers.is-words { grid-auto-flow: row; grid-template-columns: 1fr 1fr; }
@@ -149,6 +153,7 @@
 .game-jam { position: absolute; left: 0; bottom: 0; height: 4px; width: calc(var(--jam, 0) * 100%); background: var(--wrong); }
 
 /* ---- end screen ---- */
+.game-end-sky { display: block; width: 100%; height: 96px; margin: 4px 0 4px; border-radius: 16px; background: var(--game-sky-1); image-rendering: pixelated; }
 .game-end .screen-title { margin: 4px 0 2px; }
 .game-end-mode { margin: 0 0 8px; color: var(--ink-2); }
 .game-end-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }

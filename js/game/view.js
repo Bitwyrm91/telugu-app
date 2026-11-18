@@ -17,8 +17,12 @@ import * as arcade from './arcade.js';
 import * as sfx from './sfx.js';
 import * as music from './music.js';
 import { BUILD } from './shared.js';
-import { gameStyles, gicon, gameStore, saveGame, scoreKey, readColors, drawSky, drawCity, RunBase } from './shared.js';
+import { gameStyles, gicon, gameStore, saveGame, scoreKey, readColors, drawSky, drawCity, drawVignette, RunBase, reducedMotion } from './shared.js';
 import { ArcadeRun } from './arcade-view.js';
+import * as sprites from './sprites.js';
+import { Fx, TEXT, endScene } from './fx.js';
+
+const pan = x => Math.max(-0.8, Math.min(0.8, (x - 0.5) * 1.5));
 
 // The two ways to play (GAME-PLAN section 14): Arcade first and the default.
 const TYPES = [
@@ -258,7 +262,26 @@ export async function render(el) {
       h('div', { class: 'game-end-actions' },
         h('button', { type: 'button', class: 'btn btn-main', 'data-again': '', onclick: () => startRun(mode, { relaxed: state.relaxed, game: type }) }, 'Play again'),
         h('a', { class: 'btn btn-secondary', href: '#/', 'data-done': '' }, 'Done')));
+    // a strip of night sky over the result: fireworks after a win, embers drifting down after a loss
+    const sky = h('canvas', { class: 'game-end-sky', 'aria-hidden': 'true', 'data-end-sky': '' });
+    screen.prepend(sky);
     el.replaceChildren(screen);
+    try {
+      const towns = state.towns.slice();
+      const relaxed = state.relaxed;
+      const flash = [0, 0, 0, 0];
+      const rm = reducedMotion();
+      let col = null;
+      endScene(sky, {
+        won, reduced: rm,
+        draw: (c, W, H, anim, fx) => {
+          if (!col) col = readColors(sky);
+          const ground = Math.round(H * 0.62);
+          drawSky(c, W, H, col);
+          drawCity(c, { W, H, ground, col, anim, reduced: rm, towns, relaxed, flash, townX: core.TOWN_X, light: fx });
+        },
+      });
+    } catch { /* decoration only */ }
     const head = screen.querySelector('h1');
     head.setAttribute('tabindex', '-1');
     try { head.focus({ preventScroll: true }); } catch { /* ignore */ }
@@ -284,10 +307,14 @@ class Run extends RunBase {
     super(root, state, hooks);
     this.rockets = [];      // {x0,y0,x1,y1,t,dur,wide}
     this.blasts = [];       // {x,y,t,big}
+    this.sparks = [];       // flying bits (sprites.js)
     this.shake = 0;
     this.flash = [0, 0, 0, 0];
     this.chips = new Map(); // tid -> element
     this.labels = [];
+    this.fx = new Fx(this.reduced);   // particles, rings, lights, pixel texts (fx.js)
+    this.trailAcc = 0;
+    this.alarmed = false;
     this.build();
   }
 
@@ -327,6 +354,7 @@ class Run extends RunBase {
     this.syncLaunchers();
     this.syncHud();
     this.say(`Wave 1 of ${core.RULES.waves}.`);
+    if (this.W) this.fx.title('WAVE 1', this.W, this.H);
     this.loop();
   }
 
@@ -351,11 +379,22 @@ class Run extends RunBase {
   handle(events) {
     const s = this.state;
     const m = core.MODES[s.mode];
+    const fx = this.fx, on = !!this.W;
+    const g = on ? this.geom() : null;
     for (const e of events) {
       switch (e.type) {
         case 'spawn': {
           this.addChip(e);
           if (e.boss) this.speak(e.id);
+          sfx.play(e.boss ? 'boss' : 'entry', { pan: pan(e.x) });
+          if (on) {
+            const q = this.px(e.x, 0);
+            fx.entry(q.x, q.y + 6);
+            if (e.boss) {
+              fx.warn(Math.max(30, Math.min(g.W - 30, q.x)), q.y + 40, '!');
+              fx.text('BOSS', g.W / 2, g.ground * 0.3, { cols: TEXT.pink, scale: 4, life: 1.3, rise: 0 });
+            }
+          }
           break;
         }
         case 'hit': {
@@ -364,7 +403,9 @@ class Run extends RunBase {
           for (const o of e.wide || []) {
             this.dropChip(o.tid);
             this.blasts.push({ x: o.x, y: o.y, t: 0, big: true });
+            if (on) { const q = this.px(o.x, o.y); fx.explode(q.x, q.y, 60, 'big'); fx.shatter(q.x, q.y, 30); }
           }
+          if (on && (e.wide || []).length) fx.text('WIDE SHOT', g.W / 2, g.ground * 0.42, { cols: TEXT.cool, scale: 3, life: 1, rise: -10 });
           if (m.show !== 'audio' && !e.boss) this.speak(e.id);
           if (e.boss) { this.speak(e.id); this.say('The sentence is complete.'); }
           break;
@@ -373,10 +414,21 @@ class Run extends RunBase {
           sfx.play('hit');
           const chip = this.chips.get(e.tid);
           if (chip) this.fillBoss(chip);
+          if (on) {
+            const t = s.targets.find(q => q.tid === e.tid);
+            const q = t && t._px ? t._px : this.px(e.x, e.y);
+            fx.debris(q.x, q.y, 6, { speed: 130, cols: ['#A85C7E', '#7A3E5A', '#4E2439'] });
+            fx.sparks(q.x, q.y, 8, 140, { col: 'pink' });
+          }
           break;
         }
         case 'wide': this.say('Wide shot.'); break;
-        case 'wideReady': this.say('Wide shot ready.'); break;
+        case 'wideReady': {
+          sfx.play('ready');
+          if (on) fx.text('WIDE SHOT READY', g.W / 2, g.ground - 30, { cols: TEXT.cool, scale: 2, life: 1.4, rise: -12 });
+          this.say('Wide shot ready.');
+          break;
+        }
         case 'miss':
         case 'bossWrong': {
           sfx.play('wrong');
@@ -387,15 +439,29 @@ class Run extends RunBase {
         }
         case 'land': {
           this.dropChip(e.tid);
-          sfx.play('land');
+          sfx.play('land', { pan: pan(e.x) });
           this.flash[e.town] = 0.6;
           if (!this.reduced) this.shake = 0.35;
           this.blasts.push({ x: e.x, y: 1, t: 0, big: true, land: true });
+          if (on) fx.impact(e.x * g.W, g.ground, { size: 52 });
+          if (!s.relaxed && e.hp === 0) {
+            sfx.play('crumble', { pan: pan(e.x) });
+            if (on) fx.collapse(core.TOWN_X[e.town] * g.W, g.H, Math.min(g.W * 0.22, 140));
+          }
+          if (!s.relaxed && !this.alarmed && s.towns.filter(t => t > 0).length === 1) {
+            this.alarmed = true;
+            sfx.play('alarm');
+            if (on) fx.text('LAST TOWN', g.W / 2, g.ground * 0.55, { cols: TEXT.red, scale: 3, life: 1.6, rise: 0 });
+          }
           this.reveal(e.id, e.boss);
           break;
         }
         case 'waveClear': {
           sfx.play('wave');
+          if (e.repaired != null) {
+            sfx.play('repair');
+            if (on) fx.repair(core.TOWN_X[e.repaired] * g.W, g.ground, Math.min(g.W * 0.22, 140));
+          }
           const fix = e.repaired != null ? ' A town was repaired.' : '';
           this.showOverlay('banner', h('div', { class: 'game-banner', 'data-banner': String(e.wave) },
             h('span', { class: 'game-banner-title', text: `Wave ${e.wave} cleared` }),
@@ -407,10 +473,16 @@ class Run extends RunBase {
           this.hideOverlay('banner');
           music.setWave(e.wave);
           if (e.wave > 1) this.say(`Wave ${e.wave} of ${core.RULES.waves}.`);
+          if (e.wave > 1) {
+            sfx.play('start');
+            const last = e.wave >= core.RULES.waves;
+            if (on) fx.title(last ? 'FINAL WAVE' : `WAVE ${e.wave}`, g.W, g.H, { cols: last ? TEXT.hot : TEXT.gold });
+          }
           break;
         }
         case 'end': {
           this.ended = true;
+          sfx.play(e.wavesCleared >= core.RULES.waves ? 'win' : 'over');
           this.say(`Run over. Score ${e.score}.`);
           // let the live region speak before the screen changes
           const go = () => this.hooks.onEnd();
@@ -601,8 +673,25 @@ class Run extends RunBase {
   tickFx(d) {
     for (const r of this.rockets) {
       r.t += d;
-      if (r.t >= r.dur && !r.done) { r.done = true; this.blasts.push({ px: r.x1, py: r.y1, t: 0, big: r.wide }); }
+      if (r.t >= r.dur && !r.done) {
+        r.done = true;
+        this.blasts.push({ px: r.x1, py: r.y1, t: 0, big: r.wide });
+        this.fx.explode(r.x1, r.y1, r.wide ? 60 : 38, r.wide ? 'big' : 'shot');
+        if (this.W) sfx.play(r.wide ? 'bigboom' : 'boom', { pan: pan(r.x1 / this.W) });
+      }
     }
+    this.fx.step(d);
+    this.trailAcc += d;
+    if (this.trailAcc >= 1 / 60) {
+      this.trailAcc = 0;
+      for (const r of this.rockets) {
+        if (r.done) continue;
+        const k = Math.min(1, r.t / r.dur);
+        const dx = r.x1 - r.x0, dy = r.y1 - r.y0, len = Math.hypot(dx, dy) || 1;
+        this.fx.trail(r.x0 + dx * k, r.y0 + dy * k, dx / len, dy / len, r.wide);
+      }
+    }
+    this.sparks = sprites.stepSparks(this.sparks, d);
     this.rockets = this.rockets.filter(r => r.t < r.dur + 0.25);
     for (const b of this.blasts) b.t += d;
     this.blasts = this.blasts.filter(b => b.t < 0.6);
@@ -636,65 +725,35 @@ class Run extends RunBase {
     drawSky(c, W, H, col);
     c.save();
     c.translate(sh, 0);
-    drawCity(c, { W, H, ground, col, anim: this.anim, reduced: R, towns: this.state.towns, relaxed: this.state.relaxed, flash: this.flash, townX: core.TOWN_X });
+    drawCity(c, { W, H, ground, col, anim: this.anim, reduced: R, towns: this.state.towns, relaxed: this.state.relaxed, flash: this.flash, townX: core.TOWN_X, light: this.fx });
+    this.fx.draw(c, 'back');
     // meteors (the label is a DOM chip on top; here the rock and its flame tail)
     for (const t of this.state.targets) {
       const p = t._px || this.px(t.x, t.y);
-      const r = t.boss ? 46 : 26;
       const vx = (t.x1 - t.x0) * W, vy = ground;
       const len = Math.hypot(vx, vy) || 1;
-      const ux = -vx / len, uy = -vy / len;
-      const tail = t.boss ? 120 : 70;
-      const tg = c.createLinearGradient(p.x, p.y, p.x + ux * tail, p.y + uy * tail);
-      tg.addColorStop(0, col.fire);
-      tg.addColorStop(1, 'transparent');
-      c.fillStyle = tg;
-      c.beginPath();
-      c.moveTo(p.x + uy * r * 0.9, p.y - ux * r * 0.9);
-      c.lineTo(p.x + ux * tail, p.y + uy * tail);
-      c.lineTo(p.x - uy * r * 0.9, p.y + ux * r * 0.9);
-      c.closePath();
-      c.fill();
-      c.fillStyle = t.boss ? col.boss : col.rock;
-      c.beginPath();
-      c.arc(p.x, p.y, r, 0, Math.PI * 2);
-      c.fill();
+      sprites.drawMeteor(c, p.x, p.y, t.boss ? 50 : 30, -vx / len, -vy / len,
+        { anim: this.anim, reduced: R, kind: t.boss ? 'boss' : 'rock', seed: (t.tid | 0) + 1, col });
     }
     // rockets
     for (const r of this.rockets) {
+      if (r.done) continue;
       const k = Math.min(1, r.t / r.dur);
-      const x = r.x0 + (r.x1 - r.x0) * k, y = r.y0 + (r.y1 - r.y0) * k;
-      const k0 = Math.max(0, k - 0.45);
-      const xt = r.x0 + (r.x1 - r.x0) * k0, yt = r.y0 + (r.y1 - r.y0) * k0;
-      c.globalAlpha = r.done ? Math.max(0, 1 - (r.t - r.dur) / 0.25) : 1;
-      const lg = c.createLinearGradient(xt, yt, x, y);
-      lg.addColorStop(0, 'transparent');
-      lg.addColorStop(1, col.trail);
-      c.strokeStyle = lg;
-      c.lineWidth = r.wide ? 6 : 4;
-      c.lineCap = 'round';
-      c.beginPath(); c.moveTo(xt, yt); c.lineTo(x, y); c.stroke();
-      if (!r.done) { c.fillStyle = col.trail; c.beginPath(); c.arc(x, y, 4, 0, Math.PI * 2); c.fill(); }
-      c.globalAlpha = 1;
+      sprites.drawRocket(c, r.x0, r.y0, r.x0 + (r.x1 - r.x0) * k, r.y0 + (r.y1 - r.y0) * k, { anim: this.anim, reduced: R, big: r.wide, trail: false });
     }
-    // blasts: a ring; particles unless reduced motion
+    // blasts and flying bits
     for (const b of this.blasts) {
       const p = b.px != null ? { x: b.px, y: b.py } : this.px(b.x, b.y);
-      const k = b.t / 0.6;
-      const rad = (b.big ? 60 : 36) * (R ? 0.8 : (0.3 + k));
-      c.globalAlpha = Math.max(0, 1 - k);
-      c.strokeStyle = b.land ? col.hurt : col.blast;
-      c.lineWidth = 3;
-      c.beginPath(); c.arc(p.x, Math.min(p.y, H - 4), rad, 0, Math.PI * 2); c.stroke();
-      if (!R) {
-        c.fillStyle = b.land ? col.hurt : col.blast;
-        for (let i = 0; i < 10; i++) {
-          const a = i * 0.628 + b.t;
-          c.fillRect(p.x + Math.cos(a) * rad * 0.8, p.y + Math.sin(a) * rad * 0.8, 3, 3);
-        }
-      }
-      c.globalAlpha = 1;
+      const k = Math.min(1, b.t / 0.6);
+      if (b.land) sprites.drawGroundBlast(c, p.x, ground, k, { reduced: R, size: 52 });
+      else sprites.drawBurst(c, p.x, Math.min(p.y, H - 4), b.big ? 60 : 38, k, { kind: b.big ? 'big' : 'shot', reduced: R });
     }
+    sprites.drawSparks(c, this.sparks);
+    this.fx.draw(c, 'front');
     c.restore();
+    const s = this.state;
+    if (!s.relaxed && s.phase !== 'end' && s.towns.filter(t => t > 0).length === 1) {
+      drawVignette(c, W, H, R ? 0.22 : 0.2 + 0.1 * Math.sin(this.anim * 3), col.hurt || '#E23D3D');
+    }
   }
 }

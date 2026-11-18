@@ -7,8 +7,11 @@ import * as audio from '../audio.js';
 import { h } from '../ex/common.js';
 import { makeRng } from './core.js';
 import * as music from './music.js';
+import * as sprites from './sprites.js';
+import * as scenery from './scenery.js';
+import { TOWN_SHAPE } from './scenery.js';
 
-export const BUILD = '2026-11-17 e';
+export const BUILD = '2026-11-18 i';
 
 // ---- styles and icons ---------------------------------------------------------------------------
 
@@ -74,7 +77,7 @@ export const SKYLINE = (() => {
   while (x < 1) { const w = 0.03 + r() * 0.05; out.push({ x, w, h: 0.25 + r() * 0.55 }); x += w + 0.004; }
   return out;
 })();
-export const TOWN_SHAPE = [[-0.085, 0.034, 0.55], [-0.045, 0.04, 1], [0.0, 0.03, 0.75], [0.035, 0.045, 0.9], [0.075, 0.025, 0.5]];
+export { TOWN_SHAPE };
 
 /** The scene colours (tokens on .game-field in game.css). */
 export function readColors(field) {
@@ -88,8 +91,14 @@ export function readColors(field) {
   };
 }
 
-/** The sky gradient over the whole field. */
+const dprOf = c => {
+  try { const a = c.getTransform ? c.getTransform().a : 1; return Math.max(1, Math.round(a * 4) / 4); } catch { return 1; }
+};
+
+/** The sky over the whole field: gradient and a faint nebula band (made once per size). */
 export function drawSky(c, W, H, col) {
+  const L = scenery.skyLayer(W, H, col, dprOf(c));
+  if (L) { c.drawImage(L, 0, 0, W, H); return; }
   const g = c.createLinearGradient(0, 0, 0, H);
   g.addColorStop(0, col.sky1);
   g.addColorStop(1, col.sky2);
@@ -98,44 +107,77 @@ export function drawSky(c, W, H, col) {
 }
 
 /**
- * Stars, the far skyline and the four towns (o: W, H, ground, col, anim, reduced, towns, relaxed,
- * flash, townX).
+ * Moon, stars, clouds, mountains, the far skyline and the four towns (o: W, H, ground, col, anim,
+ * reduced, towns, relaxed, flash, townX, light). light (an Fx, optional) lights the towns up orange
+ * near an explosion.
  */
 export function drawCity(c, o) {
-  const { W, H, ground, col, anim, reduced: R, towns, relaxed, flash, townX } = o;
+  const { W, H, ground, col, anim, reduced: R, towns, relaxed, flash, townX, light } = o;
+  const dpr = dprOf(c);
+  sprites.drawBackdrop(c, W, ground, { anim, reduced: R });
   c.fillStyle = col.star;
   for (const st of STARS) {
     c.globalAlpha = R ? 0.7 : 0.45 + 0.4 * Math.sin(anim * 1.5 + st.p) ** 2;
     c.fillRect(st.x * W, st.y * ground, st.s, st.s);
   }
   c.globalAlpha = 1;
+  // two layers of cloud drifting at different speeds (still under reduced motion)
+  const cl = scenery.cloudLayer(W, ground, col, dpr);
+  if (cl) {
+    const strips = [[ground * 0.16, 5, 0.3], [ground * 0.46, 11, 0.42]];
+    strips.forEach(([y, v, a], j) => {
+      const off = R ? W * 0.3 * j : (anim * v + W * 0.3 * j) % W;
+      c.globalAlpha = a;
+      c.drawImage(cl.cv, Math.round(off - W), Math.round(y), W, cl.h);
+      c.drawImage(cl.cv, Math.round(off), Math.round(y), W, cl.h);
+    });
+    c.globalAlpha = 1;
+  }
   const base = H;
-  c.fillStyle = col.far;
-  for (const b of SKYLINE) c.fillRect(b.x * W, base - b.h * (H - ground) * 0.9, b.w * W, H);
+  const rl = scenery.ridgeLayer(W, H, ground, col, dpr);
+  if (rl) c.drawImage(rl, 0, 0, W, H);
+  else {
+    c.fillStyle = col.far;
+    for (const b of SKYLINE) c.fillRect(b.x * W, base - b.h * (H - ground) * 0.9, b.w * W, H);
+  }
   const tw = Math.min(W * 0.22, 140);
+  const tall = (H - ground) * 1.05;
   towns.forEach((hp, i) => {
     const cx = townX[i] * W;
-    const tall = (H - ground) * 1.05;
-    for (const [dx, w, hgt] of TOWN_SHAPE) {
-      const bx = cx + dx * tw / 0.2, bw = w * tw / 0.2, bh = tall * hgt * (hp === 0 && !relaxed ? 0.3 : hp === 1 && !relaxed ? 0.75 : 1);
-      c.fillStyle = col.city;
-      c.fillRect(bx, base - bh, bw, bh);
-      c.fillStyle = hp > 0 || relaxed ? col.window : col.dark;
-      for (let wy = base - bh + 6; wy < base - 6; wy += 9) {
-        for (let wx = bx + 4; wx < bx + bw - 4; wx += 7) {
-          const on = ((wx * 7 + wy * 3) | 0) % (hp >= 2 || relaxed ? 3 : 5) !== 0;
-          if (on) c.fillRect(wx, wy, 3, 4);
-        }
+    const st = relaxed ? 2 : Math.max(0, Math.min(2, hp));
+    const sp = scenery.townSprite(i, st, tw, tall, col, dpr);
+    if (sp) {
+      const X = Math.round(cx - sp.ox), Y = base - sp.h;
+      c.drawImage(sp.cv, X, Y, sp.w, sp.h);
+      // blinking lights on antennas and spires
+      for (const [lx, ly, kind, seed] of sp.lights) {
+        const on = R || Math.sin(anim * 2.4 + seed * 1.7) > 0.2;
+        c.fillStyle = kind === 'red' ? (on ? '#FF5D5D' : '#6A2030') : (on ? '#FFF7E0' : '#6E6A86');
+        c.fillRect(X + lx, Y + ly, 2, 2);
+      }
+      // the light of explosions nearby
+      if (light && sp.warm && !R) {
+        const k = light.tint(cx, ground - tall * 0.3);
+        if (k > 0.02) { c.globalAlpha = Math.min(0.7, k * 0.75); c.drawImage(sp.warm, X, Y, sp.w, sp.h); c.globalAlpha = 1; }
+      }
+      if (flash[i] > 0 && !R && sp.hurt) {
+        c.globalAlpha = Math.min(0.6, flash[i] * 0.9);
+        c.drawImage(sp.hurt, X, Y, sp.w, sp.h);
+        c.globalAlpha = 1;
       }
     }
+    // a damaged town smokes; a ruined one burns
+    if (hp <= 1 && !relaxed) sprites.drawSmoke(c, cx - tw * 0.1, base - tall * (hp === 0 ? 0.3 : 0.75), { anim, reduced: R, fire: hp === 0 });
     if (flash[i] > 0 && !R) {
-      c.globalAlpha = flash[i];
+      c.globalAlpha = flash[i] * 0.6;
       c.fillStyle = col.hurt;
       c.fillRect(cx - tw / 2, ground, tw, H - ground);
       c.globalAlpha = 1;
     }
   });
 }
+
+export { drawVignette } from './scenery.js';
 
 // ---- a run: clock, pause, overlays, speech --------------------------------------------------------
 // Subclasses provide: build(), stepRules(dt) -> events, handle(events), tickFx(dt), sync(), draw(),

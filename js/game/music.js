@@ -1,47 +1,244 @@
-// game/music.js: the game's soundtrack, made with WebAudio (no files). An original tune in the style
-// of 16-bit console adventure games: A minor, eight bars (Am F C G | Am F G E), a soft lead with an
-// echo, a running chord arpeggio, an octave bass and light drums. Speech wins: while the app's
-// <audio> element plays, the music drops to DUCK.
+// game/music.js: the game's soundtrack, made with WebAudio (no files). Twelve original tunes in the
+// style of 16-bit console adventure games. Each is eight bars: a soft lead with an echo over a chord
+// arpeggio, a bass and light drums. A run starts on a random tune and moves to the next after PASSES
+// times through. Speech wins: while the app's <audio> element plays, the music drops to DUCK.
 //
 //   music.start(wave)   begin (needs a user gesture earlier on the page); no-op when off
 //   music.setWave(n)    later waves play a little faster with busier drums
 //   music.pause() / music.resume() / music.stop()
 //   music.setOn(bool) / music.isOn()
 //   music.attach(audioEl) -> detach()   follow speech for ducking
+//   music.trackName() / music.trackNames() / music.problems()
 
 const VOLUME = 0.11;
 export const DUCK = 0.12;
-const _ = null;
-const N = { C: 0, 'C#': 1, D: 2, 'D#': 3, E: 4, F: 5, 'F#': 6, G: 7, 'G#': 8, A: 9, 'A#': 10, B: 11 };
-const hz = (n) => { const m = /^([A-G]#?)(\d)$/.exec(n); return 440 * 2 ** ((N[m[1]] + 12 * (Number(m[2]) + 1) - 69) / 12); };
+export const PASSES = 3;
+const PC = { C: 0, 'C#': 1, D: 2, 'D#': 3, E: 4, F: 5, 'F#': 6, G: 7, 'G#': 8, A: 9, 'A#': 10, B: 11 };
+const midi = (n) => { const m = /^([A-G]#?)(\d)$/.exec(n); return m ? PC[m[1]] + 12 * (Number(m[2]) + 1) : NaN; };
+const hz = (m) => 440 * 2 ** ((m - 69) / 12);
 
-// Lead: one note name per 16th step, null = hold. 8 bars of 16 steps.
-const LEAD = [
-  ['E5', _, _, _, 'A5', _, _, 'G5', 'E5', _, _, _, 'C5', _, 'D5', _],
-  ['C5', _, _, _, _, _, 'A4', _, 'C5', _, 'F5', _, 'E5', _, _, _],
-  ['G5', _, _, _, 'E5', _, _, 'C5', 'D5', _, 'E5', _, 'G5', _, _, _],
-  ['D5', _, _, _, _, _, 'B4', _, 'D5', _, _, _, _, _, _, _],
-  ['E5', _, _, _, 'A5', _, _, 'B5', 'C6', _, _, _, 'B5', _, 'A5', _],
-  ['A5', _, _, _, _, _, 'F5', _, 'A5', _, 'C6', _, 'A5', _, _, _],
-  ['B5', _, _, _, 'G5', _, _, 'D5', 'G5', _, 'A5', _, 'B5', _, _, _],
-  ['G#5', _, _, _, _, _, 'E5', _, 'B5', _, _, _, _, _, _, _],
+// Arpeggio shapes (index into the chord's four notes; '.' = nothing), bass ('1' root, '2' octave up)
+// and drum sets by wave ('K' kick, 'S' snare, 'h' hat).
+const ARPS = {
+  run: '0123212301232121',
+  half: '0.1.2.3.2.1.2.3.',
+  bounce: '0.32.1320.32.132',
+  climb: '0.1.2.3.0.1.2.3.',
+};
+const BASSES = {
+  walk: '1.1.2.1.1.1.2.12',
+  long: '1.......1.....1.',
+  pulse: '1.1.1.1.1.1.1.1.',
+  drive: '1.121.121.121.12',
+  skip: '1..1..1.1..1..2.',
+};
+const DRUMS = {
+  light: ['K...h...K...h...', 'K.h.S.h.K.h.S.h.', 'K.h.S.hhK.KhS.hh'],
+  soft: ['....h.......h...', 'K...h...K...h.h.', 'K.h.S.h.K.h.S.h.'],
+  drive: ['K.h.S.h.K.h.S.h.', 'K.hhS.h.KKh.S.hh', 'KhhhSh.hKKhhShSh'],
+  march: ['K..hS...K..hS...', 'K..hS.h.K.KhS.h.', 'K.hhS.hhK.KhS.SS'],
+};
+
+// Lead: 16 steps per bar. A note name starts a note, '-' holds it, '.' is silence.
+const TRACKS = [
+  { name: 'Skyward', bpm: 112, arp: 'run', bass: 'walk', drums: 'light',
+    chords: 'Am F C G Am F G E',
+    lead: [
+      'E5 - - - A5 - - G5 E5 - - - C5 - D5 -',
+      'C5 - - - - - A4 - C5 - F5 - E5 - - -',
+      'G5 - - - E5 - - C5 D5 - E5 - G5 - - -',
+      'D5 - - - - - B4 - D5 - - - - - - -',
+      'E5 - - - A5 - - B5 C6 - - - B5 - A5 -',
+      'A5 - - - - - F5 - A5 - C6 - A5 - - -',
+      'B5 - - - G5 - - D5 G5 - A5 - B5 - - -',
+      'G#5 - - - - - E5 - B5 - - - - - - -',
+    ] },
+  { name: 'Lantern Town', bpm: 96, arp: 'half', bass: 'long', drums: 'soft',
+    chords: 'C G Am F C G F G',
+    lead: [
+      'E5 - - G5 - - E5 - C5 - - - D5 - E5 -',
+      'D5 - - - B4 - - - D5 - G5 - - - - -',
+      'C5 - - E5 - - C5 - A4 - - - B4 - C5 -',
+      'A4 - - - C5 - - - F5 - E5 - D5 - C5 -',
+      'E5 - - G5 - - C6 - B5 - - - G5 - E5 -',
+      'D5 - - - G5 - - - B5 - A5 - G5 - - -',
+      'A5 - - F5 - - A5 - G5 - F5 - E5 - D5 -',
+      'D5 - - - - - G5 - - - - - . . . .',
+    ] },
+  { name: 'Storm Front', bpm: 130, arp: 'run', bass: 'drive', drums: 'drive',
+    chords: 'Dm A# C Am Dm A# C A',
+    lead: [
+      'D5 - F5 - A5 - - - G5 - F5 - E5 - F5 -',
+      'D5 - - - - - F5 - A#5 - - - A5 - - -',
+      'G5 - E5 - C5 - - - E5 - G5 - C6 - - -',
+      'A5 - - - - - E5 - C5 - - - E5 - - -',
+      'D5 - F5 - A5 - - - D6 - C6 - A5 - F5 -',
+      'A#5 - - - - - D6 - F5 - - - A#5 - - -',
+      'C6 - A#5 - G5 - - - E5 - G5 - A#5 - - -',
+      'A5 - - - C#6 - - - E6 - - - - - . .',
+    ] },
+  { name: 'Old Road', bpm: 104, arp: 'climb', bass: 'walk', drums: 'light',
+    chords: 'Em C G D Em C D B',
+    lead: [
+      'B4 - - - E5 - - - G5 - - F#5 E5 - - -',
+      'E5 - - - - - C5 - E5 - G5 - - - - -',
+      'D5 - - - G5 - - - B5 - - A5 G5 - - -',
+      'F#5 - - - - - D5 - A5 - - - - - - -',
+      'B5 - - - G5 - - - E5 - - F#5 G5 - - -',
+      'E5 - - - - - G5 - C6 - B5 - G5 - - -',
+      'A5 - - - F#5 - - - D5 - F#5 - A5 - - -',
+      'B5 - - - - - F#5 - D#5 - - - - - - -',
+    ] },
+  { name: 'Festival', bpm: 124, arp: 'bounce', bass: 'skip', drums: 'march',
+    chords: 'G C D G Em C D D',
+    lead: [
+      'G5 - B5 - D6 - B5 - G5 - - - D5 - G5 -',
+      'E5 - G5 - C6 - G5 - E5 - - - G5 - - -',
+      'F#5 - A5 - D6 - A5 - F#5 - A5 - C6 - - -',
+      'B5 - - - G5 - - - D5 - G5 - B5 - - -',
+      'E5 - G5 - B5 - - - A5 - G5 - E5 - - -',
+      'C5 - E5 - G5 - - - C6 - B5 - G5 - - -',
+      'A5 - F#5 - D5 - F#5 - A5 - D6 - C6 - A5 -',
+      'D6 - - - - - A5 - F#5 - - - - - . .',
+    ] },
+  { name: 'Deep Night', bpm: 88, arp: 'half', bass: 'long', drums: 'soft',
+    chords: 'Cm G# D# A# Cm G# G G',
+    lead: [
+      'G5 - - - - - D#5 - C5 - - - - - D5 -',
+      'D#5 - - - - - C5 - G#4 - - - - - - -',
+      'A#4 - - - D#5 - - - G5 - - - F5 - D#5 -',
+      'D5 - - - - - A#4 - F5 - - - - - - -',
+      'G5 - - - - - C6 - A#5 - - - G5 - - -',
+      'G#5 - - - - - D#5 - C5 - - - D#5 - - -',
+      'D5 - - - G5 - - - B5 - - - D6 - - -',
+      'B5 - - - - - G5 - D5 - - - - - . .',
+    ] },
+  { name: 'Last Stand', bpm: 136, arp: 'run', bass: 'drive', drums: 'drive',
+    chords: 'Bm G A F#m Bm G A F#',
+    lead: [
+      'B5 - - F#5 - - B5 - D6 - - C#6 - - B5 -',
+      'B5 - - G5 - - D5 - G5 - - - B5 - - -',
+      'A5 - - E5 - - A5 - C#6 - - B5 - - A5 -',
+      'F#5 - - - - - C#5 - F#5 - A5 - - - - -',
+      'B5 - - F#5 - - B5 - D6 - - E6 - - F#6 -',
+      'D6 - - B5 - - G5 - B5 - - - D6 - - -',
+      'C#6 - - A5 - - E5 - A5 - C#6 - E6 - - -',
+      'F#6 - - - - - C#6 - A#5 - - - - - . .',
+    ] },
+  { name: 'Morning Sail', bpm: 108, arp: 'climb', bass: 'skip', drums: 'light',
+    chords: 'F C Dm A# F C A# C',
+    lead: [
+      'A5 - - - F5 - - - C5 - F5 - A5 - - -',
+      'G5 - - - E5 - - - C5 - E5 - G5 - - -',
+      'F5 - - - D5 - - - A4 - D5 - F5 - A5 -',
+      'A#5 - - - - - F5 - D5 - - - F5 - - -',
+      'A5 - - - C6 - - - F6 - - E6 C6 - - -',
+      'G5 - - - C6 - - - E6 - - D6 C6 - - -',
+      'D6 - - - A#5 - - - F5 - A#5 - D6 - - -',
+      'C6 - - - - - G5 - E5 - - - - - . .',
+    ] },
+  { name: 'Clockwork', bpm: 120, arp: 'bounce', bass: 'pulse', drums: 'march',
+    chords: 'A E F#m D A E D E',
+    lead: [
+      'C#5 - E5 - A5 - - - G#5 - E5 - C#5 - - -',
+      'B4 - E5 - G#5 - - - B5 - G#5 - E5 - - -',
+      'A5 - - F#5 - - C#5 - F#5 - A5 - C#6 - - -',
+      'A5 - - - F#5 - - - D5 - F#5 - A5 - - -',
+      'C#6 - - A5 - - E5 - A5 - C#6 - E6 - - -',
+      'B5 - - G#5 - - E5 - G#5 - B5 - E6 - - -',
+      'D6 - - - A5 - - - F#5 - A5 - D6 - C#6 -',
+      'B5 - - - - - G#5 - E5 - - - - - . .',
+    ] },
+  { name: 'Ruins', bpm: 92, arp: 'half', bass: 'long', drums: 'soft',
+    chords: 'Dm G Dm G F C Dm A',
+    lead: [
+      'A4 - - - D5 - - - F5 - E5 - D5 - - -',
+      'B4 - - - D5 - - - G5 - - - - - D5 -',
+      'F5 - - - A5 - - - G5 - F5 - E5 - D5 -',
+      'D5 - - - B4 - - - G4 - - - B4 - - -',
+      'C5 - - - F5 - - - A5 - - - C6 - - -',
+      'G5 - - - E5 - - - C5 - E5 - G5 - - -',
+      'F5 - - - D5 - - - A4 - D5 - F5 - - -',
+      'E5 - - - - - C#5 - A4 - - - - - . .',
+    ] },
+  { name: 'Chase', bpm: 140, arp: 'run', bass: 'drive', drums: 'drive',
+    chords: 'Gm D# F Dm Gm D# F D',
+    lead: [
+      'G5 - A#5 - D6 - - A#5 - - G5 - A#5 - - -',
+      'G5 - A#5 - D#6 - - A#5 - - G5 - D#5 - - -',
+      'A5 - C6 - F6 - - C6 - - A5 - F5 - - -',
+      'D5 - F5 - A5 - - - D6 - - - A5 - - -',
+      'G5 - A#5 - D6 - - G6 - - F6 - D6 - - -',
+      'D#6 - - - A#5 - - - G5 - A#5 - D#6 - - -',
+      'F6 - - - C6 - - - A5 - C6 - F6 - D#6 -',
+      'D6 - - - - - A5 - F#5 - - - - - . .',
+    ] },
+  { name: 'Homecoming', bpm: 100, arp: 'climb', bass: 'walk', drums: 'light',
+    chords: 'D A Bm G D A G A',
+    lead: [
+      'F#5 - - - A5 - - - D6 - - C#6 A5 - - -',
+      'E5 - - - A5 - - - C#6 - - B5 A5 - - -',
+      'D5 - - - F#5 - - - B5 - - A5 F#5 - - -',
+      'G5 - - - - - D5 - B4 - - - D5 - - -',
+      'F#5 - - - A5 - - - D6 - - E6 F#6 - - -',
+      'E6 - - - C#6 - - - A5 - - B5 C#6 - - -',
+      'B5 - - - G5 - - - D5 - G5 - B5 - - -',
+      'A5 - - - - - E5 - C#5 - - - - - . .',
+    ] },
 ];
-// Chord of each bar: bass root, then the four arpeggio notes.
-const CHORDS = [
-  ['A2', 'A3', 'C4', 'E4', 'A4'], ['F2', 'F3', 'A3', 'C4', 'F4'], ['C3', 'G3', 'C4', 'E4', 'G4'], ['G2', 'G3', 'B3', 'D4', 'G4'],
-  ['A2', 'A3', 'C4', 'E4', 'A4'], ['F2', 'F3', 'A3', 'C4', 'F4'], ['G2', 'G3', 'B3', 'D4', 'G4'], ['E2', 'G#3', 'B3', 'E4', 'G#4'],
-];
-const ARP = [0, 1, 2, 3, 2, 1, 2, 3, 0, 1, 2, 3, 2, 1, 2, 1];
-const BASS = '1.1.2.1.1.1.2.12'; // 1 = root, 2 = octave up
-// Drums: 'K' kick, 'S' snare, 'h' hat, '.' nothing.
-const DRUMS = ['K...h...K...h...', 'K.h.S.h.K.h.S.h.', 'K.h.S.hhK.KhS.hh'];
+
+/** A chord name ('Am', 'F#') as {bass, arp[4]} in MIDI numbers. */
+function chord(sym) {
+  const m = /^([A-G]#?)(m?)$/.exec(sym);
+  if (!m) return null;
+  const pc = PC[m[1]], tones = [0, m[2] ? 3 : 4, 7];
+  const arp = [];
+  for (let n = 55; arp.length < 4; n++) if (tones.includes((((n - pc) % 12) + 12) % 12)) arp.push(n);
+  return { bass: pc >= 4 ? 36 + pc : 48 + pc, arp };
+}
+
+const SONGS = TRACKS.map((t) => ({
+  ...t,
+  chords: t.chords.split(' ').map(chord),
+  lead: t.lead.map((bar) => bar.split(' ').map((x) => (x === '-' ? null : x === '.' ? 0 : midi(x)))),
+}));
+
+/** Mistakes in the track data (wrong bar length, unknown note or chord); [] when fine. */
+export function problems() {
+  const bad = [];
+  SONGS.forEach((s) => {
+    if (s.chords.length !== 8 || s.chords.some((c) => !c)) bad.push(`${s.name}: chords`);
+    if (s.lead.length !== 8) bad.push(`${s.name}: ${s.lead.length} bars`);
+    s.lead.forEach((bar, i) => {
+      if (bar.length !== 16) bad.push(`${s.name} bar ${i + 1}: ${bar.length} steps`);
+      if (bar.some((x) => Number.isNaN(x))) bad.push(`${s.name} bar ${i + 1}: unknown note`);
+    });
+    if (!ARPS[s.arp] || !BASSES[s.bass] || !DRUMS[s.drums]) bad.push(`${s.name}: style`);
+  });
+  return bad;
+}
+export const trackNames = () => SONGS.map((s) => s.name);
 
 let ctx = null, out = null, noise = null, echo = null;
 let on = true, ducked = false, playing = false, paused = false;
 let timer = null, step = 0, nextAt = 0, wave = 1;
+let order = [0], at = 0, lastFirst = -1, firstTune = true;
 
-const stepLen = () => 60 / (112 + 4 * Math.min(6, wave)) / 4;
+const song = () => SONGS[order[at % order.length]];
+export const trackName = () => (playing ? song().name : '');
+const stepLen = () => 60 / (song().bpm + 3 * Math.min(6, wave)) / 4;
 const level = () => (on && playing && !paused ? VOLUME * (ducked ? DUCK : 1) : 0);
+
+function shuffle() {
+  order = SONGS.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  if (order.length > 1 && order[0] === lastFirst) order.push(order.shift());
+  lastFirst = order[0];
+  at = 0; firstTune = true;
+}
 
 function context() {
   if (ctx) return ctx;
@@ -104,24 +301,26 @@ function hit(t, gain, freq, len) {
 }
 
 function schedule(i, t) {
-  const L = stepLen();
-  const k = i % 16, bar = Math.floor(i / 16) % LEAD.length, pass = Math.floor(i / (16 * LEAD.length));
-  const chord = CHORDS[bar];
-  // lead (rests through the first pass, so the tune builds up)
-  const n = LEAD[bar][k];
-  if (n && pass > 0) {
+  const s = song(), L = stepLen();
+  const k = i % 16, bar = Math.floor(i / 16) % 8, pass = Math.floor(i / 128);
+  const ch = s.chords[bar];
+  const intro = firstTune && pass === 0; // the first tune of a run builds up: no lead the first time round
+  // lead
+  const n = s.lead[bar][k];
+  if (n && !intro) {
     let len = 1;
-    while (k + len < 16 && LEAD[bar][k + len] === null) len++;
+    while (k + len < 16 && s.lead[bar][k + len] === null) len++;
     tone('square', hz(n), t, L * len * 0.92, 0.3, { echo: true, vibrato: true, release: 0.08 });
     tone('triangle', hz(n), t, L * len * 0.92, 0.35, { release: 0.08 });
   }
   // arpeggio
-  tone('square', hz(chord[1 + ARP[k]]), t, L * 0.9, 0.11, { echo: pass === 0 });
+  const shape = ARPS[s.arp], a = shape[k];
+  if (a !== '.') tone('square', hz(ch.arp[Number(a)]), t, L * (shape[(k + 1) % 16] === '.' ? 1.8 : 0.9), 0.11, { echo: intro });
   // bass
-  const b = BASS[k];
-  if (b !== '.') tone('triangle', hz(chord[0]) * (b === '2' ? 2 : 1), t, L * 1.7, 0.75);
+  const b = BASSES[s.bass][k];
+  if (b !== '.') tone('triangle', hz(ch.bass + (b === '2' ? 12 : 0)), t, L * (s.bass === 'long' ? 6 : 1.7), 0.75);
   // drums
-  const d = DRUMS[wave <= 1 ? 0 : wave <= 3 ? 1 : 2][k];
+  const d = DRUMS[s.drums][wave <= 1 ? 0 : wave <= 3 ? 1 : 2][k];
   if (d === 'K') tone('sine', 55, t, 0.14, 0.9, { from: 160, glide: 0.1 });
   else if (d === 'S') hit(t, 0.4, 1900, 0.11);
   else if (d === 'h') hit(t, 0.12, 7000, 0.035);
@@ -131,8 +330,9 @@ function pump() {
   if (!ctx || !playing || paused) return;
   while (nextAt < ctx.currentTime + 0.25) {
     try { schedule(step, nextAt); } catch { /* a closed context: skip */ }
-    step += 1;
     nextAt += stepLen();
+    step += 1;
+    if (step >= 128 * PASSES) { step = 0; at += 1; firstTune = false; }
   }
 }
 
@@ -142,6 +342,7 @@ export function start(w = 1) {
   const c = context();
   if (!c) return false;
   if (c.state === 'suspended') { try { c.resume(); } catch { /* needs a gesture */ } }
+  shuffle();
   playing = true; paused = false; step = 0;
   nextAt = c.currentTime + 0.1;
   apply();
