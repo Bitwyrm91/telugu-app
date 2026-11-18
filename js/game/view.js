@@ -15,6 +15,8 @@ import { h, icon, confidenceLabel, ensureStyles } from '../ex/common.js';
 import * as core from './core.js';
 import * as arcade from './arcade.js';
 import * as sfx from './sfx.js';
+import * as music from './music.js';
+import { BUILD } from './shared.js';
 import { gameStyles, gicon, gameStore, saveGame, scoreKey, readColors, drawSky, drawCity, RunBase } from './shared.js';
 import { ArcadeRun } from './arcade-view.js';
 
@@ -56,6 +58,8 @@ export async function render(el) {
 
   sfx.setMuted(!!gameStore().mute);
   const undoDuck = sfx.attach(audio.element());
+  music.setOn(gameStore().music !== false);
+  const undoMusicDuck = music.attach(audio.element());
 
   let run = null; // the live run (see startRun)
   const isArcade = () => !!(run && run.state && run.state.game === 'arcade');
@@ -93,6 +97,12 @@ export async function render(el) {
     sound.addEventListener('change', () => {
       saveGame(x => { x.mute = !sound.checked; });
       sfx.setMuted(!sound.checked);
+    });
+    const tune = h('input', { type: 'checkbox', id: 'game-music', class: 'game-check' });
+    tune.checked = music.isOn();
+    tune.addEventListener('change', () => {
+      saveGame(x => { x.music = tune.checked; });
+      music.setOn(tune.checked);
     });
 
     const types = TYPES.map(t => {
@@ -159,8 +169,12 @@ export async function render(el) {
             h('span', { class: 'game-option-note', text: 'Towns take no damage' }))),
         h('label', { class: 'game-option', for: 'game-sound' }, sound,
           h('span', {}, h('span', { class: 'game-option-title', text: 'Sound effects' }),
-            h('span', { class: 'game-option-note', text: 'Speech always plays' })))),
-      h('a', { class: 'btn btn-quiet game-back', href: '#/' }, icon('back'), 'Back to Learn'));
+            h('span', { class: 'game-option-note', text: 'Speech always plays' }))),
+        h('label', { class: 'game-option', for: 'game-music' }, tune,
+          h('span', {}, h('span', { class: 'game-option-title', text: 'Music' }),
+            h('span', { class: 'game-option-note', text: 'Quieter while a letter is spoken' })))),
+      h('a', { class: 'btn btn-quiet game-back', href: '#/' }, icon('back'), 'Back to Learn'),
+      h('p', { class: 'game-build', 'data-build': '', text: `Version ${BUILD}` }));
     refresh();
     el.replaceChildren(screen);
     const head = screen.querySelector('h1');
@@ -189,11 +203,14 @@ export async function render(el) {
       run = new Run(el, state, hooks);
     }
     if (opts.manual) run.manual = true;
+    audio.preload(state.set);
     run.begin();
+    if (!opts.manual) music.start(1);
     return state;
   }
 
   function showEnd(mode, state, type = 'classic') {
+    music.stop();
     const key = scoreKey(type, mode);
     const prev = gameStore().best[key] || 0;
     const g = saveGame(x => {
@@ -253,7 +270,9 @@ export async function render(el) {
     stopRun();
     audio.stop();
     undoDuck();
+    undoMusicDuck();
     sfx.close();
+    music.close();
     delete el.__game;
   };
 }
@@ -386,6 +405,7 @@ class Run extends RunBase {
         }
         case 'waveStart': {
           this.hideOverlay('banner');
+          music.setWave(e.wave);
           if (e.wave > 1) this.say(`Wave ${e.wave} of ${core.RULES.waves}.`);
           break;
         }

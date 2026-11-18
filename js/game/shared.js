@@ -6,6 +6,9 @@ import * as store from '../store.js';
 import * as audio from '../audio.js';
 import { h } from '../ex/common.js';
 import { makeRng } from './core.js';
+import * as music from './music.js';
+
+export const BUILD = '2026-11-17 d';
 
 // ---- styles and icons ---------------------------------------------------------------------------
 
@@ -232,6 +235,7 @@ export class RunBase {
     document.removeEventListener('visibilitychange', this.onVis);
     if (this.ro) this.ro.disconnect();
     if (stopAudio) audio.stop();
+    music.stop();
   }
 
   advance(secs) {
@@ -251,6 +255,7 @@ export class RunBase {
     if (on === this.paused) return;
     this.paused = on;
     this.screen.dataset.paused = String(on);
+    if (on) music.pause(); else music.resume();
     if (on) {
       audio.stop();
       const resume = h('button', { type: 'button', class: 'btn btn-main', 'data-resume': '' }, 'Resume');
@@ -272,7 +277,17 @@ export class RunBase {
   speak(id) {
     const e = this.entry(id);
     if (!e || !e.audio) return;
-    audio.play(e).catch(err => { this.say('The sound could not play.'); return err; });
+    // Shown on screen: a ring while the sound plays, a notice when it cannot.
+    const scr = this.screen;
+    const token = (this.speakN = (this.speakN || 0) + 1);
+    const done = () => { if (scr && this.speakN === token) delete scr.dataset.speaking; };
+    if (scr) { scr.dataset.speaking = id; delete scr.dataset.audiofail; }
+    audio.play(e).then(done, err => {
+      done();
+      if (scr) scr.dataset.audiofail = 'true';
+      this.say('The sound could not play.');
+      return err;
+    });
   }
 
   say(text) {

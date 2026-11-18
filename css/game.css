@@ -266,3 +266,9 @@
 @media (prefers-reduced-motion: reduce) {
   .game-reload.is-nudge { animation: none; }
 }
+
+/* 2026-11-17: sound feedback, music option, version line */
+[data-speaking] .game-prompt, [data-speaking] .game-chip.is-aim { outline: 3px solid var(--accent); outline-offset: 3px; }
+[data-audiofail] .game-prompt-hint { visibility: visible; color: var(--wrong); }
+[data-audiofail] .game-prompt-hint::after { content: " (sound failed)"; }
+.game-build { margin: 8px 0 0; font-size: 0.75rem; color: var(--ink-2); }

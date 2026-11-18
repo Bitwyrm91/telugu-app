@@ -13,6 +13,7 @@ import { h, icon } from '../ex/common.js';
 import * as core from './core.js';
 import * as arcade from './arcade.js';
 import * as sfx from './sfx.js';
+import * as music from './music.js';
 import { gicon, readColors, drawSky, drawCity, RunBase } from './shared.js';
 
 const QUESTION = {
@@ -177,6 +178,7 @@ export class ArcadeRun extends RunBase {
         }
         case 'waveStart': {
           this.hideOverlay('banner');
+          music.setWave(e.wave);
           if (e.wave > 1) this.say(`Wave ${e.wave} of ${this.R.waves}.`);
           break;
         }

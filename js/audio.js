@@ -52,6 +52,15 @@ function setSlow(a, slow) {
   }
 }
 
+/** Fetch the sound files of these items ahead of time, so a later play() starts at once. */
+export function preload(items) {
+  for (const it of items || []) {
+    const files = (it && it.audio) || {};
+    const f = (typeof files.f === 'string' && files.f) || (typeof files.m === 'string' && files.m);
+    if (f) objectUrl(f).catch(() => {});
+  }
+}
+
 export function stop() {
   if (current) { const c = current; current = null; c.done(false); }
   if (el) { try { el.pause(); } catch { /* nothing playing */ } }
