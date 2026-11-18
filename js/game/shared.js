@@ -8,7 +8,7 @@ import { h } from '../ex/common.js';
 import { makeRng } from './core.js';
 import * as music from './music.js';
 
-export const BUILD = '2026-11-17 d';
+export const BUILD = '2026-11-17 e';
 
 // ---- styles and icons ---------------------------------------------------------------------------
 
