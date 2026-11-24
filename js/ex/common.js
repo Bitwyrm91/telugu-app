@@ -69,6 +69,7 @@ const ICONS = {
   polite: `<circle cx="8" cy="8" r="2.5" ${S}/><circle cx="16" cy="8" r="2.5" ${S}/><path d="M3.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5M11.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5" ${S}/>`,
   familiar: `<circle cx="12" cy="8" r="3" ${S}/><path d="M6 20c0-3.5 2.7-6 6-6s6 2.5 6 6" ${S}/>`,
   back: `<path d="M15 5l-7 7 7 7" ${S}/>`,
+  pen: `<path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 0 1 3 3L8 18.5z" ${S}/><path d="M13.5 7l3 3" ${S}/>`,
   'space-bar': `<path d="M4 10v4h16v-4" ${S}/>`,
 };
 

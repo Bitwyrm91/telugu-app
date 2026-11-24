@@ -1,15 +1,20 @@
-// ex/draw.js: the `letter_draw` step (task D3; SPECS S16, revision 1 R5 / R8). Not graded.
+// ex/draw.js: the `letter_draw` step (SPECS S16 R5 / R8; S17 "Screens": stages 0-2 of the writing ladder).
+// Not graded: writing never feeds the lesson score or the recognition cards (it has its own `writing` record).
 //
 //   render(exercise, el, onAnswer, ctx) -> {root, showResult(), destroy()}
 //     exercise {type: 'letter_draw', itemIds: ['L:<id>'], letterId}
-//     ctx.strokes = the parsed strokes.json (else draw.js loads it); ctx.letter(id) -> letter
-// Continue is enabled once the trace stage is complete -> onAnswer({seen: true}); until then it
-// says why (aria-describedby). "Can't draw now" (same style as "Can't speak now") -> onAnswer({skip: true})
-// and is hidden once the letter is traced (Continue is then the one way on). DOM order: Continue, then
-// "Can't draw now". The step opens with focus on its heading.
+//     ctx.strokes = the parsed strokes.json (else loaded); ctx.letter(id) -> letter
+// Watch, Trace, Fade for every new letter (stroke data or not). Continue is enabled once Trace is passed or
+// skipped -> onAnswer({seen: true}); until then it says why (aria-describedby). "Can't draw now" -> onAnswer
+// ({skip: true}) and is hidden once Continue opens. DOM order: Continue, then "Can't draw now". The step opens
+// with focus on its heading.
 
 import { h, ensureStyles, title } from './common.js';
-import { mountDraw, drawStyles } from '../ui/draw.js';
+import { drawStyles } from '../ui/draw.js';
+import * as content from '../content.js';
+import { describe, mountLadder } from '../write/ladder.js';
+import { rivalIds } from '../write/rivals.js';
+import { writeStyles } from '../ui/write.js';
 
 let uid = 0;
 export const NOTE = "Trace the letter first, or choose Can't draw now.";
@@ -17,6 +22,7 @@ export const NOTE = "Trace the letter first, or choose Can't draw now.";
 export function render(exercise, el, onAnswer, ctx = {}) {
   ensureStyles();
   drawStyles();
+  writeStyles();
   const id = exercise.letterId || String((exercise.itemIds || [])[0] || '').replace(/^L:/, '');
   const noteId = `draw-note-${++uid}`;
   const root = h('section', { class: 'ex ex-draw', 'data-type': 'letter_draw', 'data-letter': id });
@@ -31,7 +37,7 @@ export function render(exercise, el, onAnswer, ctx = {}) {
   el.replaceChildren(root);
   try { head.focus({ preventScroll: true }); } catch { /* ignore */ }
 
-  let answered = false;
+  let answered = false, alive = true, m = null;
   const finish = ans => {
     if (answered) return;
     answered = true;
@@ -39,29 +45,32 @@ export function render(exercise, el, onAnswer, ctx = {}) {
     onAnswer(ans);
   };
   const open = () => {
-    if (answered) return;
+    if (answered || !cont.disabled) return;
+    const had = skip.contains(document.activeElement);
     cont.disabled = false;
     cont.removeAttribute('aria-describedby');
+    skip.hidden = true;
+    if (had) { try { cont.focus({ preventScroll: true }); } catch { /* ignore */ } }
   };
   skip.addEventListener('click', () => finish({ skip: true }));
   cont.addEventListener('click', () => finish({ seen: true }));
 
-  const letter = typeof ctx.letter === 'function' ? ctx.letter(id) : null;
-  const m = mountDraw(slot, id, {
-    inLesson: true,
-    data: ctx.strokes || undefined,
-    letter: letter || undefined,
-    onTraced: () => {
-      if (answered) return;
-      const had = skip.contains(document.activeElement);
-      open();
-      skip.hidden = true;
-      if (had) { try { cont.focus({ preventScroll: true }); } catch { /* ignore */ } }
-    },
-    onDone: () => finish({ seen: true }),
-  });
-  // no data after all (should not happen: exgen only makes the step for letters with strokes)
-  m.ready.then(ok => { if (!ok) open(); });
+  (async () => {
+    let L = null, S = ctx.strokes || null;
+    try { L = await content.loadLetters(); } catch { L = null; }
+    if (!S) { try { S = await content.loadStrokes(); } catch { S = null; } }
+    if (!alive) return;
+    const letter = typeof ctx.letter === 'function' ? ctx.letter(id) : null;
+    const LL = L || { letters: letter ? [letter] : [], carrier: 'న' };
+    const item = describe(id, LL, S);
+    if (!item) { open(); return; }
+    m = mountLadder(slot, item, {
+      from: 0, to: 2, inLesson: true, strokes: S,
+      rivals: rivalIds(id, LL.letters || []).map(r => describe(r, LL, null)).filter(Boolean),
+      onStage: (i, outcome) => { if (i >= 1 && (outcome === 'pass' || outcome === 'skip')) open(); },
+      onFinish: () => open(),
+    });
+  })();
 
-  return { root, showResult() {}, destroy() { m.destroy(); } };
+  return { root, showResult() {}, destroy() { alive = false; if (m) m.destroy(); } };
 }

@@ -11,7 +11,7 @@
 // "Progress can't be saved in this browser" and carries on in memory.
 
 const PREFIX = 'telugu.';
-const EXPORTED = ['meta', 'settings', 'progress', 'cards', 'streak', 'reports', 'game'];
+const EXPORTED = ['meta', 'settings', 'progress', 'cards', 'streak', 'reports', 'game', 'writing'];   // writing: SPECS S17
 
 // Shapes returned by get() when nothing is stored yet.
 const DEFAULTS = {
@@ -26,6 +26,7 @@ const DEFAULTS = {
   resume: null,
   meta: null,
   game: { best: {}, runs: {}, mute: false }, // game (GAME-PLAN.md): best score and runs per mode
+  writing: { items: {} },   // S17 writing trainer: stage and writing SRS per letter / syllable
 };
 
 const mem = new Map();     // key -> JSON text; this session's truth, written through to storage
@@ -146,7 +147,7 @@ export function exportAll() {
   meta.exported = nowIso();
   writeRaw('meta', JSON.stringify(meta));
   const out = {};
-  for (const k of EXPORTED) if (k !== 'game' || readRaw(k) != null) out[k] = get(k); // game: once played
+  for (const k of EXPORTED) if ((k !== 'game' && k !== 'writing') || readRaw(k) != null) out[k] = get(k); // game, writing: once used
   return out;
 }
 
@@ -240,6 +241,20 @@ function mergeGame(a, b) {
   return out;
 }
 
+// S17 writing: per item, the record with the later last.at wins.
+function mergeWriting(a, b) {
+  const out = isObj(a) && isObj(a.items) ? clone(a) : { items: {} };
+  if (!isObj(b) || !isObj(b.items)) return out;
+  for (const [id, v] of Object.entries(b.items)) {
+    if (!isObj(v)) continue;
+    const mine = out.items[id];
+    const tm = isObj(mine) && isObj(mine.last) ? time(mine.last.at) : null;
+    const tv = isObj(v.last) ? time(v.last.at) : null;
+    if (!isObj(mine) || (tv !== null && (tm === null || tv > tm))) out.items[id] = clone(v);
+  }
+  return out;
+}
+
 // Merges an exported object into this device's data. `meta` and `resume` are never imported.
 export function importAll(obj, opts = {}) {
   if (!isObj(obj)) throw new Error('Not a progress file');
@@ -256,6 +271,7 @@ export function importAll(obj, opts = {}) {
     streak: mergeStreak(get('streak'), obj.streak),
     reports: mergeReports(get('reports'), obj.reports),
     game: mergeGame(get('game'), obj.game),
+    writing: mergeWriting(get('writing'), obj.writing),
   };
   if (opts && opts.settings && isObj(obj.settings)) next.settings = { ...get('settings'), ...obj.settings };
   for (const [k, v] of Object.entries(next)) {

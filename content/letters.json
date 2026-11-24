@@ -5889,8 +5889,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u02.a2",
@@ -5954,8 +5954,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 16,
-   "secs": 146
+   "steps": 19,
+   "secs": 206
   },
   {
    "id": "u03.a1",
@@ -6020,8 +6020,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u03.a2",
@@ -6086,8 +6086,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 20,
-   "secs": 180
+   "steps": 24,
+   "secs": 260
   },
   {
    "id": "u03.a3",
@@ -6139,8 +6139,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u04.a1",
@@ -6205,8 +6205,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u04.a2",
@@ -6270,8 +6270,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 154
+   "steps": 20,
+   "secs": 214
   },
   {
    "id": "u04.a3",
@@ -6323,8 +6323,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u05.a1",
@@ -6389,8 +6389,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 19,
-   "secs": 172
+   "steps": 23,
+   "secs": 252
   },
   {
    "id": "u05.a2",
@@ -6455,8 +6455,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 19,
-   "secs": 172
+   "steps": 23,
+   "secs": 252
   },
   {
    "id": "u06.a1",
@@ -6521,8 +6521,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 19,
-   "secs": 172
+   "steps": 23,
+   "secs": 252
   },
   {
    "id": "u06.a2",
@@ -6587,8 +6587,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u07.a1",
@@ -6653,8 +6653,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 18,
-   "secs": 164
+   "steps": 22,
+   "secs": 244
   },
   {
    "id": "u07.a2",
@@ -6706,8 +6706,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u07.a3",
@@ -6757,8 +6757,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 11,
-   "secs": 104
+   "steps": 13,
+   "secs": 144
   },
   {
    "id": "u08.a1",
@@ -6823,8 +6823,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 19,
-   "secs": 172
+   "steps": 23,
+   "secs": 252
   },
   {
    "id": "u08.a2",
@@ -6889,8 +6889,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 18,
-   "secs": 164
+   "steps": 22,
+   "secs": 244
   },
   {
    "id": "u08.a3",
@@ -6942,8 +6942,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u09.a1",
@@ -7008,8 +7008,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 21,
-   "secs": 188
+   "steps": 25,
+   "secs": 268
   },
   {
    "id": "u09.a2",
@@ -7060,8 +7060,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 14,
-   "secs": 130
+   "steps": 17,
+   "secs": 190
   },
   {
    "id": "u10.a1",
@@ -7113,8 +7113,8 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 156
+   "steps": 21,
+   "secs": 236
   },
   {
    "id": "u10.a2",
@@ -7153,9 +7153,9 @@
      "confidence": "low"
     }
    ],
-   "steps": 17,
-   "secs": 152
+   "steps": 21,
+   "secs": 232
   }
  ],
- "audio_bytes": 3222856
+ "audio_bytes": 3309688
 }

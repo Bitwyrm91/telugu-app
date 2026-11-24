@@ -54,12 +54,14 @@ const SWITCHES = {
   slow: ['Play slowly by default', 'Audio plays at three-quarter speed. The slow button is always there too.'],
   strict: ['Strict spelling', 'A nearly-right typed answer counts as wrong.'],
   speak: ['Speaking exercises', 'Lessons ask you to say words aloud and listen back.'],
+  leftHanded: ['Left-handed', 'In writing practice the buttons sit on the left, away from your writing hand.'],
 };
 
 const GROUPS = [
   ['Reading', ['reads', 'rom']],
   ['Listening', ['voice', 'slow']],
   ['Answering', ['typing', 'strict', 'speak']],
+  ['Writing', ['leftHanded']],
   ['Goal', ['goal']],
 ];
 

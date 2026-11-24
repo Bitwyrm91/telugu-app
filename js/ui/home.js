@@ -288,6 +288,12 @@ export async function render(el) {
     }
     path.append(section);
   }
+  // S17: the writing trainer, under the path
+  path.append(h('a', { class: 'home-play home-write', href: '#/write', 'data-write': '' },
+    h('span', { class: 'home-play-icon' }, icon('pen')),
+    h('span', { class: 'home-play-text' },
+      h('span', { class: 'home-play-title', text: 'Writing' }),
+      h('span', { class: 'home-play-note', text: 'Write the letters you have met, by finger or pen' }))));
   // Game: a "Play" card at the end of the path (#/game).
   path.append(h('a', { class: 'home-play', href: '#/game', 'data-game': '' },
     h('span', { class: 'home-play-icon' }, icon('play')),

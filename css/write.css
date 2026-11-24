@@ -1,0 +1,96 @@
+/* write.css: the writing trainer (SPECS S17; DESIGN tokens only, no raw colours). */
+
+/* ---- the ladder ---- */
+.wl { width: 100%; max-width: 560px; margin-inline: auto; display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+.wl-dots { display: flex; justify-content: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.wl-dots li { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; flex: 0 1 64px; }
+.wl-dot { width: 10px; height: 10px; border-radius: 5px; border: 2px solid var(--border); background: transparent; }
+.wl-dots li[data-past] .wl-dot { background: var(--border); }
+.wl-dots li[data-on] .wl-dot { background: var(--primary); border-color: var(--primary); width: 24px; }
+.wl-dot-name { font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); }
+.wl-dots li[data-on] .wl-dot-name { color: var(--ink); font-weight: 600; }
+.wl-line { margin: 0; min-height: 3em; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; text-align: center; color: var(--ink); font-weight: 600; }
+.wl-line:focus { outline: none; }
+.wl-line:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+.wl-line[data-hint] { color: var(--close); }
+.wl-model:empty { display: none; }
+.wl-copy-model { display: flex; justify-content: center; padding: 4px 16px; border-radius: 12px; background: var(--surface-2); width: fit-content; margin-inline: auto; }
+.wl-copy-model .te { font-size: var(--te-lg); line-height: var(--te-lg-lh); }
+.wl-recall { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.wl-rom { font-size: var(--rom-xl); font-weight: 600; color: var(--ink); }
+.wl-watch { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border-radius: 16px; background: var(--surface); border: 2px solid var(--border); }
+.wl-watch .te.wl-big { font-size: var(--te-hero); line-height: var(--te-hero-lh); }
+.wl-note { margin: 0; color: var(--ink-2); text-align: center; max-width: 44ch; }
+/* the S16 panel inside the ladder: same box size as the pad */
+.wl .draw { max-width: 560px; }
+.wl .draw-head .draw-dots { display: none; }
+/* in a lesson the S16 step shrinks its box to fit above the fold; the ladder keeps the 280-560 px box and scrolls */
+.ex-draw .wl .draw { max-width: 560px; min-width: min(280px, 100%); }
+.wl-line[hidden] { display: none; }
+
+/* ---- the pad ---- */
+.wl-box { width: 100%; min-width: 280px; }
+@media (max-width: 311.98px) { .wl-box { min-width: 0; } }
+.wpad { width: 100%; aspect-ratio: 1; border-radius: 16px; background: var(--surface); border: 2px solid var(--border); overflow: hidden; }
+.wpad-canvas { display: block; width: 100%; height: 100%; touch-action: none; user-select: none; -webkit-user-select: none;
+  -webkit-touch-callout: none; overscroll-behavior: contain; cursor: crosshair; }
+.wl[data-result="pass"] .wpad { border-color: var(--right); }
+.wl[data-result="fail"] .wpad { border-color: var(--wrong); }
+
+/* ---- result, actions, help ---- */
+.wl-result { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 12px; border-radius: 12px; background: var(--right-bg); color: var(--ink); }
+.wl-result[hidden] { display: none; }
+.wl-stars { display: inline-flex; gap: 4px; }
+.wl-star { width: 28px; height: 28px; fill: none; stroke: var(--ink-2); }
+.wl-star.is-on { fill: var(--accent); stroke: var(--ink); }
+.wl-praise { margin: 0; text-align: center; font-weight: 600; }
+.wl-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.wl-actions:empty { display: none; }
+.wl-actions .btn { min-height: 48px; flex: 1 1 88px; white-space: nowrap; }
+.wl-actions .btn-main { flex: 2 1 120px; }
+.wl-help { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; border-radius: 12px; background: var(--close-bg); }
+.wl-help[hidden] { display: none; }
+.wl-help-text { margin: 0; text-align: center; color: var(--ink); }
+.wl-help-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.wl-help-actions .btn { min-height: 44px; }
+
+/* Left-handed: the actions (Check first) sit on the left */
+[data-left] .wl-actions { flex-direction: row-reverse; justify-content: flex-end; }
+
+/* ---- screens ---- */
+.ww { display: flex; flex-direction: column; gap: 16px; max-width: 720px; margin-inline: auto; width: 100%; }
+.ww-intro, .ww-note { margin: 0; color: var(--ink-2); }
+.ww-actions { display: flex; }
+.ww-actions .btn { min-height: 48px; flex: 0 1 280px; }
+.ww-h2 { margin: 0 0 8px; font-size: var(--en-h2); line-height: var(--en-h2-lh); }
+.ww-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; }
+.ww-cell { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 44px; padding: 20px 4px 8px; border-radius: 12px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+.ww-cell:hover { border-color: var(--primary); }
+.ww-cell:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.ww-cell .te.ww-glyph { font-size: var(--te-lg); line-height: var(--te-lg-lh); }
+.ww-rom { font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); }
+.ww-dots { display: flex; gap: 3px; margin-top: 2px; }
+.ww-dot { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--border); }
+.ww-dot.is-past { background: var(--primary); border-color: var(--primary); }
+.ww-dot.is-on { border-color: var(--primary); }
+.ww-due { position: absolute; top: 3px; right: 3px; font-size: 0.75rem; line-height: 1.2; padding: 1px 6px; border-radius: 8px; background: var(--close-bg); color: var(--close); font-weight: 600; }
+.ww-back { align-self: flex-start; min-height: 44px; }
+.ww-title { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.ww-title:focus { outline: none; }
+.ww-title-rom { color: var(--ink-2); font-size: var(--en-body, 1rem); font-weight: 400; }
+.ww-honest { display: flex; flex-direction: column; gap: 4px; max-width: 560px; margin-inline: auto; width: 100%; }
+.ww-honest-text { margin: 0; font-size: var(--en-small); line-height: var(--en-small-lh); color: var(--ink-2); }
+.ww-session { display: flex; flex-direction: column; gap: 12px; }
+.ww-session-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ww-count { margin: 0; font-weight: 600; }
+.ww-quit { min-height: 44px; }
+.ww-bar { height: 8px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
+.ww-bar-fill { display: block; height: 100%; width: 0; background: var(--primary); transition: width 200ms ease-out; }
+.ww-done { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 16px; text-align: center; }
+.ww-done:focus { outline: none; }
+.lc-practise { min-height: 44px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ww-bar-fill { transition: none; }
+}

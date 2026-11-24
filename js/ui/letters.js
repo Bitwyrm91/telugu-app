@@ -117,6 +117,12 @@ export async function render(el) {
     const row = card.querySelector('.lc-row');
     if (row) row.after(btn, slot); else card.append(btn, slot);
   }
+  // S17: every letter card links to its writing ladder
+  function addPractise(card, l) {
+    const a = h('a', { class: 'btn btn-quiet lc-practise', href: '#/write/' + encodeURIComponent(l.id), text: 'Practise writing' });
+    const after = card.querySelector('.lc-draw-slot') || card.querySelector('.lc-row');
+    if (after) after.after(a); else card.append(a);
+  }
 
   let openCell = null;
   const gridBox = h('div', { class: 'lg-groups' });
@@ -158,6 +164,7 @@ export async function render(el) {
         });
         const card = letterCard(l, cx);
         addWrite(card, l);
+        if (on) addPractise(card, l);
         const wrap = h('div', { class: 'lg-card-wrap' }, ...[note, card, close].filter(Boolean));
         slot.replaceChildren(wrap);
         try { wrap.scrollIntoView({ block: 'nearest', behavior: 'instant' }); } catch { /* ignore */ }

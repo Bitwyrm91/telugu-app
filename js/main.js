@@ -23,11 +23,13 @@ const SCREENS = {
   notes: ['notes', 'Grammar note', 'nav'],
   settings: ['settings', 'Settings', 'nav'],
   devType: ['devtype', 'Typography', 'nav'],
+  write: ['write', 'Writing', 'nav'],
+  writeItem: ['write', 'Writing', 'focus'],
   game: ['../game/view', 'Play', 'focus'], // js/game/view.js (GAME-PLAN.md)
 };
 
 // Which main-navigation entry a route belongs to.
-const NAV_OF = { home: 'home', notes: 'home', letters: 'letters', settings: 'settings' };
+const NAV_OF = { home: 'home', notes: 'home', letters: 'letters', write: 'letters', writeItem: 'letters', settings: 'settings' };
 
 const APP_NAME = 'Telugu';
 

@@ -13,6 +13,8 @@ const ROUTES = [
   { re: /^\/settings$/, name: 'settings', keys: [] },
   { re: /^\/dev\/type$/, name: 'devType', keys: [] },
   { re: /^\/game$/, name: 'game', keys: [] }, // game (GAME-PLAN.md)
+  { re: /^\/write$/, name: 'write', keys: [] },                   // S17 writing trainer
+  { re: /^\/write\/([^/]+)$/, name: 'writeItem', keys: ['id'] },
 ];
 
 export const HOME = Object.freeze({ name: 'home', params: {}, path: '/' });
