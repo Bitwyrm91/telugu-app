@@ -124,3 +124,6 @@ fieldset.set-choice + .set-row, .set-row + fieldset.set-choice { border-top: 1px
 @media (prefers-reduced-motion: reduce) {
   .set-track, .set-thumb { transition: opacity 120ms; }
 }
+
+/* S18: writing diagnostics fallback */
+.set-diag-text { width: 100%; min-height: 120px; font: inherit; font-size: var(--en-small); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }

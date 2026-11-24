@@ -1144,6 +1144,14 @@ export async function render(el, route) {
     h('div', { class: 'sum-actions' }, cont));
     el.replaceChildren(box);
     try { cont.focus({ preventScroll: true }); } catch { /* ignore */ }
+    // S18 "Writing in reviews" (default off): after a "Practise again" run, up to two letters from memory.
+    // Not scored: the lesson result above is already saved and writing never changes it.
+    if (s.replay && (store.get('settings') || {}).writeInReviews) {
+      const slot = h('div', { class: 'sum-write' });
+      box.querySelector('.sum-actions').before(slot);
+      import('./write.js').then(m => m.reviewTail(slot, {})).then(ok => { if (!ok) slot.remove(); })
+        .catch(() => slot.remove());
+    }
   }
 
   return cleanup;

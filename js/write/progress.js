@@ -35,7 +35,7 @@ export function getItem(id) {
  * the next due date; a first-try fail at Recall resets the box and makes it due tomorrow. A skip or a
  * "Show me" never counts as a pass and changes no stage.
  */
-export function record(id, stage, outcome, { q = 0, firstTry = true, now = Date.now() } = {}) {
+export function record(id, stage, outcome, { q = 0, firstTry = true, now = Date.now(), override = false } = {}) {
   const w = load();
   const r = { ...fresh(), ...(w.items[id] || {}) };
   const at = new Date(now).toISOString();
@@ -52,7 +52,7 @@ export function record(id, stage, outcome, { q = 0, firstTry = true, now = Date.
     r.fails += 1;
     if (stage >= 4 && firstTry) { r.box = 0; r.due = new Date(now + DAY).toISOString(); }
   } else if (outcome === 'skip') r.skips += 1;
-  r.last = { at, ok: outcome === 'pass', q: q || 0, stage, outcome };
+  r.last = { at, ok: outcome === 'pass', q: q || 0, stage, outcome, ...(override ? { override: true } : {}) };
   w.items[id] = r;
   try { store.set('writing', w); } catch { /* storage banner shows */ }
   return r;

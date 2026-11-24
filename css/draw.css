@@ -88,3 +88,8 @@
 .draw-step-actions .btn { min-width: 0; }
 .draw-step-actions .draw-skip.btn-quiet { flex: 0 1 auto; white-space: nowrap; }
 .draw-step-actions .ex-continue { flex: 1 1 auto; }
+
+/* S18: with the pad's placement the panel shows the pad's guides in every stage */
+.draw-headline { stroke: var(--border); stroke-width: 4; stroke-dasharray: 24 18; }
+.draw-midline { stroke: var(--border); stroke-width: 3; stroke-dasharray: 4 22; stroke-linecap: round; }
+.draw-svg[data-fit] .draw-baseline { display: inline; stroke-dasharray: none; stroke-linecap: butt; }

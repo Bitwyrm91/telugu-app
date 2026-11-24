@@ -142,6 +142,20 @@ export function strokeTarget(entry, width = 56) {
   return t;
 }
 
+/** S18: stroke data (its own frame) onto the glyph as placement() draws it: one uniform scale from the
+ *  bounding boxes (stroke centre-lines vs the target's graded centre-line), centre to centre.
+ *  Returns {s, ox, oy, map(p)}; strokes.json itself is never changed. */
+export function strokeFit(entry, t) {
+  const pts = [...(entry && entry.strokes ? entry.strokes : []), ...(entry && Array.isArray(entry.ghost) ? entry.ghost : [])].flat();
+  if (!pts.length || !t || !t.bbox) return null;
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const p of pts) { x0 = Math.min(x0, p[0]); y0 = Math.min(y0, p[1]); x1 = Math.max(x1, p[0]); y1 = Math.max(y1, p[1]); }
+  const [X0, Y0, X1, Y1] = t.bbox;
+  const s = ((X1 - X0) + (Y1 - Y0)) / Math.max(1, (x1 - x0) + (y1 - y0));
+  const ox = (X0 + X1) / 2 - s * (x0 + x1) / 2, oy = (Y0 + Y1) / 2 - s * (y0 + y1) / 2;
+  return { s, ox, oy, map: p => [ox + s * p[0], oy + s * p[1]] };
+}
+
 export const SIGN_TYPES =new Set(['sign', 'mark', 'final']);
 
 // What is graded for a letter: its glyph; for signs and marks the carrier + sign (`say`).

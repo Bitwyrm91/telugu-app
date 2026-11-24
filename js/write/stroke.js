@@ -165,7 +165,7 @@ export const TUNING = { shortLE: 400, tolShortMin: 105, allowMin: 40, allowShort
   // part of a self-crossing stroke, a second stroke drawn over this one, wobble 60 on a small ring) cannot be
   // told from a good stroke by this check. There the check is guidance only and the writing stage is passed
   // by the shape grader. tests/e15/test_e15_check.py computes this list and asserts it is exactly this one.
-  relaxed: ['cha#1', 'da#1', 'ee#1', 'i#1', 'sign-ai#1', 'sign-ii#1', 'sign-ri#1', 'ta#1', 'u#2', 'uu#3', 'uu#4'] };
+  relaxed: ['cha#1', 'da#1', 'ee#1', 'i#1', 'sign-ai#1', 'sign-ii#1', 'sign-ri#1', 'ta#1', 'u#2', 'uu#3', 'uu#4', 'ddha#3', 'gha#4', 'ha#2', 'jha#4', 'kha#3', 'lla#2', 'nna#2', 'nya#3', 'pha#3', 'sa#2', 'sha#1', 'ttha#1', 'ya#2', 'chha#3'] };
 
 /** S17: is stroke `index` (0-based) of letter `id` in the relaxed class (check = guidance only)? */
 export function isRelaxed(id, index) {

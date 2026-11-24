@@ -10,6 +10,7 @@
 
 import * as store from '../store.js';
 import { h, icon } from '../ex/common.js';
+import * as diag from '../write/diag.js';
 
 // The stylesheet is loaded once; the screen waits for it so it never shows unstyled.
 let styled = null;
@@ -55,13 +56,14 @@ const SWITCHES = {
   strict: ['Strict spelling', 'A nearly-right typed answer counts as wrong.'],
   speak: ['Speaking exercises', 'Lessons ask you to say words aloud and listen back.'],
   leftHanded: ['Left-handed', 'In writing practice the buttons sit on the left, away from your writing hand.'],
+  writeInReviews: ['Writing in reviews', 'After a "Practise again" review, write up to two letters from memory (single letters only, not words). Not scored.'],
 };
 
 const GROUPS = [
   ['Reading', ['reads', 'rom']],
   ['Listening', ['voice', 'slow']],
   ['Answering', ['typing', 'strict', 'speak']],
-  ['Writing', ['leftHanded']],
+  ['Writing', ['leftHanded', 'writeInReviews']],
   ['Goal', ['goal']],
 ];
 
@@ -131,6 +133,30 @@ function switchRow(key, value) {
       state));
 }
 
+// S18: the writing diagnostics (local only) copied as text, to paste into a message
+function diagRow() {
+  const n = diag.entries().length;
+  const b = h('button', { type: 'button', class: 'btn btn-secondary set-diag', 'data-diag-copy': '', text: 'Copy writing diagnostics' });
+  const slot = h('div', { class: 'set-status-slot', role: 'status', 'data-diag-status': '' });
+  b.addEventListener('click', async () => {
+    const text = diag.json();
+    let ok = false;
+    try { await navigator.clipboard.writeText(text); ok = true; } catch { ok = false; }
+    if (!ok) {
+      // no clipboard access: put the text where it can be selected and copied by hand
+      const ta = h('textarea', { class: 'set-diag-text', readonly: '', rows: '6', 'aria-label': 'Writing diagnostics' });
+      ta.value = text;
+      slot.replaceChildren(statusRow('error', 'Copy did not work here. Select the text below and copy it.'), ta);
+      try { ta.focus(); ta.select(); } catch { /* ignore */ }
+      return;
+    }
+    slot.replaceChildren(statusRow('ok', `Copied ${diag.entries().length} entries.`));
+  });
+  return h('div', { class: 'set-row set-actions' },
+    h('p', { class: 'set-help', text: `Notes on hard writing tries (${n} kept, newest 50), stored only on this device. Copy them to send with a question.` }),
+    b, slot);
+}
+
 function statusRow(kind, text) {
   return h('p', { class: `set-status set-status-${kind}`, 'data-status': kind },
     icon(kind === 'error' ? 'info' : 'tick'), h('span', { text }));
@@ -164,6 +190,7 @@ function draw(el) {
     const card = h('section', { class: 'set-card', 'aria-labelledby': `set-g-${title.toLowerCase()}` },
       h('h2', { class: 'set-h2', id: `set-g-${title.toLowerCase()}`, text: title }));
     for (const k of keys) card.append(CHOICES[k] ? choiceGroup(k, settings[k]) : switchRow(k, settings[k]));
+    if (title === 'Writing') card.append(diagRow());
     page.append(card);
   }
 

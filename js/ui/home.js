@@ -42,6 +42,7 @@ const ICONS = {
   play: `<path d="M8 5.5v13l10.5-6.5z" ${S}/>`,
   lock: `<rect x="5" y="11" width="14" height="9.5" rx="2" ${S}/><path d="M8 11V8a4 4 0 0 1 8 0v3" ${S}/>`,
   flame: `<path d="M12 21c-3.9 0-6.5-2.6-6.5-6 0-3.6 3-5.6 3.8-9 2.2 1.3 3.2 3.4 3.2 5.2 1-.6 1.6-1.6 1.8-2.8 1.7 1.5 4.2 3.8 4.2 6.6 0 3.4-2.6 6-6.5 6z" ${S}/>`,
+  pen: `<path d="M15.5 4.5l4 4L9 19H5v-4z" ${S}/><path d="M13 7l4 4" ${S}/>`,
   book: `<path d="M4 5.5C6.5 4.5 9.5 4.5 12 6c2.5-1.5 5.5-1.5 8-.5v13c-2.5-1-5.5-1-8 .5-2.5-1.5-5.5-1.5-8-.5z" ${S}/><path d="M12 6v13" ${S}/>`,
 };
 function icon(name, cls = '') {
@@ -301,6 +302,35 @@ export async function render(el) {
       h('span', { class: 'home-play-title', text: 'Play' }),
       h('span', { class: 'home-play-note', text: 'Sky Shield: shoot down falling letters and words' }))));
   const run = streakRun();
-  el.append(header, homeStrip(model.next, model.units, run), path);
+  // S18: "Writing: N due · M new" above the path, only when something is due or new items wait to be written
+  const writeDue = h('div', { class: 'home-write-slot' });
+  el.append(header, homeStrip(model.next, model.units, run), writeDue, path);
   sidePanel(document.getElementById('side'), model.next, model.units, run);
+  writeDueCard(writeDue);
+}
+
+async function writeDueCard(slot) {
+  let n = { due: 0, fresh: 0 }, cap = 8, allLetters = true;
+  // nothing written yet: nothing can be due, so the writing content is not fetched at all
+  let w = null;
+  try { w = store.get('writing'); } catch { w = null; }
+  if (!w || !w.items || !Object.keys(w.items).length) return;
+  try {
+    const { loadPool, writeCounts, SESSION } = await import('../write/pool.js');
+    const { getItem } = await import('../write/progress.js');
+    const P = await loadPool();
+    n = writeCounts(P.ids);
+    cap = SESSION;
+    allLetters = P.ids.filter(id => getItem(id).stage < 4).every(id => P.letters.includes(id));
+  } catch { n = { due: 0, fresh: 0 }; }
+  if (!(n.due + n.fresh) || !slot.isConnected) return;
+  // due: review date passed; new: not yet written from memory (never shown as a backlog of "due" work)
+  const title = n.due ? `Writing: ${n.due} due${n.fresh ? ` · ${n.fresh} new` : ''}`
+    : `Writing: ${n.fresh} new ${allLetters ? (n.fresh === 1 ? 'letter' : 'letters') : (n.fresh === 1 ? 'item' : 'items')}`;
+  const runLen = Math.min(cap, n.due + n.fresh);
+  slot.append(h('a', { class: 'home-play home-write-due', href: '#/write/practice', 'data-write-due': String(n.due), 'data-write-new': String(n.fresh) },
+    h('span', { class: 'home-play-icon' }, icon('pen')),
+    h('span', { class: 'home-play-text' },
+      h('span', { class: 'home-play-title', text: title }),
+      h('span', { class: 'home-play-note', text: `A short run of ${runLen} ${runLen === 1 ? 'item' : 'items'}, most needed first` }))));
 }

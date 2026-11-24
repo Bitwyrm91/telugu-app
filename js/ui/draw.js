@@ -31,7 +31,7 @@ import { strokeEntryOk } from '../exgen.js';
 // ---- the stroke check (pure): moved to write/stroke.js (SPECS S17), re-exported here ----------
 
 import { BOX, pathLength, distToPolyline, checkStroke, isRelaxed, HINTS } from '../write/stroke.js';
-import { strokeTarget } from '../write/glyph.js';
+import { strokeTarget, getTarget, strokeFit, targetFor, placement } from '../write/glyph.js';
 import { gradeShape } from '../write/shape.js';
 export { BOX, N_POINTS, MIN_LEN, HINTS, pathLength, resample, distToSegment, distToPolyline, decimate, TUNING, checkStroke, isRelaxed } from '../write/stroke.js';
 const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
@@ -253,6 +253,19 @@ export function lines(n, part = false) {
 
 // ---- the component ---------------------------------------------------------------------------------
 
+/** S18: the panel shows the letter where the writing pad puts it. Stroke data keeps its own frame;
+ *  at render time one transform (glyph.strokeFit) places it on the glyph as placement() draws it, and the
+ *  pad's head, middle and base lines are drawn in the box frame. null: the panel keeps the data's frame. */
+export async function panelFit(entry, letter, carrier = 'న') {
+  const tg = letter && (letter.glyph || letter.say) ? targetFor(letter, carrier || 'న') : null;
+  if (!tg || !tg.text) return null;
+  const t = await getTarget(tg.text, { carrier: tg.carrier });
+  const f = strokeFit(entry, t);
+  if (!f || !(f.s > 0.4 && f.s < 2.5)) return null;
+  const pl = placement(tg.text);
+  return { s: f.s, ox: f.ox, oy: f.oy, head: pl.head, mid: pl.mid, base: pl.base };
+}
+
 export function mountDraw(root, letterId, opts = {}) {
   drawStyles();
   let alive = true;
@@ -267,7 +280,10 @@ export function mountDraw(root, letterId, opts = {}) {
       try { letter = ((await content.loadLetters()).letters || []).find(l => l.id === letterId); } catch { letter = null; }
     }
     if (!alive) return false;
-    cleanup = build(root, letterId, entry, letter || { id: letterId }, opts);
+    let fit = null;
+    try { fit = await panelFit(entry, letter, opts.carrier); } catch { fit = null; }
+    if (!alive) return false;
+    cleanup = build(root, letterId, entry, letter || { id: letterId }, { ...opts, fit });
     return true;
   })();
   return {
@@ -320,8 +336,16 @@ function build(root, letterId, entry, letter, opts) {
   const label = isSign && part ? `How to add this sign: ${n} stroke${n === 1 ? '' : 's'}`
     : `How to write ${rom}: ${n} stroke${n === 1 ? '' : 's'}`;
   const svg = s('svg', { class: 'draw-svg', viewBox: `0 0 ${BOX} ${BOX}`, role: 'img', 'aria-label': label, focusable: 'false' });
+  const fit = opts.fit || null;
   const gBase = s('g', { class: 'draw-base' });
-  gBase.append(s('line', { class: 'draw-baseline', x1: 80, x2: BOX - 80, y1: 880, y2: 880 }));
+  if (fit) {
+    // the pad's guides: head line, middle line, base line
+    gBase.append(s('line', { class: 'draw-headline', x1: 40, x2: BOX - 40, y1: fit.head, y2: fit.head }),
+      s('line', { class: 'draw-midline', x1: 40, x2: BOX - 40, y1: fit.mid, y2: fit.mid }),
+      s('line', { class: 'draw-baseline', x1: 40, x2: BOX - 40, y1: fit.base, y2: fit.base }));
+  } else {
+    gBase.append(s('line', { class: 'draw-baseline', x1: 80, x2: BOX - 80, y1: 880, y2: 880 }));
+  }
   const outline = s('path', { class: 'draw-outline', d: entry.outline || '', 'fill-rule': 'nonzero' });
   const gGhost = s('g', { class: 'draw-ghost' });
   for (const g of ghost) gGhost.append(inked(g, 'draw-ghost-stroke'));
@@ -329,7 +353,15 @@ function build(root, letterId, entry, letter, opts) {
   const gGuide = s('g', { class: 'draw-guide' });
   const gAnim = s('g', { class: 'draw-anim' });
   const gInk = s('g', { class: 'draw-ink' });
-  svg.append(gBase, outline, gGhost, gDone, gGuide, gAnim, gInk);
+  // stroke data in its own frame, placed on the pad's glyph by one transform
+  const gFit = s('g', { class: 'draw-fit' });
+  gFit.append(outline, gGhost, gDone, gGuide, gAnim, gInk);
+  if (fit) {
+    gFit.setAttribute('transform', `matrix(${fit.s} 0 0 ${fit.s} ${fit.ox} ${fit.oy})`);
+    svg.dataset.fit = `${fit.s},${fit.ox},${fit.oy}`;
+    panel.dataset.placed = '';
+  }
+  svg.append(gBase, gFit);
   const box = h('div', { class: 'draw-box' }, svg);
   const actions = h('div', { class: 'draw-actions' });
   // R3/R5: one compact block; "partner" -> the app's partner-checked label, anything else Unverified
@@ -573,7 +605,8 @@ function build(root, letterId, entry, letter, opts) {
   let cancelled = false;
   const toBox = e => {
     const r = svg.getBoundingClientRect();
-    return [clampN(((e.clientX - r.left) / r.width) * BOX, 0, BOX), clampN(((e.clientY - r.top) / r.height) * BOX, 0, BOX)];
+    const x = clampN(((e.clientX - r.left) / r.width) * BOX, 0, BOX), y = clampN(((e.clientY - r.top) / r.height) * BOX, 0, BOX);
+    return fit ? [(x - fit.ox) / fit.s, (y - fit.oy) / fit.s] : [x, y];   // the pointer in the stroke data's frame
   };
 
   function onDown(e) {
